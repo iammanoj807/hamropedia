@@ -1,8 +1,9 @@
 ---
-title: "Nepal's National AI Policy 2082, Explained: Goals, Plans and What It Means for You"
+title: "Nepal Approves National AI Policy 2082: Goals, Plans and What It Means for You"
 seoTitle: "Nepal National AI Policy 2082 Explained: Targets, AI Centre, Sectors and Skills"
-description: "What Nepal's National Artificial Intelligence Policy 2082 says: a top-50 AI readiness target, a National AI Centre, provincial centres of excellence, data protection, and what it means for students."
-date: 2026-11-01
+description: "Nepal's Cabinet has approved the National Artificial Intelligence Policy 2082: a top-50 AI readiness target, a National AI Centre, provincial centres of excellence, data protection rules and an AI skills push."
+date: 2025-08-14
+updated: 2026-11-01
 category: ai
 type: news
 tags: [ai, nepal, policy, technology]
@@ -10,11 +11,11 @@ coverWord: "AI policy"
 coverAlt: "Nepal's National AI Policy explained"
 ---
 
-Nepal has a national plan for artificial intelligence. The **National Artificial Intelligence (AI) Policy, 2082** was approved by the Council of Ministers in August 2025, and it sets out how the government wants to use AI, regulate it and build the skills to work with it. Here is what it says, and what it means if you are a student or developer in Nepal.
+Nepal now has a national plan for artificial intelligence. The Cabinet has approved the **National Artificial Intelligence (AI) Policy, 2082**, setting out how the government wants to use AI, regulate it and build the skills to work with it. Here is what it says, and what it means if you are a student or developer in Nepal.
 
 ## The basics
 
-- **Approved:** by the Cabinet at its meeting on **11 August 2025**, as announced by the then Minister for Communications and Information Technology and government spokesperson, Prithvi Subba Gurung ([The Himalayan Times / RSS](https://thehimalayantimes.com/kathmandu/government-endorses-national-ai-policy)).
+- **Approved:** by the Council of Ministers at its meeting on **11 August 2025**. The decision was announced by the Minister for Communications and Information Technology and government spokesperson, Prithvi Subba Gurung ([The Himalayan Times / RSS](https://thehimalayantimes.com/kathmandu/government-endorses-national-ai-policy)).
 - **Prepared by:** the Ministry of Communications and Information Technology. A draft was published for comment in February 2025 ([New Business Age](https://newbusinessage.com/news/45072/government-endorses-national-ai-policy)).
 - **Time frame:** five years.
 
@@ -53,7 +54,9 @@ On infrastructure, it mentions data centres, cloud and high-performance computin
 
 ## The big question: implementation
 
-Writing a policy is the easy part. Commentators have asked whether it will be backed by enough money, strong institutions and real accountability ([The Himalayan Times, opinion](https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready)). Nepal has also changed government twice since the policy was approved: the interim government after the September 2025 protests, then the [RSP government elected in March 2026](/nepal-gen-z-protests-to-balen-shah-government-explained/). Whether the AI Center and provincial centres are actually set up and funded is the thing to watch.
+Writing a policy is the easy part. Commentators have asked whether it will be backed by enough money, strong institutions and real accountability ([The Himalayan Times, opinion](https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready)). Whether the AI Center and the provincial centres are actually set up and funded is the thing to watch.
+
+> **Update (1 November 2026):** Nepal has changed government twice since this policy was approved: the interim government formed after the September 2025 protests, and the [RSP government of Prime Minister Balen Shah](/nepal-gen-z-protests-to-balen-shah-government-explained/) elected in March 2026. AI training is spreading in the meantime, from school campaigns to free government courses; see [AI training in Nepal: what's on in late 2026](/ai-training-in-nepal-2026/).
 
 ## What it means for you
 

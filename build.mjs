@@ -7,9 +7,9 @@ import matter from 'gray-matter';
 import { site, categories, redirects } from './src/data/site.js';
 import { renderMarkdown } from './src/lib/markdown.js';
 import { readingMinutes, isoDate, rfc822, esc } from './src/lib/util.js';
-import { renderPost, renderBlogIndex, renderCategory, renderNews } from './src/pages/posts.js';
+import { renderPost, renderBlogIndex, renderCategory, renderNews, renderNeHub } from './src/pages/posts.js';
 import { renderRoadmapIndex, renderPhase, phases } from './src/pages/roadmap.js';
-import { renderToolsHub, renderRomanized, renderPreeti, renderDate, TOOLS } from './src/pages/tools.js';
+import { renderToolsHub, renderRomanized, renderKeyboard, renderDate, renderAge, TOOLS } from './src/pages/tools.js';
 import { renderHome } from './src/pages/home.js';
 import { renderAbout, renderContact, renderPrivacy, renderTerms, render404, renderRedirect } from './src/pages/static.js';
 
@@ -17,6 +17,7 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(ROOT, 'dist');
 const PUBLIC = path.join(ROOT, 'public');
 const POSTS_DIR = path.join(ROOT, 'src/content/posts');
+const POSTS_NE_DIR = path.join(ROOT, 'src/content/posts-ne');
 const t0 = Date.now();
 
 fs.rmSync(DIST, { recursive: true, force: true });
@@ -37,12 +38,15 @@ try {
   console.warn('sharp not installed: images will be rendered without width/height');
 }
 
-const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'));
 const sizes = new Map();
-const raw = files.map((f) => {
-  const { data, content } = matter(fs.readFileSync(path.join(POSTS_DIR, f), 'utf8'));
-  return { file: f, data, content };
-});
+function readDir(dir, lang) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.md')).map((f) => {
+    const { data, content } = matter(fs.readFileSync(path.join(dir, f), 'utf8'));
+    return { file: f, data, content, lang };
+  });
+}
+const raw = [...readDir(POSTS_DIR, 'en'), ...readDir(POSTS_NE_DIR, 'ne')];
 
 for (const { content } of raw) {
   for (const [, src] of content.matchAll(/!\[[^\]]*\]\((\/images\/[^)\s]+)/g)) {
@@ -55,32 +59,41 @@ for (const { content } of raw) {
 }
 
 const exists = (p) => fs.existsSync(path.join(PUBLIC, p));
-const posts = raw
-  .filter((r) => !r.data.draft)
-  .map(({ file, data, content }) => {
-    for (const key of ['title', 'description', 'date', 'category']) {
-      if (!data[key]) throw new Error(`${file}: missing "${key}" in front matter`);
-    }
-    if (!categories[data.category]) throw new Error(`${file}: unknown category "${data.category}"`);
-    const slug = data.slug || file.replace(/\.md$/, '');
-    const { html, toc } = renderMarkdown(content, { imageSize: (src) => sizes.get(src) || null, siteHost: 'hamropedia.com' });
-    const cover = `/images/covers/${slug}.webp`;
-    const og = `/images/og/${slug}.jpg`;
-    return {
-      ...data,
-      slug,
-      url: `/${slug}/`,
-      date: isoDate(data.date),
-      updated: data.updated ? isoDate(data.updated) : null,
-      type: data.type || 'guide',
-      html,
-      toc,
-      readingMinutes: readingMinutes(content),
-      coverCard: exists(cover) ? cover : `/images/covers/default-${data.category}.webp`,
-      ogImage: exists(og) ? og : '/images/og-default.jpg',
-    };
-  })
-  .sort((a, b) => (b.updated || b.date).localeCompare(a.updated || a.date) || b.date.localeCompare(a.date));
+const toPost = ({ file, data, content, lang }) => {
+  for (const key of ['title', 'description', 'date', 'category']) {
+    if (!data[key]) throw new Error(`${file}: missing "${key}" in front matter`);
+  }
+  if (!categories[data.category]) throw new Error(`${file}: unknown category "${data.category}"`);
+  const slug = data.slug || file.replace(/\.md$/, '');
+  const { html, toc } = renderMarkdown(content, { imageSize: (src) => sizes.get(src) || null, siteHost: 'hamropedia.com' });
+  const og = `/images/og/${slug}.jpg`;
+  return {
+    ...data,
+    lang,
+    slug,
+    url: lang === 'ne' ? `/ne/${slug}/` : `/${slug}/`,
+    date: isoDate(data.date),
+    updated: data.updated ? isoDate(data.updated) : null,
+    type: data.type || 'guide',
+    html,
+    toc,
+    readingMinutes: readingMinutes(content),
+    ogImage: exists(og) ? og : '/images/og-default.jpg',
+  };
+};
+// Newest news first: posts are dated to when the news happened.
+const byDate = (a, b) => b.date.localeCompare(a.date) || (b.updated || '').localeCompare(a.updated || '');
+const posts = raw.filter((r) => r.lang === 'en' && !r.data.draft).map(toPost).sort(byDate);
+const nePosts = raw.filter((r) => r.lang === 'ne' && !r.data.draft).map(toPost).sort(byDate);
+const enBySlug = new Map(posts.map((p) => [p.slug, p]));
+for (const n of nePosts) {
+  const en = enBySlug.get(n.slug);
+  if (!en) throw new Error(`Nepali post ${n.slug} has no English original with the same file name`);
+  if (n.date !== en.date) throw new Error(`Nepali post ${n.slug}: date ${n.date} differs from English ${en.date}`);
+  n.ogImage = en.ogImage;
+  n.coverWord = n.coverWord || en.coverWord;
+}
+const neBySlug = new Map(nePosts.map((p) => [p.slug, p]));
 
 // ---------------------------------------------------------------------------
 // Pages
@@ -93,19 +106,22 @@ const add = (p, html) => {
 
 add('/', renderHome(posts, version));
 add('/blog/', renderBlogIndex(posts, version));
-add('/news/', renderNews([...posts].sort((a, b) => b.date.localeCompare(a.date)), version));
+add('/news/', renderNews(posts, version));
+add('/ne/', renderNeHub(nePosts, version));
 for (const slug of Object.keys(categories)) {
   const list = posts.filter((p) => p.category === slug);
   if (list.length) add(`/category/${slug}/`, renderCategory(slug, list, version));
 }
-for (const p of posts) add(p.url, renderPost(p, posts, version));
+for (const p of posts) add(p.url, renderPost(p, posts, version, neBySlug.get(p.slug)));
+for (const p of nePosts) add(p.url, renderPost(p, nePosts, version, enBySlug.get(p.slug)));
 
 add('/ai-roadmap/', renderRoadmapIndex(version));
 phases.forEach((p, i) => add(`/ai-roadmap/${p.slug}/`, renderPhase(p, i, version)));
 
 add('/tools/', renderToolsHub(version));
 add('/tools/english-to-nepali/', renderRomanized(version));
-add('/tools/preeti-to-unicode/', renderPreeti(version));
+add('/tools/nepali-keyboard/', renderKeyboard(version));
+add('/tools/age-calculator/', renderAge(version));
 add('/tools/nepali-date-converter/', renderDate(version));
 
 add('/about-us/', renderAbout(version));
@@ -131,12 +147,12 @@ for (const r of redirects) {
 // sitemap.xml, robots.txt, rss.xml
 
 const today = isoDate(new Date());
-const lastmod = new Map(posts.map((p) => [p.url, p.updated || p.date]));
-const newest = posts[0] ? posts[0].updated || posts[0].date : today;
+const lastmod = new Map([...posts, ...nePosts].map((p) => [p.url, p.updated || p.date]));
+const newest = [...posts, ...nePosts].map((p) => p.updated || p.date).sort().pop() || today;
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${[...pages.keys()]
-  .map((p) => `  <url><loc>${site.url}${p}</loc><lastmod>${lastmod.get(p) || (['/', '/blog/', '/news/'].includes(p) || p.startsWith('/category/') ? newest : today)}</lastmod></url>`)
+  .map((p) => `  <url><loc>${site.url}${p}</loc><lastmod>${lastmod.get(p) || (['/', '/blog/', '/news/', '/ne/'].includes(p) || p.startsWith('/category/') ? newest : today)}</lastmod></url>`)
   .join('\n')}
 </urlset>
 `;
@@ -181,5 +197,5 @@ fs.writeFileSync(path.join(DIST, 'rss.xml'), rss);
 fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
 
 console.log(
-  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts, ${phases.length} roadmap phases, ${TOOLS.length} tools in ${Date.now() - t0} ms`,
+  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts (${nePosts.length} in Nepali), ${phases.length} roadmap phases, ${TOOLS.length} tools in ${Date.now() - t0} ms`,
 );

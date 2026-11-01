@@ -13,7 +13,7 @@
 //      a half letter + "f" (the ा stroke) = the full letter, and so on.
 
 // Preeti key -> Unicode, from the Preeti font layout.
-const PREETI_MAP = {
+export const PREETI_MAP = {
   // lower case
   a: 'ब', b: 'द', c: 'अ', d: 'म', e: 'भ', f: 'ा', g: 'न', h: 'ज', i: 'ष्', j: 'व',
   k: 'प', l: 'ि', m: 'm', n: 'ल', o: 'य', p: 'उ', q: 'त्र', r: 'च', s: 'क', t: 'त',

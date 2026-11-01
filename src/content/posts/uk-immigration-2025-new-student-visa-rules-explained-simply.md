@@ -12,13 +12,16 @@ coverAlt: "UK student visa rules explained"
 
 UK immigration rules for students have changed a lot since the government's May 2025 immigration white paper. This page separates **what is already confirmed** from **what was only proposed**, with the source for each number, so you can plan properly.
 
-> **Update:** This article was fully rewritten in November 2026. An earlier version presented some white-paper proposals as if they were already law; that has been corrected.
+> **Update (1 November 2026):** The UK Budget of 28 October 2026 says graduates of **"high-compliance" universities** will keep a **two-year Graduate visa** after January 2027. This is announced policy; the qualifying universities have not been named yet. [Read the full story](/uk-graduate-visa-two-years-high-compliance-universities/).
+>
+> This article was also fully rewritten in November 2026. An earlier version presented some white-paper proposals as if they were already law; that has been corrected.
 
 ## The short version
 
 | Rule | What applies | Since |
 |---|---|---|
 | Graduate Route length (bachelor's, master's) | **18 months**, for applications made on or after 1 January 2027 (2 years before that) | Confirmed Oct 2025 |
+| Graduate Route, **high-compliance universities** | **2 years** even after January 2027 (Budget policy; details and university list not yet published) | Announced 28 Oct 2026 |
 | Graduate Route length (PhD) | 3 years (unchanged) | — |
 | Student visa application fee | **£558** | 8 April 2026 |
 | Immigration Health Surcharge (students) | **£776 per year** | 6 February 2024 |
@@ -33,6 +36,8 @@ The **Graduate Route** lets you stay and work in the UK after finishing a UK deg
 - **Bachelor's and master's graduates:** 18 months instead of 2 years.
 - **PhD and other doctoral graduates:** still 3 years.
 - **The cutoff is your application date.** It applies to Graduate Route applications **made on or after 1 January 2027**. Applications made before then get the current 2 years ([UKCISA, 14 October 2025](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)).
+
+**New in the October 2026 Budget:** the government says graduates of **"high-compliance universities"** with strong job outcomes will get **two years** instead of 18 months. "High-compliance" has not been defined and no list of universities has been published, so treat it as a promise until it appears in the Immigration Rules. [Details here](/uk-graduate-visa-two-years-high-compliance-universities/).
 
 **What this means for you:** if your course ends in late 2026, you may still be able to apply before 1 January 2027 and get 2 years, as long as you meet the other requirements (including your university reporting that you completed the course). Check with your university's international student advice team.
 

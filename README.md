@@ -15,10 +15,12 @@ Hosted free on GitHub Pages.
 | Home | `/` | `src/pages/home.js` |
 | Blog, categories | `/blog/`, `/category/<slug>/` | `src/pages/posts.js` |
 | News | `/news/` | posts with `type: news` |
+| Nepali news | `/ne/`, `/ne/<slug>/` | `src/content/posts-ne/*.md` (same file name as the English post) |
 | Articles | `/<slug>/` (same URLs as WordPress) | `src/content/posts/*.md` |
 | AI & ML Roadmap | `/ai-roadmap/`, `/ai-roadmap/<phase>/` | `src/data/roadmap.json` (resources from AtomicHub) |
 | English → Nepali typing | `/tools/english-to-nepali/` | `src/assets/js/lib/romanized.js` |
-| Preeti ↔ Unicode | `/tools/preeti-to-unicode/` | `src/assets/js/lib/preeti.js` |
+| Nepali keyboard (Preeti layout + Romanized) | `/tools/nepali-keyboard/` | `src/assets/js/lib/keyboard.js` (uses `preeti.js`, `romanized.js`) |
+| Age calculator | `/tools/age-calculator/` | `src/assets/js/lib/age.js` |
 | Nepali date converter | `/tools/nepali-date-converter/` | `src/assets/js/lib/bs-date.js` |
 | About, contact, privacy, terms | old WordPress URLs | `src/pages/static.js` |
 
@@ -29,9 +31,10 @@ retired posts (`redirects` in `src/data/site.js`), Open Graph images, JSON-LD st
 
 ```bash
 npm install
-npm test          # converter tests (Preeti vectors, typing rules, every BS date)
+npm test          # tool tests (typing rules, Preeti keyboard, every BS date, age rules)
 npm run dev       # build + serve at http://localhost:4321
-npm run verify    # check links, images, old URLs, titles, descriptions
+npm run verify    # check links, images, old URLs, titles, descriptions, hreflang
+npm run check-translations  # every number in English posts is in the Nepali versions
 ```
 
 ## Write a new post
@@ -63,6 +66,14 @@ npm run verify    # check links, images, old URLs, titles, descriptions
    and convert them to WebP) and use `![alt text](/images/posts/<folder>/x.webp "caption")`.
 3. `npm run covers` makes the card artwork and social image for the new post.
 4. Commit and push to `main`. GitHub Actions tests, builds, verifies and deploys.
+
+**Dates:** for news, set `date` to the day the news happened, and write the article as of
+that day. Later developments go in a `> **Update (date):**` box, with `updated:` set.
+
+**Nepali version:** add `src/content/posts-ne/<same-file-name>.md` with Nepali `title`,
+`description`, `coverWord`, and the **same `date`** as the English post. The two pages
+link to each other automatically (language switch + hreflang). `npm run check-translations`
+checks that every number in the English article also appears in the Nepali one.
 
 **House rules for content:** link a source for every fact, number and fee; label
 proposals as proposals; show the updated date when you change something.

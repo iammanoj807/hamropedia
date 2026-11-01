@@ -17,7 +17,7 @@ export function renderHome(posts, version) {
     <div class="hero-copy">
       <p class="eyebrow">Explore and enjoy · your daily discovery hub</p>
       <h1>Nepali tools, a free AI roadmap and guides you can <em>trust</em>.</h1>
-      <p class="lead">Type Nepali with an English keyboard, fix old Preeti text, convert Nepali dates, learn AI from zero for free, and get study-abroad steps that match the official sites. All in one place, made by a Nepali engineer.</p>
+      <p class="lead">Type Nepali with an English keyboard or the Preeti layout, convert Nepali dates, read the news in English or Nepali, learn AI from zero for free, and get study-abroad steps that match the official sites. All in one place, made by a Nepali engineer.</p>
       <div class="hero-cta">
         <a class="btn btn-lg" href="/tools/english-to-nepali/">Start typing Nepali</a>
         <a class="btn-ghost btn-lg" href="/ai-roadmap/">Explore the AI roadmap</a>
@@ -41,7 +41,7 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Free Nepali tools</h2><a href="/tools/">All tools</a></div>
+  <div class="section-head"><h2>Free tools</h2><a href="/tools/">All tools</a></div>
   <div class="tool-cards tool-cards-compact">
     ${TOOLS.map(
       (t) => `<a class="tool-card" href="/tools/${t.slug}/">

@@ -213,3 +213,14 @@ export const CHEAT_SHEET = {
   consonants: [['k kh g gh ng', 'क ख ग घ ङ'], ['ch chh j jh ny', 'च छ ज झ ञ'], ['T Th D Dh N', 'ट ठ ड ढ ण'], ['t th d dh n', 'त थ द ध न'], ['p ph/f b bh m', 'प फ ब भ म'], ['y r l w/v', 'य र ल व'], ['sh Sh s h', 'श ष स ह'], ['ksh tr gy', 'क्ष त्र ज्ञ'], ['x', 'छ']],
   signs: [['M', 'ं (anusvara)'], ['* or ~', 'ँ (chandrabindu)'], ['H', 'ः (visarga)'], ['\\', '् (halanta)'], ['.', '। (purna biram)'], ['OM', 'ॐ'], ['{text}', 'keeps English as typed']],
 };
+
+/** What a single key types in Romanized mode, for the on-screen keyboard labels. */
+export function romanKeyLabel(ch) {
+  if (VOWELS[ch]) return VOWELS[ch][0];
+  if (CONSONANTS[ch]) return CONSONANTS[ch];
+  if (SIGNS[ch]) return '◌' + SIGNS[ch];
+  if (DIGITS[ch] !== undefined) return DIGITS[ch];
+  if (ch === '\\') return '◌्';
+  if (ch === '.') return '।';
+  return ch;
+}

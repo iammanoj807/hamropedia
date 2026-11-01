@@ -30,6 +30,8 @@ jobs:
         run: npm run covers
       - name: Build the site
         run: npm run build
+      - name: Check Nepali translations keep every number
+        run: npm run check-translations
       - name: Check links, images and old URLs
         run: npm run verify
       - uses: actions/configure-pages@v6

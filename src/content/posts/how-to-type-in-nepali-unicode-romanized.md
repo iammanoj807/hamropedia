@@ -20,7 +20,7 @@ Before anything else, make sure you are typing **Unicode**:
 - **Unicode Nepali** stores real Devanagari letters. It works on every phone, in Facebook, Gmail, Word and Google Docs, and Google can search it.
 - **Preeti** is an old font that draws Nepali shapes on English keys. Without the font, <span lang="ne">नेपाल</span> appears as `g]kfn`.
 
-Have old documents in Preeti? Convert them with the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
+Learned to type on the Preeti layout? The [Nepali keyboard](/tools/nepali-keyboard/) lets you keep using the same keys, but produces proper Unicode.
 
 ## The rules of Romanized Nepali
 
@@ -80,4 +80,4 @@ Try these in the [tool](/tools/english-to-nepali/):
 
 Once the long-vowel and capital-letter rules click, you'll type Nepali as fast as English.
 
-Related tools: [Preeti to Unicode](/tools/preeti-to-unicode/) · [Nepali date converter](/tools/nepali-date-converter/)
+Related tools: [Nepali keyboard](/tools/nepali-keyboard/) · [Nepali date converter](/tools/nepali-date-converter/)

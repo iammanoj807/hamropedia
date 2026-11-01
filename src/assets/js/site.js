@@ -10,8 +10,8 @@ const store = {
 const themeBtn = document.getElementById('theme-btn');
 const themeMenu = document.getElementById('theme-menu');
 function syncTheme() {
-  const theme = store.get('hp-theme') || 'system';
-  const accent = store.get('hp-accent') || 'crimson';
+  const theme = store.get('hp-theme') || 'light';
+  const accent = store.get('hp-accent') || 'blue';
   document.querySelectorAll('[data-theme-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.themeChoice === theme)));
   document.querySelectorAll('[data-accent-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.accentChoice === accent)));
 }
@@ -29,11 +29,11 @@ if (themeBtn && themeMenu) {
     const a = e.target.closest('[data-accent-choice]');
     if (t) {
       const v = t.dataset.themeChoice;
-      if (v === 'system') { delete root.dataset.theme; store.set('hp-theme', null); } else { root.dataset.theme = v; store.set('hp-theme', v); }
+      if (v === 'light') { delete root.dataset.theme; store.set('hp-theme', null); } else { root.dataset.theme = v; store.set('hp-theme', v); }
     }
     if (a) {
       const v = a.dataset.accentChoice;
-      if (v === 'crimson') { delete root.dataset.accent; store.set('hp-accent', null); } else { root.dataset.accent = v; store.set('hp-accent', v); }
+      if (v === 'blue') { delete root.dataset.accent; store.set('hp-accent', null); } else { root.dataset.accent = v; store.set('hp-accent', v); }
     }
     syncTheme();
   });

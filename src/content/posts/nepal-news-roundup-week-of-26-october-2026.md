@@ -1,8 +1,8 @@
 ---
 title: "Nepal This Week: Cyclone Arnab, Rs 3 Trillion Debt, an Antibiotics Crackdown and More"
-seoTitle: "Nepal News This Week (26 Oct – 1 Nov 2026): Cyclone Arnab, Public Debt, Antibiotics Rule"
-description: "The Nepal news that mattered in the week to 1 November 2026: Cyclone Arnab blocks highways, public debt passes Rs 3 trillion, antibiotics without prescription banned, LDC deadline extended."
-date: 2026-11-01
+seoTitle: "Nepal News This Week (26–31 Oct 2026): Cyclone Arnab, Public Debt, Antibiotics Rule"
+description: "The Nepal news that mattered in the week to 31 October 2026: Cyclone Arnab blocks highways, public debt passes Rs 3 trillion, antibiotics without prescription banned, LDC deadline extended."
+date: 2026-10-31
 category: nepal
 type: news
 tags: [nepal, weekly roundup, weather, economy, health]
@@ -52,7 +52,7 @@ The Nepal Electricity Authority announced **daily power cuts of 5.5 hours (10:30
 
 ## 7. Press freedom and the courts
 
-After incidents in which police entered newsrooms and questioned journalists, the ruling **RSP** directed the government to investigate. The party also discussed pursuing parliamentary impeachment as part of what it calls judicial restructuring ([Nepal News, 31 Oct](https://english.nepalnews.com/s/main-right/nepal-news-evening-briefing-saturday-october-31-2026/)). For the background, read [how Nepal got here, from the Gen Z protests to PM Balen Shah](/nepal-gen-z-protests-to-balen-shah-government-explained/).
+After police entered newsrooms and held journalists for questioning over their reports, the ruling **RSP** directed the government to investigate. The party also discussed pursuing parliamentary impeachment as part of what it calls judicial restructuring ([Nepal News, 31 Oct](https://english.nepalnews.com/s/main-right/nepal-news-evening-briefing-saturday-october-31-2026/)). Full story: [journalists held in newsroom raids](/nepal-journalists-detained-newsroom-raids-october-2026/).
 
 ## 8. Nepal and Bhutan take a mountain agenda to COP31
 

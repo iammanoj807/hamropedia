@@ -25,7 +25,7 @@ export function renderAbout(version) {
     lead: 'Useful things for Nepali people, made carefully: tools that work, guides that match the official sites, and news with its sources showing.',
     html: `<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
-<li><strong>Nepali tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and a <a href="/tools/nepali-date-converter/">Nepali date converter</a>.</li>
+<li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
 <li><strong>Learning</strong>: a free <a href="/ai-roadmap/">AI &amp; machine learning roadmap</a> with ${'370+'} hand-picked resources, and coding guides for beginners.</li>
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
@@ -86,7 +86,7 @@ export function renderPrivacy(version) {
 <h2>What this site collects</h2>
 <p><strong>Nothing about you, directly.</strong> Hamropedia has no user accounts, no comment forms, no newsletter sign-up, no analytics scripts and no advertising.</p>
 <h2>The tools</h2>
-<p>The English to Nepali typing tool, the Preeti converter and the date converter run entirely in your browser using JavaScript. The text and dates you enter are not sent to any server.</p>
+<p>The English to Nepali typing tool, the Nepali keyboard, the date converter and the age calculator run entirely in your browser using JavaScript. The text and dates you enter are not sent to any server.</p>
 <h2>What is stored in your browser</h2>
 <p>The site uses your browser’s local storage, which stays on your device and is never sent to us, for:</p>
 <ul>
@@ -142,7 +142,8 @@ export function render404(version) {
   <ul class="nf-links">
     <li><a href="/tools/english-to-nepali/">English to Nepali typing</a></li>
     <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
-    <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode</a></li>
+    <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
+    <li><a href="/tools/age-calculator/">Age calculator</a></li>
     <li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li>
     <li><a href="/blog/">All articles</a></li>
     <li><a href="/news/">News</a></li>
@@ -164,7 +165,7 @@ export function renderRedirect(r) {
 <link rel="canonical" href="${to}">
 <meta http-equiv="refresh" content="0; url=${r.to}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>body{font:16px/1.6 system-ui,sans-serif;max-width:36rem;margin:15vh auto;padding:0 16px;color:#1d1b18;background:#fbf8f3}a{color:#c8102e}@media (prefers-color-scheme:dark){body{color:#ece8e1;background:#0f1218}a{color:#ff6b7d}}</style>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:36rem;margin:15vh auto;padding:0 16px;color:#0f172a;background:#fff}a{color:#2453c4}</style>
 <script>location.replace(${JSON.stringify(r.to)});</script>
 </head>
 <body>

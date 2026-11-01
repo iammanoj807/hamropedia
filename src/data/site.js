@@ -5,7 +5,7 @@ export const site = {
   url: 'https://hamropedia.com', // no trailing slash
   tagline: 'Nepali tools, AI learning and honest guides',
   description:
-    'Free Nepali tools (English to Nepali typing, Preeti to Unicode, Nepali date converter), a free AI and machine learning roadmap, study-abroad guides for Nepali students, and sourced Nepal news.',
+    'Free Nepali tools (English to Nepali typing, Nepali keyboard, Nepali date converter, age calculator), a free AI and machine learning roadmap, study-abroad guides for Nepali students, and sourced Nepal news in English and Nepali.',
   locale: 'en_GB',
   lang: 'en',
   author: {
@@ -29,31 +29,45 @@ export const nav = [
   { href: '/blog/', label: 'Blog' },
   { href: '/news/', label: 'News' },
   { href: '/ai-roadmap/', label: 'AI Roadmap' },
-  { href: '/tools/', label: 'Nepali Tools' },
+  { href: '/tools/', label: 'Tools' },
+  { href: '/ne/', label: 'नेपाली', lang: 'ne' },
   { href: '/about-us/', label: 'About' },
+];
+
+// The same menu, for pages written in Nepali.
+export const navNe = [
+  { href: '/blog/', label: 'ब्लग' },
+  { href: '/ne/', label: 'समाचार' },
+  { href: '/ai-roadmap/', label: 'एआई रोडम्याप' },
+  { href: '/tools/', label: 'टुल्स' },
+  { href: '/news/', label: 'English', lang: 'en' },
 ];
 
 // Category slugs match the old WordPress category URLs (/category/<slug>/).
 export const categories = {
   'study-abroad': {
     name: 'Study Abroad',
+    nameNe: 'विदेश अध्ययन',
     description: 'Step-by-step, sourced guides for Nepali students: NOC, WES, UK visas and more.',
     hue: 'blue',
   },
   coding: {
     name: 'Coding',
+    nameNe: 'कोडिङ',
     description: 'Programming guides and roadmaps for beginners, written for Nepali students.',
     hue: 'green',
   },
   ai: {
     name: 'AI & Machine Learning',
+    nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow what AI means for Nepal.',
     hue: 'violet',
   },
   nepal: {
     name: 'Nepal',
+    nameNe: 'नेपाल',
     description: 'Sourced news explainers and round-ups from Nepal, plus guides to typing and using Nepali online.',
-    hue: 'crimson',
+    hue: 'indigo',
   },
 };
 

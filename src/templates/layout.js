@@ -1,4 +1,4 @@
-import { site, nav, categories } from '../data/site.js';
+import { site, nav, navNe, categories } from '../data/site.js';
 import { esc, jsonLd, abs } from '../lib/util.js';
 
 export const ICONS = {
@@ -15,7 +15,7 @@ export const ICONS = {
 };
 
 // Runs before first paint, so the chosen theme never flashes.
-const THEME_BOOT = `(function(){try{var t=localStorage.getItem('hp-theme'),a=localStorage.getItem('hp-accent'),d=document.documentElement;if(t==='light'||t==='dark')d.dataset.theme=t;if(a)d.dataset.accent=a;}catch(e){}})();`;
+const THEME_BOOT = `(function(){try{var t=localStorage.getItem('hp-theme'),a=localStorage.getItem('hp-accent'),d=document.documentElement;if(t==='dark'||t==='auto')d.dataset.theme=t;if(a&&a!=='blue')d.dataset.accent=a;}catch(e){}})();`;
 
 /**
  * @param {object} p
@@ -30,6 +30,8 @@ const THEME_BOOT = `(function(){try{var t=localStorage.getItem('hp-theme'),a=loc
  * @param {string} [p.head]        extra head HTML
  * @param {boolean} [p.noindex]
  * @param {string} [p.section]     nav href to mark active
+ * @param {string} [p.lang]        'en' (default) or 'ne'
+ * @param {{lang:string, path:string}[]} [p.alternates]  language versions, for hreflang
  */
 export function layout(p) {
   const url = abs(site.url, p.path);
@@ -42,8 +44,13 @@ export function layout(p) {
     ? `<meta name="google-site-verification" content="${esc(site.googleSiteVerification)}">`
     : '';
 
+  const lang = p.lang || 'en';
+  const hreflang = (p.alternates || []).length
+    ? [...p.alternates.map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${abs(site.url, a.path)}">`),
+       `<link rel="alternate" hreflang="x-default" href="${abs(site.url, (p.alternates.find((a) => a.lang === 'en') || p.alternates[0]).path)}">`].join('\n')
+    : '';
   return `<!doctype html>
-<html lang="${site.lang}">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,14 +66,14 @@ ${p.noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="ro
 <meta property="og:image" content="${image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="${site.locale}">
+<meta property="og:locale" content="${lang === 'ne' ? 'ne_NP' : site.locale}">
+${hreflang}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(p.ogTitle || p.title)}">
 <meta name="twitter:description" content="${esc(p.description)}">
 <meta name="twitter:image" content="${image}">
-<meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1218" media="(prefers-color-scheme: dark)">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 ${verify}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -84,7 +91,7 @@ ${schemas}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"><span></span></div>
-${header(p.section)}
+${header(p.section, lang)}
 <main id="main">
 ${p.body}
 </main>
@@ -94,9 +101,9 @@ ${scripts}
 </html>`;
 }
 
-function header(section) {
-  const links = nav
-    .map((n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}>${n.label}</a>`)
+function header(section, lang) {
+  const links = (lang === 'ne' ? navNe : nav)
+    .map((n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}${n.lang ? ` lang="${n.lang}"` : ''}>${n.label}</a>`)
     .join('');
   return `<header class="site-header">
   <div class="wrap header-row">
@@ -111,12 +118,12 @@ function header(section) {
           <div class="seg" role="radiogroup" aria-label="Theme">
             <button type="button" role="radio" data-theme-choice="light">Light</button>
             <button type="button" role="radio" data-theme-choice="dark">Dark</button>
-            <button type="button" role="radio" data-theme-choice="system">Auto</button>
+            <button type="button" role="radio" data-theme-choice="auto">Auto</button>
           </div>
           <p class="menu-label">Colour</p>
           <div class="swatches" role="radiogroup" aria-label="Accent colour">
+            <button type="button" role="radio" data-accent-choice="blue" style="--sw:#2453c4" aria-label="Himalayan blue (default)"></button>
             <button type="button" role="radio" data-accent-choice="crimson" style="--sw:#c8102e" aria-label="Crimson"></button>
-            <button type="button" role="radio" data-accent-choice="blue" style="--sw:#2453c4" aria-label="Himalayan blue"></button>
             <button type="button" role="radio" data-accent-choice="green" style="--sw:#13795b" aria-label="Rhododendron green"></button>
             <button type="button" role="radio" data-accent-choice="violet" style="--sw:#6d3fd6" aria-label="Violet"></button>
             <button type="button" role="radio" data-accent-choice="amber" style="--sw:#b45309" aria-label="Marigold"></button>
@@ -147,16 +154,17 @@ function footer() {
       </div>
     </div>
     <div>
-      <h2 class="footer-h">Nepali tools</h2>
+      <h2 class="footer-h">Free tools</h2>
       <ul>
         <li><a href="/tools/english-to-nepali/">English to Nepali typing</a></li>
-        <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode</a></li>
+        <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
         <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
+        <li><a href="/tools/age-calculator/">Age calculator</a></li>
       </ul>
     </div>
     <div>
       <h2 class="footer-h">Read</h2>
-      <ul>${cats}<li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li></ul>
+      <ul>${cats}<li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li><li><a href="/ne/" lang="ne">नेपाली समाचार</a></li></ul>
     </div>
     <div>
       <h2 class="footer-h">Hamropedia</h2>

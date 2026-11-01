@@ -64,6 +64,24 @@ for (const file of htmlFiles) {
 
 for (const u of OLD_WORDPRESS_URLS) if (!resolve(u)) problems.push(`old WordPress URL no longer resolves: ${u}`);
 
+// Language versions: every hreflang target must exist and link back; Nepali pages must say lang="ne".
+const pageFor = (url) => {
+  const p = url.replace('https://hamropedia.com', '');
+  return path.join(DIST, p, p.endsWith('/') ? 'index.html' : '');
+};
+for (const file of htmlFiles) {
+  const rel = '/' + path.relative(DIST, file).replace(/index\.html$/, '');
+  const html = fs.readFileSync(file, 'utf8');
+  if (rel.startsWith('/ne/') && !/<html lang="ne">/.test(html)) problems.push(`${rel}: Nepali page without lang="ne"`);
+  for (const [, lang, href] of html.matchAll(/<link rel="alternate" hreflang="([a-z-]+)" href="([^"]+)">/g)) {
+    if (lang === 'x-default') continue;
+    const target = pageFor(href);
+    if (!fs.existsSync(target)) { problems.push(`${rel}: hreflang ${lang} points to missing ${href}`); continue; }
+    const back = fs.readFileSync(target, 'utf8');
+    if (!back.includes(`href="https://hamropedia.com${rel}"`)) problems.push(`${rel}: ${href} does not link back (hreflang)`);
+  }
+}
+
 if (problems.length) {
   console.error(`✖ ${problems.length} problem(s):\n` + problems.map((p) => '  - ' + p).join('\n'));
   process.exit(1);

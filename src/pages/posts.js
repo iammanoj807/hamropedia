@@ -1,7 +1,10 @@
 import { site, categories } from '../data/site.js';
 import { esc, longDate, isoDate, abs } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
-import { categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, pageHead } from '../templates/components.js';
+import {
+  categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, pageHead, cover, displayDate,
+} from '../templates/components.js';
+import { toNepaliDigits } from '../assets/js/lib/bs-date.js';
 
 const publisher = {
   '@type': 'Organization',
@@ -10,45 +13,71 @@ const publisher = {
   logo: { '@type': 'ImageObject', url: `${site.url}/apple-touch-icon.png`, width: 180, height: 180 },
 };
 
-export function renderPost(post, all, version) {
-  const crumbs = [
-    { name: 'Home', path: '/' },
-    post.type === 'news' ? { name: 'News', path: '/news/' } : { name: 'Blog', path: '/blog/' },
-    { name: categories[post.category].name, path: `/category/${post.category}/` },
-    { name: post.title, path: post.url },
-  ];
+const T = {
+  en: {
+    home: 'Home', news: 'News', blog: 'Blog', by: 'By', published: 'Published', updated: 'Updated', min: (n) => `${n} min read`,
+    onPage: 'On this page', keep: 'Keep reading', newsChip: 'News', updatedChip: 'Updated',
+    switchTo: 'यो समाचार नेपालीमा पढ्नुहोस् →', switchLang: 'ne',
+    author: `${site.author.role} in ${site.author.location}, originally from Nepal. I write practical guides for Nepali students and learners, and I check every fact against an official or named source before it goes up. <a href="/contact-us/">Spotted a mistake? Tell me.</a>`,
+    authorName: site.author.name,
+  },
+  ne: {
+    home: 'गृहपृष्ठ', news: 'समाचार', blog: 'ब्लग', by: 'लेखक:', published: 'प्रकाशित', updated: 'अपडेट', min: (n) => `${toNepaliDigits(n)} मिनेट पढाइ`,
+    onPage: 'यस पृष्ठमा', keep: 'अरू समाचार', newsChip: 'समाचार', updatedChip: 'अपडेट गरिएको',
+    switchTo: 'Read this in English →', switchLang: 'en',
+    author: 'नेपालमा जन्मिएका, हाल बेलायतको बर्मिङ्घममा कार्यरत सफ्टवेयर इन्जिनियर। हरेक तथ्य आधिकारिक वा नाम खुलेको स्रोतसँग जाँचेर मात्र प्रकाशित गरिन्छ। <a href="/contact-us/">गल्ती भेट्नुभयो? जानकारी दिनुहोस्।</a>',
+    authorName: 'मनोज कुमार थापा',
+  },
+};
+
+export function renderPost(post, all, version, translation) {
+  const lang = post.lang || 'en';
+  const t = T[lang];
+  const ne = lang === 'ne';
+  const crumbs = ne
+    ? [{ name: t.home, path: '/' }, { name: t.news, path: '/ne/' }, { name: post.title, path: post.url }]
+    : [
+        { name: t.home, path: '/' },
+        post.type === 'news' ? { name: t.news, path: '/news/' } : { name: t.blog, path: '/blog/' },
+        { name: categories[post.category].name, path: `/category/${post.category}/` },
+        { name: post.title, path: post.url },
+      ];
   const related = all
-    .filter((p) => p.slug !== post.slug)
-    .map((p) => ({ p, score: (p.category === post.category ? 3 : 0) + (p.tags || []).filter((t) => (post.tags || []).includes(t)).length }))
-    .sort((a, b) => b.score - a.score || (b.p.updated || b.p.date).localeCompare(a.p.updated || a.p.date))
+    .filter((p) => p.slug !== post.slug && (p.lang || 'en') === lang)
+    .map((p) => ({ p, score: (p.category === post.category ? 3 : 0) + (p.type === post.type ? 1 : 0) + (p.tags || []).filter((x) => (post.tags || []).includes(x)).length }))
+    .sort((a, b) => b.score - a.score || b.p.date.localeCompare(a.p.date))
     .slice(0, 3)
     .map((x) => x.p);
 
   const updated = post.updated && post.updated !== post.date;
   const toc =
     post.toc.length >= 3
-      ? `<aside class="toc" aria-label="On this page"><details open><summary>On this page</summary><ol>${post.toc
-          .map((t) => `<li class="toc-l${t.level}"><a href="#${t.id}">${t.text}</a></li>`)
+      ? `<aside class="toc" aria-label="${t.onPage}"><details open><summary>${t.onPage}</summary><ol>${post.toc
+          .map((x) => `<li class="toc-l${x.level}"><a href="#${x.id}">${x.text}</a></li>`)
           .join('')}</ol></details></aside>`
       : '';
+  const switcher = translation
+    ? `<a class="lang-switch" href="${translation.url}" hreflang="${t.switchLang}" lang="${t.switchLang}">${t.switchTo}</a>`
+    : '';
+  const dateLine = ne
+    ? `<time datetime="${isoDate(post.date)}">${t.published}: ${displayDate(post.date, 'ne')}</time>${updated ? ` · <time datetime="${isoDate(post.updated)}">${t.updated}: ${displayDate(post.updated, 'ne')}</time>` : ''} · ${t.min(post.readingMinutes)}`
+    : `<time datetime="${isoDate(post.date)}">${t.published} ${longDate(post.date)}</time>${updated ? ` · <time datetime="${isoDate(post.updated)}">${t.updated} ${longDate(post.updated)}</time>` : ''} · ${t.min(post.readingMinutes)}`;
 
   const body = `<article class="post">
   <header class="post-head wrap-narrow">
     ${breadcrumbs(crumbs)}
-    <div class="post-tags">${categoryChip(post.category)}${post.type === 'news' ? '<span class="chip chip-live">News</span>' : ''}${updated ? '<span class="chip chip-soft">Updated</span>' : ''}</div>
+    <div class="post-tags">${categoryChip(post.category, !ne, lang)}${post.type === 'news' ? `<span class="chip chip-live">${t.newsChip}</span>` : ''}${updated ? `<span class="chip chip-soft">${t.updatedChip}</span>` : ''}${switcher}</div>
     <h1>${esc(post.title)}</h1>
     <p class="lead">${esc(post.description)}</p>
     <div class="byline">
       <span class="avatar" aria-hidden="true">MT</span>
       <div>
-        <p class="byline-name">By <a href="/about-us/">${esc(site.author.name)}</a></p>
-        <p class="byline-meta"><time datetime="${isoDate(post.date)}">Published ${longDate(post.date)}</time>${updated ? ` · <time datetime="${isoDate(post.updated)}">Updated ${longDate(post.updated)}</time>` : ''} · ${post.readingMinutes} min read</p>
+        <p class="byline-name">${t.by} <a href="/about-us/">${esc(t.authorName)}</a></p>
+        <p class="byline-meta">${dateLine}</p>
       </div>
     </div>
   </header>
-  <figure class="post-cover wrap-mid">
-    <img src="${post.coverCard}" alt="${esc(post.coverAlt || post.title)}" width="1200" height="630" fetchpriority="high" decoding="async">
-  </figure>
+  <figure class="post-cover wrap-mid" role="img" aria-label="${esc(post.coverAlt || post.title)}">${cover(post)}</figure>
   <div class="post-layout wrap-mid${toc ? '' : ' no-toc'}">
     ${toc}
     <div class="prose">
@@ -56,18 +85,18 @@ ${post.html}
     </div>
   </div>
   <footer class="post-foot wrap-narrow">
-    ${shareBar(abs(site.url, post.url), post.title)}
+    ${shareBar(abs(site.url, post.url), post.title, lang)}
     <div class="author-box">
       <span class="avatar avatar-lg" aria-hidden="true">MT</span>
       <div>
-        <p class="author-name">${esc(site.author.name)}</p>
-        <p>${esc(site.author.role)} in ${esc(site.author.location)}, originally from Nepal. I write practical guides for Nepali students and learners, and I check every fact against an official or named source before it goes up. <a href="/contact-us/">Spotted a mistake? Tell me.</a></p>
+        <p class="author-name">${esc(t.authorName)}</p>
+        <p>${t.author}</p>
       </div>
     </div>
   </footer>
 </article>
 <section class="related wrap" aria-labelledby="related-h">
-  <h2 id="related-h">Keep reading</h2>
+  <h2 id="related-h">${t.keep}</h2>
   <div class="grid grid-3">${related.map((p) => postCard(p)).join('')}</div>
 </section>`;
 
@@ -85,7 +114,7 @@ ${post.html}
       mainEntityOfPage: { '@type': 'WebPage', '@id': abs(site.url, post.url) },
       articleSection: categories[post.category].name,
       keywords: (post.tags || []).join(', '),
-      inLanguage: 'en',
+      inLanguage: lang,
     },
     breadcrumbSchema(crumbs),
   ];
@@ -100,8 +129,10 @@ ${post.html}
     schema,
     body,
     version,
+    lang,
+    alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: post.type === 'news' ? '/news/' : '/blog/',
+    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : '/blog/',
   });
 }
 
@@ -117,7 +148,7 @@ export function renderBlogIndex(posts, version) {
     crumbs: [{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }],
     eyebrow: 'The blog',
     title: 'Guides, roadmaps and explainers',
-    lead: 'Study-abroad steps that match the official sites, coding and AI learning paths, and Nepal news explained with sources. Every article shows when it was last checked.',
+    lead: 'Study-abroad steps that match the official sites, coding and AI learning paths, and Nepal news explained with sources. Every article shows when it was published and last checked.',
   })}
 <section class="wrap blog-tools" id="search">
   <label class="search-box"><span class="sr-only">Search articles</span>
@@ -128,7 +159,7 @@ export function renderBlogIndex(posts, version) {
 </section>
 <section class="wrap">
   <div class="grid grid-3" id="post-grid">
-    ${posts.map((p, i) => `<div class="grid-item" data-cat="${p.category}" data-search="${esc((p.title + ' ' + p.description + ' ' + (p.tags || []).join(' ')).toLowerCase())}">${postCard(p, { eager: i < 3 })}</div>`).join('\n')}
+    ${posts.map((p) => `<div class="grid-item" data-cat="${p.category}" data-search="${esc((p.title + ' ' + p.description + ' ' + (p.tags || []).join(' ')).toLowerCase())}">${postCard(p)}</div>`).join('\n')}
   </div>
   <p class="empty" id="no-results" hidden>No articles match that search yet. Try a shorter word, or <a href="/contact-us/">suggest a topic</a>.</p>
 </section>`;
@@ -157,14 +188,14 @@ export function renderCategory(slug, posts, version) {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }, { name: c.name, path: `/category/${slug}/` }];
   const extra =
     slug === 'ai'
-      ? `<a class="banner" href="/ai-roadmap/"><strong>New: the free AI &amp; ML roadmap</strong><span>8 phases, 98 topics, 370+ hand-picked free resources, in order.</span></a>`
+      ? `<a class="banner" href="/ai-roadmap/"><strong>The free AI &amp; ML roadmap</strong><span>8 phases, 98 topics, 370+ hand-picked free resources, in order.</span></a>`
       : slug === 'nepal'
-        ? `<a class="banner" href="/news/"><strong>All Nepal and AI news</strong><span>Sourced round-ups and explainers, newest first.</span></a>`
+        ? `<a class="banner" href="/ne/" lang="ne"><strong>नेपाली समाचार</strong><span>यी समाचार नेपाली भाषामा पढ्नुहोस्।</span></a>`
         : '';
   const body = `${pageHead({ crumbs, eyebrow: 'Topic', title: esc(c.name), lead: esc(c.description) })}
 <section class="wrap">
   ${extra}
-  <div class="grid grid-3">${posts.map((p, i) => postCard(p, { eager: i < 3 })).join('\n')}</div>
+  <div class="grid grid-3">${posts.map((p) => postCard(p)).join('\n')}</div>
 </section>`;
   return layout({
     title: `${c.name} articles | ${site.name}`,
@@ -180,45 +211,81 @@ export function renderCategory(slug, posts, version) {
   });
 }
 
+function newsSection(title, list, moreHref, moreLabel) {
+  if (!list.length) return '';
+  return `<section class="wrap section">
+  <div class="section-head"><h2>${title}</h2>${moreHref ? `<a href="${moreHref}">${moreLabel}</a>` : ''}</div>
+  <div class="grid grid-3">${list.map((p) => postCard(p)).join('')}</div>
+</section>`;
+}
+
+function newsLead(news, lang) {
+  const [lead, ...rest] = news;
+  const ne = lang === 'ne';
+  return `<section class="wrap news-lead">
+  ${lead ? postCard(lead, { size: 'lg' }) : ''}
+  <div class="news-side">
+    <h2 class="side-h">${ne ? 'ताजा समाचार' : 'Latest'}</h2>
+    <ol class="headline-list">
+      ${rest.slice(0, 6).map((p) => `<li>${categoryChip(p.category, false, lang)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date, lang)}</span></li>`).join('')}
+    </ol>
+    <p class="side-note">${ne ? '<a href="/news/" lang="en">Read the news in English</a>' : 'Also in Nepali: <a href="/ne/" lang="ne">नेपाली समाचार</a> · <a href="/rss.xml">RSS feed</a>'}</p>
+  </div>
+</section>`;
+}
+
 export function renderNews(posts, version) {
   const news = posts.filter((p) => p.type === 'news');
-  const nepal = news.filter((p) => p.category === 'nepal');
-  const ai = news.filter((p) => p.category === 'ai');
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'News', path: '/news/' }];
-  const [lead, ...rest] = news;
   const body = `${pageHead({
     crumbs,
     eyebrow: 'News',
-    title: 'Nepal &amp; AI news, explained',
-    lead: 'No rumours, no copy-paste. Each story links to the reports it is based on, says what is confirmed and what is only proposed, and shows the date it was written.',
+    title: 'Nepal, AI &amp; study-abroad news, explained',
+    lead: 'No rumours, no copy-paste. Each story links to the reports it is based on, says what is confirmed and what is only proposed, and is dated to when the news happened. <a href="/ne/" lang="ne">नेपालीमा पढ्नुहोस् →</a>',
   })}
-<section class="wrap news-lead">
-  ${lead ? postCard(lead, { size: 'lg', eager: true }) : ''}
-  <div class="news-side">
-    <h2 class="side-h">Latest</h2>
-    <ol class="headline-list">
-      ${rest.slice(0, 5).map((p) => `<li><a href="${p.url}">${esc(p.title)}</a><span>${categories[p.category].name} · ${longDate(p.updated || p.date)}</span></li>`).join('')}
-    </ol>
-    <p class="side-note">Follow along: <a href="/rss.xml">RSS feed</a></p>
-  </div>
-</section>
-<section class="wrap section">
-  <div class="section-head"><h2>Nepal</h2><a href="/category/nepal/">All Nepal news</a></div>
-  <div class="grid grid-3">${nepal.map((p) => postCard(p)).join('')}</div>
-</section>
-<section class="wrap section">
-  <div class="section-head"><h2>AI &amp; technology</h2><a href="/category/ai/">All AI articles</a></div>
-  <div class="grid grid-3">${ai.map((p) => postCard(p)).join('')}</div>
-</section>`;
+${newsLead(news, 'en')}
+${newsSection('Nepal', news.filter((p) => p.category === 'nepal'), '/category/nepal/', 'All Nepal articles')}
+${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/category/ai/', 'All AI articles')}
+${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
-    title: `Nepal news and AI news, explained with sources | ${site.name}`,
-    description: 'Sourced explainers on Nepal: the 2026 election and Balen Shah government, the national AI policy, weather and economy round-ups. Every claim linked to its report.',
+    title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
+    description: 'Sourced news explainers: Nepal politics and economy, the Nagdhunga tunnel, CAR T-cell therapy, AI training in Nepal, and the UK Graduate visa update. Also in Nepali.',
     path: '/news/',
     body,
     version,
     section: '/news/',
+    alternates: [{ lang: 'en', path: '/news/' }, { lang: 'ne', path: '/ne/' }],
     schema: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Nepal & AI news', url: `${site.url}/news/` },
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'News', url: `${site.url}/news/` },
+      breadcrumbSchema(crumbs),
+    ],
+  });
+}
+
+export function renderNeHub(nePosts, version) {
+  const crumbs = [{ name: 'गृहपृष्ठ', path: '/' }, { name: 'समाचार', path: '/ne/' }];
+  const body = `${pageHead({
+    crumbs,
+    eyebrow: 'समाचार',
+    title: 'नेपाली समाचार, स्रोतसहित',
+    lead: 'नेपाल, एआई र विदेश अध्ययनसम्बन्धी प्रमुख समाचार सरल नेपालीमा। हरेक समाचारमा मूल स्रोतको लिंक छ, र के पक्का भएको हो र के प्रस्ताव मात्र हो भनेर छुट्याइएको छ।',
+  })}
+${newsLead(nePosts, 'ne')}
+${newsSection('नेपाल', nePosts.filter((p) => p.category === 'nepal'), null)}
+${newsSection('एआई र प्रविधि', nePosts.filter((p) => p.category === 'ai'), null)}
+${newsSection('विदेश अध्ययन र भिसा', nePosts.filter((p) => p.category === 'study-abroad'), null)}`;
+  return layout({
+    title: `नेपाली समाचार: नेपाल, एआई र विदेश अध्ययन | ${site.name}`,
+    ogTitle: 'Hamropedia नेपाली समाचार',
+    description: 'नेपाल, कृत्रिम बुद्धिमत्ता (एआई) र विदेश अध्ययनसम्बन्धी प्रमुख समाचार सरल नेपाली भाषामा, मूल स्रोतको लिंकसहित।',
+    path: '/ne/',
+    body,
+    version,
+    lang: 'ne',
+    section: '/ne/',
+    alternates: [{ lang: 'ne', path: '/ne/' }, { lang: 'en', path: '/news/' }],
+    schema: [
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'नेपाली समाचार', url: `${site.url}/ne/`, inLanguage: 'ne' },
       breadcrumbSchema(crumbs),
     ],
   });

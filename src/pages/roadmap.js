@@ -4,7 +4,10 @@ import { esc, slugify } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
 
-export const phases = JSON.parse(fs.readFileSync(new URL('../data/roadmap.json', import.meta.url), 'utf8'));
+// Phase colours: a cool blue / teal / violet family that sits well with the blue site theme.
+const PHASE_COLOURS = ['#64748b', '#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7', '#6366f1'];
+export const phases = JSON.parse(fs.readFileSync(new URL('../data/roadmap.json', import.meta.url), 'utf8'))
+  .map((p, i) => ({ ...p, accent: PHASE_COLOURS[i % PHASE_COLOURS.length] }));
 
 const KIND = {
   watch: ['Watch', 'k-watch'],

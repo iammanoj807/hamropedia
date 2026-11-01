@@ -14,10 +14,10 @@ export const TOOLS = [
     sample: ['namaste', 'नमस्ते'],
   },
   {
-    slug: 'preeti-to-unicode',
-    name: 'Preeti to Unicode Converter',
-    short: 'Fix old Preeti text, both ways',
-    blurb: 'Turn broken Preeti text like “g]kfn” into real Nepali “नेपाल”, or convert Unicode back to Preeti for old documents.',
+    slug: 'nepali-keyboard',
+    name: 'Nepali Keyboard',
+    short: 'On-screen Nepali keyboard, Preeti or Romanized',
+    blurb: 'Type Nepali Unicode with your keyboard using the familiar Preeti layout or Romanized keys, or tap the on-screen keys on your phone.',
     sample: ['g]kfn', 'नेपाल'],
   },
   {
@@ -26,6 +26,13 @@ export const TOOLS = [
     short: 'BS ↔ AD, with a Nepali calendar',
     blurb: 'Convert Bikram Sambat (BS) to AD and back, see today’s Nepali date, and browse any month of the Nepali calendar.',
     sample: ['2083/07/15', '1 Nov 2026'],
+  },
+  {
+    slug: 'age-calculator',
+    name: 'Age Calculator',
+    short: 'Exact age in years, months and days',
+    blurb: 'Your exact age, total days lived and next birthday, for anyone, anywhere. Enter your birth date in AD or Nepali BS.',
+    sample: ['1 Jan 2000', '26 y 10 m'],
   },
 ];
 
@@ -49,7 +56,7 @@ function toolSchema(t, description) {
 
 function related(current) {
   return `<section class="related-tools" aria-labelledby="rt-h">
-  <h2 id="rt-h">More free Nepali tools</h2>
+  <h2 id="rt-h">More free tools</h2>
   <div class="tool-mini-grid">${TOOLS.filter((t) => t.slug !== current)
     .map((t) => `<a class="tool-mini" href="${toolPath(t.slug)}"><b>${esc(t.name)}</b><span>${esc(t.short)}</span></a>`)
     .join('')}</div>
@@ -59,10 +66,10 @@ function related(current) {
 function toolPage({ t, title, description, lead, toolHtml, explainer, faqs, script }) {
   const crumbs = [
     { name: 'Home', path: '/' },
-    { name: 'Nepali Tools', path: '/tools/' },
+    { name: 'Tools', path: '/tools/' },
     { name: t.name, path: toolPath(t.slug) },
   ];
-  const body = `${pageHead({ crumbs, eyebrow: 'Free Nepali tool · works offline after loading', title: esc(t.name), lead })}
+  const body = `${pageHead({ crumbs, eyebrow: 'Free tool · runs on your device', title: esc(t.name), lead })}
 <section class="wrap tool-wrap">${toolHtml}</section>
 <section class="wrap-narrow prose tool-explainer">${explainer}</section>
 <section class="wrap-narrow">${faqBlock(faqs)}${shareBar(`${site.url}${toolPath(t.slug)}`, t.name)}${related(t.slug)}</section>`;
@@ -153,57 +160,117 @@ export function renderRomanized(version) {
   })(version);
 }
 
-export function renderPreeti(version) {
+export function renderKeyboard(version) {
   const t = TOOLS[1];
-  const toolHtml = `<div class="tool" id="pr-tool">
-  <div class="seg seg-lg" role="radiogroup" aria-label="Conversion direction">
-    <button type="button" role="radio" aria-checked="true" data-dir="p2u">Preeti → Unicode</button>
-    <button type="button" role="radio" aria-checked="false" data-dir="u2p">Unicode → Preeti</button>
-  </div>
-  <div class="panes">
-    <div class="pane">
-      <label for="pr-in" class="pane-label" id="pr-in-label">Paste Preeti text</label>
-      <textarea id="pr-in" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="e.g. xfd|f] b]z g]kfn xf] ."></textarea>
-      <div class="pane-foot"><span id="pr-count">0 characters</span><button type="button" class="btn-ghost" id="pr-swap">Swap ⇄</button><button type="button" class="btn-ghost" id="pr-clear">Clear</button></div>
+  const toolHtml = `<div class="tool kb-tool" id="kb-tool">
+  <div class="kb-top">
+    <div class="seg seg-lg" role="radiogroup" aria-label="Keyboard layout">
+      <button type="button" role="radio" aria-checked="true" data-layout="preeti">Preeti layout</button>
+      <button type="button" role="radio" aria-checked="false" data-layout="romanized">Romanized</button>
     </div>
-    <div class="pane pane-out">
-      <label for="pr-out" class="pane-label" id="pr-out-label">Unicode नेपाली</label>
-      <textarea id="pr-out" readonly rows="9"></textarea>
-      <div class="pane-foot"><button type="button" class="btn" id="pr-copy">Copy</button><button type="button" class="btn-ghost" id="pr-download">Download .txt</button></div>
-    </div>
+    <label class="switch"><input type="checkbox" id="kb-on" checked><span>Type in Nepali <kbd>Ctrl</kbd>+<kbd>Space</kbd></span></label>
   </div>
-  <p class="tool-note" id="pr-note">Paste text that was typed with the Preeti font. If it looks like <code>g]kfn</code> when the font is missing, it is Preeti.</p>
+  <label for="kb-text" class="sr-only">Your Nepali text</label>
+  <textarea id="kb-text" lang="ne" spellcheck="false" autocapitalize="off" autocomplete="off" rows="6" placeholder="यहाँ टाइप गर्नुहोस्… Start typing, or tap the keys below."></textarea>
+  <div class="pane-foot kb-actions"><span id="kb-count">0 words</span><button type="button" class="btn" id="kb-copy">Copy</button><button type="button" class="btn-ghost" id="kb-download">Download .txt</button><button type="button" class="btn-ghost" id="kb-clear">Clear</button></div>
+  <div class="kb" id="kb" aria-label="On-screen Nepali keyboard"></div>
+  <p class="tool-note" id="kb-note"></p>
 </div>`;
 
-  const explainer = `<h2>Why Preeti text breaks, and why Unicode fixes it</h2>
-<p>Preeti is an old Nepali <em>font</em>, not a real script. It draws Nepali letters on top of ordinary English keys, so the word नेपाल is actually stored as <code>g]kfn</code>. On a computer with the Preeti font it looks right; everywhere else (phones, websites, email, Google Docs) it turns into gibberish, and search engines cannot read it.</p>
-<p><strong>Unicode</strong> stores the real Nepali letters, so it looks right on every device and Google can find it. That is why government forms, news sites and Facebook all use Unicode now.</p>
-<h3>How the converter works</h3>
-<p>Two things make Preeti harder than a letter-for-letter swap, and this converter handles both:</p>
+  const explainer = `<h2>Two ways to type Nepali</h2>
+<p>This keyboard writes real <strong>Nepali Unicode</strong>, which works in Facebook, WhatsApp, Gmail, Word and Google Docs on every device. Choose the layout you know:</p>
 <ul>
-<li><strong>Visual order.</strong> In Preeti the short i-sign (ि) is typed <em>before</em> its letter and the reph (र्) is typed <em>after</em> it, because that is where they appear on screen. Unicode stores them in spoken order, so they are moved: <code>lxdfn</code> → हिमाल, <code>ug{]</code> → गर्ने.</li>
-<li><strong>Two-key letters.</strong> Some letters are built from two keys: <code>k</code> + <code>m</code> = फ, <code>e</code> + <code>m</code> = झ, and a half letter plus the <code>f</code> stroke makes the full letter.</li>
+<li><strong>Preeti layout.</strong> The layout many people in Nepal learned to type on: the same keys as the Preeti font. <code>g]kfn</code> types <span lang="ne">नेपाल</span>. Your old habits work: type <kbd>l</kbd> (ि) <em>before</em> the letter, <kbd>{</kbd> (reph) after it, and <kbd>k</kbd> + <kbd>m</kbd> for <span lang="ne">फ</span>. The output is still proper Unicode, not Preeti font text.</li>
+<li><strong>Romanized.</strong> Type how it sounds: <code>namaste</code> → <span lang="ne">नमस्ते</span>. The same rules as our <a href="/tools/english-to-nepali/">English to Nepali typing tool</a>.</li>
 </ul>
-<p>Going the other way, <strong>Unicode → Preeti</strong> gives you the keys to paste into an old document that still uses the Preeti font.</p>
-<p>This converter is built and tested for Preeti. Other legacy fonts use different key layouts, so text typed in them may not convert correctly.</p>`;
+<h3>Tips</h3>
+<ul>
+<li>Press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to switch between Nepali and English typing without leaving the box.</li>
+<li>The on-screen keys show the Nepali letter each key types. Hold <kbd>Shift</kbd> (or tap ⇧) to see the second letter on each key.</li>
+<li>On a phone, the on-screen keyboard replaces your phone’s keyboard, so you can type Nepali without installing anything.</li>
+<li>A space finishes each word. While you are still inside a word, backspace removes the last key you pressed.</li>
+</ul>`;
 
   const faqs = [
-    { q: 'What is the difference between Preeti and Unicode?', a: 'Preeti is a legacy font that maps Nepali shapes onto English keys, so the text only looks Nepali when that font is installed. Unicode is the international standard that stores real Nepali characters, so it displays correctly on every phone, computer and website.' },
-    { q: 'How do I know if my text is Preeti?', a: 'Paste it somewhere that does not have the Preeti font, such as this page or a phone. If नेपाल shows up as <code>g]kfn</code>, the text is Preeti and needs converting.' },
-    { q: 'Can I convert Unicode back to Preeti?', a: 'Yes. Choose “Unicode → Preeti”, paste Nepali Unicode text, and copy the result into a document that uses the Preeti font.' },
-    { q: 'Why is a word slightly wrong after converting?', a: 'Usually because the original was typed with a small mistake, such as a sign in the wrong order, which Preeti hides on screen. Fix it in the output, and if a correctly typed word converts wrongly, please <a href="/contact-us/">send it to me</a> so I can fix the converter.' },
-    { q: 'Is my document uploaded?', a: 'No. The conversion runs entirely in your browser, so your text never leaves your device.' },
+    { q: 'Is this the Preeti keyboard layout?', a: 'Yes. The “Preeti layout” option puts each letter on the same key as the Preeti font, which is the layout most people in Nepal learned to type on. The difference is that this keyboard produces Unicode, so your text works everywhere, not only on computers with the Preeti font.' },
+    { q: 'Do I need to install anything?', a: 'No. It works in your browser on Windows, Mac, Android and iPhone. On a computer you can type with your physical keyboard; on a phone, tap the on-screen keys.' },
+    { q: 'Why does my keyboard type the wrong letter on some symbol keys?', a: 'It shouldn’t: the keyboard reads which physical key you press, using the standard US key positions that Preeti is based on, so it works the same on UK and other keyboards. If a key still looks wrong, <a href="/contact-us/">let me know which one</a>.' },
+    { q: 'How do I type English words in between?', a: 'Turn off “Type in Nepali” (or press Ctrl + Space), type your English words, then switch back.' },
+    { q: 'Where is my text saved?', a: 'Only in your own browser, so it is still there if you reload the page. Nothing is uploaded. Use Copy or Download to keep it.' },
   ];
 
   return toolPage({
     t,
-    title: `Preeti to Unicode Converter (and Unicode to Preeti), free | ${site.name}`,
-    description: 'Convert Preeti font text to Nepali Unicode instantly (g]kfn → नेपाल), or Unicode back to Preeti. Handles ि, reph and two-key letters correctly. Free, private, no upload.',
-    lead: 'Fix Nepali text that turned into <code>g]kfn</code>. Convert Preeti to Unicode <span lang="ne">(नेपाल)</span>, or back again, instantly and privately.',
+    title: `Nepali Keyboard Online: Preeti layout & Romanized, Unicode | ${site.name}`,
+    description: 'Free online Nepali keyboard. Type Nepali Unicode with the familiar Preeti layout or Romanized keys, or tap the on-screen keyboard on your phone. Copy to Facebook, Word or anywhere.',
+    lead: 'Type Nepali Unicode with the <strong>Preeti layout</strong> you already know, or with <strong>Romanized</strong> keys. On a phone, just tap the keys.',
     toolHtml,
     explainer,
     faqs,
-    script: '/assets/js/tool-preeti.js',
+    script: '/assets/js/tool-keyboard.js',
+  })(version);
+}
+
+export function renderAge(version) {
+  const t = TOOLS[3];
+  const years = [];
+  for (let y = BS_MIN_YEAR; y <= BS_MAX_YEAR; y++) years.push(y);
+  const toolHtml = `<div class="tool age-tool" id="age-tool">
+  <div class="seg seg-lg" role="radiogroup" aria-label="Date of birth calendar">
+    <button type="button" role="radio" aria-checked="true" data-cal="ad">Born (AD / English date)</button>
+    <button type="button" role="radio" aria-checked="false" data-cal="bs">Born (BS / Nepali date)</button>
+  </div>
+  <div class="age-inputs">
+    <label class="age-ad">Date of birth<input type="date" id="age-dob" min="1900-01-01"></label>
+    <div class="age-bs bs-selects" hidden>
+      <label>Year (BS)<select id="age-bs-y">${years.map((y) => `<option value="${y}">${y}</option>`).join('')}</select></label>
+      <label>Month<select id="age-bs-m">${BS_MONTHS_EN.map((m, i) => `<option value="${i + 1}">${i + 1} · ${m}</option>`).join('')}</select></label>
+      <label>Day<select id="age-bs-d"></select></label>
+    </div>
+    <label>Age on<input type="date" id="age-on"></label>
+  </div>
+  <div class="age-result" id="age-result" aria-live="polite">
+    <p class="age-big"><span id="age-y">–</span><small>years</small> <span id="age-m">–</span><small>months</small> <span id="age-d">–</span><small>days</small></p>
+    <div class="age-stats">
+      <div><b id="age-total-months">–</b><span>months</span></div>
+      <div><b id="age-total-weeks">–</b><span>weeks</span></div>
+      <div><b id="age-total-days">–</b><span>days</span></div>
+    </div>
+    <ul class="age-facts">
+      <li id="age-born"></li>
+      <li id="age-next"></li>
+      <li id="age-bs-born"></li>
+      <li id="age-bs-next"></li>
+    </ul>
+  </div>
+</div>`;
+
+  const explainer = `<h2>How the age is calculated</h2>
+<p>Your age is counted in <strong>whole calendar months</strong> from your date of birth, then the days left over, the same way people count birthdays. “Age on” starts at today’s date on <em>your</em> device, and you can change it to find your age on an exam date, a visa deadline or any other day.</p>
+<ul>
+<li><strong>Short months:</strong> if your birth day doesn’t exist in a month (for example the 31st), the last day of that month counts. Born on 31 January? On 1 March you are 1 month and 1 day older.</li>
+<li><strong>Born on 29 February?</strong> In years without a 29 February, this calculator counts your birthday on 28 February.</li>
+<li><strong>Nepali (BS) dates:</strong> choose “Born (BS)” to enter a Bikram Sambat date of birth, as on a Nepali citizenship certificate. The tool also shows when your next Nepali-calendar birthday falls, which moves in the English calendar every year.</li>
+</ul>
+<p>Need to convert a single date between BS and AD? Use the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.</p>`;
+
+  const faqs = [
+    { q: 'How do I calculate my exact age?', a: 'Enter your date of birth. The calculator shows your age in years, months and days as of today, plus the total months, weeks and days you have lived.' },
+    { q: 'Can I calculate my age on a specific date?', a: 'Yes. Change the “Age on” date to any day, such as the cut-off date in an application form, to see exactly how old you will be (or were) on that day.' },
+    { q: 'Can I enter my date of birth in Nepali (BS)?', a: 'Yes. Choose “Born (BS / Nepali date)” and pick the year, month and day from your citizenship certificate or birth registration. Dates from 2000 to 2090 BS are supported.' },
+    { q: 'How are birthdays on 29 February handled?', a: 'In years without a 29 February, the calculator treats 28 February as your birthday. Some countries use 1 March for legal purposes, so check if it matters for an official form.' },
+    { q: 'Is my date of birth stored anywhere?', a: 'No. The calculation runs on your device and nothing is sent or saved.' },
+  ];
+
+  return toolPage({
+    t,
+    title: `Age Calculator: exact age in years, months & days (AD or BS) | ${site.name}`,
+    description: 'Free age calculator: find your exact age in years, months and days, total days lived, and your next birthday. Enter your date of birth in AD or Nepali BS.',
+    lead: 'Your exact age in years, months and days, how many days you have lived, and when your next birthday is. For everyone, in AD or Nepali BS.',
+    toolHtml,
+    explainer,
+    faqs,
+    script: '/assets/js/tool-age.js',
   })(version);
 }
 
@@ -282,12 +349,12 @@ export function renderDate(version) {
 }
 
 export function renderToolsHub(version) {
-  const crumbs = [{ name: 'Home', path: '/' }, { name: 'Nepali Tools', path: '/tools/' }];
+  const crumbs = [{ name: 'Home', path: '/' }, { name: 'Tools', path: '/tools/' }];
   const body = `${pageHead({
     crumbs,
-    eyebrow: 'Free Nepali tools',
-    title: 'Nepali tools that just work',
-    lead: 'Type Nepali with an English keyboard, rescue old Preeti documents, and convert Nepali dates. Free, fast, private: everything runs in your browser.',
+    eyebrow: 'Free tools',
+    title: 'Free tools that just work',
+    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Nepali dates, and work out your exact age. Free, fast and private: everything runs in your browser.',
   })}
 <section class="wrap">
   <div class="tool-cards">
@@ -301,11 +368,11 @@ export function renderToolsHub(version) {
     </a>`,
     ).join('')}
   </div>
-  <p class="suggest">Need another Nepali tool? <a href="/contact-us/">Suggest one</a>. The most requested ideas get built next.</p>
+  <p class="suggest">Need another tool? <a href="/contact-us/">Suggest one</a>. The most requested ideas get built next.</p>
 </section>`;
   return layout({
-    title: `Free Nepali Tools: English to Nepali typing, Preeti to Unicode, date converter | ${site.name}`,
-    description: 'Free online Nepali tools: English to Nepali (Romanized) typing, Preeti to Unicode converter and Nepali date converter (BS to AD). Private, fast and mobile friendly.',
+    title: `Free Tools: English to Nepali typing, Nepali keyboard, date converter, age calculator | ${site.name}`,
+    description: 'Free online tools: English to Nepali (Romanized) typing, Nepali keyboard (Preeti layout), Nepali date converter (BS to AD) and an age calculator. Private, fast and mobile friendly.',
     path: '/tools/',
     body,
     version,
@@ -314,7 +381,7 @@ export function renderToolsHub(version) {
       {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Free Nepali tools',
+        name: 'Free tools',
         itemListElement: TOOLS.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `${site.url}${toolPath(t.slug)}` })),
       },
       breadcrumbSchema(crumbs),
