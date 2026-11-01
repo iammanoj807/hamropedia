@@ -627,6 +627,11 @@ button { font: inherit; color: inherit; }
 @media (max-width: 640px) { .age-inputs { grid-template-columns: 1fr; } .age-stats { grid-template-columns: 1fr 1fr 1fr; } }
 
 /* ---------- static pages ---------- */
+.about-photo { float: right; width: 220px; margin: 0 0 16px 28px; text-align: center; }
+.prose .about-photo img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 0; background: none; }
+.about-photo figcaption { margin-top: 10px; font-weight: 700; color: var(--text); }
+.about-photo figcaption span { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); }
+@media (max-width: 600px) { .about-photo { float: none; width: 180px; margin: 0 auto 24px; } }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-bottom: 28px; }
 .contact-card { display: grid; gap: 4px; padding: 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); text-decoration: none; color: var(--text); }
 .contact-card svg { width: 22px; height: 22px; color: var(--accent); }

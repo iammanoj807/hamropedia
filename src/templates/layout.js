@@ -181,7 +181,7 @@ function footer() {
     </div>
   </div>
   <div class="wrap footer-base">
-    <p>© ${site.established}–${year} ${site.name}. Hand-built, no trackers.</p>
+    <p>© ${site.established}–${year} ${site.name}.</p>
     <p class="np-date" data-np-today></p>
   </div>
 </footer>`;

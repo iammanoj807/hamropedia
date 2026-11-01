@@ -23,7 +23,8 @@ export function renderAbout(version) {
     eyebrow: 'About',
     description: 'Hamropedia is a free site by software engineer Manoj Kumar Thapa: Nepali tools, a free AI roadmap, study-abroad guides and sourced Nepal news.',
     lead: 'Useful things for Nepali people, made carefully: tools that work, guides that match the official sites, and news with its sources showing.',
-    html: `<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
+    html: `<figure class="about-photo"><img src="/images/manojkumarthapa.webp" alt="Manoj Kumar Thapa" width="440" height="519" decoding="async"><figcaption>${esc(site.author.name)}<span>${esc(site.author.role)}, ${esc(site.author.location)}</span></figcaption></figure>
+<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
 <li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
 <li><strong>Learning</strong>: a free <a href="/ai-roadmap/">AI &amp; machine learning roadmap</a> with ${'370+'} hand-picked resources, and coding guides for beginners.</li>
