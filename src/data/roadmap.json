@@ -1,0 +1,3259 @@
+[
+ {
+  "number": 0,
+  "short": "Toolkit",
+  "title": "Your toolkit",
+  "slug": "your-toolkit",
+  "accent": "#90a4ae",
+  "goal": "Get fast with the tools you will use every day. This phase is short. Do it in the same two weeks as the start of Phase 1.",
+  "bigPicture": "Tools are like a carpenter's workshop. You cannot learn furniture design while fighting with the saw. NumPy is your saw: practise until it feels natural.",
+  "main": [
+   {
+    "title": "NumPy: the absolute basics for beginners",
+    "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+    "kind": "Guide",
+    "free": true,
+    "paid": false,
+    "why": "The official guide. Short and clear. Type every example yourself."
+   },
+   {
+    "title": "From Python to NumPy (Nicolas Rougier)",
+    "url": "https://github.com/rougier/from-python-to-numpy",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "Teaches you to think in whole arrays instead of loops. This is the key NumPy skill."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "The Missing Semester (MIT)",
+    "url": "https://missing.csail.mit.edu/",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "Shell, Git and developer tools. The Git lecture is the important one."
+   },
+   {
+    "title": "PyTorch: Learn the Basics",
+    "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+    "kind": "Tutorial",
+    "free": true,
+    "paid": false,
+    "why": "Keep this for the start of Phase 3."
+   }
+  ],
+  "topics": [
+   {
+    "name": "Meet machine learning: the big picture",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Neural Networks, Ch 1–2: what a neural network is, and how it learns",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/topics/neural-networks",
+      "recommended": "Beautiful moving pictures of a model adjusting its weights to lower the loss. It makes the learning loop feel real in a way text can't."
+     },
+     {
+      "kind": "watch",
+      "title": "A Gentle Introduction to Machine Learning",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+A+Gentle+Introduction+to+Machine+Learning",
+      "recommended": null
+     },
+     {
+      "kind": "play",
+      "title": "A Visual Introduction to Machine Learning",
+      "source": "R2D3 · an animated story you scroll through",
+      "url": "https://r2d3.us/visual-intro-to-machine-learning-part-1/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Machine Learning Crash Course: introduction and linear regression",
+      "source": "Google, free",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "NumPy arrays, shapes and indexing",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "A Visual Intro to NumPy and Data Representation",
+      "source": "Jay Alammar · illustrated, free",
+      "url": "https://jalammar.github.io/visual-numpy/",
+      "recommended": "Colourful pictures of arrays, slicing and reshaping, and of how tables, images and text become arrays. The best picture-book companion to this topic."
+     },
+     {
+      "kind": "read",
+      "title": "NumPy: the absolute basics for beginners",
+      "source": "numpy.org",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Indexing on ndarrays",
+      "source": "numpy.org",
+      "url": "https://numpy.org/doc/stable/user/basics.indexing.html",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Complete Python NumPy Tutorial",
+      "source": "Keith Galli",
+      "url": "https://www.youtube.com/results?search_query=Keith+Galli+complete+python+numpy+tutorial",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Broadcasting and vectorisation",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Broadcasting",
+      "source": "numpy.org · with diagrams",
+      "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "From Python to NumPy: the vectorisation chapters",
+      "source": "Nicolas Rougier · free book",
+      "url": "https://github.com/rougier/from-python-to-numpy",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "100 NumPy exercises",
+      "source": "Nicolas Rougier · GitHub",
+      "url": "https://github.com/rougier/numpy-100",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Plotting results with Matplotlib",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Quick start guide",
+      "source": "matplotlib.org",
+      "url": "https://matplotlib.org/stable/users/explain/quick_start.html",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Matplotlib Tutorial (Part 1)",
+      "source": "Corey Schafer",
+      "url": "https://www.youtube.com/results?search_query=Corey+Schafer+Matplotlib+Tutorial+Part+1",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Git and GitHub for your projects",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Learn Git Branching",
+      "source": "interactive, in the browser",
+      "url": "https://learngitbranching.js.org/",
+      "recommended": "You type real Git commands and watch the branch picture redraw itself. The fastest way to make branches and merges click."
+     },
+     {
+      "kind": "read",
+      "title": "Pro Git, Chapters 1–3",
+      "source": "Scott Chacon · free book",
+      "url": "https://git-scm.com/book/en/v2",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Version Control (Git)",
+      "source": "The Missing Semester (MIT)",
+      "url": "https://missing.csail.mit.edu/2020/version-control/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Testing numerical code (np.allclose, pytest)",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Get Started",
+      "source": "pytest docs",
+      "url": "https://docs.pytest.org/en/stable/getting-started.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "numpy.testing.assert_allclose",
+      "source": "numpy.org",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_allclose.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Floating Point Arithmetic: Issues and Limitations",
+      "source": "Python docs",
+      "url": "https://docs.python.org/3/tutorial/floatingpoint.html",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 1,
+  "short": "Math",
+  "title": "Math foundations",
+  "slug": "math-foundations",
+  "accent": "#66bb6a",
+  "goal": "The language of ML. You will see matrices as movements of space, gradients as directions, and loss functions as probabilities.",
+  "bigPicture": "Maths is the grammar of ML. You can memorise sentences (formulas), but you only speak fluently when you know the grammar. Linear algebra describes the data. Calculus describes how things change. Probability describes how sure you are.",
+  "main": [
+   {
+    "title": "3Blue1Brown: Essence of Linear Algebra",
+    "url": "https://www.3blue1brown.com/topics/linear-algebra",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "The best visual start to linear algebra. Watch the chapters in order."
+   },
+   {
+    "title": "3Blue1Brown: Essence of Calculus",
+    "url": "https://www.3blue1brown.com/topics/calculus",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Derivatives and the chain rule, shown with pictures."
+   },
+   {
+    "title": "Mathematics for Machine Learning (Deisenroth, Faisal, Ong)",
+    "url": "https://mml-book.github.io/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "The main written text for this phase. Chapters 2 to 7."
+   },
+   {
+    "title": "StatQuest (Josh Starmer)",
+    "url": "https://www.youtube.com/@statquest",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Probability and statistics in very plain English. One idea per video."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "MIT 18.06 Linear Algebra (Gilbert Strang)",
+    "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "The classic university course, for extra depth."
+   },
+   {
+    "title": "Harvard Stat 110: Probability (Joe Blitzstein)",
+    "url": "https://www.youtube.com/results?search_query=harvard+stat+110+blitzstein",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "Probability done properly, with a free book."
+   },
+   {
+    "title": "Khan Academy: Multivariable calculus",
+    "url": "https://www.khanacademy.org/math/multivariable-calculus",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "Partial derivatives and gradients, slowly and step by step."
+   },
+   {
+    "title": "Seeing Theory (Brown University)",
+    "url": "https://seeing-theory.brown.edu/",
+    "kind": "Interactive",
+    "free": true,
+    "paid": false,
+    "why": "See probability ideas move. Good when a formula feels abstract."
+   }
+  ],
+  "topics": [
+   {
+    "name": "Vectors, span and basis",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 1–2: Vectors; Linear combinations, span and basis vectors",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/span",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 2 (vector spaces, linear independence, basis)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Matrices as transformations; matrix multiplication",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 3–4: Linear transformations and matrices; Matrix multiplication as composition",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/linear-transformations",
+      "recommended": "Grid lines bending and stretching on screen: the clearest anyone has ever shown what a matrix does. If you watch one video for linear algebra, make it this one."
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 2 (matrices, linear mappings)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Determinants",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 6: The determinant",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/determinant",
+      "recommended": "Areas growing, shrinking and flipping as the matrix moves space. After this the determinant stops being a formula and becomes a picture."
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 4 (determinant and trace)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Inverse, rank and solving Ax = b",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 7: Inverse matrices, column space and null space",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/inverse-matrices",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 2 (solving linear systems, basis and rank)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "18.06 lecture: Elimination with matrices",
+      "source": "Gilbert Strang (MIT)",
+      "url": "https://www.youtube.com/results?search_query=Gilbert+Strang+18.06+elimination+with+matrices",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Dot product, projection and orthogonality",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 9: Dot products and duality",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/dot-products",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 3 (inner products, orthogonality, projections)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "18.06 lecture: Projections onto subspaces",
+      "source": "Gilbert Strang (MIT)",
+      "url": "https://www.youtube.com/results?search_query=Gilbert+Strang+18.06+projections+onto+subspaces",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Eigenvalues and eigenvectors",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Linear Algebra, Ch 14: Eigenvectors and eigenvalues",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/eigenvalues",
+      "recommended": "Watching vectors get knocked off their lines while the eigenvectors stay put is the moment eigenvectors make sense. Worth it before PCA."
+     },
+     {
+      "kind": "play",
+      "title": "Eigenvectors and Eigenvalues, explained visually",
+      "source": "Setosa · drag the vectors yourself",
+      "url": "https://setosa.io/ev/eigenvectors-and-eigenvalues/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 4 (eigenvalues, eigendecomposition)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "SVD, and the maths behind PCA",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Principal Component Analysis, explained visually",
+      "source": "Setosa · drag the points yourself",
+      "url": "https://setosa.io/ev/principal-component-analysis/",
+      "recommended": "Drag the data points and watch the principal directions swing round to follow them. PCA clicks in a couple of minutes."
+     },
+     {
+      "kind": "watch",
+      "title": "Principal Component Analysis (PCA), Step-by-Step",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Principal+Component+Analysis+%28PCA%29%2C+Step-by-Step",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Singular Value Decomposition (SVD): Overview",
+      "source": "Steve Brunton",
+      "url": "https://www.youtube.com/results?search_query=Steve+Brunton+Singular+Value+Decomposition+overview",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 4 (SVD) and Ch 10 (PCA)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Derivatives and the chain rule",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Essence of Calculus, Ch 2: The paradox of the derivative",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/derivatives",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Essence of Calculus, Ch 4: Visualizing the chain rule and product rule",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/chain-rule-and-product-rule",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 5 (differentiation, the chain rule)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Partial derivatives, gradients and Jacobians",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Gradient and directional derivatives",
+      "source": "Khan Academy",
+      "url": "https://www.khanacademy.org/math/multivariable-calculus",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 5 (partial derivatives, gradients, Jacobians)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Matrix Calculus You Need for Deep Learning",
+      "source": "Terence Parr and Jeremy Howard · free",
+      "url": "https://explained.ai/matrix-calculus/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Gradient descent and the learning rate",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Neural Networks, Ch 2: Gradient descent, how neural networks learn",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/gradient-descent",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Gradient Descent, Step-by-Step",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Gradient+Descent%2C+Step-by-Step",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 7 (optimisation with gradient descent)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Random variables, distributions, expectation and variance",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Seeing Theory: Probability Distributions",
+      "source": "Brown University · interactive",
+      "url": "https://seeing-theory.brown.edu/probability-distributions/index.html",
+      "recommended": "Roll dice, draw samples and watch histograms and averages settle, live. Probability you can play with instead of only read."
+     },
+     {
+      "kind": "watch",
+      "title": "The Normal Distribution, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+The+Normal+Distribution%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 6 (probability and distributions)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Conditional probability and Bayes’ rule",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Bayes' theorem, the geometry of changing beliefs",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/bayes-theorem",
+      "recommended": "Shows Bayes' rule as areas of a square and as counts of people. After it, the classic medical-test puzzle feels obvious instead of strange."
+     },
+     {
+      "kind": "watch",
+      "title": "The medical test paradox",
+      "source": "3Blue1Brown",
+      "url": "https://www.youtube.com/results?search_query=3Blue1Brown+medical+test+paradox",
+      "recommended": null
+     },
+     {
+      "kind": "play",
+      "title": "Conditional probability, explained visually",
+      "source": "Setosa · interactive",
+      "url": "https://setosa.io/conditional/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 6 (sum rule, product rule, Bayes' theorem)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Maximum likelihood estimation",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Maximum Likelihood, clearly explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Maximum+Likelihood%2C+clearly+explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 8 (parameter estimation: MLE and MAP)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 5 (loss functions from maximum likelihood)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Statistics: sampling, confidence intervals, hypothesis tests",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Confidence Intervals, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Confidence+Intervals%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "p-values: What they are and how to interpret them",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+p-values%3A+What+they+are+and+how+to+interpret+them",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "But what is the Central Limit Theorem?",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/clt",
+      "recommended": null
+     },
+     {
+      "kind": "play",
+      "title": "Seeing Theory: Frequentist Inference",
+      "source": "Brown University · interactive",
+      "url": "https://seeing-theory.brown.edu/frequentist-inference/index.html",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Entropy, cross-entropy and KL divergence",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Visual Information Theory",
+      "source": "Chris Olah · illustrated",
+      "url": "https://colah.github.io/posts/2015-09-Visual-Information/",
+      "recommended": "Pictures that turn entropy, cross-entropy and KL into areas you can see. The best explanation of why the formulas look the way they do."
+     },
+     {
+      "kind": "watch",
+      "title": "Entropy (for data science) Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Entropy+%28for+data+science%29+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "A Short Introduction to Entropy, Cross-Entropy and KL-Divergence",
+      "source": "Aurélien Géron",
+      "url": "https://www.youtube.com/results?search_query=Aurelien+Geron+entropy+cross-entropy+KL+divergence",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Convex optimisation: constraints, Lagrange multipliers and duality",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 7 (Lagrange multipliers, convex optimisation)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Convex Optimization, Ch 2–5",
+      "source": "Boyd and Vandenberghe · free",
+      "url": "https://web.stanford.edu/~boyd/cvxbook/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "EE364A Convex Optimization, lecture 1",
+      "source": "Stephen Boyd (Stanford)",
+      "url": "https://www.youtube.com/results?search_query=Stanford+EE364A+convex+optimization+Boyd+lecture+1",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 2,
+  "short": "Classic ML",
+  "title": "Classical ML, built by you",
+  "slug": "classical-ml-built-by-you",
+  "accent": "#64b5f6",
+  "goal": "Build every classic algorithm yourself in NumPy. After this phase, a library is only a shortcut for something you already understand.",
+  "bigPicture": "Classical ML is a toolbox of different tools for one job: learning a pattern from examples. Build each tool once by hand, and you will know which one to pick, and why.",
+  "main": [
+   {
+    "title": "StatQuest: machine learning videos",
+    "url": "https://www.youtube.com/@statquest",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Optional. Short videos, one algorithm each, if you want a second explanation of a topic."
+   },
+   {
+    "title": "Stanford CS229 lecture notes (Andrew Ng)",
+    "url": "https://cs229.stanford.edu/",
+    "kind": "Notes",
+    "free": true,
+    "paid": false,
+    "why": "Optional, for depth: the full maths behind each algorithm. Get the main notes PDF from the course site."
+   },
+   {
+    "title": "An Introduction to Statistical Learning, Python edition (ISLP)",
+    "url": "https://www.statlearning.com/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "Clear and careful. Read the chapters. Do the labs in NumPy, not scikit-learn."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "Stanford CS229 lectures (Andrew Ng, 2018)",
+    "url": "https://www.youtube.com/results?search_query=stanford+cs229+andrew+ng+2018",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "The full lectures, if you want the notes explained out loud."
+   },
+   {
+    "title": "Machine Learning Specialization, Course 1 (Andrew Ng)",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "kind": "Course",
+    "free": false,
+    "paid": false,
+    "why": "Very gentle. The labs use NumPy. Skip the later TensorFlow parts."
+   },
+   {
+    "title": "Probabilistic Machine Learning: An Introduction (Kevin Murphy)",
+    "url": "https://probml.github.io/pml-book/book1.html",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "A deep reference for going further."
+   },
+   {
+    "title": "Deep-ML",
+    "url": "https://www.deep-ml.com/",
+    "kind": "Practice",
+    "free": false,
+    "paid": false,
+    "why": "Implement ML algorithms from scratch, interview style."
+   }
+  ],
+  "topics": [
+   {
+    "name": "The ML setup: features, labels, loss, train/validation/test",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Train, Test, and Validation Sets",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/train-test-validation/",
+      "recommended": "A short, colourful scroll-through story of why the data is split three ways and what goes wrong when it isn't."
+     },
+     {
+      "kind": "watch",
+      "title": "A Gentle Introduction to Machine Learning",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+A+Gentle+Introduction+to+Machine+Learning",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "An Introduction to Statistical Learning (Python), Ch 2",
+      "source": "James, Witten, Hastie, Tibshirani, Taylor · free",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Machine Learning Crash Course",
+      "source": "Google",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Linear regression: normal equation and gradient descent",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Linear Regression",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/linear-regression/",
+      "recommended": "Watch the line, the residuals and the error update as you scroll. A visual version of this whole topic."
+     },
+     {
+      "kind": "watch",
+      "title": "Linear Regression, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Linear+Regression%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 3 (linear regression)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 9 (linear regression)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Logistic regression and the sigmoid",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Logistic Regression",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/logistic-regression/",
+      "recommended": "The sigmoid, the decision boundary and the log-loss drawn and redrawn as you scroll. The best picture of this model on the web."
+     },
+     {
+      "kind": "watch",
+      "title": "Logistic Regression",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Logistic+Regression",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 4 (logistic regression)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS229 main lecture notes (classification and logistic regression)",
+      "source": "Stanford",
+      "url": "https://cs229.stanford.edu/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Regularisation: L1 and L2",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Regularization Part 1: Ridge (L2) Regression",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Regularization+Part+1%3A+Ridge+%28L2%29+Regression",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Regularization Part 2: Lasso (L1) Regression",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Regularization+Part+2%3A+Lasso+%28L1%29+Regression",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 6 (shrinkage methods: ridge and lasso)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Bias–variance trade-off and overfitting",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "The Bias Variance Tradeoff",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/bias-variance/",
+      "recommended": "Models of growing complexity wobble and settle on screen as you scroll, with the error curves drawn alongside. Exactly this topic, as moving pictures."
+     },
+     {
+      "kind": "watch",
+      "title": "Machine Learning Fundamentals: Bias and Variance",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Machine+Learning+Fundamentals%3A+Bias+and+Variance",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 2 (the bias–variance trade-off)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Bias–variance trade-off lecture",
+      "source": "Kilian Weinberger, Cornell CS4780",
+      "url": "https://www.youtube.com/results?search_query=Kilian+Weinberger+CS4780+bias+variance+tradeoff",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Metrics: precision, recall, F1, ROC-AUC, confusion matrix",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "ROC & AUC",
+      "source": "MLU-Explain (Amazon) · animated, interactive",
+      "url": "https://mlu-explain.github.io/roc-auc/",
+      "recommended": "Drag the threshold and watch the confusion matrix and the ROC curve change together. The trade-off becomes something you can feel."
+     },
+     {
+      "kind": "play",
+      "title": "Precision & Recall",
+      "source": "MLU-Explain (Amazon) · animated, interactive",
+      "url": "https://mlu-explain.github.io/precision-recall/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "ROC and AUC, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+ROC+and+AUC%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Classification: accuracy, recall, precision and related metrics",
+      "source": "Google ML Crash Course",
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Cross-validation and data leakage",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Cross-Validation",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/cross-validation/",
+      "recommended": "Folds slide into place and rotate as you scroll, with k-fold, leave-one-out and grouped versions side by side."
+     },
+     {
+      "kind": "watch",
+      "title": "Machine Learning Fundamentals: Cross Validation",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Machine+Learning+Fundamentals%3A+Cross+Validation",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 5 (cross-validation and the bootstrap)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Intermediate Machine Learning: data leakage",
+      "source": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Feature scaling and encoding",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Working with numerical data (normalisation)",
+      "source": "Google ML Crash Course",
+      "url": "https://developers.google.com/machine-learning/crash-course/numerical-data",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Working with categorical data (one-hot encoding)",
+      "source": "Google ML Crash Course",
+      "url": "https://developers.google.com/machine-learning/crash-course/categorical-data",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Intermediate Machine Learning: categorical variables",
+      "source": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "k-nearest neighbours",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "K-nearest neighbors, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+K-nearest+neighbors%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 2 and Ch 4 (k-nearest neighbours)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "k-nearest neighbours and the curse of dimensionality",
+      "source": "Kilian Weinberger, Cornell CS4780",
+      "url": "https://www.youtube.com/results?search_query=Kilian+Weinberger+CS4780+k+nearest+neighbors+curse+of+dimensionality",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Decision trees: entropy and Gini",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Decision Trees",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/decision-tree/",
+      "recommended": "A tree grows split by split on screen while the data is carved into regions. The clearest moving picture of how trees choose questions."
+     },
+     {
+      "kind": "play",
+      "title": "A Visual Introduction to Machine Learning",
+      "source": "R2D3 · an animated story you scroll through",
+      "url": "https://r2d3.us/visual-intro-to-machine-learning-part-1/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Decision and Classification Trees, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Decision+and+Classification+Trees%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 8 (the basics of decision trees)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Ensembles: bagging, random forests, gradient boosting",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Random Forest",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/random-forest/",
+      "recommended": "Bootstrap samples, many trees and their vote, animated step by step. It shows exactly why averaging different trees works."
+     },
+     {
+      "kind": "watch",
+      "title": "Random Forests Part 1",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Random+Forests+Part+1",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Gradient Boost Part 1",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Gradient+Boost+Part+1",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 8 (bagging, random forests, boosting)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Support vector machines: margin and hinge loss",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Support Vector Machines Part 1 (of 3): Main Ideas",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Support+Vector+Machines+Part+1+%28of+3%29%3A+Main+Ideas",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Learning: Support Vector Machines",
+      "source": "Patrick Winston, MIT 6.034",
+      "url": "https://www.youtube.com/results?search_query=Patrick+Winston+MIT+6.034+support+vector+machines",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 9 (support vector machines)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Naive Bayes",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Naive Bayes, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Naive+Bayes%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 4 (naive Bayes)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Speech and Language Processing: the Naive Bayes chapter",
+      "source": "Jurafsky and Martin · free",
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "k-means clustering",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Visualizing K-Means Clustering",
+      "source": "Naftali Harris · interactive",
+      "url": "https://www.naftaliharris.com/blog/visualizing-k-means-clustering/",
+      "recommended": "Pick a dataset, drop the centres yourself, and step through assign and move. You will also see exactly where k-means fails."
+     },
+     {
+      "kind": "watch",
+      "title": "K-means clustering",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+K-means+clustering",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 12 (k-means clustering)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "PCA in practice",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Principal Component Analysis, explained visually",
+      "source": "Setosa · drag the points yourself",
+      "url": "https://setosa.io/ev/principal-component-analysis/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "PCA - Practical Tips",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+PCA+-+Practical+Tips",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "ISLP, Ch 12 (principal components analysis)",
+      "source": "free book",
+      "url": "https://www.statlearning.com/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 10 (PCA)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Gaussian mixture models and EM",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "EM algorithm: how it works",
+      "source": "Victor Lavrenko",
+      "url": "https://www.youtube.com/results?search_query=Victor+Lavrenko+EM+algorithm+how+it+works",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Mathematics for Machine Learning, Ch 11 (Gaussian mixture models)",
+      "source": "Deisenroth, Faisal, Ong · free",
+      "url": "https://mml-book.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Pattern Recognition and Machine Learning, Ch 9 (mixture models and EM)",
+      "source": "Christopher Bishop · free PDF",
+      "url": "https://www.google.com/search?q=Bishop+Pattern+Recognition+and+Machine+Learning+free+pdf+Microsoft",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Generalisation: VC dimension and double descent",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Double Descent",
+      "source": "MLU-Explain (Amazon) · animated, scroll through it",
+      "url": "https://mlu-explain.github.io/double-descent/",
+      "recommended": "The error curve rises, peaks at the interpolation threshold and falls again, animated alongside the fitted models. It makes a strange result intuitive."
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 8 (double descent) and Ch 20 (why does deep learning work?)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Machine Learning, Ch 2–6 (PAC learning, VC dimension)",
+      "source": "Shalev-Shwartz and Ben-David · free",
+      "url": "https://www.google.com/search?q=Understanding+Machine+Learning+Shalev-Shwartz+Ben-David+free+pdf",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Deep Double Descent (2019)",
+      "source": "Nakkiran et al. · arXiv",
+      "url": "https://arxiv.org/abs/1912.02292",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 3,
+  "short": "Deep learning",
+  "title": "Deep learning foundations",
+  "slug": "deep-learning-foundations",
+  "accent": "#ff8a65",
+  "goal": "Build neural networks from a single neuron up. Write backprop by hand first. Then you can trust PyTorch, because you know what it does.",
+  "bigPicture": "A neural network is many small logistic regressions stacked in layers and trained together with backprop. Phase 2 made the bricks. Phase 3 builds the wall.",
+  "main": [
+   {
+    "title": "Andrej Karpathy: Neural Networks: Zero to Hero",
+    "url": "https://karpathy.ai/zero-to-hero.html",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Builds everything from scratch in Python. Code along, then rebuild it without the video."
+   },
+   {
+    "title": "Understanding Deep Learning (Simon Prince)",
+    "url": "https://udlbook.github.io/udlbook/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "The main deep learning text for this phase. Very clear figures, with practice notebooks."
+   },
+   {
+    "title": "3Blue1Brown: Neural Networks",
+    "url": "https://www.3blue1brown.com/topics/neural-networks",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Optional. Backprop and gradient descent shown with moving pictures, if you want a second view of the topics."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "Stanford CS231n notes and assignments",
+    "url": "https://cs231n.github.io/",
+    "kind": "Notes",
+    "free": true,
+    "paid": false,
+    "why": "Backprop in NumPy by hand. Excellent practice."
+   },
+   {
+    "title": "Dive into Deep Learning",
+    "url": "https://d2l.ai/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "Maths plus PyTorch code for every idea. Use it as a reference."
+   },
+   {
+    "title": "Neural Networks and Deep Learning (Michael Nielsen)",
+    "url": "http://neuralnetworksanddeeplearning.com/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "Gentle and patient. Use it if the main book feels too fast."
+   },
+   {
+    "title": "A Recipe for Training Neural Networks (Karpathy)",
+    "url": "https://karpathy.github.io/2019/04/25/recipe/",
+    "kind": "Blog",
+    "free": true,
+    "paid": false,
+    "why": "How to debug training. Read it twice."
+   },
+   {
+    "title": "Deep Learning: Foundations and Concepts (Bishop and Bishop)",
+    "url": "https://www.bishopbook.com/",
+    "kind": "Book",
+    "free": false,
+    "paid": false,
+    "why": "Advanced depth, written very carefully."
+   }
+  ],
+  "topics": [
+   {
+    "name": "The neuron and the multi-layer perceptron",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Neural Networks, Ch 1: But what is a neural network?",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/neural-networks",
+      "recommended": "Layers of glowing neurons recognising handwritten digits. The best first picture of what a network is and what its weights do."
+     },
+     {
+      "kind": "play",
+      "title": "A Neural Network Playground",
+      "source": "TensorFlow · runs in the browser",
+      "url": "https://playground.tensorflow.org/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 3–4 (shallow and deep networks)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Neural Networks and Deep Learning, Ch 1",
+      "source": "Michael Nielsen · free",
+      "url": "http://neuralnetworksanddeeplearning.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Activation functions, and why non-linearity matters",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "A Neural Network Playground",
+      "source": "TensorFlow · runs in the browser",
+      "url": "https://playground.tensorflow.org/",
+      "recommended": "Switch between linear, ReLU, tanh and sigmoid and watch the decision boundary bend (or stay stubbornly straight) as the network trains, live."
+     },
+     {
+      "kind": "watch",
+      "title": "Neural Networks Pt. 3: ReLU In Action",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Neural+Networks+Pt.+3%3A+ReLU+In+Action",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Neural Networks Part 1 (activation functions)",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/neural-networks-1/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 3 (activation functions)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Backpropagation by hand",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Neural Networks, Ch 3: What is backpropagation really doing?",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/backpropagation",
+      "recommended": "Shows each weight being pulled up or down by the error, layer by layer, as moving pictures. The intuition behind every equation in this topic."
+     },
+     {
+      "kind": "watch",
+      "title": "Neural Networks, Ch 4: Backpropagation calculus",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/backpropagation-calculus",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Backpropagation, Intuitions",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/optimization-2/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Building makemore Part 4: Becoming a Backprop Ninja",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Autograd and computational graphs",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "The spelled-out intro to neural networks and backpropagation: building micrograd",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": "Builds a complete autograd engine from scratch, live, in plain Python. Long, but after it loss.backward() holds no mystery at all."
+     },
+     {
+      "kind": "read",
+      "title": "Calculus on Computational Graphs: Backpropagation",
+      "source": "Chris Olah",
+      "url": "https://colah.github.io/posts/2015-08-Backprop/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Dive into Deep Learning, Ch 2 (automatic differentiation)",
+      "source": "d2l.ai · free",
+      "url": "https://d2l.ai/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Softmax and cross-entropy loss",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Neural Networks Part 5: ArgMax and SoftMax",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Neural+Networks+Part+5%3A+ArgMax+and+SoftMax",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Neural Networks Part 6: Cross Entropy",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Neural+Networks+Part+6%3A+Cross+Entropy",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Linear classification (the softmax classifier)",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/linear-classify/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Optimisers: SGD, momentum, Adam; learning-rate schedules",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Why Momentum Really Works",
+      "source": "Gabriel Goh · Distill · interactive",
+      "url": "https://distill.pub/2017/momentum/",
+      "recommended": "Drag the step-size and momentum sliders and watch the path change on a real loss surface. You will feel why momentum helps, and when it overshoots."
+     },
+     {
+      "kind": "play",
+      "title": "Parameter optimization in neural networks",
+      "source": "deeplearning.ai · interactive",
+      "url": "https://www.deeplearning.ai/ai-notes/optimization/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "An overview of gradient descent optimization algorithms",
+      "source": "Sebastian Ruder",
+      "url": "https://www.ruder.io/optimizing-gradient-descent/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 6 (SGD, momentum, Adam)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Weight initialisation; vanishing and exploding gradients",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Initializing neural networks",
+      "source": "deeplearning.ai · interactive",
+      "url": "https://www.deeplearning.ai/ai-notes/initialization/",
+      "recommended": "Pick an initialisation and watch the activations and gradients shrink, explode or stay healthy layer by layer as the network trains."
+     },
+     {
+      "kind": "watch",
+      "title": "Building makemore Part 3: Activations & Gradients, BatchNorm",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 7 (gradients and initialisation)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Neural Networks Part 2 (weight initialisation)",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/neural-networks-2/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Batch norm and layer norm",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Building makemore Part 3 (the BatchNorm section)",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 11 (batch normalisation)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Layer Normalization (2016)",
+      "source": "Ba, Kiros, Hinton · arXiv",
+      "url": "https://arxiv.org/abs/1607.06450",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Regularisation: dropout, weight decay, augmentation, early stopping",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 9 (regularisation)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Neural Networks Part 2 (regularisation and dropout)",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/neural-networks-2/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "PyTorch: nn.Module, DataLoader and the training loop",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Learn the Basics",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "recommended": "The official walk-through of exactly this loop, with tensors, datasets, models, autograd and saving, in runnable steps. The reference you will come back to."
+     },
+     {
+      "kind": "watch",
+      "title": "Building makemore Part 2: MLP",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Dive into Deep Learning, Ch 6 (builders' guide)",
+      "source": "d2l.ai · free",
+      "url": "https://d2l.ai/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Convolutional networks: convolution, pooling, receptive field",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "CNN Explainer",
+      "source": "Georgia Tech Polo Club · interactive",
+      "url": "https://poloclub.github.io/cnn-explainer/",
+      "recommended": "Click any neuron of a real CNN and watch its filter slide across the image, step by step, with every number shown. The best way to see convolution happen."
+     },
+     {
+      "kind": "watch",
+      "title": "But what is a convolution?",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/convolutions",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Convolutional Neural Networks",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/convolutional-networks/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 10 (convolutional networks)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Residual connections (ResNet)",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 11 (residual networks)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Deep Residual Learning for Image Recognition (2015)",
+      "source": "He et al. · arXiv",
+      "url": "https://arxiv.org/abs/1512.03385",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "RNNs, and why long sequences are hard",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "The Unreasonable Effectiveness of Recurrent Neural Networks",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+      "recommended": "A character RNN learns to write fake Shakespeare, Wikipedia and C code, with pictures of what single neurons track. Shows what these models can (and can't) do."
+     },
+     {
+      "kind": "watch",
+      "title": "Recurrent Neural Networks (RNNs), Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Recurrent+Neural+Networks+%28RNNs%29%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Dive into Deep Learning, Ch 9 (recurrent neural networks)",
+      "source": "d2l.ai · free",
+      "url": "https://d2l.ai/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Embeddings: representing things as vectors",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "The Illustrated Word2vec",
+      "source": "Jay Alammar · illustrated",
+      "url": "https://jalammar.github.io/illustrated-word2vec/",
+      "recommended": "Colourful pictures of words turning into vectors and those vectors being trained. The clearest picture of what embeddings are and why they work."
+     },
+     {
+      "kind": "play",
+      "title": "Embedding Projector",
+      "source": "TensorFlow · explore real embeddings in 3-D",
+      "url": "https://projector.tensorflow.org/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Building makemore Part 2: MLP (the embedding table)",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Word Embedding and Word2Vec, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Word+Embedding+and+Word2Vec%2C+Clearly+Explained",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Debugging training: overfit one batch, read loss curves",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "A Recipe for Training Neural Networks",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.github.io/2019/04/25/recipe/",
+      "recommended": "The most useful blog post on training neural networks ever written: the exact step-by-step routine experts follow. Read it twice, and keep it open."
+     },
+     {
+      "kind": "read",
+      "title": "CS231n: Neural Networks Part 3 (gradient checks, babysitting training)",
+      "source": "Stanford",
+      "url": "https://cs231n.github.io/neural-networks-3/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Deep Learning Tuning Playbook",
+      "source": "Google Research",
+      "url": "https://github.com/google-research/tuning_playbook",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "LSTMs and GRUs: gates for long memory",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding LSTM Networks",
+      "source": "Chris Olah · illustrated",
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "recommended": "The diagrams everyone else copies: the cell state as a conveyor belt with gates along it. After this the four equations read like a picture."
+     },
+     {
+      "kind": "watch",
+      "title": "Long Short-Term Memory (LSTM), Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Long+Short-Term+Memory+%28LSTM%29%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Dive into Deep Learning, Ch 10 (LSTM and GRU)",
+      "source": "d2l.ai · free",
+      "url": "https://d2l.ai/",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 4,
+  "short": "LLMs",
+  "title": "Transformers and LLMs",
+  "slug": "transformers-and-llms",
+  "accent": "#4db6ac",
+  "goal": "Build a small GPT from scratch: tokenizer, attention, training and fine-tuning. This is how modern AI works inside.",
+  "bigPicture": "An LLM is a deep neural network with one special layer (attention), trained to guess the next token on a huge amount of text. Everything else is detail, but important detail.",
+  "main": [
+   {
+    "title": "Karpathy: Let’s build GPT, the GPT tokenizer, and reproduce GPT-2",
+    "url": "https://karpathy.ai/zero-to-hero.html",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "The last videos of Zero to Hero. Build along, line by line."
+   },
+   {
+    "title": "Build a Large Language Model (From Scratch), Sebastian Raschka",
+    "url": "https://github.com/rasbt/LLMs-from-scratch",
+    "kind": "Book + code",
+    "free": false,
+    "paid": false,
+    "why": "Step by step in PyTorch. The code and videos are free; the book is paid."
+   },
+   {
+    "title": "3Blue1Brown: transformers and attention",
+    "url": "https://www.3blue1brown.com/topics/neural-networks",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Optional. The later chapters of the neural networks series: attention and GPTs as moving pictures."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "The Illustrated Transformer (Jay Alammar)",
+    "url": "https://jalammar.github.io/illustrated-transformer/",
+    "kind": "Blog",
+    "free": true,
+    "paid": false,
+    "why": "Every step of a transformer drawn as a picture."
+   },
+   {
+    "title": "Stanford CS224n: NLP with Deep Learning",
+    "url": "https://web.stanford.edu/class/cs224n/",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "The full university course, for depth."
+   },
+   {
+    "title": "Attention Is All You Need (2017)",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "kind": "Paper",
+    "free": true,
+    "paid": false,
+    "why": "The original transformer paper. Read it after you have built one."
+   },
+   {
+    "title": "LoRA (2021)",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "kind": "Paper",
+    "free": true,
+    "paid": false,
+    "why": "The paper behind cheap fine-tuning."
+   },
+   {
+    "title": "Umar Jamil",
+    "url": "https://www.youtube.com/@umarjamilai",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Long videos that code models from scratch and explain the maths."
+   }
+  ],
+  "topics": [
+   {
+    "name": "Tokenisation and byte-pair encoding (BPE)",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Tiktokenizer",
+      "source": "interactive · type any text",
+      "url": "https://tiktokenizer.vercel.app/",
+      "recommended": "Type any sentence, number or emoji and instantly see how GPT-style tokenizers split it, colour-coded, with the token count. It makes tokens concrete in seconds."
+     },
+     {
+      "kind": "watch",
+      "title": "Let's build the GPT Tokenizer",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Byte-Pair Encoding tokenization",
+      "source": "Hugging Face LLM Course",
+      "url": "https://huggingface.co/learn/llm-course/chapter6/5",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 2 (working with text data)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Token embeddings and positional encoding",
+    "resources": [
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 2 (token and positional embeddings)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Illustrated Transformer (positional encoding section)",
+      "source": "Jay Alammar",
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Rotary Embeddings: A Relative Revolution",
+      "source": "EleutherAI blog",
+      "url": "https://blog.eleuther.ai/rotary-embeddings/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Self-attention: queries, keys and values",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Attention in transformers, step-by-step",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/attention",
+      "recommended": "The clearest moving-picture explanation of queries, keys and values anywhere: you watch word meanings shift as attention mixes them."
+     },
+     {
+      "kind": "play",
+      "title": "Transformer Explainer",
+      "source": "Georgia Tech Polo Club · a live GPT-2 in your browser",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Illustrated Transformer",
+      "source": "Jay Alammar",
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 3 (coding attention mechanisms)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Multi-head attention and the transformer block",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Transformer Explainer",
+      "source": "Georgia Tech Polo Club · a live GPT-2 in your browser",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "recommended": "Type your own text and click through a real GPT-2: every head, every block, every probability, animated. The best way to see a transformer block from the inside."
+     },
+     {
+      "kind": "play",
+      "title": "LLM Visualization",
+      "source": "Brendan Bycroft · a 3-D walk through a GPT",
+      "url": "https://bbycroft.net/llm",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Let's build GPT: from scratch, in code, spelled out",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Annotated Transformer",
+      "source": "Harvard NLP",
+      "url": "https://nlp.seas.harvard.edu/annotated-transformer/",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 4 (implementing a GPT model)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "GPT-style models and next-token prediction",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Transformers, the tech behind LLMs (But what is a GPT?)",
+      "source": "3Blue1Brown",
+      "url": "https://www.3blue1brown.com/lessons/gpt",
+      "recommended": "A visual tour of a GPT from tokens to probabilities, with the shapes of every step drawn out. The best single overview of how these models work."
+     },
+     {
+      "kind": "play",
+      "title": "LLM Visualization",
+      "source": "Brendan Bycroft · a 3-D walk through a GPT",
+      "url": "https://bbycroft.net/llm",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Illustrated GPT-2",
+      "source": "Jay Alammar",
+      "url": "https://jalammar.github.io/illustrated-gpt2/",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 5 (pretraining on unlabelled data)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Encoder models (BERT) vs decoder models (GPT)",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "The Illustrated BERT, ELMo, and co.",
+      "source": "Jay Alammar",
+      "url": "https://jalammar.github.io/illustrated-bert/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Decoder-Only Transformers, ChatGPT's specific Transformer, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Decoder-Only+Transformers%2C+ChatGPT%27s+specific+Transformer%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "BERT (2018)",
+      "source": "Devlin et al. · arXiv",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Vision transformers and CLIP",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 12 (transformers for images)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Vision Transformer explained, with code",
+      "source": "Umar Jamil",
+      "url": "https://www.youtube.com/results?search_query=Umar+Jamil+vision+transformer+explained",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "OpenCLIP",
+      "source": "GitHub",
+      "url": "https://github.com/mlfoundations/open_clip",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "An Image is Worth 16x16 Words (ViT, 2020)",
+      "source": "Dosovitskiy et al. · arXiv",
+      "url": "https://arxiv.org/abs/2010.11929",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision (CLIP, 2021)",
+      "source": "Radford et al. · arXiv",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Sampling: greedy, temperature, top-k, top-p",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "How to generate text: using different decoding methods",
+      "source": "Hugging Face blog",
+      "url": "https://huggingface.co/blog/how-to-generate",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 5 (decoding strategies)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "The Curious Case of Neural Text Degeneration (2019)",
+      "source": "Holtzman et al. · arXiv",
+      "url": "https://arxiv.org/abs/1904.09751",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "KV cache and the cost of generation",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding and Coding the KV Cache in LLMs from Scratch",
+      "source": "Sebastian Raschka",
+      "url": "https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "LLaMA explained: KV-Cache, Rotary Positional Embedding, RMS Norm",
+      "source": "Umar Jamil",
+      "url": "https://www.youtube.com/results?search_query=Umar+Jamil+LLaMA+explained+KV+cache+rotary+positional+embedding",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Pretraining data and scaling laws",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Deep Dive into LLMs like ChatGPT (the pretraining part)",
+      "source": "Andrej Karpathy",
+      "url": "https://www.youtube.com/results?search_query=Andrej+Karpathy+Deep+Dive+into+LLMs+like+ChatGPT",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "FineWeb: decanting the web for the finest text data at scale",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Training Compute-Optimal Large Language Models (Chinchilla, 2022)",
+      "source": "Hoffmann et al. · arXiv",
+      "url": "https://arxiv.org/abs/2203.15556",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Mixture of experts",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "A Visual Guide to Mixture of Experts",
+      "source": "Maarten Grootendorst · dozens of diagrams",
+      "url": "https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mixture-of-experts",
+      "recommended": "Colourful step-by-step diagrams of routers, experts, top-k selection and load balancing. Makes MoE intuitive in one read."
+     },
+     {
+      "kind": "read",
+      "title": "Mixture of Experts Explained",
+      "source": "Hugging Face blog",
+      "url": "https://huggingface.co/blog/moe",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Outrageously Large Neural Networks: the Sparsely-Gated MoE Layer (2017)",
+      "source": "Shazeer et al. · arXiv",
+      "url": "https://arxiv.org/abs/1701.06538",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Mixtral of Experts (2024)",
+      "source": "Jiang et al. · arXiv",
+      "url": "https://arxiv.org/abs/2401.04088",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Fine-tuning and LoRA",
+    "resources": [
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Appendix E (LoRA)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "LoRA explained, with code",
+      "source": "Umar Jamil",
+      "url": "https://www.youtube.com/results?search_query=Umar+Jamil+LoRA+explained",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models (2021)",
+      "source": "Hu et al. · arXiv",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Instruction tuning and preference tuning (RLHF, DPO)",
+    "resources": [
+     {
+      "kind": "watch",
+      "title": "Deep Dive into LLMs like ChatGPT",
+      "source": "Andrej Karpathy",
+      "url": "https://www.youtube.com/results?search_query=Andrej+Karpathy+Deep+Dive+into+LLMs+like+ChatGPT",
+      "recommended": "A general-audience tour of the whole pipeline — pretraining, SFT, RLHF, reasoning — by someone who built these systems. Long, but the best big-picture view there is."
+     },
+     {
+      "kind": "read",
+      "title": "Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+      "source": "Hugging Face blog",
+      "url": "https://huggingface.co/blog/rlhf",
+      "recommended": null
+     },
+     {
+      "kind": "code",
+      "title": "Build a Large Language Model (From Scratch), Ch 7 (fine-tuning to follow instructions)",
+      "source": "Sebastian Raschka · code free",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Direct Preference Optimization (DPO, 2023)",
+      "source": "Rafailov et al. · arXiv",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Reasoning models and test-time compute",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding Reasoning LLMs",
+      "source": "Sebastian Raschka",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-reasoning-llms",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Deep Dive into LLMs like ChatGPT (the 'thinking' and RL sections)",
+      "source": "Andrej Karpathy",
+      "url": "https://www.youtube.com/results?search_query=Andrej+Karpathy+Deep+Dive+into+LLMs+like+ChatGPT",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (2022)",
+      "source": "Wei et al. · arXiv",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Self-Consistency Improves Chain of Thought Reasoning (2022)",
+      "source": "Wang et al. · arXiv",
+      "url": "https://arxiv.org/abs/2203.11171",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability via RL (2025)",
+      "source": "DeepSeek-AI · arXiv",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 5,
+  "short": "AI engineering",
+  "title": "AI engineering",
+  "slug": "ai-engineering",
+  "accent": "#b39ddb",
+  "goal": "Turn foundation models into real products: retrieval, evaluation, agents and deployment. This is the core of most AI engineer jobs.",
+  "bigPicture": "Phases 1 to 4 teach you how the engine works. Phase 5 teaches you to build the car around it: steering (prompts), fuel (data and retrieval), a dashboard (evaluation) and brakes (safety).",
+  "main": [
+   {
+    "title": "AI Engineering (Chip Huyen)",
+    "url": null,
+    "kind": "Book",
+    "free": false,
+    "paid": true,
+    "why": "The main text for this phase."
+   },
+   {
+    "title": "Your AI Product Needs Evals (Hamel Husain)",
+    "url": "https://hamel.dev/blog/posts/evals/",
+    "kind": "Blog",
+    "free": true,
+    "paid": false,
+    "why": "The clearest guide to evaluation, the most important AI engineering skill."
+   },
+   {
+    "title": "Made With ML (Goku Mohandas)",
+    "url": "https://madewithml.com/",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "Takes a model to production: testing, serving, CI/CD."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "Designing Machine Learning Systems (Chip Huyen)",
+    "url": null,
+    "kind": "Book",
+    "free": false,
+    "paid": true,
+    "why": "The standard book for ML system design interviews."
+   },
+   {
+    "title": "Stanford CS329S: Machine Learning Systems Design",
+    "url": "https://stanford-cs329s.github.io/",
+    "kind": "Notes",
+    "free": true,
+    "paid": false,
+    "why": "Free course notes on the same topics."
+   },
+   {
+    "title": "FastAPI documentation",
+    "url": "https://fastapi.tiangolo.com/",
+    "kind": "Docs",
+    "free": true,
+    "paid": false,
+    "why": "The simplest way to put a model behind an API."
+   }
+  ],
+  "topics": [
+   {
+    "name": "Prompting: clear instructions, examples, structured output",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Prompt engineering overview",
+      "source": "Claude docs",
+      "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "recommended": "The official guide, with concrete before-and-after prompts for clarity, examples, structure and long documents. Practical and short."
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 5 (prompt engineering)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Structured outputs and function calling",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Tool use with Claude",
+      "source": "Claude docs",
+      "url": "https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Creating your first schema",
+      "source": "json-schema.org",
+      "url": "https://json-schema.org/learn/getting-started-step-by-step",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 2 (sampling and structured outputs)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Embeddings and semantic search",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Embeddings: What they are and why they matter",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2023/Oct/23/embeddings/",
+      "recommended": "A clear, practical tour of embeddings with real examples of related-content search, clustering and code. The best single read on using them."
+     },
+     {
+      "kind": "watch",
+      "title": "Cosine Similarity, Clearly Explained",
+      "source": "StatQuest (Josh Starmer)",
+      "url": "https://www.youtube.com/results?search_query=StatQuest+Cosine+Similarity%2C+Clearly+Explained",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Semantic Search",
+      "source": "Sentence Transformers docs",
+      "url": "https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Vector databases and approximate nearest-neighbour search",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Hierarchical Navigable Small Worlds (HNSW)",
+      "source": "Pinecone Learn · illustrated",
+      "url": "https://www.pinecone.io/learn/series/faiss/hnsw/",
+      "recommended": "Clear diagrams of the layered graph and the greedy search, plus how the tuning knobs change speed and recall."
+     },
+     {
+      "kind": "code",
+      "title": "Faiss: getting started",
+      "source": "Meta AI · GitHub wiki",
+      "url": "https://github.com/facebookresearch/faiss/wiki",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Efficient and robust approximate nearest neighbor search using HNSW graphs (2016)",
+      "source": "Malkov and Yashunin · arXiv",
+      "url": "https://arxiv.org/abs/1603.09320",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "RAG: chunking, retrieval and re-ranking",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Introducing Contextual Retrieval",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/contextual-retrieval",
+      "recommended": "Shows, with measured results, why chunks lose context and how adding context plus hybrid search and re-ranking cuts retrieval failures. Directly useful for building RAG."
+     },
+     {
+      "kind": "read",
+      "title": "Patterns for Building LLM-based Systems & Products",
+      "source": "Eugene Yan",
+      "url": "https://eugeneyan.com/writing/llm-patterns/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 6 (RAG and agents)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Context engineering: long context and memory",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Effective context engineering for AI agents",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "recommended": "A practical guide to treating context as a limited budget: what to keep, compact, retrieve just in time, and hand to sub-agents. Written for building real agents."
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 5 (context length and context efficiency)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts (2023)",
+      "source": "Liu et al. · arXiv",
+      "url": "https://arxiv.org/abs/2307.03172",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Evaluation: test sets, LLM-as-judge, error analysis",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Your AI Product Needs Evals",
+      "source": "Hamel Husain",
+      "url": "https://hamel.dev/blog/posts/evals/",
+      "recommended": "The most practical guide to evaluating LLM products: unit-test-style checks, LLM judges, and reading traces, from real client work."
+     },
+     {
+      "kind": "read",
+      "title": "Creating a LLM-as-a-Judge That Drives Business Results",
+      "source": "Hamel Husain",
+      "url": "https://hamel.dev/blog/posts/llm-judge/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 3–4 (evaluation)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Agents and tool use",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Building effective agents",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "recommended": "Clear diagrams of the main patterns, from simple workflows to full agents, with advice on when each is worth it. The best starting point for building agents."
+     },
+     {
+      "kind": "read",
+      "title": "LLM Powered Autonomous Agents",
+      "source": "Lilian Weng",
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 6 (the agents half)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "MCP: connecting models to tools and data",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Introduction to the Model Context Protocol",
+      "source": "modelcontextprotocol.io",
+      "url": "https://modelcontextprotocol.io/",
+      "recommended": "The official docs, with architecture diagrams and quick-starts for building a server and a client. Short, clear, and exactly what you need to build your own."
+     },
+     {
+      "kind": "code",
+      "title": "MCP Python SDK",
+      "source": "GitHub",
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Introducing the Model Context Protocol",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/model-context-protocol",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Choosing between prompting, RAG and fine-tuning",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 7 (finetuning: when to finetune)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Patterns for Building LLM-based Systems & Products",
+      "source": "Eugene Yan",
+      "url": "https://eugeneyan.com/writing/llm-patterns/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Dataset engineering for fine-tuning",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 8 (dataset engineering)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "LIMA: Less Is More for Alignment (2023)",
+      "source": "Zhou et al. · arXiv",
+      "url": "https://arxiv.org/abs/2305.11206",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Self-Instruct: aligning language models with self-generated instructions (2022)",
+      "source": "Wang et al. · arXiv",
+      "url": "https://arxiv.org/abs/2212.10560",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Serving: APIs, Docker, latency and cost",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "FastAPI tutorial",
+      "source": "fastapi.tiangolo.com",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Get started with Docker",
+      "source": "docs.docker.com",
+      "url": "https://docs.docker.com/get-started/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Made With ML: serving and deployment lessons",
+      "source": "Goku Mohandas · free",
+      "url": "https://madewithml.com/",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Caching, model routing and cost control",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Prompt caching",
+      "source": "Claude docs",
+      "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-caching",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 10 (AI engineering architecture: caches, routers and gateways)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 9 (inference optimisation)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "RouteLLM: Learning to Route LLMs with Preference Data (2024)",
+      "source": "Ong et al. · arXiv",
+      "url": "https://arxiv.org/abs/2406.18665",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Observability: tracing and debugging LLM apps",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Your AI Product Needs Evals (the section on logging traces)",
+      "source": "Hamel Husain",
+      "url": "https://hamel.dev/blog/posts/evals/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Observability primer",
+      "source": "OpenTelemetry docs",
+      "url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "AI Engineering, Ch 10 (monitoring and observability)",
+      "source": "Chip Huyen · book you own",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Safety: guardrails and prompt injection",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Prompt injection (series)",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/series/prompt-injection/",
+      "recommended": "From the person who named the attack: real exploits against real products, and an honest account of why it is so hard to fix. The essential read on LLM security."
+     },
+     {
+      "kind": "read",
+      "title": "OWASP Top 10 for LLM Applications",
+      "source": "OWASP",
+      "url": "https://www.google.com/search?q=OWASP+Top+10+for+LLM+Applications",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "ML system design: pipelines, training vs serving, drift",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Data Distribution Shifts and Monitoring",
+      "source": "Chip Huyen",
+      "url": "https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html",
+      "recommended": "The clearest explanation of the kinds of drift, how to detect them and what to monitor, from the author of the standard book on ML systems."
+     },
+     {
+      "kind": "read",
+      "title": "CS329S: Machine Learning Systems Design (notes)",
+      "source": "Stanford",
+      "url": "https://stanford-cs329s.github.io/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Designing Machine Learning Systems (whole book)",
+      "source": "Chip Huyen · paid",
+      "url": null,
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 6,
+  "short": "Systems",
+  "title": "Systems and scale",
+  "slug": "systems-and-scale",
+  "accent": "#ffca28",
+  "goal": "Make models fast and cheap. Understand what limits speed and memory on a GPU, and how training works across many GPUs.",
+  "bigPicture": "Same car, less fuel, more speed. Most of this phase is about moving data efficiently, not about doing more maths.",
+  "main": [
+   {
+    "title": "Making Deep Learning Go Brrrr From First Principles (Horace He)",
+    "url": "https://horace.io/brrr_intro.html",
+    "kind": "Blog",
+    "free": true,
+    "paid": false,
+    "why": "Compute, memory bandwidth and overhead: the three limits on speed."
+   },
+   {
+    "title": "Karpathy: Let’s reproduce GPT-2 (the speed-up parts)",
+    "url": "https://karpathy.ai/zero-to-hero.html",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Mixed precision, torch.compile and multi-GPU, applied to a real model."
+   },
+   {
+    "title": "The Ultra-Scale Playbook (Hugging Face)",
+    "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "Training on many GPUs, explained with diagrams."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "PyTorch Profiler recipe",
+    "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
+    "kind": "Tutorial",
+    "free": true,
+    "paid": false,
+    "why": "Measure before you optimise."
+   }
+  ],
+  "topics": [
+   {
+    "name": "How a GPU works: compute vs memory",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Making Deep Learning Go Brrrr From First Principles",
+      "source": "Horace He",
+      "url": "https://horace.io/brrr_intro.html",
+      "recommended": "The clearest explanation of compute-bound, memory-bound and overhead-bound code, with memorable pictures. After it you will know where your training time goes."
+     },
+     {
+      "kind": "read",
+      "title": "GPU Glossary",
+      "source": "Modal",
+      "url": "https://modal.com/gpu-glossary",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "GPU MODE lectures",
+      "source": "GPU MODE",
+      "url": "https://www.youtube.com/@GPUMODE",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Mixed precision: fp16 and bf16",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Automatic Mixed Precision recipe",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/amp_recipe.html",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Let's reproduce GPT-2 (124M): the mixed-precision section",
+      "source": "Andrej Karpathy",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Mixed Precision Training (2017)",
+      "source": "Micikevicius et al. · arXiv",
+      "url": "https://arxiv.org/abs/1710.03740",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Training memory: weights, gradients, optimiser states, activations",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Transformer Math 101",
+      "source": "EleutherAI blog",
+      "url": "https://blog.eleuther.ai/transformer-math/",
+      "recommended": "All the back-of-the-envelope formulas for compute and memory in one short page: weights, optimiser states, activations, and how to estimate them for any model."
+     },
+     {
+      "kind": "read",
+      "title": "The Ultra-Scale Playbook (memory usage section)",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models (2019)",
+      "source": "Rajbhandari et al. · arXiv",
+      "url": "https://arxiv.org/abs/1910.02054",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Parallelism: data, tensor and pipeline (the ideas)",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "The Ultra-Scale Playbook",
+      "source": "Hugging Face · interactive diagrams",
+      "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
+      "recommended": "A long but beautifully illustrated guide to every kind of parallelism, with interactive memory and speed calculators, from people who train large models."
+     },
+     {
+      "kind": "read",
+      "title": "Getting Started with Distributed Data Parallel",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/intermediate/ddp_tutorial.html",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Megatron-LM (2019)",
+      "source": "Shoeybi et al. · arXiv",
+      "url": "https://arxiv.org/abs/1909.08053",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Inference speed: batching, quantisation, FlashAttention",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "A Visual Guide to Quantization",
+      "source": "Maarten Grootendorst · many diagrams",
+      "url": "https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization",
+      "recommended": "Dozens of clear diagrams of number formats, scales, outliers and the main quantisation methods. Makes a fiddly topic visual and intuitive."
+     },
+     {
+      "kind": "paper",
+      "title": "FlashAttention (2022)",
+      "source": "Dao et al. · arXiv",
+      "url": "https://arxiv.org/abs/2205.14135",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "PagedAttention / vLLM (2023)",
+      "source": "Kwon et al. · arXiv",
+      "url": "https://arxiv.org/abs/2309.06180",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Profiling PyTorch code",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "PyTorch Profiler recipe",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Performance Tuning Guide",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/tuning_guide.html",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "GPU kernels with Triton",
+    "resources": [
+     {
+      "kind": "code",
+      "title": "GPU Puzzles",
+      "source": "Sasha Rush · GitHub · interactive notebook",
+      "url": "https://github.com/srush/GPU-Puzzles",
+      "recommended": "Small, visual puzzles that teach how GPU kernels index data, one idea at a time, in a notebook. The friendliest way into thinking like a GPU."
+     },
+     {
+      "kind": "code",
+      "title": "Triton tutorials: vector addition, fused softmax, matrix multiplication",
+      "source": "triton-lang.org",
+      "url": "https://triton-lang.org/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "GPU MODE lectures on Triton",
+      "source": "GPU MODE",
+      "url": "https://www.youtube.com/results?search_query=GPU+MODE+Triton+lecture",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Pruning and distillation",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Pruning Tutorial",
+      "source": "PyTorch tutorials",
+      "url": "https://docs.pytorch.org/tutorials/intermediate/pruning_tutorial.html",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Distilling the Knowledge in a Neural Network (2015)",
+      "source": "Hinton, Vinyals, Dean · arXiv",
+      "url": "https://arxiv.org/abs/1503.02531",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "The Lottery Ticket Hypothesis (2018)",
+      "source": "Frankle and Carbin · arXiv",
+      "url": "https://arxiv.org/abs/1803.03635",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Speculative decoding",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Assisted Generation: a new direction toward low-latency text generation",
+      "source": "Hugging Face blog · with animations",
+      "url": "https://huggingface.co/blog/assisted-generation",
+      "recommended": "Animated diagrams of a draft model proposing and a big model checking, plus measured speed-ups. Makes the idea click quickly."
+     },
+     {
+      "kind": "paper",
+      "title": "Fast Inference from Transformers via Speculative Decoding (2022)",
+      "source": "Leviathan, Kalman, Matias · arXiv",
+      "url": "https://arxiv.org/abs/2211.17192",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "number": 7,
+  "short": "Gen & RL",
+  "title": "Generative models and reinforcement learning",
+  "slug": "generative-models-and-reinforcement-learning",
+  "accent": "#f48fb1",
+  "goal": "Models that create new data, and models that learn by trial and error. These ideas power image generators, and the reinforcement learning behind RLHF.",
+  "bigPicture": "Every model so far learned to predict a label. Generative models learn what the data itself looks like, so they can make new examples. Reinforcement learning has no labels at all, only rewards, so the model must discover good actions by trying.",
+  "main": [
+   {
+    "title": "Understanding Deep Learning, Chapters 17–19 (Simon Prince)",
+    "url": "https://udlbook.github.io/udlbook/",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "VAEs, diffusion models and reinforcement learning, in the same clear style as the rest of the book."
+   },
+   {
+    "title": "Lilian Weng's blog",
+    "url": "https://lilianweng.github.io/",
+    "kind": "Blog",
+    "free": true,
+    "paid": false,
+    "why": "Careful, well-illustrated derivations of VAEs, diffusion and policy gradients. Read each post after the book chapter."
+   },
+   {
+    "title": "Spinning Up in Deep RL (OpenAI)",
+    "url": "https://spinningup.openai.com/",
+    "kind": "Course",
+    "free": true,
+    "paid": false,
+    "why": "The clearest practical introduction to deep reinforcement learning, with code."
+   }
+  ],
+  "deeper": [
+   {
+    "title": "Reinforcement Learning: An Introduction (Sutton and Barto)",
+    "url": "http://incompleteideas.net/book/the-book-2nd.html",
+    "kind": "Book",
+    "free": true,
+    "paid": false,
+    "why": "The standard RL textbook. Chapters 3 and 6 cover the basics used here."
+   },
+   {
+    "title": "David Silver's RL course (UCL / DeepMind)",
+    "url": "https://www.youtube.com/results?search_query=David+Silver+reinforcement+learning+lecture+1",
+    "kind": "Video",
+    "free": true,
+    "paid": false,
+    "why": "Ten classic lectures. Watch lectures 1 to 5 for the foundations."
+   }
+  ],
+  "topics": [
+   {
+    "name": "Autoencoders and VAEs (the ELBO)",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 17 (variational autoencoders)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": "Exceptionally clear figures of the encoder, the latent space, the ELBO and the reparameterisation trick, building up one step at a time."
+     },
+     {
+      "kind": "read",
+      "title": "From Autoencoder to Beta-VAE",
+      "source": "Lilian Weng",
+      "url": "https://lilianweng.github.io/posts/2018-08-12-vae/",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "Variational Autoencoders",
+      "source": "Arxiv Insights",
+      "url": "https://www.youtube.com/results?search_query=Arxiv+Insights+variational+autoencoders",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Auto-Encoding Variational Bayes (2013)",
+      "source": "Kingma and Welling · arXiv",
+      "url": "https://arxiv.org/abs/1312.6114",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Diffusion models",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "The Illustrated Stable Diffusion",
+      "source": "Jay Alammar · illustrated",
+      "url": "https://jalammar.github.io/illustrated-stable-diffusion/",
+      "recommended": "Colourful step-by-step pictures of noising, denoising, latent space and text conditioning. The clearest picture of how image generators work."
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 18 (diffusion models)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "The Annotated Diffusion Model",
+      "source": "Hugging Face blog · code walkthrough",
+      "url": "https://huggingface.co/blog/annotated-diffusion",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "What are Diffusion Models?",
+      "source": "Lilian Weng",
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Denoising Diffusion Probabilistic Models (DDPM, 2020)",
+      "source": "Ho, Jain, Abbeel · arXiv",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Reinforcement learning basics: states, actions, rewards, values",
+    "resources": [
+     {
+      "kind": "play",
+      "title": "Reinforcement Learning",
+      "source": "MLU-Explain (Amazon) · animated grid world",
+      "url": "https://mlu-explain.github.io/reinforcement-learning/",
+      "recommended": "An animated agent learns a grid world as you scroll, with its Q-values and policy updating live. This topic, in moving pictures."
+     },
+     {
+      "kind": "read",
+      "title": "Spinning Up, Part 1: Key Concepts in RL",
+      "source": "OpenAI",
+      "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Reinforcement Learning: An Introduction, Ch 3 and 6",
+      "source": "Sutton and Barto · free",
+      "url": "http://incompleteideas.net/book/the-book-2nd.html",
+      "recommended": null
+     },
+     {
+      "kind": "watch",
+      "title": "RL Course, Lecture 1: Introduction to Reinforcement Learning",
+      "source": "David Silver",
+      "url": "https://www.youtube.com/results?search_query=David+Silver+RL+course+lecture+1+introduction",
+      "recommended": null
+     }
+    ]
+   },
+   {
+    "name": "Policy gradients and PPO",
+    "resources": [
+     {
+      "kind": "read",
+      "title": "Spinning Up, Part 3: Intro to Policy Optimization",
+      "source": "OpenAI",
+      "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html",
+      "recommended": "A short, careful derivation of the policy gradient with runnable code, from the people who popularised PPO. The best bridge from idea to implementation."
+     },
+     {
+      "kind": "read",
+      "title": "Policy Gradient Algorithms",
+      "source": "Lilian Weng",
+      "url": "https://lilianweng.github.io/posts/2018-04-08-policy-gradient/",
+      "recommended": null
+     },
+     {
+      "kind": "read",
+      "title": "Understanding Deep Learning, Ch 19 (reinforcement learning)",
+      "source": "Simon Prince · free",
+      "url": "https://udlbook.github.io/udlbook/",
+      "recommended": null
+     },
+     {
+      "kind": "paper",
+      "title": "Proximal Policy Optimization Algorithms (2017)",
+      "source": "Schulman et al. · arXiv",
+      "url": "https://arxiv.org/abs/1707.06347",
+      "recommended": null
+     }
+    ]
+   }
+  ]
+ }
+]

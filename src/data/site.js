@@ -1,0 +1,86 @@
+// Site-wide settings. Edit here; every page reads from this file.
+
+export const site = {
+  name: 'Hamropedia',
+  url: 'https://hamropedia.com', // no trailing slash
+  tagline: 'Nepali tools, AI learning and honest guides',
+  description:
+    'Free Nepali tools (English to Nepali typing, Preeti to Unicode, Nepali date converter), a free AI and machine learning roadmap, study-abroad guides for Nepali students, and sourced Nepal news.',
+  locale: 'en_GB',
+  lang: 'en',
+  author: {
+    name: 'Manoj Kumar Thapa',
+    role: 'Software Engineer',
+    url: 'https://hamropedia.com/about-us/',
+    location: 'Birmingham, United Kingdom',
+  },
+  email: 'thapam807@gmail.com',
+  social: {
+    facebook: 'https://www.facebook.com/manojthapa807',
+    linkedin: 'https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168',
+    youtube: 'https://www.youtube.com/@thapam807',
+  },
+  // Paste the content value of Google Search Console's HTML-tag verification here.
+  googleSiteVerification: '',
+  established: 2024,
+};
+
+export const nav = [
+  { href: '/blog/', label: 'Blog' },
+  { href: '/news/', label: 'News' },
+  { href: '/ai-roadmap/', label: 'AI Roadmap' },
+  { href: '/tools/', label: 'Nepali Tools' },
+  { href: '/about-us/', label: 'About' },
+];
+
+// Category slugs match the old WordPress category URLs (/category/<slug>/).
+export const categories = {
+  'study-abroad': {
+    name: 'Study Abroad',
+    description: 'Step-by-step, sourced guides for Nepali students: NOC, WES, UK visas and more.',
+    hue: 'blue',
+  },
+  coding: {
+    name: 'Coding',
+    description: 'Programming guides and roadmaps for beginners, written for Nepali students.',
+    hue: 'green',
+  },
+  ai: {
+    name: 'AI & Machine Learning',
+    description: 'Learn AI and machine learning for free, and follow what AI means for Nepal.',
+    hue: 'violet',
+  },
+  nepal: {
+    name: 'Nepal',
+    description: 'Sourced news explainers and round-ups from Nepal, plus guides to typing and using Nepali online.',
+    hue: 'crimson',
+  },
+};
+
+// Old WordPress posts that were removed because they were outdated or
+// inaccurate. Each old URL now forwards to the closest useful page, so links
+// and Google results do not end in a 404.
+export const redirects = [
+  {
+    from: '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
+    to: '/category/study-abroad/',
+    title: 'Top skills for Nepali students to get jobs in Canada',
+  },
+  {
+    from: '/the-top-destination-for-nepali-students-studying-abroad-in-2025/',
+    to: '/category/study-abroad/',
+    title: 'Top study-abroad destinations for Nepali students',
+  },
+  {
+    from: '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
+    to: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/',
+    title: 'Top programming languages to learn',
+  },
+  {
+    from: '/devin-the-worlds-first-ai-software-engineer-who-never-sleeps/',
+    to: '/how-to-learn-ai-and-machine-learning-for-free/',
+    title: 'Devin, the AI software engineer',
+  },
+  { from: '/home/', to: '/', title: 'Home' },
+  { from: '/feed/', to: '/rss.xml', title: 'RSS feed' },
+];
