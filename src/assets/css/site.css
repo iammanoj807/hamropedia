@@ -213,6 +213,9 @@ button { font: inherit; color: inherit; }
 .cover .cv-brand { font: 700 30px Georgia, 'Fraunces', serif; fill: #fff; }
 .cover .cv-label { font: 700 18px var(--font-body); letter-spacing: 2px; fill: #fff; text-transform: uppercase; }
 .cover .cv-word { font-family: var(--font-display); font-weight: 700; letter-spacing: -3px; fill: #fff; fill-opacity: .96; }
+/* Devanagari: no negative tracking (it breaks the headline bar), no uppercase or letter-spacing on labels */
+:lang(ne) .cover .cv-word { letter-spacing: 0; font-family: 'Mukta', sans-serif; }
+:lang(ne) .cover .cv-label { letter-spacing: 0; }
 .card-body { display: flex; flex-direction: column; padding: 16px 18px 18px; flex: 1; }
 .card-meta { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
 .card-title { font-size: 1.2rem; margin: 0 0 8px; }

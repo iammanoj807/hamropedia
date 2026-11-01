@@ -62,7 +62,9 @@ test('keyboard: physical keys are read by position (UK keyboards)', () => {
   assert.equal(charForCode('Digit2', true), '@'); // Preeti २, even where Shift+2 prints "
   assert.equal(charForCode('Quote', false), "'");
   assert.equal(charForCode('KeyA', false), 'a');
-  assert.equal(charForCode('IntlBackslash', false), null);
+  assert.equal(charForCode('IntlBackslash', false), '\\'); // UK key left of Z
+  assert.equal(charForKeyEvent('IntlBackslash', '\\', false), '\\');
+  assert.equal(charForCode('F5', false), null);
   assert.equal(charForKeyEvent('Digit2', '"', true), '@'); // UK keyboard, Shift+2
   assert.equal(charForKeyEvent('Backslash', '|', false), '|'); // shifted symbol even without a Shift flag
   assert.equal(charForKeyEvent('KeyA', 'A', false), 'A'); // Caps Lock

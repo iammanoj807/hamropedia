@@ -18,6 +18,8 @@ export const ROWS = [
 ];
 
 const BY_CODE = new Map(ROWS.flat().map(([code, normal, shifted]) => [code, [normal, shifted]]));
+// UK and other ISO keyboards have an extra key left of Z; treat it like Backslash.
+BY_CODE.set('IntlBackslash', ['\\', '|']);
 
 /**
  * The US-layout character for a physical key. Preeti positions are defined on
