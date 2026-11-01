@@ -81,7 +81,7 @@
 
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; font-size: 108%; } /* slightly larger text everywhere */
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body {
   margin: 0;
@@ -627,11 +627,12 @@ button { font: inherit; color: inherit; }
 @media (max-width: 640px) { .age-inputs { grid-template-columns: 1fr; } .age-stats { grid-template-columns: 1fr 1fr 1fr; } }
 
 /* ---------- static pages ---------- */
-.about-photo { float: right; width: 220px; margin: 0 0 16px 28px; text-align: center; }
-.prose .about-photo img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 0; background: none; }
+.prose .about-photo { float: left; width: 220px; margin: 4px 36px 16px 0; text-align: center; }
+.prose .about-photo img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 22px; background: none; }
 .about-photo figcaption { margin-top: 10px; font-weight: 700; color: var(--text); }
+.static ul, .static ol { display: flow-root; } /* lists sit beside the photo instead of under it */
 .about-photo figcaption span { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); }
-@media (max-width: 600px) { .about-photo { float: none; width: 180px; margin: 0 auto 24px; } }
+@media (max-width: 600px) { .prose .about-photo { float: none; width: 180px; margin: 0 0 24px; } }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-bottom: 28px; }
 .contact-card { display: grid; gap: 4px; padding: 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); text-decoration: none; color: var(--text); }
 .contact-card svg { width: 22px; height: 22px; color: var(--accent); }
