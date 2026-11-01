@@ -319,15 +319,7 @@ button { font: inherit; color: inherit; }
 .post-head { padding-top: clamp(24px, 4vw, 48px); }
 .post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .post-head h1 { font-size: clamp(2rem, 1.3rem + 2.8vw, 3.1rem); }
-.byline { display: flex; align-items: center; gap: 12px; margin: 22px 0 28px; }
-.avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: none; background: var(--surface-2); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--border); }
-.avatar-lg { width: 64px; height: 64px; }
-.author-name a { color: inherit; text-decoration: none; }
-.author-name a:hover { color: var(--accent); }
-.about-hero { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: center; margin-bottom: 28px; }
-.about-hero img { width: 200px; height: auto; border-radius: var(--radius); border: 1px solid var(--border); }
-.about-hero p { margin: 0 0 8px; }
-@media (max-width: 600px) { .about-hero { grid-template-columns: 1fr; } .about-hero img { width: 160px; } }
+.byline { margin: 22px 0 28px; }
 .byline p { margin: 0; line-height: 1.4; }
 .byline-name { font-weight: 700; }
 .byline-name a { color: var(--text); text-decoration: none; }
@@ -351,9 +343,6 @@ button { font: inherit; color: inherit; }
   .toc details[open] summary { margin-bottom: 8px; }
 }
 .post-foot { margin-top: 48px; }
-.author-box { display: flex; gap: 16px; padding: 20px; margin-top: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
-.author-box p { margin: 0; color: var(--text-2); font-size: .98rem; }
-.author-name { font-weight: 700; color: var(--text) !important; margin-bottom: 4px !important; }
 .related { margin-top: clamp(48px, 7vw, 80px); }
 
 /* ---------- prose ---------- */
@@ -653,6 +642,6 @@ button { font: inherit; color: inherit; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 @media print {
-  .site-header, .site-footer, .share, .toc, .related, .progress, .author-box { display: none !important; }
+  .site-header, .site-footer, .share, .toc, .related, .progress { display: none !important; }
   body { background: #fff; color: #000; }
 }

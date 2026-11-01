@@ -18,14 +18,12 @@ const T = {
     home: 'Home', news: 'News', blog: 'Blog', by: 'By', published: 'Published', updated: 'Updated', min: (n) => `${n} min read`,
     onPage: 'On this page', keep: 'Keep reading', newsChip: 'News', updatedChip: 'Updated',
     switchTo: 'यो समाचार नेपालीमा पढ्नुहोस् →', switchLang: 'ne',
-    author: `${site.author.role} in ${site.author.location}, originally from Nepal. I write practical guides for Nepali students and learners, and I check every fact against an official or named source before it goes up. <a href="/contact-us/">Spotted a mistake? Tell me.</a>`,
     authorName: site.author.name,
   },
   ne: {
     home: 'गृहपृष्ठ', news: 'समाचार', blog: 'ब्लग', by: 'लेखक:', published: 'प्रकाशित', updated: 'अपडेट', min: (n) => `${toNepaliDigits(n)} मिनेट पढाइ`,
     onPage: 'यस पृष्ठमा', keep: 'अरू समाचार', newsChip: 'समाचार', updatedChip: 'अपडेट गरिएको',
     switchTo: 'Read this in English →', switchLang: 'en',
-    author: 'नेपालमा जन्मिएका, हाल बेलायतको बर्मिङ्घममा कार्यरत सफ्टवेयर इन्जिनियर। हरेक तथ्य आधिकारिक वा नाम खुलेको स्रोतसँग जाँचेर मात्र प्रकाशित गरिन्छ। <a href="/contact-us/">गल्ती भेट्नुभयो? जानकारी दिनुहोस्।</a>',
     authorName: 'मनोज कुमार थापा',
   },
 };
@@ -70,7 +68,6 @@ export function renderPost(post, all, version, translation) {
     <h1>${esc(post.title)}</h1>
     <p class="lead">${esc(post.description)}</p>
     <div class="byline">
-      <img class="avatar" src="${site.author.photo}" alt="${esc(t.authorName)}" width="44" height="44" decoding="async">
       <div>
         <p class="byline-name">${t.by} <a href="/about-us/">${esc(t.authorName)}</a></p>
         <p class="byline-meta">${dateLine}</p>
@@ -86,13 +83,6 @@ ${post.html}
   </div>
   <footer class="post-foot wrap-narrow">
     ${shareBar(abs(site.url, post.url), post.title, lang)}
-    <div class="author-box">
-      <a href="/about-us/"><img class="avatar avatar-lg" src="${site.author.photo}" alt="${esc(t.authorName)}" width="64" height="64" loading="lazy" decoding="async"></a>
-      <div>
-        <p class="author-name"><a href="/about-us/">${esc(t.authorName)}</a></p>
-        <p>${t.author}</p>
-      </div>
-    </div>
   </footer>
 </article>
 <section class="related wrap" aria-labelledby="related-h">
@@ -109,7 +99,7 @@ ${post.html}
       image: [abs(site.url, post.ogImage)],
       datePublished: isoDate(post.date),
       dateModified: isoDate(post.updated || post.date),
-      author: { '@type': 'Person', name: site.author.name, url: site.author.url, image: abs(site.url, site.author.photoSchema), jobTitle: site.author.role, sameAs: Object.values(site.social) },
+      author: { '@type': 'Person', name: site.author.name, url: site.author.url, jobTitle: site.author.role, sameAs: Object.values(site.social) },
       publisher,
       mainEntityOfPage: { '@type': 'WebPage', '@id': abs(site.url, post.url) },
       articleSection: categories[post.category].name,

@@ -23,15 +23,7 @@ export function renderAbout(version) {
     eyebrow: 'About',
     description: 'Hamropedia is a free site by software engineer Manoj Kumar Thapa: Nepali tools, a free AI roadmap, study-abroad guides and sourced Nepal news.',
     lead: 'Useful things for Nepali people, made carefully: tools that work, guides that match the official sites, and news with its sources showing.',
-    html: `<div class="about-hero">
-  <img src="${site.author.photoLarge}" alt="${esc(site.author.name)}" width="480" height="591" decoding="async">
-  <div>
-    <p class="author-name">${esc(site.author.name)}</p>
-    <p class="muted">${esc(site.author.role)} · ${esc(site.author.location)} · from Nepal</p>
-    <p><a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a> · <a href="${site.social.youtube}" target="_blank" rel="noopener">YouTube</a> · <a href="${site.social.facebook}" target="_blank" rel="noopener">Facebook</a> · <a href="/contact-us/">Contact</a></p>
-  </div>
-</div>
-<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
+    html: `<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
 <li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
 <li><strong>Learning</strong>: a free <a href="/ai-roadmap/">AI &amp; machine learning roadmap</a> with ${'370+'} hand-picked resources, and coding guides for beginners.</li>
@@ -39,6 +31,7 @@ export function renderAbout(version) {
 </ul>
 <h2>Who writes it</h2>
 <p>I’m <strong>${esc(site.author.name)}</strong>, a ${esc(site.author.role.toLowerCase())} from Nepal, now living in ${esc(site.author.location)}. I build software for a living, and Hamropedia is where I share what I have learned with other Nepali students, learners and readers.</p>
+<p>You can see my work on <a href="${site.social.github}" target="_blank" rel="noopener">GitHub</a> and my <a href="${site.social.portfolio}" target="_blank" rel="noopener">portfolio</a>, or connect on <a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.</p>
 <h2>How articles are checked</h2>
 <ul>
 <li>Rules, fees and dates are checked against the official source (gov.uk, wes.org, Nepal government portals) and linked in the article.</li>
@@ -53,7 +46,7 @@ export function renderAbout(version) {
         '@type': 'AboutPage',
         name: 'About Hamropedia',
         url: `${site.url}/about-us/`,
-        mainEntity: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, image: `${site.url}${site.author.photoSchema}`, address: { '@type': 'PostalAddress', addressLocality: 'Birmingham', addressCountry: 'GB' }, sameAs: Object.values(site.social) },
+        mainEntity: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, url: site.social.portfolio, address: { '@type': 'PostalAddress', addressLocality: 'Birmingham', addressCountry: 'GB' }, sameAs: Object.values(site.social) },
       },
     ],
   });
@@ -71,6 +64,8 @@ export function renderContact(version) {
   <a class="contact-card" href="mailto:${site.email}?subject=Hamropedia">
     <b>Email</b><span>${site.email}</span>
   </a>
+  <a class="contact-card" href="${site.social.github}" target="_blank" rel="noopener">${ICONS.github}<b>GitHub</b><span>iammanoj807</span></a>
+  <a class="contact-card" href="${site.social.portfolio}" target="_blank" rel="noopener">${ICONS.globe}<b>Portfolio</b><span>iammanoj807.github.io/profile</span></a>
   <a class="contact-card" href="${site.social.linkedin}" target="_blank" rel="noopener">${ICONS.linkedin}<b>LinkedIn</b><span>Manoj Kumar Thapa</span></a>
   <a class="contact-card" href="${site.social.facebook}" target="_blank" rel="noopener">${ICONS.facebook}<b>Facebook</b><span>manojthapa807</span></a>
   <a class="contact-card" href="${site.social.youtube}" target="_blank" rel="noopener">${ICONS.youtube}<b>YouTube</b><span>@thapam807</span></a>
