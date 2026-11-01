@@ -22,12 +22,16 @@ http
       if (!url.endsWith('/')) { res.writeHead(301, { location: url + '/' }).end(); return; }
       file = path.join(file, 'index.html');
     }
+    // dist/ may be mid-rebuild: never crash on a missing file, just answer.
+    const send = (status, f, type) => {
+      const stream = fs.createReadStream(f);
+      stream.on('error', () => { if (!res.headersSent) res.writeHead(503); res.end('Rebuilding, refresh in a moment.'); });
+      stream.once('open', () => { res.writeHead(status, { 'content-type': type }); stream.pipe(res); });
+    };
     if (!fs.existsSync(file)) {
-      res.writeHead(404, { 'content-type': TYPES['.html'] });
-      fs.createReadStream(path.join(DIST, '404.html')).pipe(res);
+      send(404, path.join(DIST, '404.html'), TYPES['.html']);
       return;
     }
-    res.writeHead(200, { 'content-type': TYPES[path.extname(file)] || 'application/octet-stream' });
-    fs.createReadStream(file).pipe(res);
+    send(200, file, TYPES[path.extname(file)] || 'application/octet-stream');
   })
   .listen(PORT, () => console.log(`Serving dist/ at http://localhost:${PORT}`));

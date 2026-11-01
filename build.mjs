@@ -104,7 +104,7 @@ const add = (p, html) => {
   pages.set(p, html);
 };
 
-add('/', renderHome(posts, version));
+add('/', renderHome(posts, version, nePosts));
 add('/blog/', renderBlogIndex(posts, version));
 add('/news/', renderNews(posts, version));
 add('/ne/', renderNeHub(nePosts, version));

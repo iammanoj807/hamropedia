@@ -29,10 +29,9 @@ export const site = {
 
 export const nav = [
   { href: '/blog/', label: 'Blog' },
-  { href: '/news/', label: 'News' },
+  { href: '/ne/', label: 'News' },
   { href: '/ai-roadmap/', label: 'AI Roadmap' },
   { href: '/tools/', label: 'Tools' },
-  { href: '/ne/', label: 'नेपाली', lang: 'ne' },
   { href: '/about-us/', label: 'About' },
 ];
 

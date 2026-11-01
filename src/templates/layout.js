@@ -168,7 +168,7 @@ function footer() {
     </div>
     <div>
       <h2 class="footer-h">Read</h2>
-      <ul>${cats}<li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li><li><a href="/ne/" lang="ne">नेपाली समाचार</a></li></ul>
+      <ul>${cats}<li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li><li><a href="/ne/" lang="ne">समाचार</a></li><li><a href="/news/">News in English</a></li></ul>
     </div>
     <div>
       <h2 class="footer-h">Hamropedia</h2>

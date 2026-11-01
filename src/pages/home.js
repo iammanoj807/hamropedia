@@ -1,12 +1,13 @@
 import { site } from '../data/site.js';
-import { esc, longDate } from '../lib/util.js';
+import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
-import { postCard, categoryChip } from '../templates/components.js';
+import { postCard, categoryChip, displayDate } from '../templates/components.js';
 import { phases, totals } from './roadmap.js';
 import { TOOLS } from './tools.js';
 
-export function renderHome(posts, version) {
-  const news = posts.filter((p) => p.type === 'news');
+export function renderHome(posts, version, nePosts = []) {
+  // News opens in Nepali by default; each story has a "Read in English" button.
+  const news = nePosts.length ? nePosts : posts.filter((p) => p.type === 'news');
   const guides = posts.filter((p) => p.type !== 'news');
   const [topNews, ...moreNews] = news;
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
@@ -54,12 +55,12 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Nepal &amp; AI news, explained</h2><a href="/news/">All news</a></div>
+  <div class="section-head"><h2>Latest news <span lang="ne">· समाचार</span></h2><a href="/ne/" lang="ne">सबै समाचार</a></div>
   <div class="news-lead">
     ${topNews ? postCard(topNews, { size: 'lg' }) : ''}
     <div class="news-side">
       <ol class="headline-list">
-        ${moreNews.slice(0, 4).map((p) => `<li>${categoryChip(p.category, false)}<a href="${p.url}">${esc(p.title)}</a><span>${longDate(p.updated || p.date)}</span></li>`).join('')}
+        ${moreNews.slice(0, 4).map((p) => `<li${p.lang === 'ne' ? ' lang="ne"' : ''}>${categoryChip(p.category, false, p.lang)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date, p.lang)}</span></li>`).join('')}
       </ol>
     </div>
   </div>

@@ -17,13 +17,13 @@ const T = {
   en: {
     home: 'Home', news: 'News', blog: 'Blog', by: 'By', published: 'Published', updated: 'Updated', min: (n) => `${n} min read`,
     onPage: 'On this page', keep: 'Keep reading', newsChip: 'News', updatedChip: 'Updated',
-    switchTo: 'यो समाचार नेपालीमा पढ्नुहोस् →', switchLang: 'ne',
+    switchTo: 'नेपालीमा पढ्नुहोस्', switchLang: 'ne',
     authorName: site.author.name,
   },
   ne: {
     home: 'गृहपृष्ठ', news: 'समाचार', blog: 'ब्लग', by: 'लेखक:', published: 'प्रकाशित', updated: 'अपडेट', min: (n) => `${toNepaliDigits(n)} मिनेट पढाइ`,
     onPage: 'यस पृष्ठमा', keep: 'अरू समाचार', newsChip: 'समाचार', updatedChip: 'अपडेट गरिएको',
-    switchTo: 'Read this in English →', switchLang: 'en',
+    switchTo: 'Read in English', switchLang: 'en',
     authorName: 'मनोज कुमार थापा',
   },
 };
@@ -122,7 +122,7 @@ ${post.html}
     lang,
     alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : '/blog/',
+    section: ne || post.type === 'news' ? '/ne/' : '/blog/',
   });
 }
 
@@ -219,7 +219,7 @@ function newsLead(news, lang) {
     <ol class="headline-list">
       ${rest.slice(0, 6).map((p) => `<li>${categoryChip(p.category, false, lang)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date, lang)}</span></li>`).join('')}
     </ol>
-    <p class="side-note">${ne ? '<a href="/news/" lang="en">Read the news in English</a>' : 'Also in Nepali: <a href="/ne/" lang="ne">नेपाली समाचार</a> · <a href="/rss.xml">RSS feed</a>'}</p>
+    <p class="side-note">${ne ? '<a class="lang-switch" href="/news/" lang="en" hreflang="en">Read in English</a>' : '<a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a>'}</p>
   </div>
 </section>`;
 }
@@ -231,7 +231,7 @@ export function renderNews(posts, version) {
     crumbs,
     eyebrow: 'News',
     title: 'Nepal, AI &amp; study-abroad news, explained',
-    lead: 'No rumours, no copy-paste. Each story links to the reports it is based on, says what is confirmed and what is only proposed, and is dated to when the news happened. <a href="/ne/" lang="ne">नेपालीमा पढ्नुहोस् →</a>',
+    lead: 'The latest news for Nepal, in English. <a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a>',
   })}
 ${newsLead(news, 'en')}
 ${newsSection('Nepal', news.filter((p) => p.category === 'nepal'), '/category/nepal/', 'All Nepal articles')}
@@ -243,7 +243,7 @@ ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'stu
     path: '/news/',
     body,
     version,
-    section: '/news/',
+    section: '/ne/',
     alternates: [{ lang: 'en', path: '/news/' }, { lang: 'ne', path: '/ne/' }],
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'News', url: `${site.url}/news/` },
@@ -257,8 +257,8 @@ export function renderNeHub(nePosts, version) {
   const body = `${pageHead({
     crumbs,
     eyebrow: 'समाचार',
-    title: 'नेपाली समाचार, स्रोतसहित',
-    lead: 'नेपाल, एआई र विदेश अध्ययनसम्बन्धी प्रमुख समाचार सरल नेपालीमा। हरेक समाचारमा मूल स्रोतको लिंक छ, र के पक्का भएको हो र के प्रस्ताव मात्र हो भनेर छुट्याइएको छ।',
+    title: 'नेपाली समाचार',
+    lead: 'नेपाल, एआई र विदेश अध्ययनसम्बन्धी प्रमुख समाचार, सरल नेपालीमा। <a class="lang-switch" href="/news/" lang="en" hreflang="en">Read in English</a>',
   })}
 ${newsLead(nePosts, 'ne')}
 ${newsSection('नेपाल', nePosts.filter((p) => p.category === 'nepal'), null)}
