@@ -12,7 +12,7 @@ const problems = [];
 
 const OLD_WORDPRESS_URLS = [
   '/', '/about-us/', '/contact-us/', '/blog/', '/privacy-policy/', '/terms-of-use-hamropedia/',
-  '/category/coding/', '/category/study-abroad/',
+  '/category/coding/', '/category/study-abroad/', '/category/online-marketing/', '/sitemap_index.xml', '/ads.txt',
   '/python-decorators-explained-for-beginners/',
   '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
   '/the-top-destination-for-nepali-students-studying-abroad-in-2025/',

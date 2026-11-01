@@ -81,6 +81,7 @@ export const redirects = [
     to: '/how-to-learn-ai-and-machine-learning-for-free/',
     title: 'Devin, the AI software engineer',
   },
+  { from: '/category/online-marketing/', to: '/blog/', title: 'Online marketing' },
   { from: '/home/', to: '/', title: 'Home' },
   { from: '/feed/', to: '/rss.xml', title: 'RSS feed' },
 ];

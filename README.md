@@ -69,20 +69,34 @@ proposals as proposals; show the updated date when you change something.
 
 ## Deploying (GitHub Pages + your Hostinger domain)
 
-1. Push this folder to a GitHub repository, then in **Settings → Pages** set
-   **Source: GitHub Actions**, and set **Custom domain** to `hamropedia.com`.
+Do these **in this order**. Setting the custom domain on GitHub *before* changing DNS
+stops anyone else from claiming the domain on GitHub in between.
+
+1. Push this folder to a **public** GitHub repository (free GitHub Pages needs a public
+   repo). In **Settings → Pages** set **Source: GitHub Actions**, wait for the first
+   deploy to go green, then set **Custom domain** to `hamropedia.com`.
+   (The temporary `username.github.io/repo/` address will look broken: the site is built
+   for the root of its own domain. That's expected.)
 2. In **Hostinger → Domains → DNS / Nameservers → DNS records**:
-   - delete the existing `A` record(s) for `@` that point to Hostinger hosting;
+   - delete the existing `A` **and `AAAA`** records for `@` that point to Hostinger hosting
+     (a leftover `AAAA` record would keep sending some visitors to WordPress);
    - add four `A` records for `@`: `185.199.108.153`, `185.199.109.153`,
      `185.199.110.153`, `185.199.111.153`;
    - optional IPv6: four `AAAA` records for `@`: `2606:50c0:8000::153`,
      `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`;
-   - set `www` as a `CNAME` to `<your-github-username>.github.io`;
-   - **leave any `MX`/email records alone.**
+   - replace whatever `www` record exists with a `CNAME` to `<your-github-username>.github.io`;
+   - **keep all `MX`, `TXT` (including SPF and `google-site-verification`) and email records.**
+     Search Console verification for this domain is not in the WordPress HTML, so it is
+     probably a DNS `TXT` record: deleting it would un-verify the site.
 3. Wait for DNS (minutes to a few hours), then tick **Enforce HTTPS** in Settings → Pages.
 4. In [Google Search Console](https://search.google.com/search-console), submit
-   `https://hamropedia.com/sitemap.xml`. Keep the WordPress hosting until the new site is
-   live and checked, then cancel it.
+   `https://hamropedia.com/sitemap.xml`. (`/sitemap_index.xml`, the old WordPress
+   sitemap address, also still works.) Use **URL inspection → Request indexing** for the
+   home page and the tools. Keep the WordPress hosting until the new site is live and
+   checked, then cancel it.
+
+`public/ads.txt` keeps the AdSense publisher line from the old site. The new site shows
+no ads; if you add AdSense later, update the privacy policy (cookies) first.
 
 ## Keeping things fresh
 

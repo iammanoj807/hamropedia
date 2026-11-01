@@ -141,6 +141,12 @@ ${[...pages.keys()]
 </urlset>
 `;
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
+// The old WordPress (Yoast) sitemap lived at /sitemap_index.xml and may still be
+// submitted in Search Console, so keep that address working as a sitemap index.
+fs.writeFileSync(
+  path.join(DIST, 'sitemap_index.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>${site.url}/sitemap.xml</loc><lastmod>${newest}</lastmod></sitemap>\n</sitemapindex>\n`,
+);
 
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 
