@@ -1,6 +1,6 @@
 ---
 title: "Balen Shah Sworn In as Prime Minister: How Nepal Got Here, from the Gen Z Protests"
-seoTitle: "Balen Shah Becomes Nepal's Prime Minister: Gen Z Protests, the 2026 Election, Explained"
+seoTitle: "Balen Shah, Nepal's Prime Minister: From the Gen Z Protests to the 2026 Election, Explained"
 description: "Balendra Shah has been sworn in as Nepal's prime minister after the Rastriya Swatantra Party's landslide. A sourced timeline from the September 2025 Gen Z protests to today, with updates since."
 date: 2026-03-27
 updated: 2026-11-01
@@ -12,6 +12,12 @@ coverAlt: "Balen Shah sworn in as Nepal's prime minister"
 ---
 
 **Balendra "Balen" Shah was sworn in as Nepal's prime minister on 27 March 2026 (Chaitra 13, 2082)**, capping one of the most dramatic years in the country's modern politics. In just over six months, Nepal went from deadly street protests to the biggest single-party election win in decades. This explainer sets out what happened, in order, with links to the reports behind each fact.
+
+> **At a glance**
+>
+> - **Who:** Balendra "Balen" Shah, 35, former mayor of Kathmandu, Rastriya Swatantra Party (RSP).
+> - **When:** sworn in on 27 March 2026 (Chaitra 13, 2082).
+> - **Why:** the RSP won 182 of 275 seats in the 5 March 2026 election, after the September 2025 Gen Z protests brought down the Oli government.
 
 ## Timeline at a glance
 
@@ -62,9 +68,9 @@ The result was a clear vote against the parties that had led Nepal for decades. 
 
 - **Reform agenda:** the government launched a **100-point governance reform agenda** and cut the number of ministries ([Tribune India, one month in](https://www.tribuneindia.com/news/world/marred-by-controversy-light-on-reforms-nepals-super-pm-balen-shah-completes-one-month-in-office/)).
 - **Mixed early reviews:** supporters pointed to a fast pace and a hard line on corruption; the Public Procurement Monitoring Office says **120 firms have been blacklisted since 27 March** ([Nepal News, 30 Oct 2026](https://english.nepalnews.com/s/business/nepal-news-evening-economic-brief-october-30-2026/)). Critics pointed to two ministers resigning within the first month, a controversial demolition drive against riverbank settlements in the Kathmandu Valley, and a prime minister who rarely speaks to the press ([The Annapurna Express](https://theannapurnaexpress.com/story/63906/); [Gulf Times, 100 days](https://www.gulf-times.com/article/728679/international/nepal/nepal-pm-marks-100-days-with-fast-change-and-few-words)).
-- **Press freedom:** in late October, police went to several newsrooms and held journalists for questioning over their reports, including one about the police chief, drawing protests from journalists' bodies. Read [what happened in the newsroom raids](/nepal-journalists-detained-newsroom-raids-october-2026/).
+- **Press freedom:** in late October, police went to several newsrooms and held journalists for questioning over their reports, including one about the police chief, drawing protests from journalists' bodies ([OnlineKhabar](https://english.onlinekhabar.com/police-visit-offices-of-multiple-media-outlets-several-journalists-taken-into-custody.html)).
 - **The courts:** RSP lawmakers have recommended forming an impeachment recommendation committee, citing Article 101 on judicial misconduct ([Nepal News, 1 Nov 2026](https://english.nepalnews.com/s/main-left/nepal-news-evening-briefing-sunday-november-01-2026/)).
-- **The economy:** public debt has passed Rs 3 trillion, and the UN has given Nepal until 24 November 2029 to graduate from Least Developed Country status. See the [weekly round-up](/nepal-news-roundup-week-of-26-october-2026/).
+- **The economy:** public debt has passed Rs 3 trillion, and the UN has given Nepal until 24 November 2029 to graduate from Least Developed Country status ([Nepal News, 30 Oct 2026](https://english.nepalnews.com/s/business/nepal-news-evening-economic-brief-october-30-2026/)).
 
 ---
 

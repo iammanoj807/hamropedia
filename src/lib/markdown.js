@@ -59,10 +59,15 @@ export function renderMarkdown(md, ctx) {
   let html = marked.parse(md);
   // wrap tables so they scroll on small screens instead of the page
   html = html.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>');
-  // Callouts: a blockquote starting with **Note:**, **Update:** or **Tip:**
+  // Callouts: a blockquote starting with **Note:**, **Update:**, **Tip:** ... or a
+  // key-facts box starting with **At a glance** (Nepali: **एक नजरमा**).
   html = html.replace(
-    /<blockquote>\s*<p><strong>(Note|Update|Tip|Warning|Important)(:?)<\/strong>/g,
-    (m, kind, colon) => `<blockquote class="callout callout-${kind.toLowerCase()}"><p><strong>${kind}${colon}</strong>`,
+    /<blockquote>\s*<p><strong>(Note|Update|Tip|Warning|Important|अपडेट)([^<]*)<\/strong>/g,
+    (m, kind, rest) => `<blockquote class="callout callout-${kind === 'अपडेट' ? 'update' : kind.toLowerCase()}"><p><strong>${kind}${rest}</strong>`,
+  );
+  html = html.replace(
+    /<blockquote>\s*<p><strong>(At a glance|एक नजरमा)<\/strong><\/p>/g,
+    (m, label) => `<blockquote class="callout callout-glance"><p class="glance-h"><strong>${label}</strong></p>`,
   );
   return { html, toc };
 }

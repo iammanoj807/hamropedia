@@ -70,7 +70,7 @@ export function renderPost(post, all, version, translation) {
     <h1>${esc(post.title)}</h1>
     <p class="lead">${esc(post.description)}</p>
     <div class="byline">
-      <span class="avatar" aria-hidden="true">MT</span>
+      <img class="avatar" src="${site.author.photo}" alt="${esc(t.authorName)}" width="44" height="44" decoding="async">
       <div>
         <p class="byline-name">${t.by} <a href="/about-us/">${esc(t.authorName)}</a></p>
         <p class="byline-meta">${dateLine}</p>
@@ -87,9 +87,9 @@ ${post.html}
   <footer class="post-foot wrap-narrow">
     ${shareBar(abs(site.url, post.url), post.title, lang)}
     <div class="author-box">
-      <span class="avatar avatar-lg" aria-hidden="true">MT</span>
+      <a href="/about-us/"><img class="avatar avatar-lg" src="${site.author.photo}" alt="${esc(t.authorName)}" width="64" height="64" loading="lazy" decoding="async"></a>
       <div>
-        <p class="author-name">${esc(t.authorName)}</p>
+        <p class="author-name"><a href="/about-us/">${esc(t.authorName)}</a></p>
         <p>${t.author}</p>
       </div>
     </div>
@@ -109,7 +109,7 @@ ${post.html}
       image: [abs(site.url, post.ogImage)],
       datePublished: isoDate(post.date),
       dateModified: isoDate(post.updated || post.date),
-      author: { '@type': 'Person', name: site.author.name, url: site.author.url },
+      author: { '@type': 'Person', name: site.author.name, url: site.author.url, image: abs(site.url, site.author.photoSchema), jobTitle: site.author.role, sameAs: Object.values(site.social) },
       publisher,
       mainEntityOfPage: { '@type': 'WebPage', '@id': abs(site.url, post.url) },
       articleSection: categories[post.category].name,
@@ -249,7 +249,7 @@ ${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/
 ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
     title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
-    description: 'Sourced news explainers: Nepal politics and economy, the Nagdhunga tunnel, CAR T-cell therapy, AI training in Nepal, and the UK Graduate visa update. Also in Nepali.',
+    description: 'Sourced news explainers Nepalis search for: PM Balen Shah and the 2026 election, Nagdhunga tunnel toll rates, Nepal\'s AI policy and the UK Graduate visa update. Also in Nepali.',
     path: '/news/',
     body,
     version,

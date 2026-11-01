@@ -1,6 +1,6 @@
 ---
-title: "Nagdhunga Tunnel Starts Charging Tolls: Rates, Rules and How to Pay"
-seoTitle: "Nagdhunga Tunnel Toll Rates 2026: Car, Bus, Truck Fees and Rules"
+title: "Nagdhunga Tunnel Toll Rates 2026: Car, Bus and Truck Fees, Rules and How to Pay"
+seoTitle: "Nagdhunga Tunnel Toll Rate 2026: Car Rs 65, Bus and Truck Fees, Rules"
 description: "Tolls start on Nepal's first road tunnel, Nagdhunga–Sisnekhola, from 1 November 2026. Rates for cars, buses and trucks, which vehicles are banned, how to pay, and key facts about the tunnel."
 date: 2026-11-01
 category: nepal
@@ -11,6 +11,13 @@ coverAlt: "Nagdhunga tunnel toll rates"
 ---
 
 Vehicles using the **Nagdhunga tunnel**, Nepal's first road tunnel on the main route between Kathmandu and the west, **pay a toll from 1 November 2026**. Earlier notices had said 31 October; the latest reports confirm 1 November ([Makalu Khabar](https://english.makalukhabar.com/nagdhunga-tunnel-road-toll-collection-begins/); [Meroauto](https://www.en.meroauto.com/nagdhunga-tunnel-road-introduces-toll-charges-from-today/)).
+
+> **At a glance**
+>
+> - **From:** 1 November 2026.
+> - **Car, jeep or van:** Rs 65 into Kathmandu, Rs 60 out.
+> - **Not allowed:** motorcycles, three-wheelers, and vehicles carrying petrol, diesel or LPG.
+> - **Pay with:** N-Tag/RFID or QR (cash was also reported in the first phase).
 
 ## Toll rates
 

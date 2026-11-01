@@ -23,7 +23,15 @@ export function renderAbout(version) {
     eyebrow: 'About',
     description: 'Hamropedia is a free site by software engineer Manoj Kumar Thapa: Nepali tools, a free AI roadmap, study-abroad guides and sourced Nepal news.',
     lead: 'Useful things for Nepali people, made carefully: tools that work, guides that match the official sites, and news with its sources showing.',
-    html: `<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
+    html: `<div class="about-hero">
+  <img src="${site.author.photoLarge}" alt="${esc(site.author.name)}" width="480" height="591" decoding="async">
+  <div>
+    <p class="author-name">${esc(site.author.name)}</p>
+    <p class="muted">${esc(site.author.role)} · ${esc(site.author.location)} · from Nepal</p>
+    <p><a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a> · <a href="${site.social.youtube}" target="_blank" rel="noopener">YouTube</a> · <a href="${site.social.facebook}" target="_blank" rel="noopener">Facebook</a> · <a href="/contact-us/">Contact</a></p>
+  </div>
+</div>
+<p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
 <li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
 <li><strong>Learning</strong>: a free <a href="/ai-roadmap/">AI &amp; machine learning roadmap</a> with ${'370+'} hand-picked resources, and coding guides for beginners.</li>
@@ -45,7 +53,7 @@ export function renderAbout(version) {
         '@type': 'AboutPage',
         name: 'About Hamropedia',
         url: `${site.url}/about-us/`,
-        mainEntity: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, sameAs: Object.values(site.social) },
+        mainEntity: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, image: `${site.url}${site.author.photoSchema}`, address: { '@type': 'PostalAddress', addressLocality: 'Birmingham', addressCountry: 'GB' }, sameAs: Object.values(site.social) },
       },
     ],
   });

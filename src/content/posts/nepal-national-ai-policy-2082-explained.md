@@ -1,6 +1,6 @@
 ---
 title: "Nepal Approves National AI Policy 2082: Goals, Plans and What It Means for You"
-seoTitle: "Nepal National AI Policy 2082 Explained: Targets, AI Centre, Sectors and Skills"
+seoTitle: "Nepal National AI Policy 2082: Targets, AI Centre, Sectors, Explained"
 description: "Nepal's Cabinet has approved the National Artificial Intelligence Policy 2082: a top-50 AI readiness target, a National AI Centre, provincial centres of excellence, data protection rules and an AI skills push."
 date: 2025-08-22
 updated: 2026-11-01
@@ -12,6 +12,13 @@ coverAlt: "Nepal's National AI Policy explained"
 ---
 
 Nepal now has a national plan for artificial intelligence. The Cabinet has approved the **National Artificial Intelligence (AI) Policy, 2082**, setting out how the government wants to use AI, regulate it and build the skills to work with it. Here is what it says, and what it means if you are a student or developer in Nepal.
+
+> **At a glance**
+>
+> - **Approved:** by Nepal's Cabinet on 11 August 2025.
+> - **Goal:** a place in the top 50 of the global AI Readiness Index within five years.
+> - **New bodies:** a National AI Center and AI Centers of Excellence in every province.
+> - **Focus sectors:** education, agriculture, health, energy and transport.
 
 ## The basics
 
@@ -56,7 +63,7 @@ On infrastructure, it mentions data centres, cloud and high-performance computin
 
 Writing a policy is the easy part. Whether the AI Center and the provincial centres are actually set up and funded is the thing to watch.
 
-> **Update (1 November 2026):** Commentators have since asked whether the policy will be backed by enough money, strong institutions and real accountability ([The Himalayan Times, opinion](https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready)). Nepal has also changed government twice since this policy was approved: the interim government formed after the September 2025 protests, and the [RSP government of Prime Minister Balen Shah](/nepal-gen-z-protests-to-balen-shah-government-explained/) elected in March 2026. AI training is spreading in the meantime, from school campaigns to free government courses; see [AI training in Nepal: what's on in late 2026](/ai-training-in-nepal-2026/).
+> **Update (1 November 2026):** Commentators have since asked whether the policy will be backed by enough money, strong institutions and real accountability ([The Himalayan Times, opinion](https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready)). Nepal has also changed government twice since this policy was approved: the interim government formed after the September 2025 protests, and the [RSP government of Prime Minister Balen Shah](/nepal-gen-z-protests-to-balen-shah-government-explained/) elected in March 2026. AI training is also spreading, from the "AI for Nepal 2026" school campaign launched in Dhangadhi ([ICT Frame](https://ictframe.com/ai-for-nepal-kicks-off-in-dhangadhi/)) to free online courses from the National Vocational Training Establishment ([Nepal News](https://english.nepalnews.com/s/main-left/nepal-news-evening-briefing-sunday-november-01-2026/)).
 
 ## What it means for you
 

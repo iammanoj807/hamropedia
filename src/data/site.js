@@ -13,6 +13,9 @@ export const site = {
     role: 'Software Engineer',
     url: 'https://hamropedia.com/about-us/',
     location: 'Birmingham, United Kingdom',
+    photo: '/images/manojkumarthapa-160.webp',
+    photoLarge: '/images/manojkumarthapa-portrait.webp',
+    photoSchema: '/images/manojkumarthapa.jpg',
   },
   email: 'thapam807@gmail.com',
   social: {
