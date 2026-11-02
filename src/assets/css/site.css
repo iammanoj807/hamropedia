@@ -149,7 +149,8 @@ button { font: inherit; color: inherit; }
 .lead { font-size: clamp(1.1rem, 1rem + .4vw, 1.3rem); color: var(--text-2); line-height: 1.55; max-width: 62ch; }
 
 /* ---------- page head & breadcrumbs ---------- */
-.page-head { padding: clamp(28px, 5vw, 56px) 0 clamp(24px, 4vw, 40px); border-bottom: 1px solid var(--border); background: radial-gradient(1200px 300px at 10% -10%, var(--accent-soft), transparent 60%); margin-bottom: clamp(28px, 4vw, 44px); }
+.page-head { position: relative; padding: clamp(28px, 5vw, 56px) 0 clamp(64px, 8vw, 110px); background: var(--bg); margin-bottom: clamp(20px, 3vw, 32px); }
+.page-head::after { height: clamp(44px, 6vw, 90px); }
 .page-head h1 { max-width: 22ch; }
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0; margin: 0 0 18px; font-size: .9rem; color: var(--muted); }
 .crumbs li:not(:last-child)::after { content: '/'; margin-left: 8px; color: var(--border-2); }
@@ -172,9 +173,6 @@ button { font: inherit; color: inherit; }
     radial-gradient(70% 90% at 85% 0%, rgb(255 255 255 / 20%), transparent 60%),
     linear-gradient(135deg, color-mix(in srgb, var(--tint) 38%, #050a18), var(--tint)); }
 .cover svg { display: block; width: 100%; height: 100%; }
-.cover-coding { --tint: color-mix(in srgb, var(--accent) 62%, #0d9488); }
-.cover-ai { --tint: color-mix(in srgb, var(--accent) 62%, #7c3aed); }
-.cover-nepal { --tint: color-mix(in srgb, var(--accent) 72%, #1e1b4b); }
 .cover .cv-mark { fill: var(--tint); }
 .cover .cv-brand { font: 700 30px Georgia, 'Fraunces', serif; fill: #fff; }
 .cover .cv-label { font: 700 18px var(--font-body); letter-spacing: 2px; fill: #fff; text-transform: uppercase; }
@@ -195,9 +193,12 @@ button { font: inherit; color: inherit; }
 .card-lg .card-excerpt { -webkit-line-clamp: 4; font-size: 1.05rem; }
 
 /* ---------- hero ---------- */
-.hero { padding: clamp(32px, 6vw, 80px) 0 clamp(20px, 4vw, 48px); background:
-  radial-gradient(900px 420px at 85% 0%, var(--accent-soft), transparent 65%),
-  radial-gradient(700px 360px at 0% 100%, color-mix(in srgb, var(--blue) 8%, transparent), transparent 70%); }
+.hero { position: relative; padding: clamp(32px, 6vw, 80px) 0 clamp(90px, 12vw, 170px); background: var(--bg); }
+/* Soft mountain range along the bottom of the hero and page headers (colour follows the theme) */
+.hero::after, .page-head::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none;
+  height: clamp(70px, 10vw, 150px); background: color-mix(in srgb, var(--accent) 9%, transparent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 160' preserveAspectRatio='none'%3E%3Cpath fill-opacity='.55' d='M0 160V96l90-38 70 26 120-62 95 50 85-30 130 58 110-72 120 64 90-24 130 48 120-58 110 40 90-26 90 34v104z'/%3E%3Cpath d='M0 160v-38l110-30 90 22 140-44 120 48 100-20 150 40 130-52 120 46 110-18 140 36 110-30 120 24v66z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 160' preserveAspectRatio='none'%3E%3Cpath fill-opacity='.55' d='M0 160V96l90-38 70 26 120-62 95 50 85-30 130 58 110-72 120 64 90-24 130 48 120-58 110 40 90-26 90 34v104z'/%3E%3Cpath d='M0 160v-38l110-30 90 22 140-44 120 48 100-20 150 40 130-52 120 46 110-18 140 36 110-30 120 24v66z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; }
+.hero > .wrap, .page-head > .wrap { position: relative; z-index: 1; }
 .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
 .hero h1 { font-size: clamp(2.2rem, 1.4rem + 3.4vw, 3.9rem); max-width: 16ch; }
 .hero h1 em { font-style: italic; color: var(--accent); }
@@ -413,7 +414,7 @@ button { font: inherit; color: inherit; }
 .phase-stats { font-size: .88rem; color: var(--muted); }
 .phase-progress { display: block; height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; border: 1px solid var(--border); }
 .phase-progress span { display: block; height: 100%; width: 0; background: var(--ph, var(--accent)); transition: width .3s ease; }
-.phase-head { background: radial-gradient(1000px 300px at 10% -20%, color-mix(in srgb, var(--ph) 22%, transparent), transparent 65%); }
+
 .phase-big { max-width: 70ch; color: var(--muted); font-style: italic; }
 .phase-bar { display: flex; align-items: center; gap: 14px; max-width: 520px; margin-top: 18px; }
 .phase-bar .phase-progress { flex: 1; height: 8px; }

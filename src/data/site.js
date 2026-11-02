@@ -28,18 +28,19 @@ export const site = {
 };
 
 export const nav = [
-  { href: '/blog/', label: 'Blog' },
   { href: '/news/', label: 'News' },
-  { href: '/ai-roadmap/', label: 'AI Roadmap' },
+  { href: '/category/study-abroad/', label: 'Study Abroad' },
+  { href: '/ai-roadmap/', label: 'Learn AI' },
+  { href: '/category/coding/', label: 'Coding' },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },
 ];
 
 // The same menu, for pages written in Nepali.
 export const navNe = [
-  { href: '/blog/', label: 'ब्लग' },
   { href: '/ne/', label: 'समाचार' },
-  { href: '/ai-roadmap/', label: 'एआई रोडम्याप' },
+  { href: '/category/study-abroad/', label: 'विदेश अध्ययन' },
+  { href: '/ai-roadmap/', label: 'एआई सिक्नुहोस्' },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },
 ];

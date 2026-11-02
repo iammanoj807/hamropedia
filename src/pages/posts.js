@@ -122,7 +122,7 @@ ${post.html}
     lang,
     alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : '/blog/',
+    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : post.category === 'ai' ? '/ai-roadmap/' : `/category/${post.category}/`,
   });
 }
 
@@ -193,7 +193,7 @@ export function renderCategory(slug, posts, version) {
     path: `/category/${slug}/`,
     body,
     version,
-    section: slug === 'nepal' ? '/news/' : '/blog/',
+    section: slug === 'nepal' ? '/news/' : slug === 'ai' ? '/ai-roadmap/' : `/category/${slug}/`,
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: c.name, url: `${site.url}/category/${slug}/`, description: c.description },
       breadcrumbSchema(crumbs),
