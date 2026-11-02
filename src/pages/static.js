@@ -33,6 +33,7 @@ export function renderAbout(version) {
 <h2>Who writes it</h2>
 <p>I’m <strong>${esc(site.author.name)}</strong>, a ${esc(site.author.role.toLowerCase())} from Nepal, now living in ${esc(site.author.location)}. I build software for a living, and Hamropedia is where I share what I have learned with students, learners and readers everywhere.</p>
 <p>You can see my work on <a href="${site.social.github}" target="_blank" rel="noopener">GitHub</a> and my <a href="${site.social.portfolio}" target="_blank" rel="noopener">portfolio</a>, or connect on <a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.</p>
+<p>I also run <a href="${site.digital.url}">${esc(site.digital.name)}</a>, where I build simple websites and AI assistants for small businesses in the UK.</p>
 <h2>How articles are checked</h2>
 <ul>
 <li>Rules, fees and dates are checked against the official source (gov.uk, wes.org, Nepal government portals) and linked in the article.</li>
@@ -73,6 +74,8 @@ export function renderContact(version) {
 </div>
 <h2>Reporting a mistake</h2>
 <p>Please include the page link and, if you can, the official source that shows the correct information. Corrections are made as quickly as possible and the article’s “updated” date changes.</p>
+<h2>Need a website or AI for your business?</h2>
+<p>That is a separate service: <a href="${site.digital.url}">${esc(site.digital.name)}</a> builds simple, fixed-price websites and AI assistants for small businesses in the UK.</p>
 <p class="muted">Based in ${esc(site.author.location)}.</p>`,
     schema: [{ '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Contact Hamropedia', url: `${site.url}/contact-us/` }],
   });

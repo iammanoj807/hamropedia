@@ -22,6 +22,8 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168',
     youtube: 'https://www.youtube.com/@thapam807',
   },
+  // Sister site: websites and AI for small businesses.
+  digital: { name: 'Hamropedia Digital', url: 'https://digital.hamropedia.com/' },
   // Paste the content value of Google Search Console's HTML-tag verification here.
   googleSiteVerification: '',
   established: 2024,

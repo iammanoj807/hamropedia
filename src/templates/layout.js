@@ -174,6 +174,7 @@ function footer() {
       <ul>
         <li><a href="/about-us/">About</a></li>
         <li><a href="/contact-us/">Contact</a></li>
+        <li><a href="${site.digital.url}">${esc(site.digital.name)}: websites &amp; AI for businesses</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use-hamropedia/">Terms of use</a></li>
         <li><button type="button" class="text-btn" data-open-consent>Cookie settings</button></li>
