@@ -54,9 +54,10 @@ export function glyph(kind, c = 'rgba(255,255,255,0.12)') {
  * Inline cover art for cards and article heads. No colours or ids inside:
  * the background comes from CSS (.cover), so it follows the accent colour.
  */
-export function coverArtSvg({ word, category, seed, label }) {
+export function coverArtSvg({ word, category, seed, label, oneLine = false }) {
   const rand = seeded(seed);
-  const lines = String(word).length > 9 ? wrap(word, 9).slice(0, 2) : [String(word)];
+  // Long words wrap onto two lines, unless the post asks for one line (coverOneLine: true).
+  const lines = !oneLine && String(word).length > 9 ? wrap(word, 9).slice(0, 2) : [String(word)];
   const longest = Math.max(...lines.map((l) => l.length));
   const size = longest <= 3 ? 210 : longest <= 5 ? 170 : longest <= 7 ? 140 : 118;
   const y0 = lines.length === 1 ? 385 + size * 0.35 : 215 + size * 0.75;

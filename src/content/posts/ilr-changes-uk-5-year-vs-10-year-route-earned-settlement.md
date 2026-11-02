@@ -6,7 +6,8 @@ date: 2026-11-02
 category: study-abroad
 type: news
 tags: [uk, ilr, settlement, skilled worker, earned settlement]
-coverWord: "ILR 5 or 10"
+coverWord: "ILR 5 or 10?"
+coverOneLine: true
 coverAlt: "UK ILR changes: 5-year and 10-year routes to settlement"
 ---
 

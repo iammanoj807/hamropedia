@@ -15,7 +15,7 @@ export function categoryChip(slug, linked = true, lang = 'en') {
 export function cover(post, extraClass = '') {
   const c = categories[post.category];
   const label = post.lang === 'ne' ? c.nameNe || c.name : c.name;
-  return `<span class="cover cover-${post.category}${extraClass ? ' ' + extraClass : ''}">${coverArtSvg({ word: post.coverWord || post.title.split(' ')[0], category: post.category, seed: post.slug, label })}</span>`;
+  return `<span class="cover cover-${post.category}${extraClass ? ' ' + extraClass : ''}">${coverArtSvg({ word: post.coverWord || post.title.split(' ')[0], oneLine: Boolean(post.coverOneLine), category: post.category, seed: post.slug, label })}</span>`;
 }
 
 /** "1 Nov 2026", or for Nepali pages "२०८३ कात्तिक १५". */
