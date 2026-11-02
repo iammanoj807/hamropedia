@@ -11,6 +11,7 @@ import { renderPost, renderBlogIndex, renderCategory, renderNews, renderNeHub } 
 import { renderRoadmapIndex, renderPhase, phases } from './src/pages/roadmap.js';
 import { renderToolsHub, renderRomanized, renderKeyboard, renderDate, renderAge, TOOLS } from './src/pages/tools.js';
 import { renderHome } from './src/pages/home.js';
+import { renderLearn } from './src/pages/learn.js';
 import { renderAbout, renderContact, renderPrivacy, renderTerms, render404, renderRedirect } from './src/pages/static.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -115,6 +116,7 @@ for (const slug of Object.keys(categories)) {
 for (const p of posts) add(p.url, renderPost(p, posts, version, neBySlug.get(p.slug)));
 for (const p of nePosts) add(p.url, renderPost(p, nePosts, version, enBySlug.get(p.slug)));
 
+add('/learn/', renderLearn(posts, version));
 add('/ai-roadmap/', renderRoadmapIndex(version));
 phases.forEach((p, i) => add(`/ai-roadmap/${p.slug}/`, renderPhase(p, i, version)));
 

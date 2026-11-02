@@ -2,7 +2,7 @@ import { site } from '../data/site.js';
 import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
 import { postCard, categoryChip, displayDate } from '../templates/components.js';
-import { phases, totals } from './roadmap.js';
+import { roadmapBand } from './learn.js';
 
 export function renderHome(posts, version) {
   const news = posts.filter((p) => p.type === 'news');
@@ -69,19 +69,7 @@ export function renderHome(posts, version) {
   <div class="grid grid-3">${learning.map((p) => postCard(p)).join('')}</div>
 </section>
 
-<section class="roadmap-band">
-  <div class="wrap band-grid">
-    <div>
-      <p class="eyebrow">Free · no sign-up</p>
-      <h2>Learn AI &amp; machine learning from zero</h2>
-      <p>${totals.phases} phases, ${totals.topics} topics and ${totals.resources} hand-picked free resources: the best videos, interactive explainers, books and courses for each topic, in the order that makes sense.</p>
-      <a class="btn btn-lg" href="/ai-roadmap/">Open the roadmap ${ICONS.arrow}</a>
-    </div>
-    <ol class="band-phases">
-      ${phases.map((p) => `<li style="--ph:${p.accent}"><a href="/ai-roadmap/${p.slug}/"><span>${p.number}</span>${esc(p.title)}</a></li>`).join('')}
-    </ol>
-  </div>
-</section>
+${roadmapBand()}
 
 <section class="wrap section promise">
   <div>

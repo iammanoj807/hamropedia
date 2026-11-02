@@ -30,7 +30,7 @@ export const site = {
 export const nav = [
   { href: '/news/', label: 'News' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/category/study-abroad/', label: 'Study Abroad' },
+  { href: '/learn/', label: 'Learn & Build' },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },
 ];
@@ -39,7 +39,7 @@ export const nav = [
 export const navNe = [
   { href: '/ne/', label: 'समाचार' },
   { href: '/blog/', label: 'ब्लग' },
-  { href: '/category/study-abroad/', label: 'विदेश अध्ययन' },
+  { href: '/learn/', label: 'सिक्नुहोस्' },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },
 ];

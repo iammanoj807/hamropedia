@@ -121,7 +121,7 @@ export function renderRoadmapIndex(version) {
     image: '/images/og/ai-roadmap.jpg',
     body,
     version,
-    section: '/ai-roadmap/',
+    section: '/learn/',
     scripts: ['/assets/js/roadmap.js'],
     schema: [
       {
@@ -212,7 +212,7 @@ export function renderPhase(p, i, version) {
     image: '/images/og/ai-roadmap.jpg',
     body,
     version,
-    section: '/ai-roadmap/',
+    section: '/learn/',
     scripts: ['/assets/js/roadmap.js'],
     schema: [
       {
