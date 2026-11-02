@@ -106,8 +106,17 @@ stops anyone else from claiming the domain on GitHub in between.
    home page and the tools. Keep the WordPress hosting until the new site is live and
    checked, then cancel it.
 
-`public/ads.txt` keeps the AdSense publisher line from the old site. The new site shows
-no ads; if you add AdSense later, update the privacy policy (cookies) first.
+### Adding Google AdSense later
+
+- `public/ads.txt` already has the AdSense publisher line from the old site, and the
+  privacy policy already contains Google's required advertising disclosures.
+- The site asks every visitor once for cookie consent (Accept / Reject, changeable from
+  "Cookie settings" in the footer). Ad code must respect it: only allow personalised ads
+  when `window.hamropediaConsent() === 'granted'` (listen for the `hamropedia:consent`
+  event for changes).
+- For visitors in the UK, EEA and Switzerland, Google requires a Google-certified consent
+  tool for personalised ads. The simplest option is AdSense's own **Privacy & messaging**
+  consent message; if you turn it on, remove this site's banner to avoid asking twice.
 
 ## Keeping things fresh
 

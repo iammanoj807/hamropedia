@@ -5,7 +5,7 @@ export const site = {
   url: 'https://hamropedia.com', // no trailing slash
   tagline: 'Nepali tools, AI learning and honest guides',
   description:
-    'Free Nepali tools (English to Nepali typing, Nepali keyboard, Nepali date converter, age calculator), a free AI and machine learning roadmap, study-abroad guides for Nepali students, and sourced Nepal news in English and Nepali.',
+    'Study-abroad guides for Nepali students (NOC, WES, UK visas, EDV), Nepal news explained in English and Nepali, and free learning paths in coding and AI.',
   locale: 'en_GB',
   lang: 'en',
   author: {
@@ -29,7 +29,7 @@ export const site = {
 
 export const nav = [
   { href: '/blog/', label: 'Blog' },
-  { href: '/ne/', label: 'News' },
+  { href: '/news/', label: 'News' },
   { href: '/ai-roadmap/', label: 'AI Roadmap' },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },

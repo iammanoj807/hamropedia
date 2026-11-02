@@ -3,25 +3,31 @@ import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
 import { postCard, categoryChip, displayDate } from '../templates/components.js';
 import { phases, totals } from './roadmap.js';
-import { TOOLS } from './tools.js';
 
-export function renderHome(posts, version, nePosts = []) {
-  // News opens in Nepali by default; each story has a "Read in English" button.
-  const news = nePosts.length ? nePosts : posts.filter((p) => p.type === 'news');
+export function renderHome(posts, version) {
+  const news = posts.filter((p) => p.type === 'news');
   const guides = posts.filter((p) => p.type !== 'news');
   const [topNews, ...moreNews] = news;
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
   const learning = guides.filter((p) => p.category === 'ai' || p.category === 'coding').slice(0, 3);
+  const popularSlugs = [
+    'edv-2027-nepal-dv-lottery-open-date',
+    'uk-graduate-visa-two-years-high-compliance-universities',
+    'how-to-apply-noc-online-easy-steps-for-nepali-students',
+    'how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide',
+    'how-to-learn-ai-and-machine-learning-for-free',
+  ];
+  const popular = popularSlugs.map((s) => posts.find((p) => p.slug === s)).filter(Boolean);
 
   const body = `<section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Explore and enjoy · your daily discovery hub</p>
-      <h1>Nepali tools, a free AI roadmap and guides you can <em>trust</em>.</h1>
-      <p class="lead">Type Nepali with an English keyboard or the Preeti layout, convert Nepali dates, read the news in English or Nepali, learn AI from zero for free, and get study-abroad steps that match the official sites. All in one place, made by a Nepali engineer.</p>
+      <p class="eyebrow">Hamropedia · <span lang="ne">हाम्रोपेडिया</span></p>
+      <h1>News, study-abroad guides and learning, <em>made for Nepalis</em>.</h1>
+      <p class="lead">Clear, sourced guides for studying abroad, the Nepal and visa news that matters to you, and free learning paths in coding and AI. Written by a Nepali software engineer, with the news also in Nepali.</p>
       <div class="hero-cta">
-        <a class="btn btn-lg" href="/tools/english-to-nepali/">Start typing Nepali</a>
-        <a class="btn-ghost btn-lg" href="/ai-roadmap/">Explore the AI roadmap</a>
+        <a class="btn btn-lg" href="/news/">Read the latest news</a>
+        <a class="btn-ghost btn-lg" href="/blog/">Explore the guides</a>
       </div>
     </div>
     <div class="hero-panel">
@@ -29,54 +35,27 @@ export function renderHome(posts, version, nePosts = []) {
         <span class="today-label">आज · Today in Nepal</span>
         <b lang="ne" data-np-today-ne>&nbsp;</b>
         <span data-np-today-en>&nbsp;</span>
-        <a href="/tools/nepali-date-converter/">Open the Nepali calendar →</a>
       </div>
-      <div class="quick-type">
-        <label for="qt-in">Try it: type Nepali in English letters</label>
-        <input id="qt-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" value="mero desh nepal ho">
-        <p class="qt-out" lang="ne" id="qt-out" aria-live="polite">मेरो देश नेपाल हो</p>
-        <a href="/tools/english-to-nepali/">Full typing tool, with copy &amp; cheat sheet →</a>
+      <div class="popular">
+        <h2 class="popular-h">Popular right now</h2>
+        <ol>
+          ${popular.map((p) => `<li><a href="${p.url}">${esc(p.title)}</a></li>`).join('')}
+        </ol>
       </div>
     </div>
   </div>
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Free tools</h2><a href="/tools/">All tools</a></div>
-  <div class="tool-cards tool-cards-compact">
-    ${TOOLS.map(
-      (t) => `<a class="tool-card" href="/tools/${t.slug}/">
-      <h3>${esc(t.name)}</h3>
-      <p>${esc(t.blurb)}</p>
-      <span class="tool-demo"><code>${esc(t.sample[0])}</code><span aria-hidden="true">→</span><b lang="ne">${esc(t.sample[1])}</b></span>
-    </a>`,
-    ).join('')}
-  </div>
-</section>
-
-<section class="wrap section">
-  <div class="section-head"><h2>Latest news <span lang="ne">· समाचार</span></h2><a href="/ne/" lang="ne">सबै समाचार</a></div>
+  <div class="section-head"><h2>Latest news</h2><a href="/news/">All news</a></div>
   <div class="news-lead">
     ${topNews ? postCard(topNews, { size: 'lg' }) : ''}
     <div class="news-side">
       <ol class="headline-list">
-        ${moreNews.slice(0, 4).map((p) => `<li${p.lang === 'ne' ? ' lang="ne"' : ''}>${categoryChip(p.category, false, p.lang)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date, p.lang)}</span></li>`).join('')}
+        ${moreNews.slice(0, 4).map((p) => `<li>${categoryChip(p.category, false)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date)}</span></li>`).join('')}
       </ol>
+      <p class="side-note"><a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a></p>
     </div>
-  </div>
-</section>
-
-<section class="roadmap-band">
-  <div class="wrap band-grid">
-    <div>
-      <p class="eyebrow">Free · no sign-up</p>
-      <h2>Learn AI &amp; machine learning from zero</h2>
-      <p>${totals.phases} phases, ${totals.topics} topics and ${totals.resources} hand-picked free resources: the best videos, interactive explainers, books and courses for each topic, in the order that makes sense. Tick topics off as you go; your progress stays on your device.</p>
-      <a class="btn btn-lg" href="/ai-roadmap/">Open the roadmap ${ICONS.arrow}</a>
-    </div>
-    <ol class="band-phases">
-      ${phases.map((p) => `<li style="--ph:${p.accent}"><a href="/ai-roadmap/${p.slug}/"><span>${p.number}</span>${esc(p.title)}</a></li>`).join('')}
-    </ol>
   </div>
 </section>
 
@@ -90,21 +69,35 @@ export function renderHome(posts, version, nePosts = []) {
   <div class="grid grid-3">${learning.map((p) => postCard(p)).join('')}</div>
 </section>
 
+<section class="roadmap-band">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow">Free · no sign-up</p>
+      <h2>Learn AI &amp; machine learning from zero</h2>
+      <p>${totals.phases} phases, ${totals.topics} topics and ${totals.resources} hand-picked free resources: the best videos, interactive explainers, books and courses for each topic, in the order that makes sense.</p>
+      <a class="btn btn-lg" href="/ai-roadmap/">Open the roadmap ${ICONS.arrow}</a>
+    </div>
+    <ol class="band-phases">
+      ${phases.map((p) => `<li style="--ph:${p.accent}"><a href="/ai-roadmap/${p.slug}/"><span>${p.number}</span>${esc(p.title)}</a></li>`).join('')}
+    </ol>
+  </div>
+</section>
+
 <section class="wrap section promise">
   <div>
     <h2>The Hamropedia promise</h2>
-    <p>Every fact is checked against an official or named source and linked. Every article shows when it was last updated. If something changes or I get it wrong, I fix it and say so.</p>
+    <p>Every fact is checked against an official or named source and linked. Every article shows when it was published and last updated. If something changes or I get it wrong, I fix it and say so.</p>
   </div>
   <ul>
     <li><b>Sourced</b><span>Links to gov.uk, WES, ministries and named reports</span></li>
     <li><b>Dated</b><span>Published and updated dates on every page</span></li>
-    <li><b>Private</b><span>No trackers, no ads, tools run on your device</span></li>
+    <li><b>Clear</b><span>Plain language, with the news also in Nepali</span></li>
   </ul>
 </section>`;
 
   return layout({
-    title: `${site.name}: English to Nepali typing, Nepali date converter, AI roadmap & guides`,
-    ogTitle: `${site.name}: Nepali tools, a free AI roadmap and honest guides`,
+    title: `${site.name}: Nepal news, study-abroad guides and learning for Nepalis`,
+    ogTitle: `${site.name}: news, study-abroad guides and learning, made for Nepalis`,
     description: site.description,
     path: '/',
     body,

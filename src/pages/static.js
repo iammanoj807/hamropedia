@@ -84,29 +84,58 @@ export function renderPrivacy(version) {
     path: '/privacy-policy/',
     title: 'Privacy Policy',
     eyebrow: 'Legal',
-    description: 'Hamropedia privacy policy: no accounts, no trackers, no advertising cookies. Tools run in your browser and your text is never uploaded.',
-    lead: 'Short version: no accounts, no tracking, no advertising cookies, and nothing you type into the tools leaves your device.',
-    html: `<p class="muted">Last updated: 1 November 2026</p>
-<h2>What this site collects</h2>
-<p><strong>Nothing about you, directly.</strong> Hamropedia has no user accounts, no comment forms, no newsletter sign-up, no analytics scripts and no advertising.</p>
-<h2>The tools</h2>
-<p>The English to Nepali typing tool, the Nepali keyboard, the date converter and the age calculator run entirely in your browser using JavaScript. The text and dates you enter are not sent to any server.</p>
-<h2>What is stored in your browser</h2>
-<p>The site uses your browser’s local storage, which stays on your device and is never sent to us, for:</p>
+    description: 'Hamropedia privacy policy: what information is collected, how cookies and browser storage are used, advertising through Google AdSense, and your choices.',
+    lead: 'What this site collects, how cookies are used, how advertising works, and the choices you have.',
+    html: `<p class="muted">Last updated: 2 November 2026</p>
+<h2>Who we are</h2>
+<p>Hamropedia (hamropedia.com) is run by ${esc(site.author.name)}, ${esc(site.author.location)}. If you have any question about this policy, email <a href="mailto:${site.email}">${site.email}</a>.</p>
+
+<h2>Information we collect</h2>
 <ul>
-<li>your theme and colour choice;</li>
-<li>topics you tick as done on the AI roadmap;</li>
-<li>the last text you typed in a tool, so it is still there if you reload.</li>
+<li><strong>No accounts.</strong> You can read everything without signing up, and we don’t ask for your name or email.</li>
+<li><strong>If you email us,</strong> we receive the information you choose to send and use it only to reply.</li>
+<li><strong>The tools</strong> (typing, Nepali keyboard, date converter, age calculator) run in your browser. The text and dates you enter are not sent to us.</li>
+<li><strong>Hosting:</strong> the site is hosted on GitHub Pages. GitHub may log technical information such as your IP address to run and secure the service; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
+<li><strong>Fonts:</strong> fonts are loaded from Google Fonts, which receives your IP address when the font files download; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a>.</li>
 </ul>
-<p>You can clear all of this at any time by clearing this site’s data in your browser settings.</p>
-<h2>Third parties</h2>
+
+<h2 id="cookies">Cookies and browser storage</h2>
+<p>Cookies and browser storage are small pieces of data saved on your device. Hamropedia uses your browser’s local storage for:</p>
 <ul>
-<li><strong>Hosting:</strong> the site is hosted on GitHub Pages. GitHub may log technical information such as IP addresses to run and secure the service; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
-<li><strong>Fonts:</strong> fonts are loaded from Google Fonts, which receives your IP address when the font files are downloaded; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a>.</li>
-<li><strong>Links and share buttons</strong> are plain links. Nothing from Facebook, LinkedIn, WhatsApp or X loads until you click one.</li>
+<li>your <strong>cookie choice</strong>, so we don’t ask again on every page;</li>
+<li><strong>dark mode</strong>, if you switch it on;</li>
+<li><strong>AI roadmap progress</strong> (topics you tick) and the <strong>last text you typed in a tool</strong>, so they are still there when you come back.</li>
 </ul>
-<h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:${site.email}">${site.email}</a>.</p>`,
+<p>These stay on your device and are not sent to us. If you accept advertising cookies, Google and its partners may also set cookies, as described below.</p>
+
+<h2>Advertising (Google AdSense)</h2>
+<p>We plan to show ads through <strong>Google AdSense</strong> to help keep Hamropedia free. When ads are shown:</p>
+<ul>
+<li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
+<li>Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet.</li>
+<li>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You can also opt out of some third-party vendors’ use of cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>.</li>
+<li>Learn more about <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</li>
+</ul>
+<p>If you choose <strong>Reject</strong> in the cookie message, we will not allow personalised advertising cookies. Ads you see may then be non-personalised, based on the page you are reading rather than on your browsing.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li><strong>Change your cookie choice</strong> at any time: <button type="button" class="text-btn" data-open-consent>Cookie settings</button> (also in the footer of every page).</li>
+<li><strong>Clear stored data</strong> by clearing this site’s data in your browser settings.</li>
+<li><strong>Opt out of personalised ads</strong> using the Google and aboutads.info links above.</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>If you are in the UK or the European Economic Area, you have rights over your personal data, including the right to ask what we hold, to have it corrected or deleted, and to object to its use. Contact us at the email above. You can also complain to your data protection authority; in the UK this is the <a href="https://ico.org.uk/" target="_blank" rel="noopener">Information Commissioner’s Office</a>.</p>
+
+<h2>Children</h2>
+<p>Hamropedia is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+
+<h2>Links to other websites</h2>
+<p>Articles link to official sources and other websites. We are not responsible for their content or their privacy practices.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this policy, for example when advertising starts. The date at the top shows the latest version.</p>`,
   });
 }
 

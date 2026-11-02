@@ -122,7 +122,7 @@ ${post.html}
     lang,
     alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: ne || post.type === 'news' ? '/ne/' : '/blog/',
+    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : '/blog/',
   });
 }
 
@@ -239,11 +239,11 @@ ${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/
 ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
     title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
-    description: 'Sourced news explainers Nepalis search for: PM Balen Shah and the 2026 election, Nagdhunga tunnel toll rates, Nepal\'s AI policy and the UK Graduate visa update. Also in Nepali.',
+    description: 'News explained for Nepalis: the EDV 2027 (DV lottery) update, PM Balen Shah and the 2026 election, the UK Graduate visa change and Nepal\'s AI policy. Also in Nepali.',
     path: '/news/',
     body,
     version,
-    section: '/ne/',
+    section: '/news/',
     alternates: [{ lang: 'en', path: '/news/' }, { lang: 'ne', path: '/ne/' }],
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'News', url: `${site.url}/news/` },

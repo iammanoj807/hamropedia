@@ -6,40 +6,39 @@ const store = {
   set(k, v) { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch { /* private mode */ } },
 };
 
-// ---- theme & accent ----
+// ---- light / dark mode (blue theme only) ----
 const themeBtn = document.getElementById('theme-btn');
-const themeMenu = document.getElementById('theme-menu');
 function syncTheme() {
-  const theme = store.get('hp-theme') || 'light';
-  const accent = store.get('hp-accent') || 'blue';
-  document.querySelectorAll('[data-theme-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.themeChoice === theme)));
-  document.querySelectorAll('[data-accent-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.accentChoice === accent)));
+  const dark = root.dataset.theme === 'dark';
+  themeBtn?.setAttribute('aria-pressed', String(dark));
+  themeBtn?.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
 }
-if (themeBtn && themeMenu) {
+themeBtn?.addEventListener('click', () => {
+  if (root.dataset.theme === 'dark') { delete root.dataset.theme; store.set('hp-theme', null); }
+  else { root.dataset.theme = 'dark'; store.set('hp-theme', 'dark'); }
   syncTheme();
-  const close = () => { themeMenu.hidden = true; themeBtn.setAttribute('aria-expanded', 'false'); };
-  themeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    themeMenu.hidden = !themeMenu.hidden;
-    themeBtn.setAttribute('aria-expanded', String(!themeMenu.hidden));
-  });
-  themeMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const t = e.target.closest('[data-theme-choice]');
-    const a = e.target.closest('[data-accent-choice]');
-    if (t) {
-      const v = t.dataset.themeChoice;
-      if (v === 'light') { delete root.dataset.theme; store.set('hp-theme', null); } else { root.dataset.theme = v; store.set('hp-theme', v); }
-    }
-    if (a) {
-      const v = a.dataset.accentChoice;
-      if (v === 'blue') { delete root.dataset.accent; store.set('hp-accent', null); } else { root.dataset.accent = v; store.set('hp-accent', v); }
-    }
-    syncTheme();
-  });
-  document.addEventListener('click', close);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+});
+syncTheme();
+
+// ---- cookie consent (asked once; change any time from "Cookie settings") ----
+// Stored as { value: 'granted' | 'denied', date }. Ad code added later should
+// check window.hamropediaConsent() === 'granted' before loading personalised ads.
+const consentBox = document.getElementById('consent');
+function readConsent() {
+  try { return JSON.parse(store.get('hp-consent') || 'null'); } catch { return null; }
 }
+window.hamropediaConsent = () => readConsent()?.value || null;
+function showConsent(show) { if (consentBox) consentBox.hidden = !show; }
+if (!readConsent()) showConsent(true);
+document.addEventListener('click', (e) => {
+  const choice = e.target.closest('[data-consent]');
+  if (choice) {
+    store.set('hp-consent', JSON.stringify({ value: choice.dataset.consent, date: new Date().toISOString().slice(0, 10) }));
+    showConsent(false);
+    window.dispatchEvent(new CustomEvent('hamropedia:consent', { detail: choice.dataset.consent }));
+  }
+  if (e.target.closest('[data-open-consent]')) showConsent(true);
+});
 
 // ---- mobile menu ----
 const menuBtn = document.getElementById('menu-btn');

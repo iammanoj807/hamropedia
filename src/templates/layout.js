@@ -5,6 +5,7 @@ export const ICONS = {
   logo: `<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--accent)"/><path d="M5 30 L15 14 L20 21 L25 12 L35 30 Z" fill="#fff"/><path d="M22.6 16 L25 12 L27.5 16.2 L25.6 15 L24.2 16.6 Z" fill="var(--accent)" opacity=".45"/></svg>`,
   search: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   sun: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+  moon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
   menu: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   close: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
@@ -17,7 +18,7 @@ export const ICONS = {
 };
 
 // Runs before first paint, so the chosen theme never flashes.
-const THEME_BOOT = `(function(){try{var t=localStorage.getItem('hp-theme'),a=localStorage.getItem('hp-accent'),d=document.documentElement;if(t==='dark'||t==='auto')d.dataset.theme=t;if(a&&a!=='blue')d.dataset.accent=a;}catch(e){}})();`;
+const THEME_BOOT = `(function(){try{if(localStorage.getItem('hp-theme')==='dark')document.documentElement.dataset.theme='dark';}catch(e){}})();`;
 
 /**
  * @param {object} p
@@ -98,6 +99,18 @@ ${header(p.section, lang)}
 ${p.body}
 </main>
 ${footer()}
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <div class="consent-inner">
+    <div>
+      <p class="consent-h" id="consent-h">Your privacy</p>
+      <p>Hamropedia uses cookies and your browser’s storage to remember your settings. We also plan to show ads through Google AdSense, which uses cookies to show and measure ads, and to personalise them if you agree. You can change your choice any time. <a href="/privacy-policy/">Privacy policy</a></p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn-ghost" data-consent="denied">Reject</button>
+      <button type="button" class="btn" data-consent="granted">Accept</button>
+    </div>
+  </div>
+</div>
 ${scripts}
 </body>
 </html>`;
@@ -113,25 +126,7 @@ function header(section, lang) {
     <nav class="main-nav" id="main-nav" aria-label="Main">${links}</nav>
     <div class="header-actions">
       <a class="icon-btn" href="/blog/#search" aria-label="Search articles">${ICONS.search}</a>
-      <div class="theme-picker">
-        <button class="icon-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Theme and colour">${ICONS.sun}</button>
-        <div class="theme-menu" id="theme-menu" hidden>
-          <p class="menu-label">Theme</p>
-          <div class="seg" role="radiogroup" aria-label="Theme">
-            <button type="button" role="radio" data-theme-choice="light">Light</button>
-            <button type="button" role="radio" data-theme-choice="dark">Dark</button>
-            <button type="button" role="radio" data-theme-choice="auto">Auto</button>
-          </div>
-          <p class="menu-label">Colour</p>
-          <div class="swatches" role="radiogroup" aria-label="Accent colour">
-            <button type="button" role="radio" data-accent-choice="blue" style="--sw:#2453c4" aria-label="Himalayan blue (default)"></button>
-            <button type="button" role="radio" data-accent-choice="crimson" style="--sw:#c8102e" aria-label="Crimson"></button>
-            <button type="button" role="radio" data-accent-choice="green" style="--sw:#13795b" aria-label="Rhododendron green"></button>
-            <button type="button" role="radio" data-accent-choice="violet" style="--sw:#6d3fd6" aria-label="Violet"></button>
-            <button type="button" role="radio" data-accent-choice="amber" style="--sw:#b45309" aria-label="Marigold"></button>
-          </div>
-        </div>
-      </div>
+      <button class="icon-btn" type="button" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">${ICONS.sun}${ICONS.moon}</button>
       <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">${ICONS.menu}</button>
     </div>
   </div>
@@ -168,7 +163,7 @@ function footer() {
     </div>
     <div>
       <h2 class="footer-h">Read</h2>
-      <ul>${cats}<li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li><li><a href="/ne/" lang="ne">समाचार</a></li><li><a href="/news/">News in English</a></li></ul>
+      <ul>${cats}<li><a href="/news/">News</a></li></ul>
     </div>
     <div>
       <h2 class="footer-h">Hamropedia</h2>
@@ -177,6 +172,7 @@ function footer() {
         <li><a href="/contact-us/">Contact</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use-hamropedia/">Terms of use</a></li>
+        <li><button type="button" class="text-btn" data-open-consent>Cookie settings</button></li>
       </ul>
     </div>
   </div>
