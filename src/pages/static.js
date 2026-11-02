@@ -39,7 +39,7 @@ export function renderAbout(version) {
 <li>Rules, fees and dates are checked against the official source (gov.uk, wes.org, Nepal government portals) and linked in the article.</li>
 <li>News is based on named reports, linked inline. Proposals are labelled as proposals, not as law.</li>
 <li>Every page shows its published and updated dates. When something changes, the article is updated, not quietly left wrong.</li>
-<li>In ${new Date().getUTCFullYear()} the old site was rebuilt from scratch. Posts that had become outdated or could not be verified were removed or rewritten.</li>
+<li>Articles that become outdated, or can no longer be verified, are rewritten or removed.</li>
 </ul>
 <p>Found a mistake, or want a topic covered? <a href="/contact-us/">Get in touch</a>.</p>`,
     schema: [
@@ -174,7 +174,7 @@ export function render404(version) {
     body: `<section class="wrap-narrow not-found">
   <p class="eyebrow">404</p>
   <h1>This page wandered off into the hills.</h1>
-  <p class="lead">It may have moved when the site was rebuilt. These are the most popular places to go next:</p>
+  <p class="lead">The link may be old or mistyped. These are the most popular places to go next:</p>
   <ul class="nf-links">
     <li><a href="/tools/english-to-nepali/">English to Nepali typing</a></li>
     <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
