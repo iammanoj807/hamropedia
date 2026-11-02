@@ -10,7 +10,7 @@ export const site = {
   lang: 'en',
   author: {
     name: 'Manoj Kumar Thapa',
-    role: 'Software Engineer',
+    role: 'AI Software Engineer',
     url: 'https://hamropedia.com/about-us/',
     location: 'Birmingham, United Kingdom',
   },

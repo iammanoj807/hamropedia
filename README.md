@@ -18,6 +18,6 @@ links to the official or named sources it is based on.
 
 ## Author
 
-Made by **Manoj Kumar Thapa**, software engineer in Birmingham, United Kingdom.
+Made by **Manoj Kumar Thapa**, AI software engineer in Birmingham, United Kingdom.
 
 [GitHub](https://github.com/iammanoj807) · [Portfolio](https://iammanoj807.github.io/profile/) · [LinkedIn](https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168)
