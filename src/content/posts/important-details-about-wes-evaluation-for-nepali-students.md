@@ -1,13 +1,13 @@
 ---
-title: "WES Evaluation for Nepali Students: Types, Fees and Which One You Need"
-seoTitle: "WES Evaluation for Nepali Students: Course-by-Course vs Document, ICAP vs Basic, Fees"
+title: "WES Evaluation Explained: Types, Fees and Which One You Need"
+seoTitle: "WES Evaluation Explained: Course-by-Course vs Document, ICAP vs Basic, Fees"
 description: "What WES evaluation is, why universities in the USA and Canada ask for it, course-by-course vs document-by-document, WES ICAP vs Basic, and current fees from wes.org."
 date: 2024-05-04
 updated: 2026-11-01
 category: study-abroad
 tags: [wes, credential evaluation, usa, canada, study abroad]
 coverWord: "WES"
-coverAlt: "WES credential evaluation explained for Nepali students"
+coverAlt: "WES credential evaluation explained"
 ---
 
 If you are applying to a university in the **USA or Canada**, sooner or later someone will ask for a "WES evaluation". This guide explains what it is, which type you need, and how much it costs, using the fees published by WES itself.
@@ -16,11 +16,11 @@ Ready to apply? Jump to the [step-by-step WES application guide with screenshots
 
 ## What is WES?
 
-**World Education Services (WES)** is a non-profit organisation that evaluates academic qualifications earned in one country and explains what they are equivalent to in another, mainly the USA and Canada. A WES report turns your Nepali marks, grades and credits into terms an admissions officer understands, such as a US grade point average (GPA) and US semester credits.
+**World Education Services (WES)** is a non-profit organisation that evaluates academic qualifications earned in one country and explains what they are equivalent to in another, mainly the USA and Canada. A WES report turns your marks, grades and credits into terms an admissions officer understands, such as a US grade point average (GPA) and US semester credits.
 
 ## Why universities ask for it
 
-1. **To compare systems.** Nepal's grading and credit systems differ from North America's. The evaluation converts them into a familiar format.
+1. **To compare systems.** Grading and credit systems differ from country to country (Nepal's, for example, differ from North America's). The evaluation converts them into a familiar format.
 2. **To verify documents.** WES checks that your documents are authentic, which is why transcripts usually have to reach WES in a sealed envelope from your university.
 3. **Because it is required.** Many US and Canadian institutions list WES (or another accepted evaluator) as an admission requirement for international applicants.
 
@@ -65,7 +65,7 @@ On top of the base fee:
 
 > **Note:** WES updates its fees from time to time, and Canadian evaluations (for example the ECA for immigration) have their own price list. Treat these numbers as a guide and confirm the total on wes.org before paying.
 
-## Which documents WES needs from a Nepali university
+## Which documents WES needs from your university
 
 Usually:
 
@@ -80,6 +80,6 @@ WES shows the exact list for your country and qualification after you create you
 - [ ] Choose course-by-course (most graduate programmes) or document-by-document.
 - [ ] Choose ICAP unless your university says Basic is fine.
 - [ ] Budget for the base fee, delivery, extra recipients and courier from Nepal.
-- [ ] Apply early: getting sealed transcripts from a Nepali university can take weeks.
+- [ ] Apply early: getting sealed transcripts from your university can take weeks.
 
 Next: [follow the WES application step by step](/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/) · [Apply for your NOC](/how-to-apply-noc-online-easy-steps-for-nepali-students/)

@@ -12,7 +12,7 @@ coverAlt: "Step-by-step WES evaluation application"
 
 This guide walks you through a **WES (World Education Services)** application from start to payment, screen by screen. The screenshots are from a real application for the **United States**; Canadian applications follow the same pattern.
 
-Not sure which evaluation type you need, or what it costs? Read [WES evaluation for Nepali students: types and fees](/important-details-about-wes-evaluation-for-nepali-students/) first.
+Not sure which evaluation type you need, or what it costs? Read [WES evaluation explained: types and fees](/important-details-about-wes-evaluation-for-nepali-students/) first.
 
 > **Note:** These screenshots were taken earlier, so the **prices shown in them are older**. The current base fees are $239 (course-by-course, ICAP) and $171 (document-by-document, ICAP); see the [WES fee page](https://www.wes.org/evaluations/). Personal details in the screenshots are blurred.
 

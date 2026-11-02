@@ -146,7 +146,7 @@ function footer() {
   <div class="wrap footer-grid">
     <div class="footer-about">
       <a class="brand" href="/">${ICONS.logo}<span>Hamro<b>pedia</b></span></a>
-      <p>${esc(site.tagline)}. Written in ${esc(site.author.location)} by ${esc(site.author.name)}, for curious people in Nepal and Nepalis everywhere.</p>
+      <p>${esc(site.tagline)}. Written in ${esc(site.author.location)} by ${esc(site.author.name)}, for curious readers everywhere.</p>
       <div class="social">
         <a href="${site.social.github}" target="_blank" rel="noopener" aria-label="GitHub">${ICONS.github}</a>
         <a href="${site.social.portfolio}" target="_blank" rel="noopener" aria-label="Portfolio">${ICONS.globe}</a>

@@ -155,7 +155,7 @@ export function renderBlogIndex(posts, version) {
 </section>`;
   return layout({
     title: `Blog: study abroad, coding, AI and Nepal guides | ${site.name}`,
-    description: 'All Hamropedia articles: NOC and WES guides for Nepali students, UK student visa rules, coding and AI roadmaps, and sourced Nepal news explainers.',
+    description: 'All Hamropedia articles: NOC and WES guides, UK student visa rules, coding and AI roadmaps, and news explainers with sources.',
     path: '/blog/',
     body,
     version,
@@ -231,7 +231,7 @@ export function renderNews(posts, version) {
     crumbs,
     eyebrow: 'News',
     title: 'Nepal, AI &amp; study-abroad news, explained',
-    lead: 'The latest news for Nepal, in English. <a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a>',
+    lead: 'The latest news, explained simply. <a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a>',
   })}
 ${newsLead(news, 'en')}
 ${newsSection('Nepal', news.filter((p) => p.category === 'nepal'), '/category/nepal/', 'All Nepal articles')}
@@ -239,7 +239,7 @@ ${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/
 ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
     title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
-    description: 'News explained for Nepalis: the EDV 2027 (DV lottery) update, PM Balen Shah and the 2026 election, the UK Graduate visa change and Nepal\'s AI policy. Also in Nepali.',
+    description: 'News explained simply: the EDV 2027 (DV lottery) update, PM Balen Shah and Nepal\'s 2026 election, the UK Graduate visa change and Nepal\'s AI policy. Also in Nepali.',
     path: '/news/',
     body,
     version,

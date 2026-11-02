@@ -49,7 +49,7 @@ The Home Office and the Department for Education will design the details, which 
 - **Russell Group** (Hollie Chandler, director of strategic policy): avoiding the planned cut for highly compliant universities "will help protect our reputation as a global study destination."
 - **Universities UK** (Vivienne Stern, chief executive): a "welcome recognition" of what international students bring, adding that "the rules need to be stable and fair".
 
-## What Nepali students should do now
+## What students should do now
 
 1. **If you graduate in 2026, apply before 1 January 2027** if you can. You get two years whatever your university.
 2. **Choosing a university for 2027 or later?** Watch for the official list of qualifying universities before you decide, and don't rely on rankings alone.

@@ -21,8 +21,8 @@ export function renderAbout(version) {
     path: '/about-us/',
     title: 'About Hamropedia',
     eyebrow: 'About',
-    description: 'Hamropedia is a free site by software engineer Manoj Kumar Thapa: Nepali tools, a free AI roadmap, study-abroad guides and sourced Nepal news.',
-    lead: 'Useful things for Nepali people, made carefully: tools that work, guides that match the official sites, and news with its sources showing.',
+    description: 'Hamropedia is a free site by software engineer Manoj Kumar Thapa: news explained simply, study-abroad guides, a free AI roadmap and useful tools.',
+    lead: 'Carefully checked articles for curious readers everywhere: guides that match the official sites, news with its sources showing, and tools that work.',
     html: `<figure class="about-photo"><img src="/images/manojkumarthapa.webp" alt="Manoj Kumar Thapa" width="440" height="519" decoding="async"><figcaption>${esc(site.author.name)}<span>${esc(site.author.role)}, ${esc(site.author.location)}</span></figcaption></figure>
 <p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
@@ -31,7 +31,7 @@ export function renderAbout(version) {
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
 <h2>Who writes it</h2>
-<p>I’m <strong>${esc(site.author.name)}</strong>, a ${esc(site.author.role.toLowerCase())} from Nepal, now living in ${esc(site.author.location)}. I build software for a living, and Hamropedia is where I share what I have learned with other Nepali students, learners and readers.</p>
+<p>I’m <strong>${esc(site.author.name)}</strong>, a ${esc(site.author.role.toLowerCase())} from Nepal, now living in ${esc(site.author.location)}. I build software for a living, and Hamropedia is where I share what I have learned with students, learners and readers everywhere.</p>
 <p>You can see my work on <a href="${site.social.github}" target="_blank" rel="noopener">GitHub</a> and my <a href="${site.social.portfolio}" target="_blank" rel="noopener">portfolio</a>, or connect on <a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.</p>
 <h2>How articles are checked</h2>
 <ul>
@@ -164,7 +164,7 @@ export function renderTerms(version) {
 export function render404(version) {
   return layout({
     title: `Page not found | ${site.name}`,
-    description: 'This page could not be found. Try the Nepali tools, the AI roadmap or the latest articles on Hamropedia.',
+    description: 'This page could not be found. Try the latest news, the guides or the AI roadmap on Hamropedia.',
     path: '/404.html',
     noindex: true,
     version,

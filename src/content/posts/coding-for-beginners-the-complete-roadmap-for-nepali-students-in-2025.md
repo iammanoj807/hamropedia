@@ -1,6 +1,6 @@
 ---
-title: "Coding for Beginners: The Complete Roadmap for Nepali Students (2026)"
-seoTitle: "Coding for Beginners 2026: A Complete, Free Roadmap for Nepali Students"
+title: "Coding for Beginners: The Complete Roadmap (2026)"
+seoTitle: "Coding for Beginners 2026: A Complete, Free Roadmap"
 description: "Start coding from zero: which language to pick, setting up VS Code, the best free courses, projects, DSA, Git and GitHub, choosing a field, and how to use AI tools without hurting your learning."
 date: 2024-03-07
 updated: 2026-11-01
@@ -10,7 +10,7 @@ coverWord: "Start coding"
 coverAlt: "A coding roadmap for beginners"
 ---
 
-Learning to code is one of the most useful things you can do as a student in Nepal: the skills are in demand at home and abroad, you can learn them entirely for free, and you can practise on any laptop. This roadmap takes you from zero to your first real projects, in order.
+Learning to code is one of the most useful things you can do as a student: the skills are in demand at home and abroad, you can learn them entirely for free, and you can practise on any laptop. This roadmap takes you from zero to your first real projects, in order.
 
 > **Update:** Refreshed for 2026, with the free resources checked, retired tools removed, and a new section on learning to code in the age of AI assistants.
 

@@ -65,7 +65,7 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Learn to code &amp; build with AI</h2><a href="/blog/">All articles</a></div>
+  <div class="section-head"><h2>Learn to code</h2><a href="/blog/">All articles</a></div>
   <div class="grid grid-3">${learning.map((p) => postCard(p)).join('')}</div>
 </section>
 

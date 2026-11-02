@@ -3,9 +3,9 @@
 export const site = {
   name: 'Hamropedia',
   url: 'https://hamropedia.com', // no trailing slash
-  tagline: 'Nepali tools, AI learning and honest guides',
+  tagline: 'News, guides and learning, explained simply',
   description:
-    'Study-abroad guides for Nepali students (NOC, WES, UK visas, EDV), Nepal news explained in English and Nepali, and free learning paths in coding and AI.',
+    'Study-abroad guides (NOC, WES, UK visas, EDV), news explained simply in English and Nepali, and free learning paths in coding and AI.',
   locale: 'en_GB',
   lang: 'en',
   author: {
@@ -58,19 +58,19 @@ export const categories = {
   'study-abroad': {
     name: 'Study Abroad',
     nameNe: 'विदेश अध्ययन',
-    description: 'Step-by-step, sourced guides for Nepali students: NOC, WES, UK visas and more.',
+    description: 'Step-by-step, sourced guides for students going abroad: NOC, WES, UK visas and more.',
     hue: 'blue',
   },
   coding: {
     name: 'Coding',
     nameNe: 'कोडिङ',
-    description: 'Programming guides and roadmaps for beginners, written for Nepali students.',
+    description: 'Programming guides and roadmaps for beginners: pick a language, build projects, and learn Git, DSA and Python.',
     hue: 'green',
   },
   ai: {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
-    description: 'Learn AI and machine learning for free, and follow what AI means for Nepal.',
+    description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
     hue: 'violet',
   },
   nepal: {
