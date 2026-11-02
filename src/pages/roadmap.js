@@ -206,7 +206,7 @@ export function renderPhase(p, i, version) {
 
   const kinds = new Set(p.topics.flatMap((t) => t.resources.map((r) => r.kind)));
   return layout({
-    title: `Phase ${p.number}: ${p.title} — free resources | AI & ML Roadmap | ${site.name}`,
+    title: `Phase ${p.number}: ${p.title}, free resources | ${site.name}`,
     ogTitle: `AI roadmap, phase ${p.number}: ${p.title}`,
     description: `${p.goal} ${p.topics.length} topics with ${resourceCount(p)} free resources${kinds.has('play') ? ', including interactive explainers' : ''}.`.slice(0, 300),
     path: phasePath(p),

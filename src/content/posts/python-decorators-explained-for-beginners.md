@@ -1,7 +1,7 @@
 ---
 title: "Python Decorators Explained for Beginners (with Examples)"
-seoTitle: "Python Decorators Explained for Beginners, with Runnable Examples"
-description: "Learn Python decorators step by step: functions as objects, wrapper functions, the @ syntax, functools.wraps, arguments, and real uses like timing, login checks and caching."
+seoTitle: "Python Decorators Explained for Beginners (with Examples)"
+description: "Learn Python decorators step by step: functions as objects, wrappers, the @ syntax, functools.wraps, arguments, and real uses like timing, logins and caching."
 date: 2024-02-25
 updated: 2026-11-01
 category: coding

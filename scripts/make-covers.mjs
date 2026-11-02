@@ -100,12 +100,29 @@ async function render(svg, webpOut, jpgOut) {
   }
 }
 
+// Google recommends article images in 16:9, 4:3 and 1:1. Each one is the 1200x630 cover,
+// extended top and bottom by repeating its edge colours, so nothing is cropped.
+async function ratios(jpg) {
+  for (const [name, h] of [['16x9', 675], ['4x3', 900], ['1x1', 1200]]) {
+    const out = jpg.replace(/\.jpg$/, `-${name}.jpg`);
+    if (!force && fs.existsSync(out)) continue;
+    const pad = h - 630;
+    await sharp(jpg)
+      .extend({ top: Math.floor(pad / 2), bottom: Math.ceil(pad / 2), extendWith: 'copy' })
+      .jpeg({ quality: 80, mozjpeg: true })
+      .toFile(out);
+    console.log('wrote', path.relative(ROOT, out));
+  }
+}
+
 // posts
 const postsDir = path.join(ROOT, 'src/content/posts');
 for (const f of fs.readdirSync(postsDir).filter((x) => x.endsWith('.md'))) {
   const { data } = matter(fs.readFileSync(path.join(postsDir, f), 'utf8'));
   const slug = data.slug || f.replace(/\.md$/, '');
-  await render(coverSvg({ title: data.coverTitle || data.title, theme: data.category }), null, path.join(PUB, 'images/og', `${slug}.jpg`));
+  const jpg = path.join(PUB, 'images/og', `${slug}.jpg`);
+  await render(coverSvg({ title: data.coverTitle || data.title, theme: data.category }), null, jpg);
+  await ratios(jpg);
 }
 
 

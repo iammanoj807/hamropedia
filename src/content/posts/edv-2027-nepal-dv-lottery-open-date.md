@@ -1,7 +1,7 @@
 ---
 title: "EDV 2027: Is the DV Lottery Form Open? Latest Update for Nepal"
-seoTitle: "EDV 2027 Nepal: DV Lottery Open Date, Court Pause, $1 Fee and Passport Rule"
-description: "The EDV 2027 (DV-2027) form is not open. A US appeals court paused the order to open it on 1 November 2026. What happened, what changes when it opens (US$1 fee, passport), and how to avoid EDV scams."
+seoTitle: "EDV 2027 Nepal: Is the DV Lottery Form Open? (Latest)"
+description: "The EDV 2027 form is not open: a US appeals court paused the order to open it. What happened, what's new (US$1 fee, passport) and how to avoid EDV scams."
 date: 2026-10-30
 category: study-abroad
 type: news

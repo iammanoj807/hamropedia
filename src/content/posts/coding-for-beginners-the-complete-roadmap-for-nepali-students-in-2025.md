@@ -1,7 +1,7 @@
 ---
 title: "Coding for Beginners: The Complete Roadmap (2026)"
 seoTitle: "Coding for Beginners 2026: A Complete, Free Roadmap"
-description: "Start coding from zero: which language to pick, setting up VS Code, the best free courses, projects, DSA, Git and GitHub, choosing a field, and how to use AI tools without hurting your learning."
+description: "Start coding from zero: which language to pick, setting up VS Code, the best free courses, projects, DSA, Git, and how to use AI tools wisely."
 date: 2024-03-07
 updated: 2026-11-01
 category: coding

@@ -1,7 +1,7 @@
 ---
 title: "ILR Changes 2026: Who Still Gets UK Settlement in 5 Years, and Who Waits 10?"
-seoTitle: "ILR 10-Year Rule (2026): 3, 5, 10 and 20-Year Routes to UK Settlement"
-description: "The UK confirmed on 2 November 2026 that the standard wait for ILR (settlement) will rise from 5 to 10 years. Who still qualifies in 3 or 5 years, what changes for Skilled Workers, students and families, and when it starts."
+seoTitle: "ILR 10-Year Rule 2026: Who Still Gets ILR in 5 Years?"
+description: "Confirmed on 2 November 2026: the UK's standard wait for ILR rises from 5 to 10 years. Who still settles in 3 or 5 years, what changes for workers and students."
 date: 2026-11-02
 category: study-abroad
 type: news

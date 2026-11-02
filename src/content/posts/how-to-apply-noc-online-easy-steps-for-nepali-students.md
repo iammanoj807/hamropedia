@@ -1,7 +1,7 @@
 ---
 title: "How to Apply for NOC Online: Easy Steps for Nepali Students (2026)"
-seoTitle: "How to Apply for NOC Online in Nepal (2026): Step-by-Step with Screenshots"
-description: "Step-by-step guide to the Nepal NOC (No Objection Certificate) for studying abroad: documents, every screen of the online form, the NRs 2,000 fee, and what changed in 2026."
+seoTitle: "How to Apply for NOC Online in Nepal (2026): Step by Step"
+description: "Nepal NOC (No Objection Certificate) for studying abroad, step by step: documents, every screen of the online form, the NRs 2,000 fee and what changed in 2026."
 date: 2025-06-17
 updated: 2026-11-01
 category: study-abroad

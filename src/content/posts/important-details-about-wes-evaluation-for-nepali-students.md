@@ -1,7 +1,7 @@
 ---
 title: "WES Evaluation Explained: Types, Fees and Which One You Need"
-seoTitle: "WES Evaluation Explained: Course-by-Course vs Document, ICAP vs Basic, Fees"
-description: "What WES evaluation is, why universities in the USA and Canada ask for it, course-by-course vs document-by-document, WES ICAP vs Basic, and current fees from wes.org."
+seoTitle: "WES Evaluation Explained: Types, Fees, ICAP vs Basic"
+description: "What WES evaluation is, why universities in the USA and Canada ask for it, course-by-course vs document-by-document, WES ICAP vs Basic, and current fees."
 date: 2024-05-04
 updated: 2026-11-01
 category: study-abroad

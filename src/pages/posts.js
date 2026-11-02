@@ -5,12 +5,25 @@ import {
   categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, pageHead, cover, displayDate,
 } from '../templates/components.js';
 import { toNepaliDigits } from '../assets/js/lib/bs-date.js';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const PUBLIC_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../../public');
+
+// Google recommends 16:9, 4:3 and 1:1 images for articles; make-covers.mjs creates them.
+function articleImages(og) {
+  const variants = ['16x9', '4x3', '1x1']
+    .map((r) => og.replace(/\.jpg$/, `-${r}.jpg`))
+    .filter((p) => fs.existsSync(path.join(PUBLIC_DIR, p)));
+  return [...variants, og].map((p) => abs(site.url, p));
+}
 
 const publisher = {
   '@type': 'Organization',
   name: site.name,
   url: site.url,
-  logo: { '@type': 'ImageObject', url: `${site.url}/apple-touch-icon.png`, width: 180, height: 180 },
+  logo: { '@type': 'ImageObject', url: `${site.url}/icon-512.png`, width: 512, height: 512 },
 };
 
 const T = {
@@ -95,8 +108,9 @@ ${post.html}
       '@context': 'https://schema.org',
       '@type': post.type === 'news' ? 'NewsArticle' : 'BlogPosting',
       headline: post.title,
+      name: post.seoTitle || post.title,
       description: post.description,
-      image: [abs(site.url, post.ogImage)],
+      image: articleImages(post.ogImage),
       datePublished: isoDate(post.date),
       dateModified: isoDate(post.updated || post.date),
       author: { '@type': 'Person', name: site.author.name, url: site.author.url, jobTitle: site.author.role, sameAs: Object.values(site.social) },
@@ -115,6 +129,7 @@ ${post.html}
     description: post.description,
     path: post.url,
     image: post.ogImage,
+    imageAlt: post.coverAlt || post.title,
     type: 'article',
     schema,
     body,

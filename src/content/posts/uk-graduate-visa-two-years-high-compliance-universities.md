@@ -1,7 +1,7 @@
 ---
 title: "UK Budget: Two-Year Graduate Visa to Stay for 'High-Compliance' Universities"
-seoTitle: "UK Graduate Visa 2 Years for High-Compliance Universities: Budget 2026 Explained"
-description: "The UK's 2026 Budget says graduates of high-compliance universities with strong job outcomes will get a two-year Graduate visa, while others move to 18 months from January 2027. What we know, and what Nepali students should do."
+seoTitle: "UK Graduate Visa 2026: 2 Years for High-Compliance Unis"
+description: "The UK Budget says graduates of high-compliance universities keep a two-year Graduate visa; others get 18 months from January 2027. What we know and what to do."
 date: 2026-10-28
 category: study-abroad
 type: news

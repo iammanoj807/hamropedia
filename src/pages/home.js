@@ -11,11 +11,11 @@ export function renderHome(posts, version) {
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
   const learning = guides.filter((p) => p.category === 'ai' || p.category === 'coding').slice(0, 3);
   const popularSlugs = [
+    'ilr-changes-uk-5-year-vs-10-year-route-earned-settlement',
     'edv-2027-nepal-dv-lottery-open-date',
     'uk-graduate-visa-two-years-high-compliance-universities',
     'how-to-apply-noc-online-easy-steps-for-nepali-students',
     'how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide',
-    'how-to-learn-ai-and-machine-learning-for-free',
   ];
   const popular = popularSlugs.map((s) => posts.find((p) => p.slug === s)).filter(Boolean);
 
@@ -96,17 +96,18 @@ ${roadmapBand()}
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: site.name,
+        alternateName: ['हाम्रोपेडिया', 'Hamropedia.com'],
         url: `${site.url}/`,
         description: site.description,
         inLanguage: 'en',
-        publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: `${site.url}/apple-touch-icon.png`, sameAs: Object.values(site.social) },
+        publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: `${site.url}/icon-512.png`, sameAs: Object.values(site.social) },
       },
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: site.name,
         url: site.url,
-        logo: `${site.url}/apple-touch-icon.png`,
+        logo: `${site.url}/icon-512.png`,
         email: site.email,
         founder: { '@type': 'Person', name: site.author.name },
         foundingDate: String(site.established),

@@ -59,6 +59,14 @@ for (const file of htmlFiles) {
     if (!rel.endsWith('404.html') && !/<link rel="canonical" href="https:\/\/hamropedia\.com\//.test(html)) problems.push(`${rel}: missing canonical`);
     const title = html.match(/<title>([^<]*)<\/title>/)?.[1] || '';
     if (title.length < 15) problems.push(`${rel}: short title`);
+    // English articles: keep what Google shows within its limits (about 60 characters for the
+    // title link, about 160 for the snippet). Set seoTitle and description in the post's front matter.
+    if (/<html lang="en">/.test(html) && html.includes('<meta property="og:type" content="article">')) {
+      const text = (t) => t.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+      const desc = text(html.match(/<meta name="description" content="([^"]*)"/)?.[1] || '');
+      if (text(title).length > 70) problems.push(`${rel}: title is ${text(title).length} characters (keep seoTitle under 60)`);
+      if (desc.length > 160) problems.push(`${rel}: description is ${desc.length} characters (keep it under 160)`);
+    }
   }
 }
 

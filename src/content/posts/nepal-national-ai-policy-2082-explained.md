@@ -1,7 +1,7 @@
 ---
 title: "Nepal Approves National AI Policy 2082: Goals, Plans and What It Means for You"
-seoTitle: "Nepal National AI Policy 2082: Targets, AI Centre, Sectors, Explained"
-description: "Nepal's Cabinet has approved the National Artificial Intelligence Policy 2082: a top-50 AI readiness target, a National AI Centre, provincial centres of excellence, data protection rules and an AI skills push."
+seoTitle: "Nepal National AI Policy 2082 Explained: Targets and Plans"
+description: "Nepal's National AI Policy 2082: a top-50 AI readiness target, a National AI Centre, provincial centres of excellence, data protection rules and AI skills."
 date: 2025-08-22
 updated: 2026-11-01
 category: ai

@@ -1,7 +1,7 @@
 ---
 title: "UK Student Visa Rules Explained Simply (Updated for 2026)"
-seoTitle: "UK Student Visa Rules 2026: Graduate Route 18 Months, Fees, Funds, Dependants"
-description: "The UK student visa rules that matter in 2026: the Graduate Route cut to 18 months from January 2027, the £558 visa fee, £776 health surcharge, new maintenance funds and dependants rules."
+seoTitle: "UK Student Visa Rules 2026: Fees, Funds and Graduate Route"
+description: "UK student visa rules for 2026: the Graduate Route cut to 18 months from January 2027, the £558 visa fee, £776 health surcharge, funds and dependants."
 date: 2025-05-12
 updated: 2026-11-02
 category: study-abroad

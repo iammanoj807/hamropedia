@@ -1,7 +1,7 @@
 ---
 title: "Balen Shah Sworn In as Prime Minister: How Nepal Got Here, from the Gen Z Protests"
-seoTitle: "Balen Shah, Nepal's Prime Minister: From the Gen Z Protests to the 2026 Election, Explained"
-description: "Balendra Shah has been sworn in as Nepal's prime minister after the Rastriya Swatantra Party's landslide. A sourced timeline from the September 2025 Gen Z protests to today, with updates since."
+seoTitle: "Balen Shah, Nepal's PM: From the Gen Z Protests to Power"
+description: "Balendra Shah is Nepal's prime minister after the Rastriya Swatantra Party's landslide. A sourced timeline from the September 2025 Gen Z protests to today."
 date: 2026-03-27
 updated: 2026-11-01
 category: nepal

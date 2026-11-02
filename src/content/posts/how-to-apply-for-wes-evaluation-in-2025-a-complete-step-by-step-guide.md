@@ -1,7 +1,7 @@
 ---
 title: "How to Apply for WES Evaluation: A Complete Step-by-Step Guide (2026)"
-seoTitle: "How to Apply for WES Evaluation (2026): Step-by-Step with Screenshots"
-description: "Apply for a WES evaluation step by step: create your account, add credentials, choose course-by-course and ICAP, send sealed transcripts by courier, and pay. With screenshots."
+seoTitle: "How to Apply for WES Evaluation (2026): Step-by-Step Guide"
+description: "Apply for WES step by step: create an account, add credentials, choose course-by-course and ICAP, send sealed transcripts by courier, and pay. With screenshots."
 date: 2025-06-09
 updated: 2026-11-01
 category: study-abroad

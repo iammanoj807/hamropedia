@@ -1,7 +1,7 @@
 ---
 title: "How to Type in Nepali on Phone and Computer (Romanized Unicode Guide)"
-seoTitle: "How to Type in Nepali: English to Nepali Unicode Typing on Phone & Computer"
-description: "Type Nepali using English letters on Android, iPhone and computer. Learn the Romanized Nepali rules (aa, ee, T, D, Sh), avoid Preeti, and practise with a free online typing tool."
+seoTitle: "How to Type in Nepali: English to Nepali Unicode Typing"
+description: "Type Nepali with English letters on Android, iPhone and computer: the Romanized rules (aa, ee, T, D, Sh), why to avoid Preeti, and a free online typing tool."
 date: 2026-11-01
 category: nepal
 tags: [nepali typing, unicode, romanized, preeti, nepali language]

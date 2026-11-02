@@ -1,7 +1,7 @@
 ---
 title: "UKVI Credibility Interview: Common Questions and How to Answer Them"
 seoTitle: "UKVI Credibility Interview Questions and Answers (2026)"
-description: "Prepare for the UK student credibility interview: what it checks, the questions you are likely to get, how to structure honest answers, and answer templates you can adapt."
+description: "Prepare for the UK student credibility interview: what it checks, the questions you are likely to get, how to answer honestly, and templates you can adapt."
 date: 2025-06-16
 updated: 2026-11-01
 category: study-abroad

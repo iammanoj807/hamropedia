@@ -371,7 +371,7 @@ export function renderToolsHub(version) {
   <p class="suggest">Need another tool? <a href="/contact-us/">Suggest one</a>. The most requested ideas get built next.</p>
 </section>`;
   return layout({
-    title: `Free Tools: English to Nepali typing, Nepali keyboard, date converter, age calculator | ${site.name}`,
+    title: `Free Nepali Tools: Typing, Keyboard, Date Converter, Age | ${site.name}`,
     description: 'Free online tools: English to Nepali (Romanized) typing, Nepali keyboard (Preeti layout), Nepali date converter (BS to AD) and an age calculator. Private, fast and mobile friendly.',
     path: '/tools/',
     body,

@@ -49,6 +49,10 @@ export function layout(p) {
     : '';
 
   const lang = p.lang || 'en';
+  // Google shows the site name above each result and cuts titles at about 60 characters,
+  // so long titles drop the "| Hamropedia" suffix to keep the important words visible.
+  const brand = ` | ${site.name}`;
+  const pageTitle = p.title.length > 65 && p.title.endsWith(brand) ? p.title.slice(0, -brand.length) : p.title;
   const hreflang = (p.alternates || []).length
     ? [...p.alternates.map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${abs(site.url, a.path)}">`),
        `<link rel="alternate" hreflang="x-default" href="${abs(site.url, (p.alternates.find((a) => a.lang === 'en') || p.alternates[0]).path)}">`].join('\n')
@@ -58,7 +62,7 @@ export function layout(p) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(p.title)}</title>
+<title>${esc(pageTitle)}</title>
 <meta name="description" content="${esc(p.description)}">
 <link rel="canonical" href="${url}">
 ${p.noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robots" content="index, follow, max-image-preview:large">'}
@@ -70,17 +74,20 @@ ${p.noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="ro
 <meta property="og:image" content="${image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(p.imageAlt || p.ogTitle || p.title)}">
 <meta property="og:locale" content="${lang === 'ne' ? 'ne_NP' : site.locale}">
 ${hreflang}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(p.ogTitle || p.title)}">
 <meta name="twitter:description" content="${esc(p.description)}">
 <meta name="twitter:image" content="${image}">
+<meta name="twitter:image:alt" content="${esc(p.imageAlt || p.ogTitle || p.title)}">
 <meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
 ${verify}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="${site.name}" href="/rss.xml">
