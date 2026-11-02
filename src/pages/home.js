@@ -23,8 +23,8 @@ export function renderHome(posts, version) {
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Hamropedia · <span lang="ne">हाम्रोपेडिया</span></p>
-      <h1>News, study-abroad guides and learning, <em>made for Nepalis</em>.</h1>
-      <p class="lead">Clear, sourced guides for studying abroad, the Nepal and visa news that matters to you, and free learning paths in coding and AI. Written by a Nepali software engineer, with the news also in Nepali.</p>
+      <h1>News, study-abroad guides and learning, <em>explained simply</em>.</h1>
+      <p class="lead">Clear, sourced guides for studying abroad, the news that matters, and free learning paths in coding and AI, written in plain language for everyone.</p>
       <div class="hero-cta">
         <a class="btn btn-lg" href="/news/">Read the latest news</a>
         <a class="btn-ghost btn-lg" href="/blog/">Explore the guides</a>
@@ -96,8 +96,8 @@ export function renderHome(posts, version) {
 </section>`;
 
   return layout({
-    title: `${site.name}: Nepal news, study-abroad guides and learning for Nepalis`,
-    ogTitle: `${site.name}: news, study-abroad guides and learning, made for Nepalis`,
+    title: `${site.name}: news, study-abroad guides and learning`,
+    ogTitle: `${site.name}: news, study-abroad guides and learning, explained simply`,
     description: site.description,
     path: '/',
     body,
