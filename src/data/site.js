@@ -29,9 +29,8 @@ export const site = {
 
 export const nav = [
   { href: '/news/', label: 'News' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/category/study-abroad/', label: 'Study Abroad' },
-  { href: '/ai-roadmap/', label: 'Learn AI' },
-  { href: '/category/coding/', label: 'Coding' },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },
 ];
@@ -39,8 +38,8 @@ export const nav = [
 // The same menu, for pages written in Nepali.
 export const navNe = [
   { href: '/ne/', label: 'समाचार' },
+  { href: '/blog/', label: 'ब्लग' },
   { href: '/category/study-abroad/', label: 'विदेश अध्ययन' },
-  { href: '/ai-roadmap/', label: 'एआई सिक्नुहोस्' },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },
 ];
