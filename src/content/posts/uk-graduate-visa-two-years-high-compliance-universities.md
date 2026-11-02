@@ -57,7 +57,7 @@ The Home Office and the Department for Education will design the details, which 
 
 The Budget also said the **High Potential Individual (HPI) visa** will be opened to graduates of the **top 150 global institutions**, with a larger cap (The PIE News).
 
-For all the current UK student visa numbers (fees, funds, dependants), see [UK student visa rules explained](/uk-immigration-2025-new-student-visa-rules-explained-simply/).
+For all the current UK student visa numbers (fees, funds, dependants), see [UK student visa rules explained](/uk-immigration-2025-new-student-visa-rules-explained-simply/). Planning to stay long term? Graduate visa time will not count towards settlement under the new rules: see [UK ILR changes: 5-year vs 10-year routes](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
 
 ---
 

@@ -3,7 +3,7 @@ title: "UK Student Visa Rules Explained Simply (Updated for 2026)"
 seoTitle: "UK Student Visa Rules 2026: Graduate Route 18 Months, Fees, Funds, Dependants"
 description: "The UK student visa rules that matter in 2026: the Graduate Route cut to 18 months from January 2027, the £558 visa fee, £776 health surcharge, new maintenance funds and dependants rules."
 date: 2025-05-12
-updated: 2026-11-01
+updated: 2026-11-02
 category: study-abroad
 tags: [uk, student visa, graduate route, study abroad]
 coverWord: "UK visa 2026"
@@ -77,7 +77,7 @@ The [May 2025 immigration white paper](https://www.gov.uk/government/publication
 
 - **stricter compliance thresholds** for universities that sponsor international students;
 - a **levy on universities' income from international students**;
-- making **10 years**, rather than 5, the normal qualifying period for settlement (permanent residence), with ways to qualify faster.
+- making **10 years**, rather than 5, the normal qualifying period for settlement (permanent residence), with ways to qualify faster. **Update (2 November 2026):** the government has now confirmed this, starting from December 2026 and through 2027. Student and Graduate visa time will not count towards settlement. See [UK ILR changes: 5-year vs 10-year routes](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
 
 Some of these need further legislation or consultation, and details change. **Treat them as proposals until they appear in the official Immigration Rules or on gov.uk.**
 

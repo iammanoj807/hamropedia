@@ -19,7 +19,7 @@ The UK government has confirmed its biggest change to **ILR (indefinite leave to
 > - **3 years:** people earning at least **£125,141**.
 > - **20 years:** people who have claimed specified public funds in the last 5 years, or broken immigration rules as an adult.
 > - **Student and Graduate visa time** will no longer count, and the **10-year Long Residence route will close**.
-> - **When:** not in force yet. The first changes come in the **December Immigration Rules**, and the rest **"over the course of 2027"**.
+> - **When:** not in force yet. The first changes come in the **December Immigration Rules**, with the rest during **2027**.
 
 ## What is ILR?
 
@@ -42,10 +42,10 @@ The earnings thresholds are tied to the UK income tax bands (£12,571 is where b
 
 ## Who still gets ILR after 5 years
 
-- **Higher earners:** at least **£50,271** a year in 3 of the 5 years before applying. Two lower years are allowed, for example for maternity leave or illness.
+- **Higher earners:** at least **£50,271** a year in 3 of the 5 years before applying. Two lower years are allowed, for example for maternity leave or illness. The 3- and 5-year earnings routes are for people on the **Skilled Worker, Global Talent, Scale-up, Innovator Founder** and **International Sportsperson** routes.
 - **Public service workers in health and education:** eligible roles paid on **national pay scales**, such as **doctors, nurses and teachers**. The full list is in Annex C of the Home Office response.
 - **A British connection:** eligible **partners, parents and children of British citizens**, and **UK Ancestry** visa holders.
-- **Groups with existing promises:** **Hong Kong BN(O)** visa holders keep 5 years. **Armed Forces** members, including **Gurkhas**, qualify after 4 years' service, and their partners and children after 5.
+- **Groups with existing promises:** **Hong Kong BN(O)** visa holders keep 5 years. **HM Armed Forces**, including **Gurkha** and Hong Kong military unit veterans discharged before 1 July 1997, keep their existing arrangements: service personnel qualify after at least 4 years' service, and their partners and children after 5 years.
 
 ### Transitional protection for some people already in the UK
 
@@ -53,7 +53,6 @@ These apply only to people who were in the route **before the Immigration White 
 
 - **Care workers** who entered or switched into the care worker route before May 2025 keep **5 years**, if they meet the **£25,000** salary, sponsorship and work requirements. Those who don't can apply for a further **five-year Health and Care visa** to try again.
 - **Health and education workers below degree level (RQF 6)** on national pay scales, such as **nursing auxiliaries and teaching assistants**, keep a **5-year** route.
-- **Skilled Workers from before April 2024** in roles below RQF 6 can keep **extending their visas on their current terms until 2035**.
 
 (Home Office, Chapter 8)
 
@@ -64,6 +63,7 @@ Almost everyone else on a route to settlement, including:
 - **Skilled Workers** earning **under £50,271** who are not in an eligible public service job. The consultation had proposed **15 years** for jobs below RQF 6; that was dropped, so they get **10 years** like everyone else.
 - People on **Family and Private Life** routes, who cannot use the 3- or 5-year routes.
 - **Care workers** who joined the route **after May 2025**.
+- **Skilled Workers who were on the route before April 2024**, in roles below RQF 6: they move to **10 years** too, but they can keep **extending their visas on their current salary terms until 2035** (previously 2030), so they have time to reach settlement.
 
 To qualify after 10 years you must earn at least **£12,571** in 5 of the 7 years before applying. **Couples can combine their income**, with a household threshold of **£25,142**, so a partner who works part-time while caring for children is not held back. Children, people aged 65 and over, and people who cannot work because of a physical or mental condition are exempt from the earnings rule.
 
@@ -75,7 +75,7 @@ Whatever your route, you will need to meet these minimum requirements. **Earning
 - **Pass the [Life in the UK test](https://www.gov.uk/life-in-the-uk-test)**, which is being reviewed.
 - **No criminal record in the UK.** Adults with any UK criminal record, including court fines, conditional cautions and suspended sentences, will be refused.
 - **No money owed to the government**, including **NHS debt**, **unpaid tax and National Insurance**, and Home Office legal costs.
-- **No specified public funds in the 5 years before applying.** If you claim them, you are on the **20-year** route.
+- **No specified public funds in the 5 years before applying.** If you have claimed them, you are on the **20-year** route, unless you then go 5 years in a row without claiming.
 - **No immigration breaches as an adult**, such as **overstaying** or **working in breach of your visa conditions**. These also move you to the **20-year** route.
 
 ## Students and Graduate visa holders: time will not count
@@ -114,7 +114,7 @@ The plan is about how people **qualify** for settlement. The Home Office respons
 
 ## When do the changes start?
 
-**Not yet.** The new system has been announced but is **not law** until it appears in the Immigration Rules. The Home Secretary told Parliament that the first changes will be laid in the **December Immigration Rules**, and that the reforms *"will be implemented over the course of 2027"* ([EIN, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement)). More guidance is due before then.
+**Not yet.** The new system has been announced but is **not law** until it appears in the Immigration Rules. In her statement to Parliament, the Home Secretary said the first changes will be laid in the **December Immigration Rules**, and the reforms will be brought in **over the course of 2027** ([EIN, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement)). More guidance is due before then.
 
 One point matters for everyone already in the UK. The government says that, unless transitional rules say otherwise, settlement applications are normally decided under **the rules in force on the date of the decision**, not the rules when you arrived (Home Office, Chapter 8). Apart from the groups listed above, there is **no general protection** for people who are already here.
 
@@ -131,7 +131,7 @@ One point matters for everyone already in the UK. The government says that, unle
 
 **Is ILR now 10 years in the UK?** It has been confirmed as the new standard, but it is **not in force yet**. The changes start in the December Immigration Rules and roll out over 2027.
 
-**Can I still get ILR in 5 years on a Skilled Worker visa?** Yes, if you earn at least **£50,271** in 3 of the 5 years before applying, work in an eligible public service job, have a British partner, or are covered by a transitional rule. Otherwise the standard will be 10 years.
+**Can I still get ILR in 5 years on a Skilled Worker visa?** Yes, if you earn at least **£50,271** in 3 of the 5 years before applying, work in an eligible public service job, have a British partner, or are a care, health or education worker covered by the transitional rules. Otherwise the standard will be 10 years.
 
 **Does the 10-year rule apply to people already in the UK?** Generally yes. Applications are normally decided under the rules in force on the decision date, and only specific groups have transitional protection: some care, health and education workers who arrived before May 2025 keep 5 years, and pre-April 2024 Skilled Workers in roles below RQF 6 can keep extending their visas on current terms until 2035.
 
