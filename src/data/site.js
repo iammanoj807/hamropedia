@@ -30,7 +30,13 @@ export const site = {
 export const nav = [
   { href: '/news/', label: 'News' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/learn/', label: 'Learn & Build' },
+  {
+    href: '/learn/', label: 'Learn & Build',
+    children: [
+      { href: '/ai-roadmap/', label: 'AI & ML Roadmap' },
+      { href: '/category/coding/', label: 'Coding guides' },
+    ],
+  },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },
 ];
@@ -39,7 +45,10 @@ export const nav = [
 export const navNe = [
   { href: '/ne/', label: 'समाचार' },
   { href: '/blog/', label: 'ब्लग' },
-  { href: '/learn/', label: 'सिक्नुहोस्' },
+  {
+    href: '/learn/', label: 'सिक्नुहोस्',
+    children: [{ href: '/ai-roadmap/', label: 'एआई तथा एमएल रोडम्याप' }],
+  },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },
 ];

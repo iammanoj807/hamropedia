@@ -69,7 +69,7 @@ const ROADMAP_FAQ = [
 ];
 
 export function renderRoadmapIndex(version) {
-  const crumbs = [{ name: 'Home', path: '/' }, { name: 'AI Roadmap', path: '/ai-roadmap/' }];
+  const crumbs = [{ name: 'Home', path: '/' }, { name: 'Learn & Build', path: '/learn/' }, { name: 'AI & ML Roadmap', path: '/ai-roadmap/' }];
   const cards = phases
     .map(
       (p) => `<li class="phase-card" style="--ph:${p.accent}">
@@ -141,7 +141,8 @@ export function renderRoadmapIndex(version) {
 export function renderPhase(p, i, version) {
   const crumbs = [
     { name: 'Home', path: '/' },
-    { name: 'AI Roadmap', path: '/ai-roadmap/' },
+    { name: 'Learn & Build', path: '/learn/' },
+    { name: 'AI & ML Roadmap', path: '/ai-roadmap/' },
     { name: `Phase ${p.number}: ${p.title}`, path: phasePath(p) },
   ];
   const prev = phases[i - 1];

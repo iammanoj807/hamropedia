@@ -39,7 +39,21 @@ export function renderLearn(posts, version) {
     title: 'Learn the skills, then build something real',
     lead: 'Free, step-by-step paths to learn coding and AI, and project ideas you can build and show. Start anywhere: every resource here is free.',
   })}
-${roadmapBand()}
+<section class="wrap" aria-labelledby="rm-h">
+  <div class="section-head"><h2 id="rm-h">AI &amp; ML Roadmap</h2><a href="/ai-roadmap/">Open the full roadmap</a></div>
+  <p class="section-lead">Learn AI and machine learning from zero, in order: ${totals.phases} phases, ${totals.topics} topics and ${totals.resources} hand-picked free resources. Tick topics off as you go.</p>
+  <ol class="phase-grid">
+    ${phases.map((p) => `<li class="phase-card" style="--ph:${p.accent}">
+      <a href="/ai-roadmap/${p.slug}/">
+        <span class="phase-num">Phase ${p.number}</span>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.goal)}</p>
+        <span class="phase-stats">${p.topics.length} topics</span>
+        <span class="phase-progress" data-phase-progress="${p.slug}" data-total="${p.topics.length}"><span></span></span>
+      </a>
+    </li>`).join('')}
+  </ol>
+</section>
 <section class="wrap section">
   <div class="section-head"><h2>Guides to get you started</h2><a href="/blog/">All articles</a></div>
   <div class="grid grid-3">${guides.map((p) => postCard(p)).join('')}</div>
@@ -60,6 +74,7 @@ ${roadmapBand()}
     body,
     version,
     section: '/learn/',
+    scripts: ['/assets/js/roadmap.js'],
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Learn & Build', url: `${site.url}/learn/` },
       breadcrumbSchema(crumbs),

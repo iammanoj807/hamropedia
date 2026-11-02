@@ -5,6 +5,7 @@ export const ICONS = {
   logo: `<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--accent)"/><path d="M5 30 L15 14 L20 21 L25 12 L35 30 Z" fill="#fff"/><path d="M22.6 16 L25 12 L27.5 16.2 L25.6 15 L24.2 16.6 Z" fill="var(--accent)" opacity=".45"/></svg>`,
   search: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   sun: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+  caret: `<svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   moon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
   menu: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   close: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
@@ -117,8 +118,11 @@ ${scripts}
 }
 
 function header(section, lang) {
+  const link = (n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}${n.lang ? ` lang="${n.lang}"` : ''}>${esc(n.label)}</a>`;
   const links = (lang === 'ne' ? navNe : nav)
-    .map((n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}${n.lang ? ` lang="${n.lang}"` : ''}>${n.label}</a>`)
+    .map((n) => (n.children
+      ? `<div class="nav-group">${link(n).replace('</a>', `${ICONS.caret}</a>`)}<div class="nav-sub">${n.children.map(link).join('')}</div></div>`
+      : link(n)))
     .join('');
   return `<header class="site-header">
   <div class="wrap header-row">
