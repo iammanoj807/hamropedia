@@ -146,4 +146,24 @@ await sharp(Buffer.from(favicon)).resize(32, 32).png().toFile(path.join(PUB, 'fa
 await sharp(Buffer.from(favicon)).resize(180, 180).flatten({ background: '#2453c4' }).png().toFile(path.join(PUB, 'apple-touch-icon.png'));
 await sharp(Buffer.from(favicon)).resize(192, 192).png().toFile(path.join(PUB, 'icon-192.png'));
 await sharp(Buffer.from(favicon)).resize(512, 512).png().toFile(path.join(PUB, 'icon-512.png'));
+// favicon.ico: Google and older browsers request /favicon.ico directly.
+// ICO files can hold PNG images, so pack 16, 32 and 48 px PNGs into one.
+const icoSizes = [16, 32, 48];
+const icoPngs = await Promise.all(icoSizes.map((s) => sharp(Buffer.from(favicon)).resize(s, s).png().toBuffer()));
+const icoHeader = Buffer.alloc(6 + 16 * icoSizes.length);
+icoHeader.writeUInt16LE(0, 0); // reserved
+icoHeader.writeUInt16LE(1, 2); // type: icon
+icoHeader.writeUInt16LE(icoSizes.length, 4);
+let icoOffset = icoHeader.length;
+icoSizes.forEach((s, i) => {
+  const e = 6 + 16 * i;
+  icoHeader.writeUInt8(s, e); // width
+  icoHeader.writeUInt8(s, e + 1); // height
+  icoHeader.writeUInt16LE(1, e + 4); // colour planes
+  icoHeader.writeUInt16LE(32, e + 6); // bits per pixel
+  icoHeader.writeUInt32LE(icoPngs[i].length, e + 8);
+  icoHeader.writeUInt32LE(icoOffset, e + 12);
+  icoOffset += icoPngs[i].length;
+});
+fs.writeFileSync(path.join(PUB, 'favicon.ico'), Buffer.concat([icoHeader, ...icoPngs]));
 console.log('favicons done');
