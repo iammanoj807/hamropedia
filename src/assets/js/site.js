@@ -1,4 +1,4 @@
-import { todayInNepal, formatBs } from './lib/bs-date.js';
+import { todayInNepal, formatBs, formatAd } from './lib/bs-date.js';
 
 const root = document.documentElement;
 const store = {
@@ -100,13 +100,22 @@ document.addEventListener('click', (e) => {
 });
 export { copyText, store };
 
-// ---- today's Nepali date in the footer ----
+// ---- today's date in Nepal, in the footer, in the page's language ----
+// Nepali pages: the Nepali (BS) date in Nepali. English pages: the English (AD)
+// date, then the same day in the Nepali calendar, written in English.
 const np = document.querySelector('[data-np-today]');
 if (np) {
   try {
     const t = todayInNepal();
-    np.textContent = `${formatBs(t)} · ${formatBs(t, 'en')}`;
-    np.lang = 'ne';
+    if (document.documentElement.lang === 'ne') {
+      np.textContent = formatBs(t);
+      np.lang = 'ne';
+    } else {
+      const npt = new Date(Date.now() + (5 * 60 + 45) * 60000); // Nepal time
+      const ad = { year: npt.getUTCFullYear(), month: npt.getUTCMonth() + 1, day: npt.getUTCDate(), weekday: npt.getUTCDay() };
+      np.textContent = `${formatAd(ad)} · ${formatBs({ ...t, weekday: undefined }, 'en')}`; // the weekday once, not twice
+      np.lang = 'en';
+    }
   } catch { /* outside supported range */ }
 }
 
