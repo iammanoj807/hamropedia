@@ -87,7 +87,7 @@ export function renderPrivacy(version) {
     path: '/privacy-policy/',
     title: 'Privacy Policy',
     eyebrow: 'Legal',
-    description: 'Hamropedia privacy policy: what information is collected, how cookies and browser storage are used, advertising through Google AdSense, and your choices.',
+    description: 'Hamropedia privacy policy: what is collected, cookies and browser storage, course progress without an account, advertising, and your choices.',
     lead: 'What this site collects, how cookies are used, how advertising works, and the choices you have.',
     html: `<p class="muted">Last updated: 3 November 2026</p>
 <h2>Who we are</h2>
@@ -107,9 +107,21 @@ export function renderPrivacy(version) {
 <p>Cookies and browser storage are small pieces of data saved on your device. Hamropedia uses your browser’s local storage for:</p>
 <ul>
 <li><strong>dark mode</strong>, if you switch it on;</li>
-<li><strong>course progress</strong> (the checks you tick in the lessons, the SQL queries you run, and the DSA problems you mark solved with their review dates) and the <strong>last text you typed in a tool</strong>, so they are still there when you come back.</li>
+<li><strong>your course progress</strong> (see <a href="#courses">Courses and your progress</a> below);</li>
+<li>the <strong>last text you typed in a tool</strong>, so it is still there when you come back.</li>
 </ul>
 <p>These stay on your device and are not sent to us. Google and its partners may also set cookies for advertising, as described below.</p>
+
+<h2 id="courses">Courses and your progress (no account)</h2>
+<p>The courses (AI &amp; ML Roadmap, System Design, SQL and DSA) work without an account. There is no sign-up and no login, and we do not keep a database of readers or their progress.</p>
+<ul>
+<li><strong>What is saved, in your browser only:</strong> the checks you tick in each lesson; the SQL queries you change and run, with the lesson and box you ran them in; the DSA problems you mark as solved, with their review dates and your “Which pattern?” drill progress; and small settings such as “Must know only” on the revision notes.</li>
+<li><strong>Download my progress</strong> (on the Learn page and each course page) makes a small file on your device, named like <code>hamropedia-progress-2026-11-03.json</code>, with exactly the items above. It is not uploaded anywhere. Anyone who has the file can load your ticks and queries, so keep it like any other personal file.</li>
+<li><strong>Load a progress file</strong> reads the file inside your browser and adds what is in it. It never removes ticks or queries that are already there, and the file is not sent to us.</li>
+<li><strong>The SQL runner</strong> runs your queries inside your browser, on a fresh copy of a small practice database. What you type is not sent to us. The SQL engine itself (sql.js) is downloaded from jsDelivr the first time you press Run.</li>
+<li><strong>To delete your progress</strong>, clear this site’s data in your browser settings, and delete any progress files you downloaded.</li>
+<li><strong>On a shared or public computer</strong>, your progress stays in that browser for the next person who uses it. Download it if you want to keep it, then clear the site’s data before you leave.</li>
+</ul>
 
 <h2>Advertising (Google AdSense)</h2>
 <p>Hamropedia shows ads through <strong>Google AdSense</strong> to help keep the site free. Ads appear on English pages only.</p>
@@ -124,7 +136,7 @@ export function renderPrivacy(version) {
 <h2>Your choices</h2>
 <ul>
 <li><strong>Change your cookie choice</strong> at any time: <button type="button" class="text-btn" data-privacy-settings>Cookie settings</button> (also in the footer of every page) reopens Google’s consent message where it applies.</li>
-<li><strong>Back up your course progress</strong> with <b>Download my progress</b> on the Learn page or a course page. The file is made in your browser and is not sent to us.</li>
+<li><strong>Back up or move your course progress</strong> with <b>Download my progress</b> and <b>Load a progress file</b> (see <a href="#courses">Courses and your progress</a>).</li>
 <li><strong>Clear stored data</strong> by clearing this site’s data in your browser settings.</li>
 <li><strong>Opt out of personalised ads</strong> using the Google and aboutads.info links above.</li>
 </ul>
@@ -151,13 +163,15 @@ export function renderTerms(version) {
     eyebrow: 'Legal',
     description: 'Terms of use for Hamropedia.com: information is provided in good faith, always confirm official requirements with the official source.',
     lead: 'Plain-English terms for using Hamropedia.',
-    html: `<p class="muted">Last updated: 1 November 2026</p>
+    html: `<p class="muted">Last updated: 3 November 2026</p>
 <h2>Information, not official advice</h2>
 <p>Articles are written carefully and checked against official sources, but rules, fees and processes change. Hamropedia is not a government body, university, law firm or registered immigration adviser. Before you apply for a visa, NOC, credential evaluation or anything with legal or financial consequences, confirm the current requirements on the official website, which every guide links to.</p>
 <h2>The tools</h2>
 <p>The converters are provided free and “as is”. They are tested, but you should check important text and dates yourself, especially for legal documents. Dates from 2084 BS onward are provisional.</p>
+<h2>The courses</h2>
+<p>The AI &amp; ML Roadmap, System Design, SQL and DSA courses, the SQL runner and the progress file are provided free and “as is”, for learning. Your progress is kept in your own browser (see the <a href="/privacy-policy/#courses">privacy policy</a>), so we cannot recover it if your browser’s data is cleared: download a progress file to keep a copy.</p>
 <h2>Content</h2>
-<p>Articles and site design are © ${site.name}. You are welcome to quote short parts with a link back to the original page. Linked resources on the AI roadmap belong to their creators.</p>
+<p>Articles, course lessons and site design are © ${site.name}. You are welcome to quote short parts with a link back to the original page. Linked videos, articles and other resources belong to their creators. In the DSA course, the list and order of the 150 problems come from NeetCode (neetcode.io) and the problems themselves are on LeetCode (a few need LeetCode Premium); the lessons, templates, examples and answers are Hamropedia’s own.</p>
 <h2>External links</h2>
 <p>Hamropedia links to other websites for sources and learning resources. We are not responsible for their content or availability.</p>
 <h2>Contact</h2>
@@ -182,6 +196,9 @@ export function render404(version) {
     <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
     <li><a href="/tools/age-calculator/">Age calculator</a></li>
     <li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li>
+    <li><a href="/system-design/">System Design</a></li>
+    <li><a href="/sql/">SQL</a></li>
+    <li><a href="/dsa/">DSA (NeetCode 150)</a></li>
     <li><a href="/blog/">All articles</a></li>
     <li><a href="/news/">News</a></li>
   </ul>
