@@ -8,18 +8,24 @@ import { sdPhases, sdTotals, CHECKS_ATTR as SD_ATTR } from './system-design.js';
 import { sqlPhases, sqlTotals, CHECKS_ATTR as SQL_ATTR } from './sql.js';
 import { dsaTopics, dsaTotals } from './dsa.js';
 
-/** The dark AI-roadmap band, shared by the home page and Learn & Build. */
+/** The dark "free courses" band on the home page: the four courses, with a way in. */
 export function roadmapBand() {
+  const courses = [
+    ['/ai-roadmap/', 'AI & Machine Learning Roadmap', `${totals.topics} lessons`, '#2563eb'],
+    ['/system-design/', 'System Design', `${sdTotals.topics} lessons`, '#0891b2'],
+    ['/sql/', 'SQL, with a query runner', `${sqlTotals.topics} lessons`, '#0d9488'],
+    ['/dsa/', 'DSA (NeetCode 150)', `${dsaTotals.problems} problems`, '#7c3aed'],
+  ];
   return `<section class="roadmap-band">
   <div class="wrap band-grid">
     <div>
-      <p class="eyebrow">Free · no sign-up</p>
-      <h2>Learn AI &amp; machine learning from zero</h2>
-      <p>${totals.phases} phases and ${totals.topics} full lessons, in the order that makes sense. Every lesson has an animation, a diagram, worked code and exercises with answers, plus the best free videos and explainers if you want more.</p>
-      <a class="btn btn-lg" href="/ai-roadmap/">Open the roadmap ${ICONS.arrow}</a>
+      <p class="eyebrow">Free courses · no sign-up</p>
+      <h2>Learn AI, system design, SQL and DSA from zero</h2>
+      <p>Four free courses that work the same way: every lesson has an animation, a diagram, worked code and exercises with answers. Tick off what you can do without notes, and the site remembers it in your browser.</p>
+      <a class="btn btn-lg" href="/learn/#start-here">Start here ${ICONS.arrow}</a>
     </div>
     <ol class="band-phases">
-      ${phases.map((p) => `<li style="--ph:${p.accent}"><a href="/ai-roadmap/${p.slug}/"><span>${p.number}</span>${esc(p.title)}</a></li>`).join('')}
+      ${courses.map(([href, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${href}"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
     </ol>
   </div>
 </section>`;
@@ -168,8 +174,8 @@ ${startHere()}
 </section>`;
 
   return layout({
-    title: `Learn & Build: free coding and AI learning paths | ${site.name}`,
-    ogTitle: 'Learn & Build: free coding and AI learning paths',
+    title: `Learn & Build: free AI, System Design, SQL and DSA courses | ${site.name}`,
+    ogTitle: 'Learn & Build: free AI, System Design, SQL and DSA courses',
     description: `Learn AI, system design, SQL and DSA for free: ${totals.topics + sdTotals.topics + sqlTotals.topics} lessons, the NeetCode 150, coding guides and project ideas.`,
     path: '/learn/',
     image: '/images/og/ai-roadmap.jpg',

@@ -24,7 +24,7 @@ export function renderHome(posts, version) {
     <div class="hero-copy">
       <p class="eyebrow">Hamropedia · <span lang="ne">हाम्रोपेडिया</span></p>
       <h1>News, study-abroad guides and learning, <em>explained simply</em>.</h1>
-      <p class="lead">Clear, sourced guides for studying abroad, the news that matters, and free learning paths in coding and AI, written in plain language for everyone.</p>
+      <p class="lead">Clear, sourced guides for studying abroad, the news that matters, and free courses in AI, system design, SQL and DSA, written in plain language for everyone.</p>
       <div class="hero-cta">
         <a class="btn btn-lg" href="/news/">Read the latest news</a>
         <a class="btn-ghost btn-lg" href="/blog/">Explore the guides</a>

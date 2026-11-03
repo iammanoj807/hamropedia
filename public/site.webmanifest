@@ -1,7 +1,7 @@
 {
   "name": "Hamropedia",
   "short_name": "Hamropedia",
-  "description": "Nepali tools, a free AI roadmap and honest guides",
+  "description": "Nepali tools, free courses in AI, system design, SQL and DSA, and honest guides",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

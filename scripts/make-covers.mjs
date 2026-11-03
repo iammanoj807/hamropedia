@@ -127,8 +127,8 @@ for (const f of fs.readdirSync(postsDir).filter((x) => x.endsWith('.md'))) {
 
 
 // site, roadmap and tools
-await render(coverSvg({ title: 'Nepali tools, a free AI roadmap and guides you can trust', theme: 'site' }), null, path.join(PUB, 'images/og-default.jpg'));
-await render(coverSvg({ title: 'The free AI & Machine Learning Roadmap: 8 phases, 98 topics, 370+ resources', theme: 'roadmap' }), null, path.join(PUB, 'images/og/ai-roadmap.jpg'));
+await render(coverSvg({ title: 'Nepali tools, free courses in AI, SQL, system design and DSA, and guides you can trust', theme: 'site' }), null, path.join(PUB, 'images/og-default.jpg'));
+await render(coverSvg({ title: 'The free AI & Machine Learning Roadmap: 98 lessons with animations, exercises and answers', theme: 'roadmap' }), null, path.join(PUB, 'images/og/ai-roadmap.jpg'));
 await render(coverSvg({ title: 'The free System Design course: 72 lessons, from building blocks to full designs', theme: 'roadmap' }), null, path.join(PUB, 'images/og/system-design.jpg'));
 await render(coverSvg({ title: 'The free SQL course: from your first SELECT to interview problems, with a query runner', theme: 'roadmap' }), null, path.join(PUB, 'images/og/sql.jpg'));
 await render(coverSvg({ title: 'DSA: the NeetCode 150, one pattern at a time, with reviews that make it stick', theme: 'roadmap' }), null, path.join(PUB, 'images/og/dsa.jpg'));

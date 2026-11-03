@@ -3,6 +3,7 @@ title: "How to Learn AI and Machine Learning for Free: A Realistic Roadmap"
 seoTitle: "How to Learn AI and Machine Learning for Free (2026 Roadmap)"
 description: "A realistic, free path into AI and machine learning: what to learn first, the best free courses and videos, the tools you need, and projects that stand out."
 date: 2026-11-01
+updated: 2026-11-03
 category: ai
 tags: [ai, machine learning, roadmap, learning, python]
 coverWord: "Learn AI"
@@ -11,7 +12,7 @@ coverAlt: "A free roadmap for learning AI and machine learning"
 
 You can learn AI and machine learning properly without paying for a single course. The best material in the world, from Stanford, MIT, Harvard, 3Blue1Brown and Andrej Karpathy, is free online. The hard part is not finding resources but **knowing what to learn, in what order, and what to skip**.
 
-That is what the [Hamropedia AI & ML Roadmap](/ai-roadmap/) is for: 8 phases and 98 topics, in order, with hand-picked free resources for each. This article explains how to use it.
+That is what the [Hamropedia AI & ML Roadmap](/ai-roadmap/) is for: 8 phases and 98 full lessons, in order. Every lesson has an animation, a diagram, worked code and four exercises with answers, plus hand-picked free videos and readings if you want a second explanation. This article explains how to use it.
 
 ## The big picture: 8 phases
 
@@ -32,7 +33,7 @@ That is what the [Hamropedia AI & ML Roadmap](/ai-roadmap/) is for: 8 phases and
 2. **One resource per topic.** Collecting courses feels like progress, but it isn't. On the roadmap, one resource per topic is marked **Worth it**. Start there.
 3. **Build, then rebuild.** Code along with a video, then close it and write the code again from a blank file. The second time is where you learn.
 4. **Explain it out loud.** If you can't explain gradient descent to a friend in two sentences, you don't know it yet.
-5. **Revisit old topics.** Every couple of weeks, test yourself on earlier topics and untick anything you've forgotten. The roadmap's tick boxes are saved in your browser for exactly this.
+5. **Revisit old topics.** Every couple of weeks, test yourself on earlier topics and untick anything you've forgotten. Each lesson's four checks (Explain, Derive, Build, Break) are saved in your browser for exactly this, and **Download my progress** keeps a copy.
 
 ## The best free resources (a starter set)
 
@@ -44,7 +45,9 @@ That is what the [Hamropedia AI & ML Roadmap](/ai-roadmap/) is for: 8 phases and
 - **Transformers:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and Karpathy's "Let's build GPT".
 - **AI engineering:** [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain.
 
-The full list, with 370+ resources sorted by topic and type (video, interactive, reading, code, paper), is on the [roadmap](/ai-roadmap/).
+The full list, sorted by topic and type (video, interactive, reading, code, paper), is inside each lesson of the [roadmap](/ai-roadmap/).
+
+Aiming for an AI engineer job? Interviews usually test more than machine learning. Hamropedia has free courses for those too: [SQL](/sql/) (with a query runner in your browser), [DSA with the NeetCode 150](/dsa/) for coding rounds, and [System Design](/system-design/), including [AI and ML system design](/system-design/ai-ml-design/). The [Start here map](/learn/#start-here) shows an order to take them alongside the roadmap.
 
 ## What you need
 

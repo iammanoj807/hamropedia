@@ -21,13 +21,13 @@ export function renderAbout(version) {
     path: '/about-us/',
     title: 'About Hamropedia',
     eyebrow: 'About',
-    description: 'Hamropedia is a free site by AI software engineer Manoj Kumar Thapa: news explained simply, study-abroad guides, a free AI roadmap and useful tools.',
+    description: 'Hamropedia is a free site by AI software engineer Manoj Kumar Thapa: news explained simply, study-abroad guides, free courses and useful tools.',
     lead: 'Carefully checked articles for curious readers everywhere: guides that match the official sites, news with its sources showing, and tools that work.',
     html: `<figure class="about-photo"><img src="/images/manojkumarthapa.webp" alt="Manoj Kumar Thapa" width="440" height="519" decoding="async"><figcaption>${esc(site.author.name)}<span>${esc(site.author.role)}, ${esc(site.author.location)}</span></figcaption></figure>
 <p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
 <li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
-<li><strong>Learning</strong>: a free <a href="/ai-roadmap/">AI &amp; machine learning roadmap</a> with ${'370+'} hand-picked resources, and coding guides for beginners.</li>
+<li><strong>Learning</strong>: four free courses, the <a href="/ai-roadmap/">AI &amp; Machine Learning Roadmap</a>, <a href="/system-design/">System Design</a>, <a href="/sql/">SQL</a> (with a query runner in your browser) and <a href="/dsa/">DSA (NeetCode 150)</a>, where every lesson has an animation, a diagram and exercises with answers. There are also <a href="/category/coding/">coding guides</a> for beginners. <a href="/learn/#start-here">Start here</a> to see how they fit together.</li>
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
 <h2>Who writes it</h2>
@@ -182,7 +182,7 @@ export function renderTerms(version) {
 export function render404(version) {
   return layout({
     title: `Page not found | ${site.name}`,
-    description: 'This page could not be found. Try the latest news, the guides or the AI roadmap on Hamropedia.',
+    description: 'This page could not be found. Try the latest news, the guides or the free courses (AI, System Design, SQL and DSA) on Hamropedia.',
     path: '/404.html',
     noindex: true,
     version,

@@ -169,6 +169,16 @@ function footer() {
       </ul>
     </div>
     <div>
+      <h2 class="footer-h">Free courses</h2>
+      <ul>
+        <li><a href="/ai-roadmap/">AI &amp; ML Roadmap</a></li>
+        <li><a href="/system-design/">System Design</a></li>
+        <li><a href="/sql/">SQL</a></li>
+        <li><a href="/dsa/">DSA (NeetCode 150)</a></li>
+        <li><a href="/learn/#start-here">Start here</a></li>
+      </ul>
+    </div>
+    <div>
       <h2 class="footer-h">Read</h2>
       <ul>${cats}<li><a href="/news/">News</a></li><li><a href="/blog/">All articles</a></li></ul>
     </div>

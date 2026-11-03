@@ -5,7 +5,7 @@ export const site = {
   url: 'https://hamropedia.com', // no trailing slash
   tagline: 'News, guides and learning, explained simply',
   description:
-    'Study-abroad guides (NOC, WES, UK visas, EDV), news explained simply in English and Nepali, and free learning paths in coding and AI.',
+    'Study-abroad guides (NOC, WES, UK visas, EDV), news explained simply in English and Nepali, and free courses in AI, system design, SQL and DSA.',
   locale: 'en_GB',
   lang: 'en',
   author: {
