@@ -1,7 +1,13 @@
 import { site, nav, navNe, categories } from '../data/site.js';
 import { esc, jsonLd, abs } from '../lib/util.js';
 
+/** The Buy Me a Coffee page, or '' when no username is set (then no support buttons appear). */
+const BMC = site.support?.buyMeACoffee || '';
+if (BMC && !/^[A-Za-z0-9_-]{1,50}$/.test(BMC)) throw new Error(`site.support.buyMeACoffee "${BMC}" is not a valid Buy Me a Coffee username`);
+export const supportUrl = BMC ? `https://buymeacoffee.com/${BMC}` : '';
+
 export const ICONS = {
+  coffee: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3.5c0 1 1 1.2 1 2.3M12 3.5c0 1 1 1.2 1 2.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
   logo: `<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--accent)"/><path d="M5 30 L15 14 L20 21 L25 12 L35 30 Z" fill="#fff"/><path d="M22.6 16 L25 12 L27.5 16.2 L25.6 15 L24.2 16.6 Z" fill="var(--accent)" opacity=".45"/></svg>`,
   search: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
   sun: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
@@ -132,6 +138,7 @@ function header(section, lang) {
     <a class="brand" href="/" aria-label="${site.name} home">${ICONS.logo}<span>Hamro<b>pedia</b></span></a>
     <nav class="main-nav" id="main-nav" aria-label="Main">${links}</nav>
     <div class="header-actions">
+      ${supportUrl ? `<a class="icon-btn coffee-btn" href="${supportUrl}" target="_blank" rel="noopener" aria-label="Support Hamropedia: buy me a coffee" title="Support Hamropedia: buy me a coffee">${ICONS.coffee}</a>` : ''}
       <a class="icon-btn" href="/blog/#search" aria-label="Search articles">${ICONS.search}</a>
       <button class="icon-btn" type="button" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">${ICONS.sun}${ICONS.moon}</button>
       <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">${ICONS.menu}</button>
@@ -158,6 +165,7 @@ function footer() {
         <a href="${site.social.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${ICONS.youtube}</a>
         <a href="/rss.xml" aria-label="RSS feed">${ICONS.rss}</a>
       </div>
+      ${supportUrl ? `<a class="btn-coffee" href="${supportUrl}" target="_blank" rel="noopener">${ICONS.coffee}<span>Buy me a coffee</span></a>` : ''}
     </div>
     <div>
       <h2 class="footer-h">Free tools</h2>

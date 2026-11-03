@@ -1,6 +1,6 @@
 import { site } from '../data/site.js';
 import { esc } from '../lib/util.js';
-import { layout, ICONS } from '../templates/layout.js';
+import { layout, ICONS, supportUrl } from '../templates/layout.js';
 import { pageHead, breadcrumbSchema } from '../templates/components.js';
 
 function simplePage({ path, title, seoTitle, description, lead, eyebrow, html, version, schema = [] }) {
@@ -34,7 +34,10 @@ export function renderAbout(version) {
 <p>I’m <strong>${esc(site.author.name)}</strong>, an ${esc(site.author.role.replace('Software Engineer', 'software engineer'))} from Nepal, now living in ${esc(site.author.location)}. I build software for a living, and Hamropedia is where I share what I have learned with students, learners and readers everywhere.</p>
 <p>You can see my work on <a href="${site.social.github}" target="_blank" rel="noopener">GitHub</a> and my <a href="${site.social.portfolio}" target="_blank" rel="noopener">portfolio</a>, or connect on <a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.</p>
 <p>I also run <a href="${site.digital.url}">${esc(site.digital.name)}</a>, where I build simple websites and AI assistants for small businesses in the UK.</p>
-<h2>How articles are checked</h2>
+${supportUrl ? `<h2>Support Hamropedia</h2>
+<p>Everything here is free, with no paywall and no sign-up, and it is built and written by one person. If the guides, tools or courses helped you, you can support the site with a coffee. It pays for the time to keep the guides checked and to write new lessons.</p>
+<p><a class="btn-coffee" href="${supportUrl}" target="_blank" rel="noopener">${ICONS.coffee}<span>Buy me a coffee</span></a></p>
+` : ''}<h2>How articles are checked</h2>
 <ul>
 <li>Rules, fees and dates are checked against the official source (gov.uk, wes.org, Nepal government portals) and linked in the article.</li>
 <li>News is based on named reports, linked inline. Proposals are labelled as proposals, not as law.</li>
@@ -100,7 +103,8 @@ export function renderPrivacy(version) {
 <li><strong>The tools</strong> (typing, Nepali keyboard, date converter, age calculator) run in your browser. The text and dates you enter are not sent to us.</li>
 <li><strong>Hosting:</strong> the site is hosted on GitHub Pages. GitHub may log technical information such as your IP address to run and secure the service; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
 <li><strong>Fonts:</strong> fonts are loaded from Google Fonts, which receives your IP address when the font files download; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a>.</li>
-<li><strong>Diagrams and the SQL runner:</strong> the course lessons load their diagram library (Mermaid) from jsDelivr, a public content delivery network, and the SQL lessons load the SQL engine (sql.js) from it the first time you press Run. jsDelivr receives your IP address when a file downloads; see <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr’s privacy policy</a>. Your queries run inside your browser and are not sent anywhere.</li>
+${supportUrl ? `<li><strong>Support:</strong> the “Buy me a coffee” buttons are plain links to <a href="${supportUrl}" target="_blank" rel="noopener">buymeacoffee.com</a>. Nothing from Buy Me a Coffee loads on this site. If you choose to support it, the payment is handled by Buy Me a Coffee under <a href="https://www.buymeacoffee.com/privacy-policy" target="_blank" rel="noopener">its own privacy policy</a>, and we see only what it shares with creators, such as the name and message you choose to leave.</li>
+` : ''}<li><strong>Diagrams and the SQL runner:</strong> the course lessons load their diagram library (Mermaid) from jsDelivr, a public content delivery network, and the SQL lessons load the SQL engine (sql.js) from it the first time you press Run. jsDelivr receives your IP address when a file downloads; see <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr’s privacy policy</a>. Your queries run inside your browser and are not sent anywhere.</li>
 </ul>
 
 <h2 id="cookies">Cookies and browser storage</h2>

@@ -14,7 +14,7 @@ import { esc } from '../lib/util.js';
 import { codeBlock } from '../lib/markdown.js';
 import { paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
-import { breadcrumbs, breadcrumbSchema, shareBar } from '../templates/components.js';
+import { breadcrumbs, breadcrumbSchema, shareBar, supportNote } from '../templates/components.js';
 import { topicResources, clip, courseByline } from './course-parts.js';
 
 export const list = (items, mark, tag = 'ul', cls = '') =>
@@ -159,6 +159,7 @@ ${checks
       ${pagerLink(around.next, 'next')}
     </nav>
     ${shareBar(`${site.url}${url}`, `${t.name}: a free lesson from ${ctx.shareFrom}`)}
+    ${supportNote()}
   </article>
 </div>
 <div class="term-pop" role="dialog" aria-modal="false" hidden><p class="term-pop-h"></p><p class="term-pop-d"></p><a class="term-pop-link" hidden></a><button type="button" class="term-pop-x" aria-label="Close">×</button></div>

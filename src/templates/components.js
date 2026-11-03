@@ -2,7 +2,7 @@ import { site, categories } from '../data/site.js';
 import { esc, shortDate, isoDate, abs } from '../lib/util.js';
 import { coverArtSvg } from '../lib/art.js';
 import { formatBs, adToBs, toNepaliDigits } from '../assets/js/lib/bs-date.js';
-import { ICONS } from './layout.js';
+import { ICONS, supportUrl } from './layout.js';
 
 export function categoryChip(slug, linked = true, lang = 'en') {
   const c = categories[slug];
@@ -61,6 +61,15 @@ export function breadcrumbSchema(items) {
       item: abs(site.url, it.path),
     })),
   };
+}
+
+/** "Hamropedia is free. If this helped you, buy me a coffee", at the end of articles and lessons. */
+export function supportNote(lang = 'en') {
+  if (!supportUrl) return '';
+  const text = lang === 'ne'
+    ? '<span lang="ne">हाम्रोपेडिया निःशुल्क छ। यसले तपाईंलाई मद्दत गर्‍यो भने, एक कप कफी किनिदिएर साथ दिन सक्नुहुन्छ।</span>'
+    : 'Hamropedia is free, with no paywall. If this helped you, you can support it with a coffee.';
+  return `<aside class="support-note" aria-label="Support Hamropedia"><p>${text}</p><a class="btn-coffee" href="${supportUrl}" target="_blank" rel="noopener">${ICONS.coffee}<span>Buy me a coffee</span></a></aside>`;
 }
 
 export function shareBar(url, title, lang = 'en') {

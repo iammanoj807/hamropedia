@@ -2,7 +2,7 @@ import { site, categories } from '../data/site.js';
 import { esc, longDate, isoDate, abs } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import {
-  categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, pageHead, cover, displayDate,
+  categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, supportNote, pageHead, cover, displayDate,
 } from '../templates/components.js';
 import { toNepaliDigits } from '../assets/js/lib/bs-date.js';
 import fs from 'node:fs';
@@ -96,6 +96,7 @@ ${post.html}
   </div>
   <footer class="post-foot wrap-narrow">
     ${shareBar(abs(site.url, post.url), post.title, lang)}
+    ${supportNote(lang)}
   </footer>
 </article>
 <section class="related wrap" aria-labelledby="related-h">

@@ -24,6 +24,10 @@ export const site = {
   },
   // Sister site: websites and AI for small businesses.
   digital: { name: 'Hamropedia Digital', url: 'https://digital.hamropedia.com/' },
+  // Buy Me a Coffee username (buymeacoffee.com/<username>). Leave empty and no support
+  // buttons appear anywhere; fill it in and they appear in the header, footer, About page
+  // and at the end of every article and lesson.
+  support: { buyMeACoffee: 'manojthapa' },
   // Paste the content value of Google Search Console's HTML-tag verification here.
   googleSiteVerification: '',
   // Google AdSense publisher ID ("ca-pub-..."; ads.txt uses the same number as "pub-...").

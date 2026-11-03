@@ -9,7 +9,7 @@ import { esc } from '../lib/util.js';
 import { codeBlock } from '../lib/markdown.js';
 import { paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
-import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
+import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar, supportNote } from '../templates/components.js';
 import { readCourse, progressBackup, clip, courseByline, newest } from './course-parts.js';
 import { list, animationBox, diagramBox } from './lesson.js';
 
@@ -173,6 +173,7 @@ ${c.interviewTips?.followUpPrep ? `<h3>Follow-up prep</h3>${paragraphs(c.intervi
       ${next ? `<a class="pager-next" href="${topicPath(next)}"><span>Next →</span>${esc(next.title)}</a>` : `<a class="pager-next" href="${PATTERNS}"><span>Finished →</span>Which pattern? drill</a>`}
     </nav>
     ${shareBar(`${site.url}${url}`, `${t.title}: the pattern and the NeetCode problems, explained`)}
+    ${supportNote()}
   </article>
 </div>
 ${topicMap()}`;
