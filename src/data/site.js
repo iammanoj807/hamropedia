@@ -39,6 +39,9 @@ export const nav = [
     href: '/learn/', label: 'Learn & Build',
     children: [
       { href: '/ai-roadmap/', label: 'AI & ML Roadmap' },
+      { href: '/system-design/', label: 'System Design' },
+      { href: '/sql/', label: 'SQL' },
+      { href: '/dsa/', label: 'DSA (NeetCode 150)' },
       { href: '/category/coding/', label: 'Coding guides' },
     ],
   },
@@ -52,7 +55,12 @@ export const navNe = [
   { href: '/blog/', label: 'ब्लग' },
   {
     href: '/learn/', label: 'सिक्नुहोस्',
-    children: [{ href: '/ai-roadmap/', label: 'एआई तथा एमएल रोडम्याप' }],
+    children: [
+      { href: '/ai-roadmap/', label: 'एआई तथा एमएल रोडम्याप' },
+      { href: '/system-design/', label: 'सिस्टम डिजाइन' },
+      { href: '/sql/', label: 'एसक्यूएल (SQL)' },
+      { href: '/dsa/', label: 'डीएसए (NeetCode 150)' },
+    ],
   },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },

@@ -1,10 +1,11 @@
-// Checks every resource URL in src/data/roadmap.json and prints the ones that fail.
+// Checks every resource URL in the courses (src/data/courses/ml.json, sd.json, sql.json) and prints the ones that fail.
 // Usage: node scripts/check-links.mjs [--json out.json]
 import fs from 'node:fs';
-const data = JSON.parse(fs.readFileSync(new URL('../src/data/roadmap.json', import.meta.url)));
+const course = (f) => JSON.parse(fs.readFileSync(new URL(`../src/data/courses/${f}`, import.meta.url))).phases;
+const data = [...course('ml.json'), ...course('sd.json'), ...course('sql.json')];
 const urls = new Set();
 for (const p of data) {
-  for (const r of [...p.main, ...p.deeper]) if (r.url) urls.add(r.url);
+  for (const r of [...(p.main || []), ...(p.deeper || [])]) if (r.url) urls.add(r.url);
   for (const t of p.topics) for (const r of t.resources) if (r.url) urls.add(r.url);
 }
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';

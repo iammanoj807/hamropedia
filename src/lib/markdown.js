@@ -4,12 +4,23 @@ import python from 'highlight.js/lib/languages/python';
 import bash from 'highlight.js/lib/languages/bash';
 import javascript from 'highlight.js/lib/languages/javascript';
 import plaintext from 'highlight.js/lib/languages/plaintext';
+import sql from 'highlight.js/lib/languages/sql';
 import { esc, slugify } from './util.js';
 
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('text', plaintext);
+hljs.registerLanguage('sql', sql);
+
+/** A highlighted code block with its language label and a Copy button (posts and lessons). */
+export function codeBlock(text, lang) {
+  const language = (lang || '').trim().split(/\s+/)[0];
+  const known = language && hljs.getLanguage(language);
+  const body = known ? hljs.highlight(text, { language }).value : esc(text);
+  const label = language ? `<span class="code-lang">${esc(language)}</span>` : '';
+  return `<div class="code-block">${label}<button class="copy-code" type="button" aria-label="Copy code">Copy</button><pre><code class="hljs${known ? ` language-${language}` : ''}">${body}</code></pre></div>\n`;
+}
 
 /**
  * Render post Markdown to HTML.
@@ -34,11 +45,7 @@ export function renderMarkdown(md, ctx) {
         return `<h${depth} id="${id}"><a class="anchor" href="#${id}" aria-hidden="true" tabindex="-1">#</a>${inner}</h${depth}>\n`;
       },
       code({ text, lang }) {
-        const language = (lang || '').trim().split(/\s+/)[0];
-        const known = language && hljs.getLanguage(language);
-        const body = known ? hljs.highlight(text, { language }).value : esc(text);
-        const label = language ? `<span class="code-lang">${esc(language)}</span>` : '';
-        return `<div class="code-block">${label}<button class="copy-code" type="button" aria-label="Copy code">Copy</button><pre><code class="hljs${known ? ` language-${language}` : ''}">${body}</code></pre></div>\n`;
+        return codeBlock(text, lang);
       },
       link({ href, title, tokens }) {
         const inner = this.parser.parseInline(tokens);

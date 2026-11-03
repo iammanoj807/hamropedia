@@ -100,13 +100,14 @@ export function renderPrivacy(version) {
 <li><strong>The tools</strong> (typing, Nepali keyboard, date converter, age calculator) run in your browser. The text and dates you enter are not sent to us.</li>
 <li><strong>Hosting:</strong> the site is hosted on GitHub Pages. GitHub may log technical information such as your IP address to run and secure the service; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
 <li><strong>Fonts:</strong> fonts are loaded from Google Fonts, which receives your IP address when the font files download; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a>.</li>
+<li><strong>Diagrams and the SQL runner:</strong> the course lessons load their diagram library (Mermaid) from jsDelivr, a public content delivery network, and the SQL lessons load the SQL engine (sql.js) from it the first time you press Run. jsDelivr receives your IP address when a file downloads; see <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr’s privacy policy</a>. Your queries run inside your browser and are not sent anywhere.</li>
 </ul>
 
 <h2 id="cookies">Cookies and browser storage</h2>
 <p>Cookies and browser storage are small pieces of data saved on your device. Hamropedia uses your browser’s local storage for:</p>
 <ul>
 <li><strong>dark mode</strong>, if you switch it on;</li>
-<li><strong>AI roadmap progress</strong> (topics you tick) and the <strong>last text you typed in a tool</strong>, so they are still there when you come back.</li>
+<li><strong>course progress</strong> (the checks you tick in the lessons, the SQL queries you run, and the DSA problems you mark solved with their review dates) and the <strong>last text you typed in a tool</strong>, so they are still there when you come back.</li>
 </ul>
 <p>These stay on your device and are not sent to us. Google and its partners may also set cookies for advertising, as described below.</p>
 
@@ -123,6 +124,7 @@ export function renderPrivacy(version) {
 <h2>Your choices</h2>
 <ul>
 <li><strong>Change your cookie choice</strong> at any time: <button type="button" class="text-btn" data-privacy-settings>Cookie settings</button> (also in the footer of every page) reopens Google’s consent message where it applies.</li>
+<li><strong>Back up your course progress</strong> with <b>Download my progress</b> on the Learn page or a course page. The file is made in your browser and is not sent to us.</li>
 <li><strong>Clear stored data</strong> by clearing this site’s data in your browser settings.</li>
 <li><strong>Opt out of personalised ads</strong> using the Google and aboutads.info links above.</li>
 </ul>
