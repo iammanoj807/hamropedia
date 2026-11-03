@@ -631,18 +631,10 @@ button { font: inherit; color: inherit; }
 .nf-links a { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border-2); background: var(--surface); text-decoration: none; color: var(--text); }
 .nf-links a:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ---------- cookie consent ---------- */
-.consent { position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom)); }
-.consent-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; padding: 18px 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border-2); box-shadow: var(--shadow-lg); }
-.consent-inner > div:first-child { flex: 1 1 420px; }
-.consent-inner p { margin: 0; font-size: .95rem; color: var(--text-2); }
-.consent-h { font-weight: 700; color: var(--text) !important; margin-bottom: 4px !important; }
-.consent-actions { display: flex; gap: 10px; }
-.consent-actions .btn, .consent-actions .btn-ghost { min-width: 110px; }
+/* ---------- cookie settings button ---------- */
 .text-btn { border: 0; background: none; padding: 0; color: var(--text-2); cursor: pointer; font: inherit; text-decoration: none; }
 .site-footer .text-btn:hover { color: var(--accent); text-decoration: underline; }
 .prose .text-btn { color: var(--link); text-decoration: underline; }
-@media print { .consent { display: none !important; } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }

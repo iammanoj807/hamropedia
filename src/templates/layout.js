@@ -49,6 +49,12 @@ export function layout(p) {
     : '';
 
   const lang = p.lang || 'en';
+  // AdSense goes on indexable English pages only: not on the 404, redirects or feed
+  // (noindex), and not on Nepali pages, because Nepali is not an AdSense-supported language.
+  const ads = site.adsenseClient && !p.noindex && lang === 'en'
+    ? `<meta name="google-adsense-account" content="${esc(site.adsenseClient)}">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(site.adsenseClient)}" crossorigin="anonymous"></script>`
+    : '';
   // Google shows the site name above each result and cuts titles at about 60 characters,
   // so long titles drop the "| Hamropedia" suffix to keep the important words visible.
   const brand = ` | ${site.name}`;
@@ -85,6 +91,7 @@ ${hreflang}
 <meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
 ${verify}
+${ads}
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -108,18 +115,6 @@ ${header(p.section, lang)}
 ${p.body}
 </main>
 ${footer()}
-<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
-  <div class="consent-inner">
-    <div>
-      <p class="consent-h" id="consent-h">Your privacy</p>
-      <p>Hamropedia uses cookies and your browser’s storage to remember your settings. We also plan to show ads through Google AdSense, which uses cookies to show and measure ads, and to personalise them if you agree. You can change your choice any time. <a href="/privacy-policy/">Privacy policy</a></p>
-    </div>
-    <div class="consent-actions">
-      <button type="button" class="btn-ghost" data-consent="denied">Reject</button>
-      <button type="button" class="btn" data-consent="granted">Accept</button>
-    </div>
-  </div>
-</div>
 ${scripts}
 </body>
 </html>`;
@@ -185,7 +180,7 @@ function footer() {
         <li><a href="${site.digital.url}">${esc(site.digital.name)}: websites &amp; AI for businesses</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use-hamropedia/">Terms of use</a></li>
-        <li><button type="button" class="text-btn" data-open-consent>Cookie settings</button></li>
+        <li><button type="button" class="text-btn" data-privacy-settings>Cookie settings</button></li>
       </ul>
     </div>
   </div>

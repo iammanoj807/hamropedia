@@ -20,24 +20,20 @@ themeBtn?.addEventListener('click', () => {
 });
 syncTheme();
 
-// ---- cookie consent (asked once; change any time from "Cookie settings") ----
-// Stored as { value: 'granted' | 'denied', date }. Ad code added later should
-// check window.hamropediaConsent() === 'granted' before loading personalised ads.
-const consentBox = document.getElementById('consent');
-function readConsent() {
-  try { return JSON.parse(store.get('hp-consent') || 'null'); } catch { return null; }
+// ---- cookie settings ----
+// Consent is asked by Google's certified consent message, which the AdSense tag
+// shows to visitors in the UK, EEA and Switzerland (set up in AdSense > Privacy &
+// messaging). "Cookie settings" reopens that message. Where it doesn't apply (other
+// regions, ad blockers, Nepali pages without ads), it opens the privacy policy.
+store.set('hp-consent', null); // choice saved by the old home-made banner, no longer used
+function openPrivacySettings() {
+  const fc = window.googlefc;
+  const fallback = () => { location.href = '/privacy-policy/#cookies'; };
+  if (typeof fc?.showRevocationMessage !== 'function' || typeof window.__tcfapi !== 'function') return fallback();
+  window.__tcfapi('ping', 2, (ping) => (ping?.gdprApplies ? fc.showRevocationMessage() : fallback()));
 }
-window.hamropediaConsent = () => readConsent()?.value || null;
-function showConsent(show) { if (consentBox) consentBox.hidden = !show; }
-if (!readConsent()) showConsent(true);
 document.addEventListener('click', (e) => {
-  const choice = e.target.closest('[data-consent]');
-  if (choice) {
-    store.set('hp-consent', JSON.stringify({ value: choice.dataset.consent, date: new Date().toISOString().slice(0, 10) }));
-    showConsent(false);
-    window.dispatchEvent(new CustomEvent('hamropedia:consent', { detail: choice.dataset.consent }));
-  }
-  if (e.target.closest('[data-open-consent]')) showConsent(true);
+  if (e.target.closest('[data-privacy-settings]')) openPrivacySettings();
 });
 
 // ---- mobile menu ----

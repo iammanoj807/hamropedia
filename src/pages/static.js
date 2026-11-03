@@ -89,7 +89,7 @@ export function renderPrivacy(version) {
     eyebrow: 'Legal',
     description: 'Hamropedia privacy policy: what information is collected, how cookies and browser storage are used, advertising through Google AdSense, and your choices.',
     lead: 'What this site collects, how cookies are used, how advertising works, and the choices you have.',
-    html: `<p class="muted">Last updated: 2 November 2026</p>
+    html: `<p class="muted">Last updated: 3 November 2026</p>
 <h2>Who we are</h2>
 <p>Hamropedia (hamropedia.com) is run by ${esc(site.author.name)}, ${esc(site.author.location)}. If you have any question about this policy, email <a href="mailto:${site.email}">${site.email}</a>.</p>
 
@@ -105,25 +105,24 @@ export function renderPrivacy(version) {
 <h2 id="cookies">Cookies and browser storage</h2>
 <p>Cookies and browser storage are small pieces of data saved on your device. Hamropedia uses your browser’s local storage for:</p>
 <ul>
-<li>your <strong>cookie choice</strong>, so we don’t ask again on every page;</li>
 <li><strong>dark mode</strong>, if you switch it on;</li>
 <li><strong>AI roadmap progress</strong> (topics you tick) and the <strong>last text you typed in a tool</strong>, so they are still there when you come back.</li>
 </ul>
-<p>These stay on your device and are not sent to us. If you accept advertising cookies, Google and its partners may also set cookies, as described below.</p>
+<p>These stay on your device and are not sent to us. Google and its partners may also set cookies for advertising, as described below.</p>
 
 <h2>Advertising (Google AdSense)</h2>
-<p>We plan to show ads through <strong>Google AdSense</strong> to help keep Hamropedia free. When ads are shown:</p>
+<p>Hamropedia shows ads through <strong>Google AdSense</strong> to help keep the site free. Ads appear on English pages only.</p>
 <ul>
 <li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
 <li>Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet.</li>
 <li>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You can also opt out of some third-party vendors’ use of cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>.</li>
 <li>Learn more about <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</li>
 </ul>
-<p>If you choose <strong>Reject</strong> in the cookie message, we will not allow personalised advertising cookies. Ads you see may then be non-personalised, based on the page you are reading rather than on your browsing.</p>
+<p>If you are in the UK, the European Economic Area or Switzerland, Google shows a consent message on your first visit, and advertising cookies are only used for the purposes you agree to there. If you don’t consent, ads may be non-personalised (based on the page you are reading rather than your browsing) or limited.</p>
 
 <h2>Your choices</h2>
 <ul>
-<li><strong>Change your cookie choice</strong> at any time: <button type="button" class="text-btn" data-open-consent>Cookie settings</button> (also in the footer of every page).</li>
+<li><strong>Change your cookie choice</strong> at any time: <button type="button" class="text-btn" data-privacy-settings>Cookie settings</button> (also in the footer of every page) reopens Google’s consent message where it applies.</li>
 <li><strong>Clear stored data</strong> by clearing this site’s data in your browser settings.</li>
 <li><strong>Opt out of personalised ads</strong> using the Google and aboutads.info links above.</li>
 </ul>
@@ -138,7 +137,7 @@ export function renderPrivacy(version) {
 <p>Articles link to official sources and other websites. We are not responsible for their content or their privacy practices.</p>
 
 <h2>Changes to this policy</h2>
-<p>We may update this policy, for example when advertising starts. The date at the top shows the latest version.</p>`,
+<p>We may update this policy from time to time. The date at the top shows the latest version.</p>`,
   });
 }
 

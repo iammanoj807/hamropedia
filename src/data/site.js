@@ -26,6 +26,9 @@ export const site = {
   digital: { name: 'Hamropedia Digital', url: 'https://digital.hamropedia.com/' },
   // Paste the content value of Google Search Console's HTML-tag verification here.
   googleSiteVerification: '',
+  // Google AdSense publisher ID ("ca-pub-..."; ads.txt uses the same number as "pub-...").
+  // The AdSense tag also shows Google's consent message, set up in AdSense > Privacy & messaging.
+  adsenseClient: 'ca-pub-2805610183510543',
   established: 2024,
 };
 
