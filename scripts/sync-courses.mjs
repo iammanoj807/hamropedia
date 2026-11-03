@@ -17,6 +17,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import crypto from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { slugify } from '../src/lib/util.js';
 
@@ -155,6 +156,19 @@ const write = (file, json) => {
 const slugsFile = path.join(OUT, 'slugs.json');
 const slugs = fs.existsSync(slugsFile) ? JSON.parse(fs.readFileSync(slugsFile, 'utf8')) : {};
 
+// When each lesson last changed, for its "Updated" date: a lesson keeps its
+// date until its content (or its animation) is different from the last sync.
+const datesFile = path.join(OUT, 'dates.json');
+const dates = fs.existsSync(datesFile) ? JSON.parse(fs.readFileSync(datesFile, 'utf8')) : {};
+const now = new Date();
+const TODAY = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+function stamp(course, id, content) {
+  const map = (dates[course] ??= {});
+  const hash = crypto.createHash('sha1').update(JSON.stringify(content)).digest('hex').slice(0, 16);
+  if (map[id]?.hash !== hash) map[id] = { hash, updated: TODAY };
+  return map[id].updated;
+}
+
 /** A slug for this id: the saved one, or a new one that no sibling uses yet. */
 function slugFor(map, id, name, taken) {
   if (map[id]) return map[id];
@@ -199,7 +213,7 @@ function syncMl(ml) {
           if (!answers?.[k]?.answer) fail(`ML ${t.id}: no answer for the "${k}" exercise`);
         }
         if (!ml.animations[t.id]) fail(`ML ${t.id}: no animation`);
-        return { ...t, slug, answers };
+        return { ...t, slug, answers, updated: stamp('ml', t.id, [t, answers, ml.animations[t.id]]) };
       }),
     };
   });
@@ -254,7 +268,7 @@ function syncSd(sd) {
           if (!answers?.[k]?.answer) fail(`System Design ${t.id}: no answer for the "${k}" exercise`);
         }
         if (!sd.animations[t.id] && !sd.noAnimation[t.id]) fail(`System Design ${t.id}: no animation (and not listed as having none)`);
-        return { ...t, slug, answers };
+        return { ...t, slug, answers, updated: stamp('sd', t.id, [t, answers, sd.animations[t.id] ?? null]) };
       }),
     };
   });
@@ -308,7 +322,7 @@ function syncSql(sql) {
         }
         if (t.kind === 'problem' && !t.solution?.result) fail(`SQL ${t.id}: no solution rows`);
         if (!sql.animations[t.id] && !sql.noAnimation[t.id]) fail(`SQL ${t.id}: no animation (and not listed as having none)`);
-        return { ...t, slug, answers };
+        return { ...t, slug, answers, updated: stamp('sql', t.id, [t, answers, sql.animations[t.id] ?? null]) };
       }),
     };
   });
@@ -376,7 +390,8 @@ function syncDsa(dsa) {
           n++;
           return { ...pr, difficulty: difficulty.get(pr.title) || null, leetcodeNum: leetcode.get(pr.title) || null, card };
         });
-        return { id: t.id, slug, number: t.number, title: t.title, description: t.description, problems, content, guide, mistakes };
+        const updated = stamp('dsa', t.id, [t, problems, content, guide, mistakes, dsa.animations[t.id]]);
+        return { id: t.id, slug, number: t.number, title: t.title, description: t.description, problems, content, guide, mistakes, updated };
       }),
     })),
   }));
@@ -399,8 +414,9 @@ function syncDsa(dsa) {
 
 const results = [syncMl(source.ml), syncSd(source.sd), syncSql(source.sql), syncDsa(source.dsa)];
 fs.writeFileSync(slugsFile, JSON.stringify(slugs, null, 2) + '\n');
+fs.writeFileSync(datesFile, JSON.stringify(dates, null, 2) + '\n');
 for (const r of results) {
   console.log(`✔ ${r.summary}`);
   for (const f of r.files) console.log(`    ${f}`);
 }
-console.log(`    ${path.relative(ROOT, slugsFile)}`);
+console.log(`    ${path.relative(ROOT, slugsFile)}, ${path.relative(ROOT, datesFile)}`);

@@ -155,6 +155,7 @@ npm run build && npm run verify
 
 Commit the changed files in `src/data/courses/`. The build only reads those files, never atomic-hub.
 `slugs.json` keeps every lesson's URL fixed, even if a topic is renamed in atomic-hub.
+`dates.json` keeps each lesson's "Updated" date: it only changes when that lesson's content changes.
 
 ## Author
 

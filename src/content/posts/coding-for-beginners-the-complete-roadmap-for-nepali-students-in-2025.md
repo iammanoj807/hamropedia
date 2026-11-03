@@ -98,4 +98,4 @@ There is no perfect timeline, but a steady pace works: **an hour a day, every da
 
 ---
 
-Keep going: [Python decorators explained](/python-decorators-explained-for-beginners/) · [How to learn AI and machine learning for free](/how-to-learn-ai-and-machine-learning-for-free/) · [The AI & ML roadmap](/ai-roadmap/)
+Keep going: [DSA: the NeetCode 150, one pattern at a time](/dsa/) · [How to learn AI and machine learning for free](/how-to-learn-ai-and-machine-learning-for-free/) · [The AI & ML roadmap](/ai-roadmap/)

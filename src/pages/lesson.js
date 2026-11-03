@@ -15,7 +15,7 @@ import { codeBlock } from '../lib/markdown.js';
 import { paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, shareBar } from '../templates/components.js';
-import { topicResources, clip } from './course-parts.js';
+import { topicResources, clip, courseByline } from './course-parts.js';
 
 export const list = (items, mark, tag = 'ul', cls = '') =>
   `<${tag}${cls ? ` class="${cls}"` : ''}>${items.map((s) => `<li>${mark(s)}</li>`).join('')}</${tag}>`;
@@ -137,6 +137,7 @@ ${checks
     <h1>${esc(t.name)}</h1>
     ${ctx.tags ? ctx.tags(t) : ''}
     <p class="lead">${plain(t.definition)}</p>
+    ${courseByline(t.updated)}
     <p class="lesson-progress"><span class="check-dots" data-check-dots="${key}" aria-hidden="true">${checks.map(() => '<i></i>').join('')}</span><span data-lesson-progress>Not started</span></p>
   </div>
 </section>
@@ -192,7 +193,8 @@ ${checks
         inLanguage: 'en',
         isAccessibleForFree: true,
         isPartOf: { '@type': 'Course', name: ctx.schemaCourse, url: `${site.url}${ctx.base}`, provider: { '@type': 'Organization', name: site.name, url: site.url } },
-        author: { '@type': 'Person', name: site.author.name },
+        author: { '@type': 'Person', name: site.author.name, url: `${site.url}/about-us/` },
+        ...(t.updated ? { dateModified: t.updated } : {}),
       },
       breadcrumbSchema(crumbs),
     ],

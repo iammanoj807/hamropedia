@@ -1,6 +1,7 @@
 // Pieces shared by the course pages (roadmap index, phases, lessons).
 import fs from 'node:fs';
-import { esc } from '../lib/util.js';
+import { site } from '../data/site.js';
+import { esc, longDate } from '../lib/util.js';
 
 export const readCourse = (name) => JSON.parse(fs.readFileSync(new URL(`../data/courses/${name}.json`, import.meta.url), 'utf8'));
 
@@ -72,6 +73,19 @@ export function progressBackup(id = 'your-progress') {
   </div>
   <p class="backup-msg" data-backup-msg aria-live="polite"></p>
 </section>`;
+}
+
+/** The newest "updated" date among some lessons (YYYY-MM-DD). */
+export const newest = (topics) => topics.map((t) => t.updated).filter(Boolean).sort().pop();
+
+/** "By Manoj Kumar Thapa", with the role and when it was last updated, as on the articles. */
+export function courseByline(updated) {
+  return `<div class="byline">
+      <div>
+        <p class="byline-name">By <a href="/about-us/">${esc(site.author.name)}</a></p>
+        <p class="byline-meta">${esc(site.author.role)}${updated ? ` · <time datetime="${updated}">Updated ${longDate(updated)}</time>` : ''}</p>
+      </div>
+    </div>`;
 }
 
 /** Cut text to at most `max` characters at a word boundary, for meta descriptions. */

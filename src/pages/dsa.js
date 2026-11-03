@@ -10,7 +10,7 @@ import { codeBlock } from '../lib/markdown.js';
 import { paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, progressBackup, clip } from './course-parts.js';
+import { readCourse, progressBackup, clip, courseByline, newest } from './course-parts.js';
 import { list, animationBox, diagramBox } from './lesson.js';
 
 const COLOURS = ['#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7'];
@@ -151,6 +151,7 @@ ${c.interviewTips?.followUpPrep ? `<h3>Follow-up prep</h3>${paragraphs(c.intervi
     <p class="eyebrow">DSA · Topic ${t.index + 1} of ${dsaTopics.length} · ${esc(t.section.title)}</p>
     <h1>${esc(t.title)}</h1>
     <p class="lead">${plain(g.hook)}</p>
+    ${courseByline(t.updated)}
     <p class="lesson-progress"><span data-dsa-count="${esc(t.id)}" data-total="${t.problems.length}">${t.problems.length} problems</span> · <span>${esc(g.time)} time, ${esc(g.space)} space</span></p>
   </div>
 </section>
@@ -199,7 +200,8 @@ ${topicMap()}`;
         inLanguage: 'en',
         isAccessibleForFree: true,
         isPartOf: { '@type': 'Course', name: 'DSA: the NeetCode 150, one pattern at a time', url: `${site.url}${BASE}`, provider: { '@type': 'Organization', name: site.name, url: site.url } },
-        author: { '@type': 'Person', name: site.author.name },
+        author: { '@type': 'Person', name: site.author.name, url: `${site.url}/about-us/` },
+        ...(t.updated ? { dateModified: t.updated } : {}),
       },
       breadcrumbSchema(crumbs),
     ],
@@ -239,6 +241,7 @@ ${ph.sections.map((s) => `<ol class="phase-grid dsa-grid">${s.topics.map((x) => 
     <p class="eyebrow">Free course · coding interviews</p>
     <h1>DSA: the NeetCode 150, one pattern at a time</h1>
     <p class="lead">${dsaTotals.topics} patterns and ${dsaTotals.problems} problems, in order. Each topic teaches the pattern first (the idea, a picture, a Python template and two traced examples), then gives its problems as questions with hidden answers. Problems you solve come back for review, so they are still there in a month.</p>
+    ${courseByline(newest(dsaTopics))}
     <div class="rm-stats">
       <div><b>${dsaTotals.topics}</b><span>patterns</span></div>
       <div><b>${dsaTotals.problems}</b><span>problems</span></div>
@@ -297,6 +300,7 @@ export function renderDsaPatterns(version) {
     <p class="eyebrow">DSA · recognising patterns</p>
     <h1>Which pattern? Spot it from the question</h1>
     <p class="lead">Most of a coding interview is choosing the right pattern. Ask three questions, follow the two finders, then practise on real problems until you can name the pattern in seconds.</p>
+    ${courseByline(newest(dsaTopics))}
   </div>
 </section>
 <div class="wrap-narrow prose">

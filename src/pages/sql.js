@@ -11,7 +11,7 @@ import { codeBlock } from '../lib/markdown.js';
 import { createGlossary, paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, progressBackup } from './course-parts.js';
+import { readCourse, progressBackup, courseByline, newest } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions } from './lesson.js';
 
 const PHASE_COLOURS = ['#64748b', '#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7', '#6366f1', '#0f766e'];
@@ -256,6 +256,7 @@ export function renderSqlIndex(version) {
     <p class="eyebrow">Free course · updated ${new Date().getUTCFullYear()}</p>
     <h1>SQL, from your first SELECT to interview problems</h1>
     <p class="lead">${sqlTotals.phases} phases: ${sqlTotals.topics - sqlTotals.problems} lessons and ${sqlTotals.problems} classic interview problems, all on one small practice database. Every example shows the exact rows it returns, and <b>Try it</b> runs it in your browser, so you can change it and see what happens.</p>
+    ${courseByline(newest(allTopics.map((x) => x.topic)))}
     <div class="rm-stats">
       <div><b>${sqlTotals.topics}</b><span>lessons and problems</span></div>
       <div><b>${sqlTotals.queries}</b><span>worked queries you can run</span></div>
@@ -343,6 +344,7 @@ export function renderSqlDatabase(version) {
     <p class="eyebrow">SQL · practice</p>
     <h1>The practice database</h1>
     <p class="lead">Every SQL lesson and interview problem uses these six small tables. The awkward cases are planted on purpose: NULLs, ties, duplicates, and a customer with no orders. Get to know the rows, and you can check any answer by eye.</p>
+    ${courseByline(newest(allTopics.map((x) => x.topic)))}
   </div>
 </section>
 <div class="wrap-narrow prose">
@@ -405,6 +407,7 @@ export function renderSqlPhase(p, i, version) {
     <h1>${esc(p.title)}</h1>
     <p class="lead">${esc(p.goal)}</p>
     <p class="phase-big">${esc(p.bigPicture)}</p>
+    ${courseByline(newest(p.topics))}
     <div class="phase-bar"><span class="phase-progress" data-phase-progress="${p.slug}" data-total="${p.topics.length}"><span></span></span><span class="phase-count" data-phase-count="${p.slug}" data-total="${p.topics.length}">0 of ${p.topics.length} done</span></div>
   </div>
 </section>

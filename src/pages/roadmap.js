@@ -5,7 +5,7 @@ import { esc } from '../lib/util.js';
 import { createGlossary, paragraphs } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, backbone, progressBackup, KIND } from './course-parts.js';
+import { readCourse, backbone, progressBackup, courseByline, newest, KIND } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions } from './lesson.js';
 import { codeBlock } from '../lib/markdown.js';
 
@@ -67,6 +67,7 @@ export function renderRoadmapIndex(version) {
     <p class="eyebrow">Free course · updated ${new Date().getUTCFullYear()}</p>
     <h1>The AI &amp; Machine Learning Roadmap</h1>
     <p class="lead">From your first NumPy array to building and shipping LLM apps: ${totals.phases} phases and ${totals.topics} lessons, in order. Every lesson has an animation, a diagram, worked code and ${course.checks.length} exercises with answers. No sign-up, no paywall.</p>
+    ${courseByline(newest(allTopics.map((x) => x.topic)))}
     <div class="rm-stats">
       <div><b>${totals.topics}</b><span>lessons</span></div>
       <div><b>${totals.exercises}</b><span>exercises with answers</span></div>
@@ -161,6 +162,7 @@ export function renderPhase(p, i, version) {
     <h1>${esc(p.title)}</h1>
     <p class="lead">${esc(p.goal)}</p>
     <p class="phase-big">${esc(p.bigPicture)}</p>
+    ${courseByline(newest(p.topics))}
     <div class="phase-bar"><span class="phase-progress" data-phase-progress="${p.slug}" data-total="${p.topics.length}"><span></span></span><span class="phase-count" data-phase-count="${p.slug}" data-total="${p.topics.length}">0 of ${p.topics.length} done</span></div>
   </div>
 </section>

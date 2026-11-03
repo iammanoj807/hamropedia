@@ -6,7 +6,7 @@ import { esc } from '../lib/util.js';
 import { createGlossary, paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, progressBackup } from './course-parts.js';
+import { readCourse, progressBackup, courseByline, newest } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions, topicCode } from './lesson.js';
 
 const PHASE_COLOURS = ['#64748b', '#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7', '#6366f1', '#0f766e', '#9333ea'];
@@ -178,6 +178,7 @@ export function renderSdIndex(version) {
     <p class="eyebrow">Free course · updated ${new Date().getUTCFullYear()}</p>
     <h1>System Design, from building blocks to full designs</h1>
     <p class="lead">${sdTotals.phases} phases and ${sdTotals.topics} lessons: high-level design, low-level design (OOP, SOLID and design patterns) and AI/ML system design, ending with ${sdTotals.designs} full interview questions worked through step by step. Every lesson has a diagram, an animation, a spoken interview answer and ${course.checks.length} exercises with answers.</p>
+    ${courseByline(newest(allTopics.map((x) => x.topic)))}
     <div class="rm-stats">
       <div><b>${sdTotals.topics}</b><span>lessons</span></div>
       <div><b>${sdTotals.designs}</b><span>full design questions</span></div>
@@ -259,6 +260,7 @@ export function renderSdPhase(p, i, version) {
     <h1>${esc(p.title)}</h1>
     <p class="lead">${esc(p.goal)}</p>
     <p class="phase-big">${esc(p.bigPicture)}</p>
+    ${courseByline(newest(p.topics))}
     <div class="phase-bar"><span class="phase-progress" data-phase-progress="${p.slug}" data-total="${p.topics.length}"><span></span></span><span class="phase-count" data-phase-count="${p.slug}" data-total="${p.topics.length}">0 of ${p.topics.length} done</span></div>
   </div>
 </section>

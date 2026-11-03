@@ -42,7 +42,6 @@ export const nav = [
       { href: '/system-design/', label: 'System Design' },
       { href: '/sql/', label: 'SQL' },
       { href: '/dsa/', label: 'DSA (NeetCode 150)' },
-      { href: '/category/coding/', label: 'Coding guides' },
     ],
   },
   { href: '/tools/', label: 'Tools' },
@@ -98,6 +97,12 @@ export const categories = {
 // inaccurate. Each old URL now forwards to the closest useful page, so links
 // and Google results do not end in a 404.
 export const redirects = [
+  {
+    // Removed on 3 November 2026; the old address still works (it was on the WordPress site).
+    from: '/python-decorators-explained-for-beginners/',
+    to: '/category/coding/',
+    title: 'Python decorators explained for beginners',
+  },
   {
     from: '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
     to: '/category/study-abroad/',
