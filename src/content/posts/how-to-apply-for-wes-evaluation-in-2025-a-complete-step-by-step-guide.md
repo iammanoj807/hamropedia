@@ -6,7 +6,7 @@ date: 2025-06-09
 updated: 2026-11-01
 category: study-abroad
 tags: [wes, credential evaluation, usa, canada, study abroad]
-coverWord: "WES how-to"
+coverWord: "Apply for WES"
 coverAlt: "Step-by-step WES evaluation application"
 ---
 
