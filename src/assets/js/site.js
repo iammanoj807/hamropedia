@@ -30,7 +30,14 @@ function openPrivacySettings() {
   const fc = window.googlefc;
   const fallback = () => { location.href = '/privacy-policy/#cookies'; };
   if (typeof fc?.showRevocationMessage !== 'function' || typeof window.__tcfapi !== 'function') return fallback();
-  window.__tcfapi('ping', 2, (ping) => (ping?.gdprApplies ? fc.showRevocationMessage() : fallback()));
+  window.__tcfapi('ping', 2, (ping) => {
+    if (!ping?.gdprApplies) return fallback();
+    fc.showRevocationMessage();
+    // No message published for this site (or still under review): Google opens
+    // nothing, so send the visitor to the privacy policy instead of doing nothing.
+    const shown = () => document.querySelector('.fc-consent-root, .fc-dialog-container');
+    setTimeout(() => window.__tcfapi('ping', 2, (p) => { if (p?.displayStatus !== 'visible' && !shown()) fallback(); }), 1500);
+  });
 }
 document.addEventListener('click', (e) => {
   if (e.target.closest('[data-privacy-settings]')) openPrivacySettings();
