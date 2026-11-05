@@ -1,17 +1,18 @@
 ---
-title: "ILR Changes 2026: Who Still Gets UK Settlement in 5 Years, and Who Waits 10?"
-seoTitle: "ILR 10-Year Rule 2026: Who Still Gets ILR in 5 Years?"
+title: "ILR New Rules 2026: Who Still Gets Indefinite Leave to Remain in 5 Years, and Who Waits 10?"
+seoTitle: "ILR New Rules: Indefinite Leave to Remain in 5 or 10 Years"
 description: "Confirmed on 2 November 2026: the UK's standard wait for ILR rises from 5 to 10 years. Who still settles in 3 or 5 years, what changes for workers and students."
 date: 2026-11-02
+updated: 2026-11-05
 category: study-abroad
 type: news
-tags: [uk, ilr, settlement, skilled worker, earned settlement]
+tags: [uk, ilr, ilr changes, settlement, skilled worker, earned settlement]
 coverWord: "ILR 5 or 10?"
 coverOneLine: true
 coverAlt: "UK ILR changes: 5-year and 10-year routes to settlement"
 ---
 
-The UK government has confirmed its biggest change to **ILR (indefinite leave to remain)** in years. On **2 November 2026** the Home Office published its final plan, called **"Earned Settlement"**: the standard wait for settlement will rise from **5 years to 10 years**, with shorter routes for people who earn more, work in key public services or have a British partner, and longer routes for people who claim benefits or break immigration rules ([Home Office, Government Response, Nov 2026](https://assets.publishing.service.gov.uk/media/6ae89fddf4a6b3f59cf37580/FINAL_VERSION_-_Earned_Settlement_-_Consultation_Response.pdf)).
+The UK government has confirmed the **new ILR rules**, its biggest change to **indefinite leave to remain (ILR)** in years. On **2 November 2026** the Home Office published its final plan, called **"Earned Settlement"**: the standard wait for settlement will rise from **5 years to 10 years**, with shorter routes for people who earn more, work in key public services or have a British partner, and longer routes for people who claim benefits or break immigration rules ([Home Office, Government Response, Nov 2026](https://assets.publishing.service.gov.uk/media/6ae89fddf4a6b3f59cf37580/FINAL_VERSION_-_Earned_Settlement_-_Consultation_Response.pdf)).
 
 > **At a glance**
 >
@@ -22,13 +23,22 @@ The UK government has confirmed its biggest change to **ILR (indefinite leave to
 > - **Student and Graduate visa time** will no longer count, and the **10-year Long Residence route will close**.
 > - **When:** not in force yet. The first changes come in the **December Immigration Rules**, with the rest during **2027**.
 
-## What is ILR?
+## What is indefinite leave to remain (ILR)?
 
 **ILR (indefinite leave to remain)**, also called **settlement**, lets you live in the UK permanently, with no visa to renew, no limits on work, and access to public funds. It is also the usual step before applying for **British citizenship** ([gov.uk: Settle in the UK](https://www.gov.uk/settle-in-the-uk)).
 
 Today, most people on routes like the **Skilled Worker visa** can apply for ILR after **5 years**, and anyone with **10 years of continuous lawful residence** can apply through the **Long Residence** route ([gov.uk: Long residence](https://www.gov.uk/long-residence)). Both are changing.
 
-## The new routes to ILR: 3, 5, 10 and 20 years
+### "ILR 10 years": two different things
+
+If you search for "ILR 10 years", you will see two different rules mixed together:
+
+- **The old 10-year Long Residence route** (gov.uk's [long residence](https://www.gov.uk/long-residence) page): settlement after 10 years of continuous lawful residence on **any mix of visas**, including Student and Graduate time. It still applies today, but **it will close** under Earned Settlement.
+- **The new 10-year standard qualifying period**: the default wait for ILR on routes like the Skilled Worker visa, up from 5 years, with **only time on a qualifying route counting**.
+
+So 10 years on a student visa followed by work will no longer get you settlement on its own. What counts is the time on a route that leads to settlement.
+
+## ILR new rules: the 3, 5, 10 and 20-year routes
 
 | How long | Who it is for | What you need |
 |---|---|---|
@@ -68,7 +78,7 @@ Almost everyone else on a route to settlement, including:
 
 To qualify after 10 years you must earn at least **£12,571** in 5 of the 7 years before applying. **Couples can combine their income**, with a household threshold of **£25,142**, so a partner who works part-time while caring for children is not held back. Children, people aged 65 and over, and people who cannot work because of a physical or mental condition are exempt from the earnings rule.
 
-## New rules that apply to everyone
+## ILR requirements under the new rules
 
 Whatever your route, you will need to meet these minimum requirements. **Earning more cannot make up for them** (Home Office, Introduction and Chapter 1):
 
@@ -101,6 +111,30 @@ The final plan is kinder to families than the consultation (Home Office, Chapter
 - **Young adults aged 18 to 24** who are still dependants can settle with their family without meeting the earnings rule.
 - **From age 25**, a dependant who has not yet settled with their family must qualify in their own right or move to their own visa.
 
+## Worked examples
+
+How the confirmed rules would apply, once in force (based on the Home Office response; your own case may differ):
+
+| Your situation | Likely route |
+|---|---|
+| Skilled Worker earning **£38,000**, not in a public service job | **10 years** (you need at least £12,571 in 5 of the 7 years before applying) |
+| Skilled Worker earning **£55,000** in 3 of the last 5 years | **5 years** (above £50,271) |
+| **Nurse or teacher** paid on a national pay scale | **5 years** (eligible public service job) |
+| Earned **£130,000** in 3 of the last 4 years | **3 years** (above £125,141) |
+| 3 years on a **Student** visa, 2 on a **Graduate** visa, then a Skilled Worker visa | Student and Graduate time **doesn't count**: your clock starts on the Skilled Worker visa |
+| **Care worker** who joined before May 2025, earning £25,000+ | **5 years** (transitional protection) |
+| Claimed specified public funds in the last 5 years | **20 years**, unless you then go 5 years in a row without claiming |
+
+## Key dates
+
+| Date | What happens |
+|---|---|
+| May 2025 | Immigration white paper proposes 10 years as the standard |
+| 2 November 2026 | Government confirms Earned Settlement |
+| December 2026 | First changes laid in the Immigration Rules |
+| During 2027 | The rest of the reforms come in |
+| Until 2035 | Pre-April 2024 Skilled Workers below RQF 6 can keep extending on current terms |
+
 ## Who is not affected
 
 These keep their own arrangements (Home Office, Chapters 4 and 6):
@@ -112,6 +146,10 @@ These keep their own arrangements (Home Office, Chapters 4 and 6):
 - children in care, and young people who have grown up in the UK.
 
 The plan is about how people **qualify** for settlement. The Home Office response does not propose taking ILR away from people who already have it.
+
+## ILR application fee and decision time (today)
+
+Under the current rules, applying for ILR after a Skilled Worker visa costs **£3,226 per person**. Giving your fingerprints and photo is free, and you usually get a decision **within 6 months** of doing so. If you are aged 18 to 64 you must pass the Life in the UK test, and you must not travel outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision ([gov.uk: ILR for Skilled Workers](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)). Fees usually change each April, so check gov.uk before you apply.
 
 ## When do the changes start?
 
@@ -130,24 +168,28 @@ One point matters for everyone already in the UK. The government says that, unle
 
 ## Frequently asked questions
 
-**Is ILR now 10 years in the UK?** It has been confirmed as the new standard, but it is **not in force yet**. The changes start in the December Immigration Rules and roll out over 2027.
+**Is ILR now 10 years in the UK? Is it confirmed?** It has been confirmed as the new standard, but it is **not in force yet**. The changes start in the December Immigration Rules and roll out over 2027.
 
 **Can I still get ILR in 5 years on a Skilled Worker visa?** Yes, if you earn at least **£50,271** in 3 of the 5 years before applying, work in an eligible public service job, have a British partner, or are a care, health or education worker covered by the transitional rules. Otherwise the standard will be 10 years.
 
-**Does the 10-year rule apply to people already in the UK?** Generally yes. Applications are normally decided under the rules in force on the decision date, and only specific groups have transitional protection: some care, health and education workers who arrived before May 2025 keep 5 years, and pre-April 2024 Skilled Workers in roles below RQF 6 can keep extending their visas on current terms until 2035.
+**Will the ILR changes affect people already in the UK? Is it retrospective?** Generally yes, for people who do not have ILR yet. The government says "settlement rules will otherwise continue to apply at the point of application" ([gov.uk, 2 Nov 2026](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)). Applications are normally decided under the rules in force on the decision date. Only specific groups have transitional protection: some care, health and education workers who arrived before May 2025 keep 5 years, and pre-April 2024 Skilled Workers in roles below RQF 6 can keep extending their visas on current terms until 2035.
 
 **Does Student or Graduate visa time count towards ILR?** Not under the new system. Time on temporary routes will not count, and the 10-year Long Residence route will close.
 
 **Is the Long Residence route closing?** Yes. The government has confirmed it will close under Earned Settlement.
 
+**How much is the ILR fee?** £3,226 per person for a Skilled Worker ILR application, with no extra charge for biometrics ([gov.uk](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)).
+
 **What English level will I need for ILR?** **B2**, up from B1, unless you are exempt (children, people aged 65 and over, or people with a relevant physical or mental condition).
 
 **Does my partner need to earn £12,571?** Not necessarily. Couples can combine income to reach **£25,142** together.
 
-**I already have ILR. Am I affected?** The plan sets out how people qualify for settlement. It does not propose taking away ILR that has already been granted.
+**I already have ILR. Am I affected?** No. The government says "settled status will never be removed from anyone who already holds it" ([gov.uk, 2 Nov 2026](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)).
 
-Related: [UK Graduate visa: 2 years for high-compliance universities](/uk-graduate-visa-two-years-high-compliance-universities/) · [UK student visa rules explained](/uk-immigration-2025-new-student-visa-rules-explained-simply/) · [UKVI credibility interview questions](/top-ukvi-interview-question-examples-and-answers/)
+**Is ILR the same as EU settled status?** Settled status under the EU Settlement Scheme is a form of indefinite leave for EU citizens and their families who lived in the UK before 2021. The EU Settlement Scheme keeps its own rules and is not affected by Earned Settlement.
+
+Related: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) · [UK student visa rules explained](/uk-immigration-2025-new-student-visa-rules-explained-simply/) · [UKVI credibility interview questions](/top-ukvi-interview-question-examples-and-answers/)
 
 ---
 
-**Sources:** [Home Office: A Fairer Pathway to Settlement, Government Response (Nov 2026)](https://assets.publishing.service.gov.uk/media/6ae89fddf4a6b3f59cf37580/FINAL_VERSION_-_Earned_Settlement_-_Consultation_Response.pdf) · [gov.uk: Earned settlement consultation](https://www.gov.uk/government/consultations/earned-settlement) · [EIN: Home Secretary's statement, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement) · [Free Movement, 2 Nov 2026](https://freemovement.org.uk/government-response-to-earned-settlement-consultation/) · [gov.uk: Long residence](https://www.gov.uk/long-residence) · [gov.uk: Settle in the UK](https://www.gov.uk/settle-in-the-uk)
+**Sources:** [gov.uk: Home Secretary unveils new rules for migrants settling in the UK, 2 Nov 2026](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk) · [Home Office: A Fairer Pathway to Settlement, Government Response (Nov 2026)](https://assets.publishing.service.gov.uk/media/6ae89fddf4a6b3f59cf37580/FINAL_VERSION_-_Earned_Settlement_-_Consultation_Response.pdf) · [gov.uk: Earned settlement consultation](https://www.gov.uk/government/consultations/earned-settlement) · [EIN: Home Secretary's statement, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement) · [Free Movement, 2 Nov 2026](https://freemovement.org.uk/government-response-to-earned-settlement-consultation/) · [gov.uk: Long residence](https://www.gov.uk/long-residence) · [gov.uk: Settle in the UK](https://www.gov.uk/settle-in-the-uk)

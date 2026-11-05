@@ -134,6 +134,7 @@ await render(coverSvg({ title: 'The free SQL course: from your first SELECT to i
 await render(coverSvg({ title: 'DSA: the NeetCode 150, one pattern at a time, with reviews that make it stick', theme: 'roadmap' }), null, path.join(PUB, 'images/og/dsa.jpg'));
 const tools = {
   'english-to-nepali': 'English to Nepali typing, free and instant',
+  'preeti-to-unicode': 'Preeti to Unicode converter, and Unicode to Preeti',
   'nepali-keyboard': 'Nepali keyboard: Preeti layout and Romanized',
   'age-calculator': 'Age calculator: exact age in years, months and days',
   'nepali-date-converter': 'Nepali date converter: BS to AD, with calendar',

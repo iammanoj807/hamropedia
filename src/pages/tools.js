@@ -3,7 +3,7 @@ import { esc } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar, pageHead } from '../templates/components.js';
 import { CHEAT_SHEET } from '../assets/js/lib/romanized.js';
-import { BS_MONTHS_EN, BS_MONTHS_NE, BS_MIN_YEAR, BS_MAX_YEAR, BS_PROVISIONAL_FROM } from '../assets/js/lib/bs-date.js';
+import { BS_MONTHS_EN, BS_MONTHS_NE, BS_MIN_YEAR, BS_MAX_YEAR, BS_PROVISIONAL_FROM, AD_MONTHS_EN, WEEKDAYS_EN, bsToAd, daysInBsMonth, toNepaliDigits } from '../assets/js/lib/bs-date.js';
 
 export const TOOLS = [
   {
@@ -12,6 +12,13 @@ export const TOOLS = [
     short: 'Type Nepali with English letters',
     blurb: 'Type “mero naam” and get “मेरो नाम”. Romanized Nepali to Unicode, live, with smart spelling for common words.',
     sample: ['namaste', 'नमस्ते'],
+  },
+  {
+    slug: 'preeti-to-unicode',
+    name: 'Preeti to Unicode Converter',
+    short: 'Preeti ↔ Unicode, both ways',
+    blurb: 'Convert old Preeti text to Nepali Unicode, or Unicode back to Preeti for a Preeti document. Also Romanized to Preeti. Live, free, in your browser.',
+    sample: ['g]kfn', 'नेपाल'],
   },
   {
     slug: 'nepali-keyboard',
@@ -37,6 +44,7 @@ export const TOOLS = [
 ];
 
 const toolPath = (slug) => `/tools/${slug}/`;
+const toolBySlug = (slug) => TOOLS.find((t) => t.slug === slug);
 
 function toolSchema(t, description) {
   return {
@@ -94,7 +102,7 @@ const cheatTable = (rows) =>
   `<table class="cheat"><tbody>${rows.map(([a, b]) => `<tr><td><kbd>${esc(a)}</kbd></td><td lang="ne">${esc(b)}</td></tr>`).join('')}</tbody></table>`;
 
 export function renderRomanized(version) {
-  const t = TOOLS[0];
+  const t = toolBySlug('english-to-nepali');
   const toolHtml = `<div class="tool" id="rz-tool">
   <div class="tool-options" role="group" aria-label="Options">
     <label class="switch"><input type="checkbox" id="rz-smart" checked><span>Smart spelling</span></label>
@@ -136,7 +144,7 @@ export function renderRomanized(version) {
 <li><strong>Put English words in braces.</strong> <code>{Facebook}</code> stays “Facebook”.</li>
 </ol>
 <p><strong>Smart spelling</strong> fixes a few dozen everyday words that people usually type with short vowels, such as <code>nepal</code> → नेपाल, <code>kathmandu</code> → काठमाडौं and <code>dhanyabad</code> → धन्यवाद, and turns a final <code>lai</code> into लाई. Switch it off to get the strict letter-by-letter result.</p>
-<p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>.</p>`;
+<p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
     { q: 'Is this English to Nepali translation?', a: 'No. It converts the <em>sounds</em> you type in English letters into Nepali script (transliteration). “mero naam” becomes “मेरो नाम”. To translate meaning from English to Nepali you need a translator; this tool is for typing Nepali when you only have an English keyboard.' },
@@ -150,7 +158,7 @@ export function renderRomanized(version) {
 
   return toolPage({
     t,
-    title: `English to Nepali Typing (Romanized to Unicode), free & live | ${site.name}`,
+    title: `Nepali Typing Online: Easy English to Nepali Unicode Typing | ${site.name}`,
     description: 'Type in English letters and get Nepali Unicode instantly: “mero naam” → “मेरो नाम”. Free Romanized Nepali typing with smart spelling, copy and download. Works on phone.',
     lead: 'Type Nepali the way it sounds in English letters. <span lang="ne">“mero naam” → “मेरो नाम”</span>, instantly, right in your browser.',
     toolHtml,
@@ -160,8 +168,72 @@ export function renderRomanized(version) {
   })(version);
 }
 
+export function renderPreeti(version) {
+  const t = toolBySlug('preeti-to-unicode');
+  const toolHtml = `<div class="tool" id="pr-tool">
+  <div class="seg seg-lg" role="radiogroup" aria-label="Conversion">
+    <button type="button" role="radio" aria-checked="true" data-mode="p2u">Preeti → Unicode</button>
+    <button type="button" role="radio" aria-checked="false" data-mode="u2p">Unicode → Preeti</button>
+    <button type="button" role="radio" aria-checked="false" data-mode="r2p">Romanized → Preeti</button>
+  </div>
+  <div class="panes">
+    <div class="pane">
+      <label for="pr-in" class="pane-label" id="pr-in-label">Paste Preeti text</label>
+      <textarea id="pr-in" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Paste text typed in the Preeti font, e.g. g]kfn"></textarea>
+      <div class="pane-foot"><span id="pr-count">0 words</span><label class="btn-ghost file-btn">Open .txt<input type="file" id="pr-file" accept=".txt,text/plain" hidden></label><button type="button" class="btn-ghost" id="pr-clear">Clear</button></div>
+    </div>
+    <div class="pane pane-out">
+      <label for="pr-out" class="pane-label" id="pr-out-label">Nepali Unicode</label>
+      <textarea id="pr-out" readonly rows="9" lang="ne" placeholder="नेपाली युनिकोड यहाँ देखिन्छ"></textarea>
+      <div class="pane-foot"><button type="button" class="btn" id="pr-copy">Copy</button><button type="button" class="btn-ghost" id="pr-swap" title="Use the result as input and reverse the direction">⇄ Swap</button><button type="button" class="btn-ghost" id="pr-download">Download .txt</button></div>
+    </div>
+  </div>
+  <p class="tool-note" id="pr-note"></p>
+  <div class="examples" aria-label="Examples"><span>Try:</span><span id="pr-examples"></span></div>
+</div>`;
+
+  const explainer = `<h2>How to convert Preeti to Unicode</h2>
+<ol>
+<li><strong>Copy your Preeti text</strong> from Word, Excel or an old document. It doesn't matter that it looks like <code>g]kfn</code> once the font is gone: that is what Preeti text really is.</li>
+<li><strong>Paste it into the left box.</strong> The Nepali Unicode appears on the right as you paste: <code>g]kfn</code> → <span lang="ne">नेपाल</span>.</li>
+<li><strong>Copy the result</strong> and paste it wherever you need it: Facebook, Gmail, Google Docs, a website, or back into Word with a Unicode font such as <strong>Kalimati</strong>, <strong>Mangal</strong> or <strong>Nirmala UI</strong>.</li>
+</ol>
+<h2>Why convert Preeti to Unicode?</h2>
+<p><strong>Preeti</strong> is an old Nepali font that draws Devanagari shapes on top of ordinary English keys. Text typed in Preeti only looks Nepali on a computer that has the Preeti font, and becomes <code>g]kfn xf]</code> everywhere else: on phones, in email, on the web and in Google Docs. Google can't search it either.</p>
+<p><strong>Unicode</strong> stores real Nepali letters. It works on every device and in every app, with no special font, and it is what government offices, news sites and Google use. If you are starting something new, type in Unicode from the start with our <a href="/tools/english-to-nepali/">Nepali typing tool</a> or the <a href="/tools/nepali-keyboard/">Nepali keyboard</a> (which keeps the Preeti layout you know).</p>
+<h2>Unicode to Preeti, for Preeti documents</h2>
+<p>Some offices and print shops still use documents set in Preeti. Choose <strong>Unicode → Preeti</strong>, paste Nepali Unicode text, and copy the result into your Preeti document. The result looks like English letters and symbols (<span lang="ne">नेपाल</span> → <code>g]kfn</code>) <strong>until you set the font to Preeti</strong> in Word; then it shows as Nepali.</p>
+<p><strong>Romanized → Preeti</strong> does the same, starting from Nepali typed in English letters: <code>mero naam</code> → <code>d]/f] gfd</code>, which shows as <span lang="ne">मेरो नाम</span> in the Preeti font.</p>
+<h2>Tips for a clean conversion</h2>
+<ul>
+<li><strong>Convert only the Preeti parts.</strong> In Preeti, ordinary keys are Nepali letters (<code>1</code> is <span lang="ne">ज्ञ</span>, <code>a</code> is <span lang="ne">ब</span>), so English words or numbers typed in another font will be converted too.</li>
+<li><strong>Word documents:</strong> select the Preeti text in Word, copy and paste it here, then paste the Unicode back and choose a Unicode font. A whole page at a time works fine.</li>
+<li><strong>Check names and rare conjuncts.</strong> The converter handles the usual Preeti rules (ि typed before the letter, reph <code>{</code> after it, <code>k</code> + <code>m</code> for <span lang="ne">फ</span>), but unusual spellings can still come out wrong. If one does, <a href="/contact-us/">tell me which word</a> and I'll fix it.</li>
+</ul>`;
+
+  const faqs = [
+    { q: 'Why does the Unicode → Preeti result look like English letters?', a: 'That is normal. Preeti text is stored as English keys, so <span lang="ne">नेपाल</span> becomes <code>g]kfn</code>. Paste it into Word (or any program) and set the font to <strong>Preeti</strong>, and it shows as Nepali.' },
+    { q: 'How do I convert Preeti to Kalimati?', a: 'Kalimati is a Unicode font, so converting Preeti to Kalimati is the same as converting Preeti to Unicode. Paste your Preeti text here, copy the Unicode result, paste it into your document and set the font to Kalimati.' },
+    { q: 'How do I convert Mangal or Kalimati text to Preeti?', a: 'Mangal and Kalimati are Unicode fonts. Choose <strong>Unicode → Preeti</strong>, paste the text, and set the font of the result to Preeti in your document.' },
+    { q: 'Can I convert a whole Word file?', a: 'Yes, by copy and paste: select all the Preeti text in Word (Ctrl + A), copy it, paste it here, then paste the Unicode result back into Word and choose a Unicode font. Plain .txt files can also be opened directly with the “Open .txt” button.' },
+    { q: 'Where can I download the Preeti font?', a: 'Preeti is a font owned by its creator, so we don’t host it. For anything new, you don’t need it: type and share in Unicode, which needs no special font. Keep Preeti only for old documents that require it.' },
+    { q: 'Is my text uploaded anywhere?', a: 'No. The conversion runs entirely in your browser, and nothing you paste is sent to a server.' },
+  ];
+
+  return toolPage({
+    t,
+    title: `Preeti to Unicode Converter: Nepali Unicode & Unicode to Preeti | ${site.name}`,
+    description: 'Free Preeti to Unicode converter (Nepali Unicode converter): paste Preeti text, get Kalimati or Mangal Unicode instantly. Also Unicode to Preeti.',
+    lead: 'Paste old <strong>Preeti</strong> text and get proper <strong>Nepali Unicode</strong>, instantly: <code>g]kfn</code> → <span lang="ne">नेपाल</span>. Or convert Unicode back to Preeti.',
+    toolHtml,
+    explainer,
+    faqs,
+    script: '/assets/js/tool-preeti.js',
+  })(version);
+}
+
 export function renderKeyboard(version) {
-  const t = TOOLS[1];
+  const t = toolBySlug('nepali-keyboard');
   const toolHtml = `<div class="tool kb-tool" id="kb-tool">
   <div class="kb-top">
     <div class="seg seg-lg" role="radiogroup" aria-label="Keyboard layout">
@@ -189,7 +261,8 @@ export function renderKeyboard(version) {
 <li>The on-screen keys show the Nepali letter each key types. Hold <kbd>Shift</kbd> (or tap ⇧) to see the second letter on each key.</li>
 <li>On a phone, the on-screen keyboard replaces your phone’s keyboard, so you can type Nepali without installing anything.</li>
 <li>A space finishes each word. While you are still inside a word, backspace removes the last key you pressed.</li>
-</ul>`;
+</ul>
+<p>Have old text that was already typed in the Preeti font? Don't retype it: paste it into the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
     { q: 'Is this the Preeti keyboard layout?', a: 'Yes. The “Preeti layout” option puts each letter on the same key as the Preeti font, which is the layout most people in Nepal learned to type on. The difference is that this keyboard produces Unicode, so your text works everywhere, not only on computers with the Preeti font.' },
@@ -201,7 +274,7 @@ export function renderKeyboard(version) {
 
   return toolPage({
     t,
-    title: `Nepali Keyboard Online: Preeti layout & Romanized, Unicode | ${site.name}`,
+    title: `Nepali Keyboard Layout Online: Preeti and Romanized | ${site.name}`,
     description: 'Free online Nepali keyboard. Type Nepali Unicode with the familiar Preeti layout or Romanized keys, or tap the on-screen keyboard on your phone. Copy to Facebook, Word or anywhere.',
     lead: 'Type Nepali Unicode with the <strong>Preeti layout</strong> you already know, or with <strong>Romanized</strong> keys. On a phone, just tap the keys.',
     toolHtml,
@@ -212,7 +285,7 @@ export function renderKeyboard(version) {
 }
 
 export function renderAge(version) {
-  const t = TOOLS[3];
+  const t = toolBySlug('age-calculator');
   const years = [];
   for (let y = BS_MIN_YEAR; y <= BS_MAX_YEAR; y++) years.push(y);
   const toolHtml = `<div class="tool age-tool" id="age-tool">
@@ -264,8 +337,8 @@ export function renderAge(version) {
 
   return toolPage({
     t,
-    title: `Age Calculator: exact age in years, months & days (AD or BS) | ${site.name}`,
-    description: 'Free age calculator: find your exact age in years, months and days, total days lived, and your next birthday. Enter your date of birth in AD or Nepali BS.',
+    title: `Age Calculator Nepali (BS & AD): Exact Age by Date of Birth | ${site.name}`,
+    description: 'Nepali age calculator: your exact age in years, months and days from your date of birth in BS or AD, plus total days lived and your next birthday. Free.',
     lead: 'Your exact age in years, months and days, how many days you have lived, and when your next birthday is. For everyone, in AD or Nepali BS.',
     toolHtml,
     explainer,
@@ -275,7 +348,7 @@ export function renderAge(version) {
 }
 
 export function renderDate(version) {
-  const t = TOOLS[2];
+  const t = toolBySlug('nepali-date-converter');
   const years = [];
   for (let y = BS_MIN_YEAR; y <= BS_MAX_YEAR; y++) years.push(y);
   const yearOpts = years.map((y) => `<option value="${y}">${y}${y >= BS_PROVISIONAL_FROM ? ' *' : ''}</option>`).join('');
@@ -283,20 +356,20 @@ export function renderDate(version) {
 
   const toolHtml = `<div class="tool date-tool" id="dt-tool">
   <div class="today-card" aria-live="polite">
-    <p class="today-label">Today in Nepal</p>
+    <p class="today-label">Today’s Nepali date (<span lang="ne">आजको मिति</span>)</p>
     <p class="today-ne" lang="ne" id="dt-today-ne">&nbsp;</p>
     <p class="today-en" id="dt-today-en">&nbsp;</p>
     <p class="today-time" id="dt-time"></p>
   </div>
   <div class="convert-grid">
     <form class="convert-card" id="ad2bs" novalidate>
-      <h2>AD → BS</h2>
+      <h2>English to Nepali date <span class="muted">(AD → BS)</span></h2>
       <label for="ad-date">English date (AD)</label>
       <input type="date" id="ad-date" min="1943-04-14" max="2034-04-13" required>
       <output class="result" id="ad2bs-out" for="ad-date"></output>
     </form>
     <form class="convert-card" id="bs2ad" novalidate>
-      <h2>BS → AD</h2>
+      <h2>Nepali to English date <span class="muted">(BS → AD)</span></h2>
       <div class="bs-selects">
         <label>Year<select id="bs-y">${yearOpts}</select></label>
         <label>Month<select id="bs-m">${monthOpts}</select></label>
@@ -318,7 +391,26 @@ export function renderDate(version) {
   <p class="tool-note">* Years from ${BS_PROVISIONAL_FROM} BS are provisional: the official calendar for them is not final, and published sources still disagree on some month lengths.</p>
 </div>`;
 
-  const explainer = `<h2>About the Nepali calendar (Bikram Sambat)</h2>
+  // Nepali calendar 2083: built from the same table the converter uses, so they can never disagree.
+  const CAL_YEAR = 2083;
+  const calRows = BS_MONTHS_EN.map((m, i) => {
+    const start = bsToAd(CAL_YEAR, i + 1, 1);
+    const days = daysInBsMonth(CAL_YEAR, i + 1);
+    return `<tr><td>${m} <span lang="ne">(${BS_MONTHS_NE[i]})</span></td><td>${days}</td><td>${WEEKDAYS_EN[start.weekday]}, ${start.day} ${AD_MONTHS_EN[start.month - 1]} ${start.year}</td></tr>`;
+  }).join('');
+  const nextNy = bsToAd(CAL_YEAR + 1, 1, 1);
+
+  const explainer = `<h2>How to convert a Nepali date to an English date</h2>
+<ol>
+<li>In the <strong>Nepali to English date</strong> box, choose the BS year, month and day, for example your date of birth from your citizenship certificate.</li>
+<li>The English (AD) date and the weekday appear straight away. This is the date used on passports and applications abroad.</li>
+<li>For the other way, pick a date in the <strong>English to Nepali date</strong> box to get the BS date in Nepali and English.</li>
+</ol>
+<h2>Nepali calendar ${CAL_YEAR} (<span lang="ne">नेपाली पात्रो ${toNepaliDigits(CAL_YEAR)}</span>)</h2>
+<p>Nepali year ${CAL_YEAR} BS began on <strong>1 Baisakh ${CAL_YEAR} = 14 April 2026</strong> and ends on 30 Chaitra; 1 Baisakh ${CAL_YEAR + 1} falls on ${nextNy.day} ${AD_MONTHS_EN[nextNy.month - 1]} ${nextNy.year}. Each month starts on:</p>
+<div class="table-wrap"><table><thead><tr><th>Month</th><th>Days</th><th>1st of the month (AD)</th></tr></thead><tbody>${calRows}</tbody></table></div>
+<p>Use the calendar above the converter to see every day of any month, with the AD date under each BS day.</p>
+<h2>About the Nepali calendar (Bikram Sambat)</h2>
 <p><strong>Bikram Sambat (BS)</strong>, also written Vikram Samvat, is Nepal’s official calendar. Government documents, citizenship certificates, school certificates and many birth dates in Nepal are written in BS, which is why you often need to convert them to AD (the Gregorian calendar) for passports, visas and university applications abroad.</p>
 <ul>
 <li>BS runs roughly <strong>56 years and 8½ months ahead</strong> of AD. That is why the quick “add 57” trick goes wrong for dates between January and mid-April.</li>
@@ -330,6 +422,8 @@ export function renderDate(version) {
 
   const faqs = [
     { q: 'How do I convert my date of birth from BS to AD?', a: 'Choose your birth year, month and day in the “BS → AD” box. The English (AD) date and the weekday appear immediately. This is the date normally used on passports and foreign applications.' },
+    { q: 'How do I convert an English date to a Nepali date?', a: 'Pick the date in the “English to Nepali date (AD → BS)” box. You get the Bikram Sambat date in Nepali and English, with the weekday.' },
+    { q: 'Is this a date of birth converter from Nepali to English?', a: 'Yes. Enter your BS date of birth in the “Nepali to English date” box to get the AD date for your passport, visa or university forms. Always check it against the date on your official documents.' },
     { q: 'What is today’s Nepali date?', a: 'It is shown at the top of this page, calculated for Nepal Standard Time (UTC+5:45), so it changes at midnight in Nepal, not at midnight where you are.' },
     { q: 'Why do Nepali months have 29, 30, 31 or 32 days?', a: 'BS months follow the Sun’s movement through the zodiac signs, which takes slightly different lengths of time. The official calendar fixes the length of each month every year, so the number of days in, say, Asar is not the same every year.' },
     { q: 'Which years can I convert?', a: `${BS_MIN_YEAR} to ${BS_MAX_YEAR} BS, which is 14 April 1943 to April 2034 AD. Years from ${BS_PROVISIONAL_FROM} BS are provisional until the official calendar is final.` },
@@ -338,8 +432,8 @@ export function renderDate(version) {
 
   return toolPage({
     t,
-    title: `Nepali Date Converter: BS to AD & AD to BS, with calendar | ${site.name}`,
-    description: 'Convert Nepali date (Bikram Sambat) to English date and back. See today’s Nepali date and the full Nepali calendar month. Accurate table for 2000–2090 BS. Free.',
+    title: `Nepali Date Converter: Nepali to English Date & Today's Date | ${site.name}`,
+    description: 'Convert Nepali date to English date (BS to AD) and English to Nepali date. See today’s Nepali date (आजको मिति) and the Nepali calendar 2083. Free and accurate.',
     lead: 'Convert Bikram Sambat to AD and back, see <span lang="ne">आजको मिति</span> (today’s date), and browse the Nepali calendar.',
     toolHtml,
     explainer,
@@ -354,7 +448,7 @@ export function renderToolsHub(version) {
     crumbs,
     eyebrow: 'Free tools',
     title: 'Free tools that just work',
-    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Nepali dates, and work out your exact age. Free, fast and private: everything runs in your browser.',
+    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Preeti to Unicode, convert Nepali dates, and work out your exact age. Free, fast and private: everything runs in your browser.',
   })}
 <section class="wrap">
   <div class="tool-cards">
@@ -371,8 +465,8 @@ export function renderToolsHub(version) {
   <p class="suggest">Need another tool? <a href="/contact-us/">Suggest one</a>. The most requested ideas get built next.</p>
 </section>`;
   return layout({
-    title: `Free Nepali Tools: Typing, Keyboard, Date Converter, Age | ${site.name}`,
-    description: 'Free online tools: English to Nepali (Romanized) typing, Nepali keyboard (Preeti layout), Nepali date converter (BS to AD) and an age calculator. Private, fast and mobile friendly.',
+    title: `Free Nepali Tools: Typing, Preeti to Unicode, Date Converter | ${site.name}`,
+    description: 'Free Nepali tools: Nepali typing, Preeti to Unicode converter, Nepali keyboard (Preeti layout), Nepali date converter and age calculator. Private and fast.',
     path: '/tools/',
     body,
     version,

@@ -53,6 +53,12 @@ test('Unicode -> Preeti gives the keys a Preeti typist uses', () => {
   assert.equal(unicodeToPreeti('१२३'), '!@#');
 });
 
+test('Romanized -> Preeti (used by the converter tool)', () => {
+  assert.equal(unicodeToPreeti(romanizedToUnicode('nepal')), 'g]kfn');
+  assert.equal(unicodeToPreeti(romanizedToUnicode('mero naam')), 'd]/f] gfd');
+  assert.equal(preetiToUnicode(unicodeToPreeti(romanizedToUnicode('dhanyabad'))), 'धन्यवाद');
+});
+
 test('Romanized -> Unicode', () => {
   const cases = [
     ['namaste', 'नमस्ते'], ['mero naam', 'मेरो नाम'], ['nepal', 'नेपाल'], ['kathmandu', 'काठमाडौं'],

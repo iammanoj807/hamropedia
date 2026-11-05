@@ -179,7 +179,7 @@ ${c.interviewTips?.followUpPrep ? `<h3>Follow-up prep</h3>${paragraphs(c.intervi
 ${topicMap()}`;
 
   return layout({
-    title: `${t.title}: pattern and problems | ${site.name}`,
+    title: `${t.title} Pattern: Template and NeetCode Problems | ${site.name}`,
     ogTitle: `${t.title}: the pattern, the template and the NeetCode problems`,
     description: clip(`${t.title}: ${c.whatItIs || g.idea} With a Python template, traced examples and ${t.problems.length} NeetCode problems.`),
     path: url,
@@ -265,9 +265,9 @@ ${ph.sections.map((s) => `<ol class="phase-grid dsa-grid">${s.topics.map((x) => 
 ${topicMap()}`;
 
   return layout({
-    title: `DSA: the NeetCode 150, one pattern at a time | ${site.name}`,
+    title: `NeetCode 150 DSA Course and Roadmap, One Pattern at a Time | ${site.name}`,
     ogTitle: 'DSA: the NeetCode 150, one pattern at a time',
-    description: `Learn data structures and algorithms for free: ${dsaTotals.topics} patterns and the ${dsaTotals.problems} NeetCode problems, with templates, traced examples, answers and a review schedule.`,
+    description: `Free DSA course and roadmap: ${dsaTotals.topics} patterns and the ${dsaTotals.problems} NeetCode 150 problems, with Python templates, traced examples and answers.`,
     path: BASE,
     image: '/images/og/dsa.jpg',
     body,
@@ -319,7 +319,7 @@ export function renderDsaPatterns(version) {
 ${topicMap()}`;
 
   return layout({
-    title: `Which DSA pattern? Spot it from the question | ${site.name}`,
+    title: `LeetCode Patterns: Which DSA Pattern to Use, and When | ${site.name}`,
     ogTitle: 'Which pattern? Spot the DSA pattern from the question',
     description: 'How to choose the right data structure or algorithm pattern in a coding interview: three questions, two flowcharts, and a drill on the NeetCode 150.',
     path: PATTERNS,

@@ -173,6 +173,12 @@ const lessonCtx = {
   image: '/images/og/sql.jpg',
   lessonNoun: 'SQL lesson',
   schemaCourse: 'SQL, from SELECT to interview problems',
+  // Search words (Semrush): "row number sql", "second highest salary sql", "sql interview questions".
+  seoName: (phase, t) => {
+    if (/SQL/.test(t.name) || phase.slug === 'start-here') return t.name;
+    if (phase.slug === 'interview-problems') return `SQL interview question: ${t.name.charAt(0).toLowerCase()}${t.name.slice(1)}`;
+    return t.name.endsWith(' in') ? `${t.name} (SQL)` : `${t.name} in SQL`;
+  },
   scripts: ['/assets/js/sql.js'],
   level: (phase, t) => (t.kind === 'problem' ? (t.difficulty === 'easy' ? 'Beginner' : t.difficulty === 'hard' ? 'Advanced' : 'Intermediate') : phase.number <= 3 ? 'Beginner' : 'Intermediate'),
   tags,
@@ -210,6 +216,19 @@ ${runBox({ ...ids, key: 'practice', place: 'Step 3 · Practice box', label: 'Pra
 <blockquote class="callout callout-glance">${paragraphs(t.interviewAnswer, mark)}</blockquote>
 <h3>Follow-up questions</h3>
 ${questions(t.followUps, mark)}`,
+};
+
+// Phase page titles built around what people search for (Semrush, Nov 2026).
+const PHASE_TITLES = {
+  'start-here': 'Learn SQL from Zero: Databases, Tables and Keys',
+  'reading-data': 'SQL SELECT, WHERE and ORDER BY: Reading Data for Beginners',
+  summarising: 'SQL GROUP BY, HAVING and Aggregate Functions Explained',
+  'building-and-changing': 'SQL CREATE TABLE, INSERT, UPDATE, DELETE and Constraints',
+  joins: 'SQL Joins Explained: INNER, LEFT, Self and Anti-Joins',
+  'subqueries-and-ctes': 'SQL Subqueries and CTEs (WITH), plus UNION and EXCEPT',
+  'window-functions': 'SQL Window Functions: ROW_NUMBER, RANK, LAG, Running Totals',
+  performance: 'SQL Indexes and Query Plans (EXPLAIN): Performance Basics',
+  'interview-problems': 'SQL Interview Questions: Problems from Easy to Hard',
 };
 
 export function renderSqlLessons(version) {
@@ -296,9 +315,9 @@ export function renderSqlIndex(version) {
 </div>`;
 
   return layout({
-    title: `Free SQL Course with a Query Runner: ${sqlTotals.topics} lessons | ${site.name}`,
+    title: `Free SQL Course: Practice Online and SQL Interview Questions | ${site.name}`,
     ogTitle: 'The free SQL course, with a query runner',
-    description: `Learn SQL for free: ${sqlTotals.topics} lessons and interview problems, from SELECT to window functions, with ${sqlTotals.queries} example queries you can run in your browser.`,
+    description: `Learn SQL free: ${sqlTotals.topics} lessons from SELECT to window functions, ${sqlTotals.queries} queries to practice online, and SQL interview questions with answers.`,
     path: BASE,
     image: '/images/og/sql.jpg',
     body,
@@ -430,7 +449,7 @@ export function renderSqlPhase(p, i, version) {
 </div>`;
 
   return layout({
-    title: `SQL, phase ${p.number}: ${p.short} | ${site.name}`,
+    title: `${PHASE_TITLES[p.slug] || `SQL, phase ${p.number}: ${p.short}`} | ${site.name}`,
     ogTitle: `SQL, phase ${p.number}: ${p.title}`,
     description: `${p.goal} ${p.topics.length} free ${unit} with examples you can run in your browser.`.slice(0, 300),
     path: phasePath(p),
@@ -485,7 +504,7 @@ ${sqlPhases.map((p) => `<section class="rev-phase" aria-labelledby="rev-${p.slug
 </div>`;
 
   return layout({
-    title: `SQL revision notes | ${site.name}`,
+    title: `SQL Cheat Sheet: Interview Revision Notes | ${site.name}`,
     description: `Revision notes for SQL interviews: the must-know points, interview problem patterns, common mistakes and interview answer of all ${sqlTotals.topics} topics, on one page.`,
     path: `${BASE}revise/`,
     image: '/images/og/sql.jpg',

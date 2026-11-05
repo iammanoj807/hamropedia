@@ -835,6 +835,10 @@ table.trace-rows td { white-space: pre; }
 .pane-label { font-weight: 700; margin-bottom: 8px; }
 .pane textarea { width: 100%; min-height: 220px; resize: vertical; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-2); background: var(--bg); color: var(--text); font: 400 1.1rem/1.6 var(--font-mono); }
 .pane-out textarea { font: 500 1.35rem/1.6 'Mukta', sans-serif; background: var(--surface-2); }
+.pane textarea.ne-text { font: 500 1.25rem/1.6 'Mukta', sans-serif; }
+.pane-out textarea.ascii { font: 400 1.1rem/1.6 var(--font-mono); }
+.file-btn { cursor: pointer; }
+@media (max-width: 560px) { #pr-tool .seg-lg { display: grid; grid-auto-flow: row; width: 100%; border-radius: var(--radius-sm); } #pr-tool .seg-lg button { border-radius: calc(var(--radius-sm) - 2px); } }
 .pane textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .pane-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; color: var(--muted); font-size: .9rem; }
 .pane-foot > span { margin-right: auto; }

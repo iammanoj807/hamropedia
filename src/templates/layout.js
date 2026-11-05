@@ -171,6 +171,7 @@ function footer() {
       <h2 class="footer-h">Free tools</h2>
       <ul>
         <li><a href="/tools/english-to-nepali/">English to Nepali typing</a></li>
+        <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode</a></li>
         <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
         <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
         <li><a href="/tools/age-calculator/">Age calculator</a></li>

@@ -119,6 +119,14 @@ const lessonCtx = {
   image: '/images/og/system-design.jpg',
   lessonNoun: 'system design lesson',
   schemaCourse: 'System Design',
+  // Search words per phase (Semrush): "url shortener system design", "singleton design pattern"...
+  seoName: (phase, t) => {
+    if (['hld-practice', 'ai-ml-design'].includes(phase.slug)) return `${t.name}: system design`;
+    if (phase.slug === 'lld-practice') return `${t.name}: low-level design`;
+    if (phase.slug === 'patterns') return /pattern/i.test(t.name) ? t.name : `${t.name} design pattern`;
+    if (['networking', 'core-concepts', 'data', 'distributed'].includes(phase.slug)) return `${t.name} in system design`;
+    return t.name;
+  },
   level: (phase, t) => (t.priority === 'bonus' ? 'Advanced' : t.kind === 'design' || phase.number >= 4 ? 'Intermediate' : 'Beginner'),
   tags,
   steps: [
@@ -134,6 +142,20 @@ const lessonCtx = {
 <blockquote class="callout callout-glance">${paragraphs(t.interviewAnswer, mark)}</blockquote>
 <h3>Follow-up questions</h3>
 ${questions(t.followUps, mark)}`,
+};
+
+// Phase page titles built around what people search for (Semrush, Nov 2026).
+const PHASE_TITLES = {
+  networking: 'Networking for System Design: DNS, HTTP, REST, WebSockets',
+  data: 'Databases for System Design: SQL vs NoSQL, Sharding, Replication',
+  distributed: 'Microservices, Sagas and Raft: Distributed Systems Basics',
+  'interview-basics': 'How System Design Interviews Work: A Step-by-Step Framework',
+  'core-concepts': 'System Design Concepts: Load Balancing, Caching, CAP',
+  'oop-and-solid': 'OOP and SOLID Principles Explained, with Examples',
+  patterns: 'Design Patterns Explained: Singleton, Factory, Strategy, Observer',
+  'lld-practice': 'Low-Level Design (LLD) Interview Questions: Parking Lot, LRU',
+  'hld-practice': 'System Design Interview Questions: URL Shortener, Chat, Feed',
+  'ai-ml-design': 'AI/ML System Design: RAG, Recommendations, Fraud Detection',
 };
 
 export function renderSdLessons(version) {
@@ -209,9 +231,9 @@ export function renderSdIndex(version) {
 </div>`;
 
   return layout({
-    title: `Free System Design Course: HLD, LLD and AI/ML design | ${site.name}`,
+    title: `System Design Course (Free): HLD, LLD and Interview Roadmap | ${site.name}`,
     ogTitle: 'The free System Design course',
-    description: `A free system design course: ${sdTotals.topics} lessons on high-level design, low-level design and AI/ML design, with diagrams, animations and interview answers.`,
+    description: `Free system design course and roadmap: ${sdTotals.topics} lessons on HLD, LLD, design patterns and AI/ML design, with diagrams and interview answers.`,
     path: BASE,
     image: '/images/og/system-design.jpg',
     body,
@@ -283,7 +305,7 @@ export function renderSdPhase(p, i, version) {
 </div>`;
 
   return layout({
-    title: `System Design, phase ${p.number}: ${p.short} | ${site.name}`,
+    title: `${PHASE_TITLES[p.slug] || `System Design, phase ${p.number}: ${p.short}`} | ${site.name}`,
     ogTitle: `System design, phase ${p.number}: ${p.title}`,
     description: `${p.goal} ${p.topics.length} free lessons with diagrams, interview answers and exercises.`.slice(0, 300),
     path: phasePath(p),
@@ -343,7 +365,7 @@ ${sdPhases.map((p) => `<section class="rev-phase" aria-labelledby="rev-${p.slug}
 </div>`;
 
   return layout({
-    title: `System design revision notes | ${site.name}`,
+    title: `System Design Cheat Sheet: Interview Revision Notes | ${site.name}`,
     description: `Revision notes for system design interviews: the must-know points, design steps, common mistakes and interview answer of all ${sdTotals.topics} lessons, on one page.`,
     path: `${BASE}revise/`,
     image: '/images/og/system-design.jpg',

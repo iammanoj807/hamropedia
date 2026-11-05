@@ -165,9 +165,12 @@ ${checks
 <div class="term-pop" role="dialog" aria-modal="false" hidden><p class="term-pop-h"></p><p class="term-pop-d"></p><a class="term-pop-link" hidden></a><button type="button" class="term-pop-x" aria-label="Close">×</button></div>
 <script type="application/json" id="glossary-data">${JSON.stringify(words).replace(/</g, '\\u003c')}</script>`;
 
-  const title = `${t.name} | ${site.name}`;
+  // The course can add the words people search with ("in SQL", "design pattern"), if it still fits.
+  const searchName = (ctx.seoName && ctx.seoName(phase, t)) || t.name;
+  const name = searchName.length <= 65 ? searchName : t.name;
+  const title = `${name} | ${site.name}`;
   // Google shows about 60 characters of a title; a very long topic name is cut at a word.
-  const shortTitle = title.length <= 60 ? title : t.name.length <= 65 ? t.name : clip(t.name, 64);
+  const shortTitle = title.length <= 60 ? title : name.length <= 65 ? name : clip(name, 64);
   const definition = t.definition.replace(/`/g, '');
   let description = clip(definition);
   if (description.length < 90) description = clip(`${description} A free ${ctx.lessonNoun} with exercises and answers.`);

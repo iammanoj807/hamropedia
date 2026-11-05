@@ -26,7 +26,7 @@ export function renderAbout(version) {
     html: `<figure class="about-photo"><img src="/images/manojkumarthapa.webp" alt="Manoj Kumar Thapa" width="440" height="519" decoding="async"><figcaption>${esc(site.author.name)}<span>${esc(site.author.role)}, ${esc(site.author.location)}</span></figcaption></figure>
 <p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
-<li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
+<li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
 <li><strong>Learning</strong>: four free courses, the <a href="/ai-roadmap/">AI &amp; Machine Learning Roadmap</a>, <a href="/system-design/">System Design</a>, <a href="/sql/">SQL</a> (with a query runner in your browser) and <a href="/dsa/">DSA (NeetCode 150)</a>, where every lesson has an animation, a diagram and exercises with answers. There are also <a href="/category/coding/">coding guides</a> for beginners. <a href="/learn/#start-here">Start here</a> to see how they fit together.</li>
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
@@ -197,6 +197,7 @@ export function render404(version) {
   <ul class="nf-links">
     <li><a href="/tools/english-to-nepali/">English to Nepali typing</a></li>
     <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
+    <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a></li>
     <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
     <li><a href="/tools/age-calculator/">Age calculator</a></li>
     <li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li>

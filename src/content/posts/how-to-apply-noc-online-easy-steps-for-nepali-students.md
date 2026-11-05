@@ -1,18 +1,18 @@
 ---
-title: "How to Apply for NOC Online: Easy Steps for Nepali Students (2026)"
-seoTitle: "How to Apply for NOC Online in Nepal (2026): Step by Step"
-description: "Nepal NOC (No Objection Certificate) for studying abroad, step by step: documents, every screen of the online form, the NRs 2,000 fee and what changed in 2026."
+title: "How to Apply for NOC Online in Nepal: Step-by-Step Guide for Students (2026)"
+seoTitle: "NOC Online Form Nepal 2026: How to Apply, Fee and Status"
+description: "Apply for your NOC online in Nepal, step by step with screenshots: documents required, every screen of the noc.moest.gov.np form, the fee and status check."
 date: 2025-06-17
-updated: 2026-11-01
+updated: 2026-11-05
 category: study-abroad
-tags: [noc, nepal, study abroad, documents]
+tags: [noc, noc online, nepal, study abroad, documents]
 coverWord: "NOC"
 coverAlt: "Applying for a No Objection Certificate (NOC) online in Nepal"
 ---
 
-Applying for a **No Objection Certificate (NOC)** is one of the first official steps for any Nepali student going abroad. The good news: the whole application is online. This guide walks through every screen, with screenshots, and starts with what has changed in 2026.
+**NOC full form: No Objection Certificate** (<span lang="ne">अनापत्ति पत्र</span> in Nepali). Applying for one is among the first official steps for any Nepali student going abroad. The good news: you can apply for the NOC online from anywhere in Nepal, on the official portal **noc.moest.gov.np**. This guide walks through every screen of the NOC online form with real screenshots, then shows how to pay the fee and check your status. It starts with what has changed in 2026.
 
-> **Update:** In April 2026, Nepal's new government published reform plans that include overhauling the NOC process. One proposal would approve foreign exchange only for courses in "priority" sectors such as STEM, health and IT. **These are proposals, not rules in force.** As of this update, the NOC is still applied for online as described below ([The PIE News, 7 April 2026](https://thepienews.com/nepal-proposes-scrapping-current-noc-process-in-sweeping-reform-push/)). 2026 reports also say the service is now fully "faceless", with no visit to the ministry needed ([Techpana](https://techpana.com/2026/156253/nepal-digitizes-noc-service-ends-in-person-requirements-for-students)). Always check the official portal, [noc.moest.gov.np](https://noc.moest.gov.np/), before you apply.
+> **Update:** In April 2026, Nepal's new government published reform plans that include overhauling the NOC process. One proposal would approve foreign exchange only for courses in "priority" sectors such as STEM, health and IT. **These are proposals, not rules in force.** As of this update, the NOC is still applied for online as described below ([The PIE News, 7 April 2026](https://thepienews.com/nepal-proposes-scrapping-current-noc-process-in-sweeping-reform-push/)). The whole application is online, but **most applicants still end up visiting the NOC office**: of everyone since online NOCs began in May 2023, 74% had to go to the NOC branch office at **Sanothimi, Bhaktapur**, mostly because of mistakes in their details or missing documents ([The Kathmandu Post, 28 April 2026](https://kathmandupost.com/national/2026/04/28/over-88-000-students-obtain-nocs-online-in-three-years-as-system-expands)). The guide below shows how to avoid that. Always check the official portal, [noc.moest.gov.np](https://noc.moest.gov.np/), before you apply.
 
 ## What a NOC is for
 
@@ -23,7 +23,7 @@ The NOC is issued by Nepal's education ministry. It is mainly needed to **send m
 - **One institution per NOC:** money can only be sent to the institution named on your NOC. Changing institution or country means applying for a new NOC.
 - **Official record:** it shows the government has no objection to you studying abroad at that institution.
 
-## Documents you need
+## NOC documents required
 
 Have clear scans ready before you start. Images must be under **5 MB** each.
 
@@ -33,9 +33,9 @@ Have clear scans ready before you start. Images must be under **5 MB** each.
 - **Passport** (if you have one).
 - **A recent passport-size photo**.
 - **University or college invoice** (if you don't have one, the form lets you upload the offer letter instead).
-- **Language test result** (IELTS, PTE, TOEFL and so on), if you have one.
+- **Language test result** (IELTS, PTE, TOEFL and so on), if you have one. The form treats it as optional.
 
-## Step-by-step: the online NOC application
+## NOC online form: how to apply, step by step
 
 The screenshots below are from a real application. Personal details are blurred. The portal's look may change slightly over time, but the steps stay the same.
 
@@ -99,7 +99,11 @@ Check everything carefully. **You cannot edit the application after submitting.*
 
 ## After you apply
 
-### Track your status
+### Log in again later
+
+To come back to your application, go to [noc.moest.gov.np](https://noc.moest.gov.np/) and log in with the **mobile number** and the **password** you created in step 2. Use the same number every time: your application is linked to it.
+
+### How to check your NOC status
 
 Open **My NOC** from the menu to see your application. The status starts as **Not Seen / Waiting Verification**.
 
@@ -107,13 +111,23 @@ Open **My NOC** from the menu to see your application. The status starts as **No
 
 ![NOC application status waiting for verification](/images/posts/noc/step-12-1.webp "Status: waiting for verification")
 
-### Pay the fee once verified
+### NOC fee and payment
 
-When the status changes to **Application Verified / Waiting Payment**, open the application. You will be asked to pay the **NRs 2,000** revenue fee using the voucher number shown, through the online payment option or at a bank with the printed voucher. After payment, your NOC is issued and can be downloaded from the portal.
+You pay only after the ministry has checked your documents. When the status changes to **Application Verified / Waiting Payment**, open the application. You will be asked to pay the **NRs 2,000** revenue fee using the voucher number shown, through the online payment option or at a bank with the printed voucher. After payment, your NOC is issued and can be downloaded from the portal.
 
 ![Application verified and waiting for payment](/images/posts/noc/step-13-1.webp "Status: verified, waiting payment")
 
 ![Payment instruction for the NRs 2,000 fee](/images/posts/noc/step-14-1.webp "Pay the NRs 2,000 fee using your voucher number")
+
+## NOC office: do you need to visit?
+
+Only if something in your application needs checking. The NOC branch office is at **Sanothimi, Bhaktapur** (The Kathmandu Post). You are most likely to get your NOC without a visit if:
+
+- **you studied at Tribhuvan University (TU) or Kathmandu University (KU).** Their bachelor's and master's records are now linked to the NOC system, so your degree is checked online. TU's agreement was signed on 17 April 2026. Pokhara and Purbanchal universities were not yet linked as of April 2026;
+- **every detail matches your documents exactly**: name, dates and citizenship number;
+- **every required document is uploaded** and readable.
+
+Officials say "even minor mistakes in personal details or missing documents require applicants to come in person for verification" ([The Kathmandu Post](https://kathmandupost.com/national/2026/04/28/over-88-000-students-obtain-nocs-online-in-three-years-as-system-expands)).
 
 ## Common mistakes to avoid
 
@@ -124,9 +138,23 @@ When the status changes to **Application Verified / Waiting Payment**, open the 
 
 ## Frequently asked questions
 
+**How do I download my NOC certificate?** After you pay, the NOC is issued in the portal: log in, open **My NOC** and download it. Keep a copy for your bank.
+
+**What is the NOC fee in Nepal?** **NRs 2,000**, the revenue fee shown on the portal when we applied (see the screenshot above). You pay it only after your application is verified, using the voucher number the portal gives you. Check the amount shown on your own application before paying.
+
 **How long does a NOC take?** It varies. It is often quoted as a few working days, but it can take longer around intake peaks or if your institution has to be added first. Apply as soon as you have your offer letter.
 
 **Do I need a new NOC to change university?** Yes. The NOC is tied to one institution.
+
+**Can I apply for NOC without IELTS or PTE?** Yes. The form asks for a language test result only "if you have one". Your university may still need one for admission, and your visa may too.
+
+**Do I need to visit the NOC office?** Not always. You apply, pay and download online, but 74% of applicants since 2023 still had to visit the NOC branch at Sanothimi, Bhaktapur, mainly to fix errors or missing documents ([The Kathmandu Post](https://kathmandupost.com/national/2026/04/28/over-88-000-students-obtain-nocs-online-in-three-years-as-system-expands)). Check your details carefully to avoid it; TU and KU graduates are most likely to finish fully online.
+
+**What is the full form of NOC?** No Objection Certificate. In Nepali it is called <span lang="ne">अनापत्ति पत्र</span>.
+
+**What does NOC mean for students?** It is the education ministry's permission that lets you send money out of Nepal for your studies abroad, to the institution named on it.
+
+**Is a NOC needed for every country?** If you will send money from Nepal for tuition or living costs, yes: banks ask for it whatever the country. It is about the money transfer, not the visa.
 
 **Can a consultancy apply for me?** Yes, the form has a "Studying through Consultancy" option, but with this guide you can do it yourself.
 

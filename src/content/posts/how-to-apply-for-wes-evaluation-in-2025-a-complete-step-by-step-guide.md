@@ -1,16 +1,24 @@
 ---
-title: "How to Apply for WES Evaluation: A Complete Step-by-Step Guide (2026)"
-seoTitle: "How to Apply for WES Evaluation (2026): Step-by-Step Guide"
-description: "Apply for WES step by step: create an account, add credentials, choose course-by-course and ICAP, send sealed transcripts by courier, and pay. With screenshots."
+title: "How to Apply for WES Credential Evaluation from Nepal: A Complete Step-by-Step Guide (2026)"
+seoTitle: "WES Application: How to Apply for WES Evaluation, Step by Step"
+description: "How to apply for WES evaluation, step by step with screenshots: create an account, add credentials, choose ICAP, send sealed transcripts from Nepal and pay."
 date: 2025-06-09
-updated: 2026-11-01
+updated: 2026-11-05
 category: study-abroad
 tags: [wes, credential evaluation, usa, canada, study abroad]
 coverWord: "Apply for WES"
 coverAlt: "Step-by-step WES evaluation application"
 ---
 
-This guide walks you through a **WES (World Education Services)** application from start to payment, screen by screen. The screenshots are from a real application for the **United States**; Canadian applications follow the same pattern.
+This guide shows **how to apply for a WES evaluation**: the whole **WES application form**, from creating your account to paying, screen by screen. The screenshots are from a real application for the **United States**; Canadian applications follow the same pattern. It also covers the part Nepali students find hardest: getting sealed transcripts from your university to WES.
+
+## WES required documents: what you need before you start
+
+- **Your degree certificate** (final or provisional) as a clear scan, to upload yourself.
+- **Official transcripts** that your university will send to WES in a **sealed envelope**: ask your university's exam or records section how long this takes, because it is usually the slowest part.
+- **Your passport**, so your name and date of birth match exactly.
+- **A card that can pay in US dollars** for the fee: $239 for course-by-course ICAP, plus delivery ([WES fees](https://www.wes.org/evaluations-and-fees/education/graduate-admissions/)).
+- **Your university's instructions**: which evaluation type it wants and where WES should send the report.
 
 Not sure which evaluation type you need, or what it costs? Read [WES evaluation explained: types and fees](/important-details-about-wes-evaluation-for-nepali-students/) first.
 
@@ -112,10 +120,33 @@ Review the fee summary and pay by credit or debit card (or another option shown)
 
 ![WES fee summary and payment](/images/posts/wes/step-18.webp "Pay the fee (screenshot shows older prices)")
 
-## After you apply
+## Sending transcripts to WES from Nepal
+
+This is the step most guides skip, and the one that delays most Nepali applications. WES prefers your **university to send transcripts directly**. If it sends paper, the transcripts must be in an envelope with the institution's name on it, with an official's **seal, stamp or signature across the back flap**. WES rejects any envelope that has been opened ([WES Help: sealed envelope](https://us-help.wes.org/support/solutions/articles/14000126440-sealed-envelope)).
+
+| University | How it works |
+|---|---|
+| **Kathmandu University (KU)** | Apply online for **WES verification** with your WES reference number. KU's Office of the Controller of Examinations sends **electronic copies** of your transcripts and degree certificate **directly to WES**. It does not send paper copies. The fee is **NRs 2,000**; questions to olf.exam@ku.edu.np ([KU](https://exam.ku.edu.np/?p=4811)). |
+| **Tribhuvan University (TU)** | Transcripts come from the **Office of the Controller of Examinations at Balkhu** ([Edusanjal](https://edusanjal.com/blog/how-apply-transcript-tribhuvan-university/)). Ask for them in a sealed envelope as above, or ask whether the office will send them to WES directly. |
+| **Pokhara, Purbanchal and other universities** | Ask your university's examination or records section how it sends documents to WES, and follow WES's rule for sealed envelopes. |
+
+Whatever your university, write your **WES reference number** on the request, and keep the courier tracking number.
+
+### Timeline from Nepal
+
+| Step | Time |
+|---|---|
+| Create your WES account and pay | Same day |
+| Get transcripts from your university and courier them to WES | The slowest step: start this first |
+| WES verifies your documents | About 2 weeks after they arrive |
+| WES evaluates (course-by-course) | About 2 weeks, up to 4 if complex |
+
+(WES times from [WES processing times](https://www.wes.org/processing-times/).)
+
+## After you apply: how long WES takes
 
 - Track your documents and status in your WES account.
-- WES starts the evaluation once **all** required documents have arrived and been verified.
+- WES starts the evaluation once **all** required documents have arrived and been verified. Verification takes about **2 weeks**, and a course-by-course evaluation about **2 more weeks** (up to 4 if complex) ([WES processing times](https://www.wes.org/processing-times/)).
 - Your report goes to you and to your recipients by the delivery method you chose.
 
 ## Tips to avoid delays
@@ -124,5 +155,17 @@ Review the fee summary and pay by credit or debit card (or another option shown)
 - **Match names exactly** across passport, certificates and the WES form.
 - **Write your WES reference number** on everything you send.
 - **Don't send originals.** WES does not return documents.
+
+## Frequently asked questions
+
+**What are the WES required documents?** An account on wes.org, a copy of your degree certificate, and official transcripts sent by your university in a sealed envelope with your WES reference number. WES shows the exact list for your qualification under **Required documents** in your account.
+
+**How much does a WES evaluation cost?** For US admissions, $239 for course-by-course ICAP or $171 for document-by-document ICAP, plus delivery. See [WES fees in dollars and rupees](/important-details-about-wes-evaluation-for-nepali-students/).
+
+**How long does WES processing take?** About 2 weeks for verification and 1 to 4 weeks for the evaluation, counted from when all documents arrive. Courier time from Nepal comes on top.
+
+**Where do I send my documents for WES?** To the address shown in **How to Send Your Documents** in your WES account, with your WES reference number on the envelope. Always copy it from your own account, because it can change.
+
+**Is WES valid for 5 years?** The 5-year limit applies to the ECA for Canadian immigration (Express Entry). Universities set their own rules on how old a report can be.
 
 Next: [Apply for your NOC](/how-to-apply-noc-online-easy-steps-for-nepali-students/) · [Convert BS dates on your documents to AD](/tools/nepali-date-converter/)

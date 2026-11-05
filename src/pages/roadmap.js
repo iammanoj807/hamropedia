@@ -98,9 +98,9 @@ export function renderRoadmapIndex(version) {
 <section class="wrap-narrow">${faqBlock(ROADMAP_FAQ)}</section>`;
 
   return layout({
-    title: `Free AI & Machine Learning Roadmap (${new Date().getUTCFullYear()}): ${totals.topics} lessons | ${site.name}`,
+    title: `AI Engineer Roadmap (${new Date().getUTCFullYear()}): Free AI & Machine Learning Course | ${site.name}`,
     ogTitle: 'The free AI & Machine Learning Roadmap',
-    description: `A free AI and machine learning course: ${totals.topics} lessons in ${totals.phases} phases, each with an animation, a diagram and exercises with answers, from NumPy to LLMs.`,
+    description: `A free AI engineer and machine learning roadmap: ${totals.topics} lessons in ${totals.phases} phases, from NumPy and maths to LLMs, RAG and agents, with answers.`,
     path: BASE,
     image: '/images/og/ai-roadmap.jpg',
     body,
@@ -188,7 +188,7 @@ export function renderPhase(p, i, version) {
 </div>`;
 
   return layout({
-    title: `Phase ${p.number}: ${p.title}, free lessons | ${site.name}`,
+    title: `${PHASE_TITLES[p.slug] || `Phase ${p.number}: ${p.title}, free lessons`} | ${site.name}`,
     ogTitle: `AI roadmap, phase ${p.number}: ${p.title}`,
     description: `${p.goal} ${p.topics.length} free lessons, each with an animation, a diagram and exercises with answers.`.slice(0, 300),
     path: phasePath(p),
@@ -245,6 +245,11 @@ const lessonCtx = {
   image: '/images/og/ai-roadmap.jpg',
   lessonNoun: 'AI & ML lesson',
   schemaCourse: 'AI & Machine Learning Roadmap',
+  // Search words per phase (Semrush): "... for machine learning", "... in deep learning".
+  seoName: (phase, t) => {
+    const add = { 'math-foundations': ' for machine learning', 'classical-ml-built-by-you': ' in machine learning', 'deep-learning-foundations': ' in deep learning' }[phase.slug];
+    return add && !/machine learning|deep learning/i.test(t.name) ? `${t.name}${add}` : t.name;
+  },
   level: (phase) => (phase.number <= 2 ? 'Beginner' : 'Intermediate'),
   steps: [
     { id: 'understand', label: 'Understand it' },
@@ -255,6 +260,18 @@ const lessonCtx = {
   furtherNote: 'Optional. The lesson above is written to be enough on its own. If you want a second explanation, start with the one marked <b>Worth it</b>.',
   understand,
   interview: (t, mark) => `<h3>Check you understood</h3>\n${questions(t.followUps, mark)}`,
+};
+
+// Phase page titles built around what people search for (Semrush, Nov 2026).
+const PHASE_TITLES = {
+  'your-toolkit': 'NumPy, Matplotlib and Git for Machine Learning: Your Toolkit',
+  'systems-and-scale': 'LLM Systems at Scale: GPUs, Quantisation, FlashAttention',
+  'generative-models-and-reinforcement-learning': 'Diffusion Models, VAEs and Reinforcement Learning (PPO)',
+  'math-foundations': 'Math for Machine Learning: Linear Algebra, Calculus, Probability',
+  'classical-ml-built-by-you': 'Machine Learning from Scratch in NumPy: Regression to Trees',
+  'deep-learning-foundations': 'Deep Learning from Scratch: Neural Networks and Backprop',
+  'transformers-and-llms': 'Transformers and LLMs Explained: Build a Small GPT',
+  'ai-engineering': 'AI Engineering: RAG, Agents, Evaluation and Deployment',
 };
 
 /** Every lesson page: [path, html]. */
