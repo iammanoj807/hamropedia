@@ -299,10 +299,6 @@ button { font: inherit; color: inherit; }
 .pill[aria-pressed='true'] span { color: inherit; opacity: .7; }
 .grid-item[hidden] { display: none; }
 .empty { padding: 32px; text-align: center; color: var(--muted); border: 1px dashed var(--border-2); border-radius: var(--radius); }
-.author-box { display: flex; gap: 14px; align-items: flex-start; padding: 16px; margin: 0 0 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-2); }
-.author-box img { border-radius: 50%; object-fit: cover; flex: none; width: 56px; height: 56px; }
-.author-box p { margin: 0; font-size: .95rem; color: var(--text-2); }
-.author-box .author-box-name { font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .cat-intro { max-width: 70ch; margin: 0 0 24px; color: var(--text-2); line-height: 1.7; }
 .cat-intro a { color: var(--accent); }
 .banner { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 16px 20px; margin-bottom: 24px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); color: var(--text); text-decoration: none; }
@@ -392,7 +388,11 @@ button { font: inherit; color: inherit; }
 .share .copy-link span { font-size: .9rem; font-weight: 500; }
 
 /* ---------- FAQ ---------- */
-.faq { margin: clamp(36px, 5vw, 56px) 0; }
+.faq { margin: clamp(36px, 5vw, 56px) 0; counter-reset: faq; }
+.faq summary::before { counter-increment: faq; content: counter(faq) ". "; color: var(--accent); }
+.prose .faq-q { display: flex; gap: .5em; font-size: 1.08rem; line-height: 1.45; margin: 1.5em 0 .4em; }
+.prose .faq-n { flex: none; min-width: 1.7em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.prose .faq-ans { margin-top: 0; padding-left: calc(1.7em + .5em); }
 .faq details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); margin-bottom: 10px; }
 .faq summary { cursor: pointer; padding: 15px 44px 15px 18px; font-weight: 700; color: var(--text); position: relative; list-style: none; }
 .faq summary::-webkit-details-marker { display: none; }
