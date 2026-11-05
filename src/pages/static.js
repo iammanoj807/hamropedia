@@ -228,7 +228,7 @@ export function renderRedirect(r) {
 <script>location.replace(${JSON.stringify(r.to)});</script>
 </head>
 <body>
-<p>This article was retired because its information was out of date. Taking you to the updated page: <a href="${r.to}">${to}</a></p>
+<p>${r.moved ? 'This article has moved to a new address.' : 'This article was retired because its information was out of date.'} Taking you to the updated page: <a href="${r.to}">${to}</a></p>
 </body>
 </html>`;
 }

@@ -160,4 +160,4 @@ Officials say "even minor mistakes in personal details or missing documents requ
 
 ---
 
-Next steps: if you are applying to the USA or Canada, you will probably need a credential evaluation. See [the WES evaluation step-by-step guide](/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/). Going to the UK? Read [UK student visa rules, explained](/uk-immigration-2025-new-student-visa-rules-explained-simply/).
+Next steps: if you are applying to the USA or Canada, you will probably need a credential evaluation. See [the WES evaluation step-by-step guide](/how-to-apply-for-wes-evaluation/). Going to the UK? Read [UK student visa rules, explained](/uk-student-visa-from-nepal/).

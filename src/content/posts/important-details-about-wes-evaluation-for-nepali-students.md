@@ -12,7 +12,7 @@ coverAlt: "WES credential evaluation explained"
 
 If you are applying to a university in the **USA or Canada**, sooner or later someone will ask for a "WES evaluation". This guide explains what a WES evaluation is, the difference between **WES ICAP and Basic** and between **course-by-course and document-by-document**, and what it costs in Nepal, using the fees published by WES itself (checked on 5 November 2026).
 
-Ready to apply? Jump to the [step-by-step WES application guide with screenshots](/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/).
+Ready to apply? Jump to the [step-by-step WES application guide with screenshots](/how-to-apply-for-wes-evaluation/).
 
 ## What is WES?
 
@@ -133,4 +133,4 @@ WES shows the exact list for your country and qualification after you create you
 
 **Course-by-course or document-by-document for a master's in the USA?** Usually course-by-course, because it includes a GPA. Follow your university's instructions.
 
-Next: [follow the WES application step by step](/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/) · [Apply for your NOC](/how-to-apply-noc-online-easy-steps-for-nepali-students/)
+Next: [follow the WES application step by step](/how-to-apply-for-wes-evaluation/) · [Apply for your NOC](/how-to-apply-noc-online-easy-steps-for-nepali-students/)

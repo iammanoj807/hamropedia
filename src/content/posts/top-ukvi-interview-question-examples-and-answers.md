@@ -73,7 +73,7 @@ It is usually short and conversational, often by video call. Your university or 
 - *How much is your tuition fee? How much have you paid?*
 - *How much are living costs where you will study?*
 
-**How to answer:** know your numbers exactly: tuition fee, deposit paid, remaining balance, and the monthly living cost for your city (for visa applications made on or after 30 November 2026, the rules use **£1,570 a month in London and £1,203 a month elsewhere**; see [UK student visa rules](/uk-immigration-2025-new-student-visa-rules-explained-simply/)). Know who your sponsor is, what they do, and where the funds are held.
+**How to answer:** know your numbers exactly: tuition fee, deposit paid, remaining balance, and the monthly living cost for your city (for visa applications made on or after 30 November 2026, the rules use **£1,570 a month in London and £1,203 a month elsewhere**; see [UK student visa rules](/uk-student-visa-from-nepal/)). Know who your sponsor is, what they do, and where the funds are held.
 
 > *"My [father/mother/relative] is sponsoring me. He/she works as a [job] and the funds are in [type of account] at [bank]. My tuition is £[amount]; I have paid a deposit of £[amount], and the remaining £[amount] is due in [month]. I have also shown £[amount] for nine months of living costs in [city]."*
 
@@ -175,6 +175,6 @@ To save this list as a PDF, use your browser's **Print** option and choose **Sav
 
 ---
 
-Related: [UK student visa rules explained (2026)](/uk-immigration-2025-new-student-visa-rules-explained-simply/) · [How to apply for NOC online](/how-to-apply-noc-online-easy-steps-for-nepali-students/)
+Related: [UK student visa rules explained (2026)](/uk-student-visa-from-nepal/) · [How to apply for NOC online](/how-to-apply-noc-online-easy-steps-for-nepali-students/)
 
 *This guide is general preparation advice, not legal advice. Follow the instructions from your university and from [gov.uk](https://www.gov.uk/student-visa).*

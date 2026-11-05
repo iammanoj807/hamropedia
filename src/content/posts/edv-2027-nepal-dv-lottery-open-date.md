@@ -94,7 +94,7 @@ Results for DV-2027 can only come after the entry period opens and closes, so an
 
 **Is the DV lottery open for 2028?** No. The programme is named after the US fiscal year of the visas. DV-2027 is the one currently delayed; no dates for DV-2028 have been announced.
 
-Related: [UK Graduate visa: 18 months from 2027](/uk-graduate-visa-two-years-high-compliance-universities/) · [How to apply for WES evaluation](/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/) (if you plan to study in the US) · [Nepali date converter](/tools/nepali-date-converter/)
+Related: [UK Graduate visa: 18 months from 2027](/uk-graduate-visa-two-years-high-compliance-universities/) · [How to apply for WES evaluation](/how-to-apply-for-wes-evaluation/) (if you plan to study in the US) · [Nepali date converter](/tools/nepali-date-converter/)
 
 ---
 
