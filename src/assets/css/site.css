@@ -345,7 +345,6 @@ button { font: inherit; color: inherit; }
 .prose strong { color: var(--text); }
 .prose ul, .prose ol { padding-left: 1.4em; margin: 0 0 1.2em; }
 .prose li { margin: .35em 0; }
-.prose li::marker { color: var(--accent); }
 .prose hr { border: 0; height: 1px; background: var(--border); margin: 2.5em 0; }
 .prose img { border-radius: var(--radius-sm); border: 1px solid var(--border); display: block; margin: 1.4em auto; }
 .prose figure { margin: 1.6em 0; }
