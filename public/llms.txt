@@ -31,6 +31,8 @@
 - [Nepali keyboard (Preeti layout and Romanized)](https://hamropedia.com/tools/nepali-keyboard/)
 - [Nepali date converter (BS to AD)](https://hamropedia.com/tools/nepali-date-converter/)
 - [Age calculator (BS and AD)](https://hamropedia.com/tools/age-calculator/)
+- [DV lottery photo tool: 600x600 JPEG under 240 kB](https://hamropedia.com/tools/dv-photo-tool/)
+- [Passport size photo maker: Nepal 35x45 mm, 2x2 inch, custom size and kB limit, 4x6 print sheet](https://hamropedia.com/tools/passport-size-photo-maker/)
 
 ## About
 - [About the author](https://hamropedia.com/about-us/)

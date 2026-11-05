@@ -138,6 +138,8 @@ const tools = {
   'nepali-keyboard': 'Nepali keyboard: Preeti layout and Romanized',
   'age-calculator': 'Age calculator: exact age in years, months and days',
   'nepali-date-converter': 'Nepali date converter: BS to AD, with calendar',
+  'dv-photo-tool': 'DV lottery photo tool: 600×600 under 240 kB',
+  'passport-size-photo-maker': 'Passport size photo maker: Nepal 35×45 mm',
 };
 for (const [slug, title] of Object.entries(tools)) {
   await render(coverSvg({ title, theme: 'tools' }), null, path.join(PUB, 'images/og', `tool-${slug}.jpg`));
