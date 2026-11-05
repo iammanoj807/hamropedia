@@ -8,7 +8,7 @@ import { BS_MONTHS_EN, BS_MONTHS_NE, BS_MIN_YEAR, BS_MAX_YEAR, BS_PROVISIONAL_FR
 export const TOOLS = [
   {
     slug: 'english-to-nepali',
-    name: 'English to Nepali Typing',
+    name: 'Nepali Typing: English to Nepali',
     short: 'Type Nepali with English letters',
     blurb: 'Type “mero naam” and get “मेरो नाम”. Romanized Nepali to Unicode, live, with smart spelling for common words.',
     sample: ['namaste', 'नमस्ते'],
@@ -144,6 +144,10 @@ export function renderRomanized(version) {
 <li><strong>Put English words in braces.</strong> <code>{Facebook}</code> stays “Facebook”.</li>
 </ol>
 <p><strong>Smart spelling</strong> fixes a few dozen everyday words that people usually type with short vowels, such as <code>nepal</code> → नेपाल, <code>kathmandu</code> → काठमाडौं and <code>dhanyabad</code> → धन्यवाद, and turns a final <code>lai</code> into लाई. Switch it off to get the strict letter-by-letter result.</p>
+<h2>Nepali typing on phone, laptop and Word</h2>
+<p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
+<h2>Nepali Unicode, not Preeti</h2>
+<p>Everything you type here is <strong>Nepali Unicode</strong>: real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> keeps the same keys.</p>
 <p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
@@ -153,6 +157,8 @@ export function renderRomanized(version) {
     { q: 'How do I write ऋ and कृ?', a: 'Use capital <code>R</code> (or <code>rri</code>): <code>R</code> gives ऋ, and <code>kR</code> gives कृ, so <code>kRShNa</code> becomes कृष्ण.' },
     { q: 'How do I end a word with a halanta (्)?', a: 'Type a backslash after it: <code>garchhan\\</code> gives गर्छन्. Without the backslash a final consonant keeps its normal sound, so <code>naam</code> gives नाम.' },
     { q: 'Can I paste the result into Facebook, Word or Google Docs?', a: 'Yes. The output is standard Unicode Devanagari, so it works in Facebook, Messenger, WhatsApp, Gmail, Word, Google Docs and websites, on phones and computers, with no special font.' },
+    { q: 'Is this Nepali typing tool free?', a: 'Yes, completely free, with no sign-up and no limit on how much you type. The conversion runs in your browser, so it keeps working even if your internet drops after the page has loaded.' },
+    { q: 'Can I type Nepali on my phone with this?', a: 'Yes. Open this page in your phone browser, type with your normal English keyboard, and copy the Nepali. If you type Nepali every day, add a Nepali keyboard to your phone instead; the <a href="/how-to-type-in-nepali-unicode-romanized/">typing guide</a> shows how.' },
     { q: 'Is my text sent anywhere?', a: 'No. The conversion runs entirely in your browser. Nothing you type is uploaded or stored on a server.' },
   ];
 
@@ -209,7 +215,9 @@ export function renderPreeti(version) {
 <li><strong>Convert only the Preeti parts.</strong> In Preeti, ordinary keys are Nepali letters (<code>1</code> is <span lang="ne">ज्ञ</span>, <code>a</code> is <span lang="ne">ब</span>), so English words or numbers typed in another font will be converted too.</li>
 <li><strong>Word documents:</strong> select the Preeti text in Word, copy and paste it here, then paste the Unicode back and choose a Unicode font. A whole page at a time works fine.</li>
 <li><strong>Check names and rare conjuncts.</strong> The converter handles the usual Preeti rules (ि typed before the letter, reph <code>{</code> after it, <code>k</code> + <code>m</code> for <span lang="ne">फ</span>), but unusual spellings can still come out wrong. If one does, <a href="/contact-us/">tell me which word</a> and I'll fix it.</li>
-</ul>`;
+</ul>
+<h2>For developers: open source</h2>
+<p>The converter is free and open source (MIT licence), with no dependencies: <a href="https://github.com/iammanoj807/nepali-unicode-tools" rel="noopener">nepali-unicode-tools on GitHub</a>. Use it in your own website or app.</p>`;
 
   const faqs = [
     { q: 'Why does the Unicode → Preeti result look like English letters?', a: 'That is normal. Preeti text is stored as English keys, so <span lang="ne">नेपाल</span> becomes <code>g]kfn</code>. Paste it into Word (or any program) and set the font to <strong>Preeti</strong>, and it shows as Nepali.' },
