@@ -133,6 +133,8 @@ export const redirects = [
   },
   // Renamed on 5 November 2026 to short URLs without a year (the year lives in the title).
   { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/how-to-learn-coding/', title: 'How to learn coding', moved: true },
+  // Merged into the DV photo tool on 5 November 2026; #passport-size opens it on Nepal 35×45 mm.
+  { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/#passport-size', title: 'Passport size photo maker', moved: true },
   { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/how-to-apply-for-wes-evaluation/', title: 'How to apply for WES evaluation', moved: true },
   { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-from-nepal/', title: 'UK student visa from Nepal', moved: true },
   { from: '/category/online-marketing/', to: '/blog/', title: 'Online marketing' },

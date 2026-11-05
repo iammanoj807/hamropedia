@@ -997,20 +997,15 @@ table.trace-rows td { white-space: pre; }
 .ph-drop { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; border: 2px dashed var(--border-2); border-radius: var(--radius-sm); background: var(--surface-2); text-align: center; color: var(--text-2); }
 .ph-drop p { margin: 0; max-width: 30ch; }
 .ph-drop.drag { border-color: var(--accent); background: var(--accent-soft); }
-.ph-controls { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; border: 0; min-width: 0; }
-.ph-tool:not(.has-photo) .ph-controls > :not(.ph-info) { opacity: .45; pointer-events: none; }
+.ph-controls { display: block; }
 .ph-info { margin: 0; color: var(--text-2); }
-.ph-info.bad, .ph-result.bad { color: var(--crimson); }
+.ph-info.bad { color: var(--crimson); }
 .ph-range { display: grid; gap: 6px; font-weight: 600; }
 .ph-range input { width: 100%; accent-color: var(--accent); }
 .ph-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .ph-btns .btn, .ph-btns .btn-ghost { padding: 9px 14px; font-size: .95rem; }
 .ph-btns [hidden] { display: none; }
 .ph-guide-row[hidden] { display: none; }
-.ph-guide-row p { margin: 6px 0 0; font-size: .92rem; color: var(--text-2); }
-.ph-result { margin: 0; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--surface-2); border: 1px solid var(--border); font-size: .95rem; }
-.ph-result:empty { display: none; }
-.ph-result.ok b { color: var(--text); }
 .ph-sheet-note { margin: 0; font-size: .92rem; color: var(--text-2); }
 .ph-sheet-note:empty { display: none; }
 @media (max-width: 760px) { .ph-main { grid-template-columns: 1fr; } }
@@ -1019,3 +1014,33 @@ table.trace-rows td { white-space: pre; }
   #ph-tool .seg-lg button { border-radius: calc(var(--radius-sm) - 2px); }
   .ph-custom { grid-template-columns: 1fr 1fr; }
 }
+.ph-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.ph-step { margin: 0; padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; }
+.ph-step-h { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; padding: 0; font-size: 1.05rem; font-weight: 700; color: var(--text); font-family: inherit; }
+.ph-step-h span { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: .85rem; flex: none; }
+.ph-controls > :not(legend) + * { margin-top: 12px; }
+.ph-tool:not(.has-photo) .ph-controls, .ph-tool:not(.has-photo) .ph-out { opacity: .5; pointer-events: none; }
+.ph-checks { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; font-size: .94rem; }
+.ph-checks:empty { display: none; }
+.ph-checks li { display: flex; gap: 8px; align-items: flex-start; }
+.ph-ic { flex: none; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; font-size: .75rem; font-weight: 800; color: #fff; }
+.ph-checks .ok .ph-ic { background: var(--green); }
+.ph-checks .bad .ph-ic { background: var(--crimson); }
+.ph-checks .info .ph-ic { background: var(--muted); font-style: italic; font-family: Georgia, serif; }
+.ph-verdict { margin: 10px 0 0; font-weight: 600; color: var(--text); }
+.ph-verdict:empty { display: none; }
+.ph-hint { margin: 8px 0 0; text-align: center; font-size: .88rem; color: var(--muted); }
+.ph-tool:not(.has-photo) .ph-hint { display: none; }
+.ph-examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 1em 0 1.4em; }
+.ph-example { margin: 0; }
+.ph-example svg { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); border: 3px solid var(--border); }
+.ph-example.is-ok svg { border-color: var(--green); }
+.ph-example.is-bad svg { border-color: var(--crimson); }
+.ph-example figcaption { margin-top: 6px; font-size: .9rem; line-height: 1.4; color: var(--text-2); }
+.ph-example.is-ok figcaption span { color: var(--green); font-weight: 800; }
+.ph-example.is-bad figcaption span { color: var(--crimson); font-weight: 800; }
+@media (max-width: 480px) { .ph-examples { gap: 8px; } .ph-example figcaption { font-size: .82rem; } }
+.ph-guide-row { display: grid; gap: 8px; }
+.ph-guide-row p { margin: 0; font-size: .92rem; color: var(--text-2); }
+.ph-controls legend { float: left; width: 100%; }
+.ph-controls legend + * { clear: both; }

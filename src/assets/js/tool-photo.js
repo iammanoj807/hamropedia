@@ -1,8 +1,9 @@
-import { PRESETS, DPI, toPx, coverScale, rotatedBox, clampOffset, sheetLayout, encodeUnder, setJpegDpi, formatKB } from './lib/photo.js';
+import { PRESETS, DPI, toPx, coverScale, rotatedBox, clampOffset, sheetLayout, encodeUnder, setJpegDpi, formatKB, checkFile, analyzePixels, pixelRows } from './lib/photo.js';
 import { store } from './site.js';
 
 // Everything happens in the browser: the photo is drawn on a canvas and saved with a
 // download link. Nothing is uploaded, and the photo itself is never stored.
+// Steps: 1 check the photo you chose, 2 fit your head inside the oval, 3 download.
 
 const $ = (id) => document.getElementById(id);
 const tool = $('ph-tool');
@@ -12,10 +13,10 @@ const fileInput = $('ph-file');
 const drop = $('ph-drop');
 const zoomEl = $('ph-zoom');
 const tiltEl = $('ph-tilt');
-const resultEl = $('ph-result');
 
 let img = null; // ImageBitmap or HTMLImageElement
-let presetKey = tool.dataset.default || 'dv';
+let source = null; // { type, bytes, w, h, example } of the chosen file
+let presetKey = location.hash === '#passport-size' ? 'np' : tool.dataset.default || 'dv';
 const view = { zoom: 1, ox: 0, oy: 0, quarter: 0, tilt: 0 };
 let checkTimer = 0;
 
@@ -44,6 +45,50 @@ function customPreset() {
 
 const preset = () => (presetKey === 'custom' ? customPreset() : PRESETS[presetKey]);
 const theta = () => ((view.quarter * 90 + view.tilt) * Math.PI) / 180;
+
+// ---- checklists ----------------------------------------------------------------------
+
+const ICON = { true: '✓', false: '✗', null: 'i' };
+const CLASS = { true: 'ok', false: 'bad', null: 'info' };
+
+function showChecks(el, rows) {
+  el.innerHTML = rows
+    .map((r) => `<li class="${CLASS[r.ok]}"><span class="ph-ic" aria-hidden="true">${ICON[r.ok]}</span><span><b>${r.label}:</b> ${r.detail}</span></li>`)
+    .join('');
+}
+
+/** Read the pixels of a canvas-like source at a small size, for the colour and background hints. */
+function pixelsOf(drawFn, w, h) {
+  const scale = Math.min(1, 160 / Math.max(w, h));
+  const c = document.createElement('canvas');
+  c.width = Math.max(1, Math.round(w * scale));
+  c.height = Math.max(1, Math.round(h * scale));
+  const cx = c.getContext('2d', { willReadFrequently: true });
+  cx.scale(c.width / w, c.height / h);
+  drawFn(cx, w, h);
+  return analyzePixels(cx.getImageData(0, 0, c.width, c.height).data, c.width, c.height);
+}
+
+/** Step 1: the photo exactly as chosen, against the rules of the current size. */
+function checkSource() {
+  if (!source) return;
+  const p = preset();
+  const fileRows = checkFile(source, p);
+  const hints = pixelsOf((c, w, h) => c.drawImage(img, 0, 0, w, h), img.width, img.height);
+  const rows = [...fileRows, ...pixelRows(hints)];
+  showChecks($('ph-check-in'), rows);
+  const fileOk = fileRows.every((r) => r.ok !== false);
+  const verdict = $('ph-verdict');
+  const name = presetKey === 'dv' ? 'the DV entry' : 'this size';
+  if (source.example) {
+    verdict.textContent = 'This is an example photo: practise moving and zooming it until the head fits the oval.';
+  } else if (fileOk) {
+    verdict.textContent = `This file already has the right format, size and shape for ${name}. Check that your head fits the oval in step 2; if it does, you can use the photo as it is.`;
+  } else {
+    verdict.textContent = `Not ready for ${name} yet. Steps 2 and 3 fix the size, shape and file size.`;
+  }
+  if (hints.background === 'dark') verdict.textContent += ' The background can’t be fixed here: take the photo again against a plain white wall.';
+}
 
 // ---- drawing -------------------------------------------------------------------------
 
@@ -125,39 +170,43 @@ function save(blob, name) {
   setTimeout(() => URL.revokeObjectURL(a.href), 4000);
 }
 
-/** Encode the photo as it will be downloaded and show its size, so people can check it first. */
-async function check() {
-  if (!img) return;
+/** Step 3: encode the photo as it will be downloaded and check it, before anyone downloads. */
+async function checkOutput() {
+  if (!img) return null;
   const p = preset();
   const out = await encodePhoto(photoCanvas(p), p.maxBytes, p.dpi);
+  const el = $('ph-check-out');
   if (!out) {
-    resultEl.className = 'ph-result bad';
-    resultEl.textContent = `This size can't get under ${formatKB(p.maxBytes)} as a JPEG. Try a smaller width and height, or a higher kB limit.`;
+    showChecks(el, [{ label: 'File size', ok: false, detail: `this size can’t get under ${formatKB(p.maxBytes)} as a JPEG. Try a smaller width and height, or a higher kB limit` }]);
     return null;
   }
-  const limit = p.maxBytes ? ` (limit ${formatKB(p.maxBytes)})` : '';
-  resultEl.className = 'ph-result ok';
-  resultEl.innerHTML = `<b>Your download:</b> ${p.w} × ${p.h} pixels · JPEG · ${formatKB(out.blob.size)}${limit} ✓`;
+  const rows = checkFile({ type: 'image/jpeg', bytes: out.blob.size, w: p.w, h: p.h }, p);
+  const hints = pixelsOf((c, w, h) => drawPhoto(c, w, h), p.w, p.h);
+  showChecks(el, [
+    ...rows,
+    ...pixelRows(hints),
+    { label: 'Head size', ok: null, detail: p.guide ? 'check by eye that your head fits the oval' : 'check it matches what your form asks for' },
+  ]);
   return out;
 }
 
 function scheduleCheck() {
   clearTimeout(checkTimer);
-  checkTimer = setTimeout(check, 350);
+  checkTimer = setTimeout(checkOutput, 350);
 }
 
 async function downloadPhoto() {
   const p = preset();
-  const out = await check();
+  const out = await checkOutput();
   if (out) save(out.blob, `${p.file}.jpg`);
 }
 
 async function downloadSheet() {
   const p = preset();
   const layout = sheetLayout(p.w, p.h);
+  const note = $('ph-sheet-note');
   if (!layout) {
-    resultEl.className = 'ph-result bad';
-    resultEl.textContent = 'This photo is too big to fit on a 4×6 inch sheet.';
+    note.textContent = 'This photo is too big to fit on a 4×6 inch sheet.';
     return;
   }
   const photo = photoCanvas(p);
@@ -175,45 +224,58 @@ async function downloadSheet() {
   }
   const out = await encodePhoto(c, 0, DPI);
   if (out) save(out.blob, `${p.file}-4x6-sheet-${layout.count}.jpg`);
-  $('ph-sheet-note').textContent = `${layout.count} photos on a 4 × 6 inch (10 × 15 cm) sheet. Print at 100% (actual size), not “fit to page”.`;
+  note.textContent = `${layout.count} photos on a 4 × 6 inch (10 × 15 cm) sheet. Print at 100% (actual size), not “fit to page”.`;
 }
 
 // ---- loading a photo -----------------------------------------------------------------
 
-async function decode(file) {
+async function decode(blob) {
   if ('createImageBitmap' in window) {
     try {
-      return await createImageBitmap(file, { imageOrientation: 'from-image' });
+      return await createImageBitmap(blob, { imageOrientation: 'from-image' });
     } catch { /* fall back to <img> below */ }
   }
   return new Promise((resolve, reject) => {
-    const url = URL.createObjectURL(file);
     const el = new Image();
     el.onload = () => resolve(el);
     el.onerror = () => reject(new Error('decode'));
-    el.src = url;
+    el.src = URL.createObjectURL(blob);
   });
 }
 
-async function load(file) {
+async function load(file, { example = false } = {}) {
   if (!file) return;
   const info = $('ph-info');
   try {
     img = await decode(file);
   } catch {
-    const heic = /heic|heif/i.test(file.type) || /\.hei[cf]$/i.test(file.name);
+    const heic = /heic|heif/i.test(file.type) || /\.hei[cf]$/i.test(file.name || '');
     info.className = 'ph-info bad';
     info.textContent = heic
       ? 'This browser can’t open HEIC photos. Open this page in Safari, or on iPhone set Settings → Camera → Formats → Most Compatible and take the photo again.'
       : 'That file couldn’t be opened as a photo. Try a JPEG or PNG.';
     return;
   }
-  const type = (file.type.split('/')[1] || file.name.split('.').pop() || '').toUpperCase();
+  source = { type: file.type || 'image/jpeg', bytes: file.size, w: img.width, h: img.height, example };
   info.className = 'ph-info';
-  info.textContent = `Your photo: ${img.width} × ${img.height} pixels, ${type || 'image'}, ${formatKB(file.size)}. It stays on this device.`;
+  info.textContent = example
+    ? 'Example photo loaded. Drag it and zoom until the head fits the oval.'
+    : `Your photo: ${img.width} × ${img.height} pixels, ${formatKB(file.size)}. It stays on this device.`;
   tool.classList.add('has-photo');
   reset();
+  checkSource();
   canvas.focus({ preventScroll: true });
+}
+
+async function loadExample() {
+  const btn = $('ph-example');
+  btn.disabled = true;
+  try {
+    const res = await fetch(btn.dataset.src);
+    await load(await res.blob(), { example: true });
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 function reset() {
@@ -316,6 +378,7 @@ $('ph-guide').addEventListener('change', render);
 $('ph-dl').addEventListener('click', downloadPhoto);
 $('ph-sheet').addEventListener('click', downloadSheet);
 $('ph-change').addEventListener('click', () => fileInput.click());
+$('ph-example').addEventListener('click', loadExample);
 fileInput.addEventListener('change', () => {
   load(fileInput.files && fileInput.files[0]);
   fileInput.value = '';
@@ -343,15 +406,17 @@ function setPreset(key) {
   $('ph-guide-row').hidden = !p.guide;
   $('ph-guide-text').textContent = p.guide
     ? (p.guide.min === p.guide.max
-      ? 'Fit your head, chin to top of hair, inside the oval: the Nepal Embassy asks for about 70% face coverage.'
-      : 'Fit your head, chin to top of hair, between the two ovals: it must be 50% to 69% of the photo height.')
+      ? 'Your face should fill the oval: the Nepal Embassy asks for about 70% face coverage.'
+      : 'Your head, chin to top of hair, must be between the inner and outer oval: 50% to 69% of the photo height.')
     : '';
   $('ph-sheet').hidden = !p.sheet;
   $('ph-sheet-note').textContent = '';
+  checkSource();
   update();
 }
 
 document.querySelectorAll('#ph-tool [data-preset]').forEach((b) => b.addEventListener('click', () => setPreset(b.dataset.preset)));
+window.addEventListener('hashchange', () => { if (location.hash === '#passport-size') setPreset('np'); });
 
 // custom size fields: remember them on this device (only the numbers, never the photo)
 const fields = ['ph-cw', 'ph-ch', 'ph-cu', 'ph-ckb'];

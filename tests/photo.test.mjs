@@ -80,3 +80,51 @@ test('photo file: 300 dpi is written into the JPEG header', () => {
   const notJpeg = new Uint8Array([1, 2, 3]);
   assert.equal(setJpegDpi(notJpeg, 300), notJpeg);
 });
+
+test('photo checker: a phone photo fails the DV file rules, the tool output passes', async () => {
+  const { checkFile } = await import('../src/assets/js/lib/photo.js');
+  const phone = checkFile({ type: 'image/png', bytes: 586000, w: 3000, h: 3539 }, PRESETS.dv);
+  const by = Object.fromEntries(phone.map((r) => [r.key, r]));
+  assert.equal(by.format.ok, false);
+  assert.equal(by.bytes.ok, false);
+  assert.match(by.bytes.detail, /586 kB: must be 240 kB or less/);
+  assert.equal(by.shape.ok, false);
+  assert.equal(by.pixels.ok, false);
+  assert.equal(by.detail.ok, true); // big enough to crop down
+  const out = checkFile({ type: 'image/jpeg', bytes: 52000, w: 600, h: 600 }, PRESETS.dv);
+  assert.ok(out.every((r) => r.ok === true));
+  // a small photo is flagged as possibly blurry, but not as a failure
+  const small = checkFile({ type: 'image/jpeg', bytes: 30000, w: 400, h: 400 }, PRESETS.dv);
+  assert.equal(small.find((r) => r.key === 'detail').ok, null);
+  // Nepal size has no JPEG or kB rule; shape 413:531
+  const np = checkFile({ type: 'image/jpeg', bytes: 40000, w: 413, h: 531 }, PRESETS.np);
+  assert.deepEqual(np.map((r) => r.key), ['shape', 'pixels']);
+  assert.ok(np.every((r) => r.ok));
+});
+
+test('photo checker: colour and background hints', async () => {
+  const { analyzePixels, pixelRows } = await import('../src/assets/js/lib/photo.js');
+  const W = 40;
+  const H = 40;
+  const img = (bg, person) => {
+    const d = new Uint8ClampedArray(W * H * 4);
+    for (let y = 0; y < H; y++) {
+      for (let x = 0; x < W; x++) {
+        const inPerson = x > 12 && x < 28 && y > 10;
+        const [r, g, b] = inPerson ? person : bg;
+        d.set([r, g, b, 255], (y * W + x) * 4);
+      }
+    }
+    return d;
+  };
+  const white = analyzePixels(img([245, 245, 240], [200, 150, 120]), W, H);
+  assert.deepEqual([white.background, white.grey], ['light', false]);
+  const black = analyzePixels(img([10, 10, 10], [200, 150, 120]), W, H);
+  assert.equal(black.background, 'dark');
+  assert.equal(pixelRows(black).find((r) => r.key === 'background').ok, false);
+  const blue = analyzePixels(img([170, 200, 240], [200, 150, 120]), W, H); // light but clearly blue
+  assert.equal(blue.background, 'unclear');
+  const grey = analyzePixels(img([240, 240, 240], [120, 120, 120]), W, H);
+  assert.equal(grey.grey, true);
+  assert.equal(pixelRows(grey).find((r) => r.key === 'colour').ok, false);
+});

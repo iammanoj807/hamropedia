@@ -3,6 +3,7 @@ import { esc } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar, pageHead } from '../templates/components.js';
 import { CHEAT_SHEET } from '../assets/js/lib/romanized.js';
+import { exampleSvg } from '../lib/photo-figure.js';
 import { BS_MONTHS_EN, BS_MONTHS_NE, BS_MIN_YEAR, BS_MAX_YEAR, BS_PROVISIONAL_FROM, AD_MONTHS_EN, WEEKDAYS_EN, bsToAd, daysInBsMonth, toNepaliDigits } from '../assets/js/lib/bs-date.js';
 
 export const TOOLS = [
@@ -44,17 +45,9 @@ export const TOOLS = [
   {
     slug: 'dv-photo-tool',
     name: 'DV Lottery Photo Tool',
-    short: 'EDV photo: 600×600, under 240 kB',
-    blurb: 'Crop and resize your DV (EDV) photo to 600×600 pixels as a JPEG of 240 kB or less, with a head-size guide. On your phone or computer, nothing uploaded.',
+    short: 'Check and crop DV and passport size photos',
+    blurb: 'Check your DV (EDV) photo, then crop it to 600×600 pixels under 240 kB. Also Nepal passport size 35×45 mm, 2×2 inch and custom sizes, with a 4×6 print sheet.',
     sample: ['4032×3024', '600×600'],
-    latin: true,
-  },
-  {
-    slug: 'passport-size-photo-maker',
-    name: 'Passport Size Photo Maker',
-    short: 'Nepal 35×45 mm, 2×2 inch or any size',
-    blurb: 'Make passport size photos: Nepal 35×45 mm, 2×2 inch, or your own size and kB limit. Download the photo or a 4×6 sheet to print. Free, nothing uploaded.',
-    sample: ['35×45 mm', '413×531 px'],
     latin: true,
   },
 ];
@@ -71,13 +64,13 @@ function related(current) {
 </section>`;
 }
 
-function toolPage({ t, title, description, lead, toolHtml, explainer, faqs, script }) {
+function toolPage({ t, h1, title, description, lead, toolHtml, explainer, faqs, script }) {
   const crumbs = [
     { name: 'Home', path: '/' },
     { name: 'Tools', path: '/tools/' },
     { name: t.name, path: toolPath(t.slug) },
   ];
-  const body = `${pageHead({ crumbs, eyebrow: 'Free tool · runs on your device', title: esc(t.name), lead })}
+  const body = `${pageHead({ crumbs, eyebrow: 'Free tool · runs on your device', title: esc(h1 || t.name), lead })}
 <section class="wrap tool-wrap">${toolHtml}</section>
 <section class="wrap-narrow prose tool-explainer">${explainer}</section>
 <section class="wrap-narrow">${faqBlock(faqs)}${shareBar(`${site.url}${toolPath(t.slug)}`, t.name)}${related(t.slug)}</section>`;
@@ -452,18 +445,17 @@ export function renderDate(version) {
 }
 
 // ---------------------------------------------------------------------------
-// Photo tools: one engine (tool-photo.js), two pages that open on different sizes.
+// Photo tool: one page, several sizes (DV, Nepal passport size, 2×2 inch, custom).
 
 const DOS_PHOTOS = 'https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html';
 const NP_EMBASSY = 'https://au.nepalembassy.gov.np/pages/required-documents-10/';
 const GOV_UK_PHOTOS = 'https://www.gov.uk/photos-for-passports';
 
-function photoToolHtml(defaultPreset) {
-  const order = defaultPreset === 'np' ? ['np', 'us2x2', 'dv', 'custom'] : ['dv', 'us2x2', 'np', 'custom'];
-  const labels = { dv: 'DV Lottery 600×600', np: 'Nepal passport 35×45 mm', us2x2: '2×2 inch print', custom: 'Custom size' };
-  return `<div class="tool ph-tool" id="ph-tool" data-default="${defaultPreset}">
+function photoToolHtml() {
+  const presets = [['dv', 'DV Lottery 600×600'], ['np', 'Nepal passport 35×45 mm'], ['us2x2', '2×2 inch print'], ['custom', 'Custom size']];
+  return `<div class="tool ph-tool" id="ph-tool" data-default="dv">
   <div class="seg seg-lg ph-presets" role="radiogroup" aria-label="Photo size">
-    ${order.map((k) => `<button type="button" role="radio" aria-checked="${k === defaultPreset}" data-preset="${k}">${labels[k]}</button>`).join('\n    ')}
+    ${presets.map(([k, label]) => `<button type="button" role="radio" aria-checked="${k === 'dv'}" data-preset="${k}">${label}</button>`).join('\n    ')}
   </div>
   <div class="ph-custom" id="ph-custom" hidden>
     <label>Width<input type="number" id="ph-cw" min="0" step="any" inputmode="decimal" value="35"></label>
@@ -475,130 +467,122 @@ function photoToolHtml(defaultPreset) {
   <div class="ph-main">
     <div class="ph-stage">
       <div class="ph-drop" id="ph-drop">
-        <label class="btn">Choose a photo<input type="file" id="ph-file" accept="image/*" hidden></label>
-        <p>or drag a photo here. <b>Nothing is uploaded</b>: it stays on your device.</p>
+        <label class="btn">Choose your photo<input type="file" id="ph-file" accept="image/*" hidden></label>
+        <p>or drag it here. <b>Nothing is uploaded</b>: it stays on your device.</p>
+        <button type="button" class="btn-ghost" id="ph-example" data-src="/images/tools/dv-example-photo.jpg">Try an example photo</button>
       </div>
       <canvas id="ph-canvas" tabindex="0" aria-label="Photo crop area. Drag to move, pinch or scroll to zoom, or use the arrow keys."></canvas>
+      <p class="ph-hint">Drag to move · pinch, scroll or use Zoom to resize</p>
     </div>
-    <fieldset class="ph-controls" id="ph-controls">
-      <legend class="sr-only">Adjust the photo</legend>
-      <p class="ph-info" id="ph-info">Choose a photo to start. Then drag it to move it, and pinch or use Zoom to resize it.</p>
-      <label class="ph-range">Zoom<input type="range" id="ph-zoom" min="0.5" max="4" step="0.01" value="1"></label>
-      <label class="ph-range">Straighten<input type="range" id="ph-tilt" min="-15" max="15" step="0.5" value="0"></label>
-      <div class="ph-btns">
-        <button type="button" class="btn-ghost" id="ph-rotl" aria-label="Rotate left">⟲ Rotate</button>
-        <button type="button" class="btn-ghost" id="ph-rotr" aria-label="Rotate right">⟳ Rotate</button>
-        <button type="button" class="btn-ghost" id="ph-reset">Reset</button>
-        <button type="button" class="btn-ghost" id="ph-change">Change photo</button>
-      </div>
-      <div class="ph-guide-row" id="ph-guide-row">
-        <label class="switch"><input type="checkbox" id="ph-guide" checked><span>Head guide</span></label>
-        <p id="ph-guide-text"></p>
-      </div>
-      <p class="ph-result" id="ph-result" aria-live="polite"></p>
-      <div class="ph-btns">
-        <button type="button" class="btn" id="ph-dl">Download photo</button>
-        <button type="button" class="btn-ghost" id="ph-sheet">Download 4×6 print sheet</button>
-      </div>
-      <p class="ph-sheet-note" id="ph-sheet-note" aria-live="polite"></p>
-    </fieldset>
+    <div class="ph-side">
+      <section class="ph-step" aria-labelledby="ph-s1">
+        <h2 class="ph-step-h" id="ph-s1"><span>1</span> Check your photo</h2>
+        <p class="ph-info" id="ph-info">Choose a photo and the tool checks it against the rules for the size you picked.</p>
+        <ul class="ph-checks" id="ph-check-in"></ul>
+        <p class="ph-verdict" id="ph-verdict"></p>
+      </section>
+      <fieldset class="ph-step ph-controls" id="ph-controls">
+        <legend class="ph-step-h"><span>2</span> Fit your head inside the oval</legend>
+        <div class="ph-guide-row" id="ph-guide-row">
+          <p id="ph-guide-text"></p>
+          <label class="switch"><input type="checkbox" id="ph-guide" checked><span>Show the oval</span></label>
+        </div>
+        <label class="ph-range">Zoom<input type="range" id="ph-zoom" min="0.5" max="4" step="0.01" value="1"></label>
+        <label class="ph-range">Straighten<input type="range" id="ph-tilt" min="-15" max="15" step="0.5" value="0"></label>
+        <div class="ph-btns">
+          <button type="button" class="btn-ghost" id="ph-rotl" aria-label="Rotate left">⟲ Rotate</button>
+          <button type="button" class="btn-ghost" id="ph-rotr" aria-label="Rotate right">⟳ Rotate</button>
+          <button type="button" class="btn-ghost" id="ph-reset">Reset</button>
+          <button type="button" class="btn-ghost" id="ph-change">Change photo</button>
+        </div>
+      </fieldset>
+      <section class="ph-step ph-out" aria-labelledby="ph-s3">
+        <h2 class="ph-step-h" id="ph-s3"><span>3</span> Download</h2>
+        <ul class="ph-checks" id="ph-check-out" aria-live="polite"></ul>
+        <div class="ph-btns">
+          <button type="button" class="btn" id="ph-dl">Download photo</button>
+          <button type="button" class="btn-ghost" id="ph-sheet">Download 4×6 print sheet</button>
+        </div>
+        <p class="ph-sheet-note" id="ph-sheet-note" aria-live="polite"></p>
+      </section>
+    </div>
   </div>
 </div>`;
 }
 
 export function renderDvPhoto(version) {
   const t = toolBySlug('dv-photo-tool');
-  const explainer = `<blockquote class="callout callout-update"><p><strong>DV-2027 entries have not opened yet.</strong> You can get your photo ready now. For the opening date and the court case, follow the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV 2027 guide</a>.</p></blockquote>
-<h2>DV lottery photo requirements</h2>
-<p>For the online DV entry, the U.S. Department of State asks for a digital image that is:</p>
-<ul>
-<li>in <strong>JPEG</strong> (.jpg) format</li>
-<li><strong>240 kB or less</strong> in file size</li>
-<li><strong>square</strong> (height equals width) and <strong>600 × 600 pixels</strong></li>
-</ul>
-<p>The photo itself must be in colour, taken within the last <strong>6 months</strong>, in front of a <strong>plain white or off-white</strong> background, in full-face view with a neutral expression and both eyes open. Your head, from the bottom of the chin to the top of the head, must be <strong>between 50% and 69% of the image height</strong>. <strong>Eyeglasses are no longer allowed</strong>, except in rare medical cases. Source: <a href="${DOS_PHOTOS}" rel="noopener">U.S. Department of State photo requirements</a>.</p>
-<h2>How to make your DV photo</h2>
-<ol>
-<li><strong>Take the photo</strong> against a plain white or off-white wall, in even light, looking straight at the camera. Leave space around your head and shoulders so there is room to crop.</li>
-<li><strong>Choose the photo</strong> above. The tool opens on the DV size: 600 × 600 pixels.</li>
-<li><strong>Drag to move</strong> and pinch (or use Zoom) until your head, chin to top of hair, fits between the two ovals. Use Straighten if your head is tilted.</li>
-<li><strong>Check the result line</strong>: 600 × 600 pixels, JPEG, 240 kB or less. Then download it and upload that file in your entry.</li>
-</ol>
-<p>Every person on the entry needs their own photo: you, your spouse and each unmarried child under 21, even if they won't move with you (see the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV guide</a>).</p>
-<h2>Interview photos: two 2×2 inch prints</h2>
-<p>If you are selected, each DV applicant brings <strong>two identical photos</strong> to the interview, printed on photo quality paper, <strong>2 × 2 inches (51 × 51 mm)</strong>. Choose <strong>2×2 inch print</strong> and download the 4×6 print sheet: two photos on one 4 × 6 inch sheet, ready to print at a photo studio.</p>
-<h2>A cropping tool, not a photo editor</h2>
-<p>This tool only crops, rotates, straightens and resizes. It does not smooth skin, change colours or remove backgrounds, because the State Department says photos must not be digitally enhanced or altered to change your appearance. If your background is not plain white or off-white, take the photo again.</p>
-<p>The State Department also has its own free <a href="https://tsg.phototool.state.gov/photo" rel="noopener">photo tool</a> that crops a photo to 600 × 600 pixels. Whichever you use, a State Department employee makes the final decision on your photo: no tool can promise it will be accepted.</p>
-<p>Need a passport size photo instead? Use the <a href="/tools/passport-size-photo-maker/">passport size photo maker</a> (Nepal 35 × 45 mm).</p>`;
+  const examples = `<div class="ph-examples">
+${exampleSvg({ headShare: 0.6, label: 'Right: the head is between the two ovals', ok: true })}
+${exampleSvg({ headShare: 0.36, label: 'Too small: zoom in', ok: false })}
+${exampleSvg({ headShare: 0.84, label: 'Too big: zoom out', ok: false })}
+</div>`;
 
-  const faqs = [
-    { q: 'What size is the DV lottery photo?', a: 'A square JPEG of <strong>600 × 600 pixels</strong>, <strong>240 kB or less</strong>. Your head, chin to top of head, must be 50% to 69% of the image height, on a plain white or off-white background.' },
-    { q: 'How do I make my DV photo under 240 kB?', a: 'This tool does it for you. It saves the photo as a JPEG and lowers the quality step by step until the file is 240 kB or less, then shows the final size before you download. A 600 × 600 photo is usually well under the limit.' },
-    { q: 'Can I take my DV photo with a phone?', a: 'You may take the photo yourself, though the State Department recommends a professional photo service and says low quality mobile phone photos and snapshots are not acceptable. Use a sharp photo, even light and a plain white or off-white background.' },
-    { q: 'Can I wear glasses in the DV photo?', a: 'No. Eyeglasses are no longer allowed in new visa photos, except in rare cases where they cannot be removed for medical reasons, with a signed medical statement.' },
-    { q: 'Can I use an old photo for the DV lottery?', a: 'No. The photo must have been taken within the last 6 months. To scan an existing photo, it must be 2 × 2 inches and scanned at 300 pixels per inch.' },
-    { q: 'Does every family member need a photo?', a: 'Yes: you, your spouse and each unmarried child under 21 need their own photo on the entry, even if they will not move with you.' },
-    { q: 'Is my photo uploaded to your server?', a: 'No. The photo is opened, cropped and saved entirely in your browser. It never leaves your phone or computer, and it is not stored.' },
-    { q: 'Will my photo be accepted?', a: 'No tool can promise that. This tool makes the file the right size, shape and weight; whether the photo itself is acceptable is decided by the U.S. Department of State.' },
-  ];
-
-  return toolPage({
-    t,
-    title: `DV Lottery Photo Tool: 600x600 EDV Photo Under 240 kB | ${site.name}`,
-    description: 'Free DV lottery photo tool: crop and resize your EDV photo to 600×600 pixels, JPEG under 240 kB, with a head-size guide. Works on phone, nothing uploaded.',
-    lead: 'Crop your DV (EDV) lottery photo to <strong>600 × 600 pixels</strong> and save it as a JPEG of <strong>240 kB or less</strong>. Free, on your phone or computer, and your photo never leaves your device.',
-    toolHtml: photoToolHtml('dv'),
-    explainer,
-    faqs,
-    script: '/assets/js/tool-photo.js',
-  })(version);
-}
-
-export function renderPassportPhoto(version) {
-  const t = toolBySlug('passport-size-photo-maker');
-  const explainer = `<h2>Passport size photo size in Nepal</h2>
-<p>A Nepali passport size (pp size) photo is <strong>35 mm wide and 45 mm tall</strong> (3.5 × 4.5 cm). The Nepal Embassy in Australia, for example, asks for “35mm X 45mm sized, only 70% face coverage, high resolution borderless photos” with a <strong>white background</strong>, and says photos with a tika on the forehead are not accepted (<a href="${NP_EMBASSY}" rel="noopener">Embassy of Nepal, Canberra</a>).</p>
+  const explainer = `<blockquote class="callout callout-update"><p><strong>DV-2027 entries have not opened yet.</strong> You can get your photo ready now. For the opening date, follow the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV 2027 guide</a>.</p></blockquote>
+<h2>DV lottery photo size and requirements</h2>
+<p>This is what the U.S. Department of State asks for in the online DV entry (<a href="${DOS_PHOTOS}" rel="noopener">official photo requirements</a>):</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Photo</th><th>mm</th><th>cm</th><th>inches</th><th>pixels (300 dpi)</th></tr></thead>
 <tbody>
-<tr><td>Nepal passport size</td><td>35 × 45</td><td>3.5 × 4.5</td><td>1.38 × 1.77</td><td>413 × 531</td></tr>
-<tr><td>2 × 2 inch (US visa)</td><td>51 × 51</td><td>5.1 × 5.1</td><td>2 × 2</td><td>600 × 600</td></tr>
-<tr><td>DV lottery (online entry)</td><td>–</td><td>–</td><td>–</td><td>600 × 600, 240 kB or less</td></tr>
+<tr><th scope="row">File format</th><td>JPEG (.jpg)</td></tr>
+<tr><th scope="row">File size</th><td>240 kB or less</td></tr>
+<tr><th scope="row">Shape and size</th><td>Square, 600 × 600 pixels</td></tr>
+<tr><th scope="row">Head size</th><td>50% to 69% of the image height, from the bottom of the chin to the top of the head</td></tr>
+<tr><th scope="row">Background</th><td>Plain white or off-white</td></tr>
+<tr><th scope="row">Colour and age</th><td>In colour, taken within the last 6 months</td></tr>
+<tr><th scope="row">Pose</th><td>Full face, looking straight at the camera, neutral expression, both eyes open</td></tr>
+<tr><th scope="row">Glasses</th><td>Not allowed, except in rare medical cases</td></tr>
+<tr><th scope="row">Editing</th><td>Must not be digitally enhanced or altered to change your appearance</td></tr>
 </tbody>
 </table></div>
-<p>Different offices and online forms can ask for other sizes or file limits. Always follow the size in the form or notice you are applying to: choose <strong>Custom size</strong> and enter it in mm, cm, inches or pixels, with a maximum file size in kB if the form has one.</p>
-<h2>How to make a passport size photo</h2>
+<p>Steps 1 and 3 above check the file rules for you: format, file size, shape and pixel size. They also look at the colour and the background, but those are only hints. The head size you check by eye, with the oval.</p>
+<h2>How to fit your head inside the oval</h2>
+<p>For the DV size the tool shows two ovals. Move and zoom the photo until your head, from the chin to the top of your hair, is <strong>bigger than the inner oval and smaller than the outer one</strong>. That keeps it between 50% and 69% of the photo height.</p>
+${examples}
+<p>Not sure how it works? Press <strong>Try an example photo</strong> in the tool: the example person starts too small and off-centre, so you can practise zooming and moving them into the oval.</p>
+<h2>How to make your DV photo, step by step</h2>
 <ol>
-<li><strong>Take the photo</strong> against a plain white wall in even light, facing the camera, with space around your head and shoulders.</li>
-<li><strong>Choose the photo</strong> above. The tool opens on Nepal passport size, 35 × 45 mm.</li>
-<li><strong>Drag to move</strong> and pinch (or use Zoom) until your face fills the oval guide. Use Straighten if the photo is tilted.</li>
-<li><strong>Download the photo</strong> for an online form, or the <strong>4×6 print sheet</strong> to print.</li>
+<li><strong>Take the photo</strong> against a plain white or off-white wall, in even light, looking straight at the camera, with no glasses. Leave space around your head and shoulders.</li>
+<li><strong>Check it</strong>: choose it in the tool. Step 1 shows what already meets the rules (✓) and what doesn't (✗).</li>
+<li><strong>Crop it</strong>: drag and zoom until your head fits between the ovals. Use Straighten if your head is tilted.</li>
+<li><strong>Download it</strong> when step 3 shows 600 × 600 pixels, JPEG and 240 kB or less, then upload that file in your entry.</li>
 </ol>
-<h2>Print passport photos on one 4×6 sheet</h2>
-<p>The print sheet puts <strong>8 Nepal passport size photos</strong> (35 × 45 mm) on one 4 × 6 inch (10 × 15 cm) photo, with thin lines to cut along. Print it at a photo studio as a normal 4 × 6 print, or at home on 4 × 6 photo paper at <strong>100% (actual size)</strong>, not “fit to page”. The 2 × 2 inch size gives two photos per sheet, which is what a US visa interview asks for.</p>
-<p>The saved files carry a 300 dpi setting, so Word and most printers print them at their real size.</p>
-<h2>UK passport photos: don't crop</h2>
-<p>For a UK passport, gov.uk says “Do not crop your photo” for online applications (the crop is done for you), and printed photos must not be “a cut down version of a larger picture”. Upload or print the original photo instead (<a href="${GOV_UK_PHOTOS}" rel="noopener">GOV.UK: photos for passports</a>).</p>
-<p>Making a photo for the DV lottery? Use the <a href="/tools/dv-photo-tool/">DV lottery photo tool</a>: 600 × 600 pixels, 240 kB or less.</p>`;
+<p>Every person on the entry needs their own photo: you, your spouse and each unmarried child under 21, even if they won't move with you (see the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV guide</a>). If you are selected, each applicant brings <strong>two identical 2 × 2 inch (51 × 51 mm) prints</strong> to the interview: choose <strong>2×2 inch print</strong> and download the 4×6 print sheet.</p>
+<h2>What this DV photo editor changes, and what it doesn't</h2>
+<p>It crops, rotates, straightens and resizes, and it saves the file small enough. It does not smooth skin, change colours or remove backgrounds, because the State Department says photos must not be digitally enhanced or altered to change your appearance. If step 1 says the background looks dark, take the photo again against a white wall.</p>
+<p>The State Department also has its own free <a href="https://tsg.phototool.state.gov/photo" rel="noopener">photo tool</a> that crops a photo to 600 × 600 pixels. Whichever you use, a State Department employee makes the final decision on your photo: no tool can promise it will be accepted.</p>
+<h2 id="passport-size-photo">Passport size photo: Nepal 35 × 45 mm</h2>
+<p>The same tool makes passport size photos. A Nepali passport size (pp size) photo is <strong>35 mm wide and 45 mm tall</strong> (3.5 × 4.5 cm). The Nepal Embassy in Australia, for example, asks for “35mm X 45mm sized, only 70% face coverage, high resolution borderless photos” with a white background, and says photos with a tika on the forehead are not accepted (<a href="${NP_EMBASSY}" rel="noopener">Embassy of Nepal, Canberra</a>). Choose <strong>Nepal passport 35×45 mm</strong>, fit your face in the oval, and download the photo or a <strong>4×6 print sheet with 8 photos</strong>. Print the sheet at 100% (actual size), not “fit to page”.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Photo</th><th>mm</th><th>inches</th><th>pixels (300 dpi)</th><th>On a 4×6 sheet</th></tr></thead>
+<tbody>
+<tr><td>Nepal passport size</td><td>35 × 45</td><td>1.38 × 1.77</td><td>413 × 531</td><td>8</td></tr>
+<tr><td>2 × 2 inch (US visa, DV interview)</td><td>51 × 51</td><td>2 × 2</td><td>600 × 600</td><td>2</td></tr>
+<tr><td>DV lottery entry (digital)</td><td>–</td><td>–</td><td>600 × 600, 240 kB or less</td><td>–</td></tr>
+</tbody>
+</table></div>
+<p>Online forms in Nepal can ask for other sizes or a file limit in kB. Follow what your form says: choose <strong>Custom size</strong> and enter it in mm, cm, inches or pixels, with a maximum size in kB.</p>
+<p><strong>UK passport?</strong> Don't crop it. For online applications gov.uk says “Do not crop your photo” (the crop is done for you), and printed photos must not be “a cut down version of a larger picture” (<a href="${GOV_UK_PHOTOS}" rel="noopener">GOV.UK</a>).</p>`;
 
   const faqs = [
-    { q: 'What is the passport size photo size in Nepal?', a: '<strong>35 × 45 mm</strong> (3.5 × 4.5 cm). The Nepal Embassy in Australia, for example, asks for 35 × 45 mm photos with a white background, about 70% face coverage and no border.' },
-    { q: 'What is passport size photo size in pixels?', a: 'At 300 dpi, a 35 × 45 mm photo is <strong>413 × 531 pixels</strong>, and a 2 × 2 inch photo is 600 × 600 pixels. Use Custom size for any other size.' },
-    { q: 'What is pp size photo size in cm?', a: '3.5 cm wide and 4.5 cm tall (35 × 45 mm). “PP size” is short for passport size.' },
-    { q: 'How many passport size photos fit on a 4×6 print?', a: 'Eight 35 × 45 mm photos, with gaps to cut along. For 2 × 2 inch photos, the sheet holds two.' },
-    { q: 'How do I reduce my photo size in kB for an online form?', a: 'Choose Custom size, enter the size the form asks for, and type the limit in “Max size (kB)”. The tool lowers the JPEG quality until the file fits and shows the final size before you download.' },
-    { q: 'What background colour should a Nepali passport photo have?', a: 'White: the Nepal Embassy in Australia asks for a white background. Take the photo against a plain white wall, because this tool crops and resizes but does not change the background.' },
-    { q: 'Is this passport photo maker free?', a: 'Yes. There is no sign-up, no watermark and no charge to download the photo or the print sheet.' },
-    { q: 'Is my photo uploaded anywhere?', a: 'No. Everything happens in your browser: the photo never leaves your phone or computer and is not stored.' },
+    { q: 'What is the photo size for the DV lottery?', a: 'A square JPEG of <strong>600 × 600 pixels</strong>, <strong>240 kB or less</strong>, with your head 50% to 69% of the image height on a plain white or off-white background.' },
+    { q: 'How do I check if my DV photo is valid?', a: 'Choose it in step 1 of this tool. It checks the format (JPEG), the file size (240 kB or less), the shape (square) and the size (600 × 600 pixels), and gives hints on colour and background. Check the head size yourself with the oval. Only the State Department can make the final decision.' },
+    { q: 'How do I edit my photo for the DV lottery?', a: 'Crop and resize it: move and zoom it until your head fits between the ovals, then download it. The tool saves a 600 × 600 JPEG of 240 kB or less. Don’t change your face or the background: the State Department says photos must not be digitally altered to change your appearance.' },
+    { q: 'How do I make my DV photo under 240 kB?', a: 'The tool does it for you: it lowers the JPEG quality step by step until the file is 240 kB or less, and step 3 shows the final size before you download. A 600 × 600 photo is usually well under the limit.' },
+    { q: 'Can I edit the background of my DV photo?', a: 'No. The background must be plain white or off-white, and the photo must not be digitally altered. If yours is not, take the photo again against a white wall.' },
+    { q: 'Can I take my DV photo with an iPhone?', a: 'You may take the photo yourself, though the State Department recommends a professional photo service and says low quality mobile phone photos are not acceptable. If your iPhone saves HEIC photos and they won’t open here, open this page in Safari, or set Settings → Camera → Formats → Most Compatible.' },
+    { q: 'Can I use an old photo for the DV lottery?', a: 'No. The photo must have been taken within the last 6 months, so take a new one for each entry.' },
+    { q: 'Can I wear glasses in the DV photo?', a: 'No. Eyeglasses are no longer allowed in new visa photos, except in rare medical cases with a signed medical statement.' },
+    { q: 'What is the passport size photo size in Nepal?', a: '<strong>35 × 45 mm</strong> (3.5 × 4.5 cm), which is 413 × 531 pixels at 300 dpi. The Nepal Embassy in Australia, for example, asks for a white background, about 70% face coverage and no border. Choose Nepal passport 35×45 mm in the tool.' },
+    { q: 'Is my photo uploaded anywhere?', a: 'No. The photo is opened, checked, cropped and saved entirely in your browser. It never leaves your phone or computer and is not stored.' },
   ];
 
   return toolPage({
     t,
-    title: `Passport Size Photo Maker: Nepal 35x45 mm, Free | ${site.name}`,
-    description: 'Free passport size photo maker: crop to Nepal 35×45 mm (pp size), 2×2 inch or any size, set a kB limit, and print 8 on one 4×6 sheet. Nothing uploaded.',
-    lead: 'Crop your photo to <strong>passport size</strong>: Nepal 35 × 45 mm, 2 × 2 inch or any size and kB limit. Download it, or print 8 on one 4 × 6 sheet. Free, and your photo never leaves your device.',
-    toolHtml: photoToolHtml('np'),
+    h1: 'DV Lottery Photo Tool: Check and Crop Your Photo',
+    title: 'DV Photo Editor & Checker: EDV Photo 600x600 Under 240 kB',
+    description: 'Free DV lottery photo checker and editor: check your EDV photo, then crop it to 600×600 pixels under 240 kB. Also Nepal passport size 35×45 mm.',
+    lead: 'Check whether your DV (EDV) photo meets the official rules, then crop it to <strong>600 × 600 pixels</strong> and save it <strong>under 240 kB</strong>. It also makes Nepal passport size (35 × 45 mm) and 2 × 2 inch photos. Free, and your photo never leaves your device.',
+    toolHtml: photoToolHtml(),
     explainer,
     faqs,
     script: '/assets/js/tool-photo.js',
@@ -611,7 +595,7 @@ export function renderToolsHub(version) {
     crumbs,
     eyebrow: 'Free tools',
     title: 'Free tools that just work',
-    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Preeti to Unicode, convert Nepali dates, work out your exact age, and make DV lottery and passport size photos. Free, fast and private: everything runs in your browser.',
+    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Preeti to Unicode, convert Nepali dates, work out your exact age, and check and crop DV lottery and passport size photos. Free, fast and private: everything runs in your browser.',
   })}
 <section class="wrap">
   <div class="tool-cards">
@@ -628,8 +612,8 @@ export function renderToolsHub(version) {
   <p class="suggest">Need another tool? <a href="/contact-us/">Suggest one</a>. The most requested ideas get built next.</p>
 </section>`;
   return layout({
-    title: `Free Nepali Tools: Typing, Preeti, Date, DV & Passport Photo | ${site.name}`,
-    description: 'Free tools: Nepali typing, Preeti to Unicode, Nepali keyboard, date converter, age calculator, DV lottery photo tool and passport size photo maker.',
+    title: `Free Nepali Tools: Typing, Preeti, Date Converter, DV Photo | ${site.name}`,
+    description: 'Free tools: Nepali typing, Preeti to Unicode, Nepali keyboard, date converter, age calculator, and a DV lottery and passport size photo tool.',
     path: '/tools/',
     body,
     version,

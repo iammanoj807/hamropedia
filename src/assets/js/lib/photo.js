@@ -19,7 +19,7 @@ export function toPx(value, unit, dpi = DPI) {
 export const PRESETS = {
   dv: {
     label: 'DV Lottery 600×600',
-    w: 600, h: 600, maxBytes: 240000, file: 'dv-photo-600x600',
+    w: 600, h: 600, maxBytes: 240000, jpeg: true, file: 'dv-photo-600x600',
     spec: 'DV Lottery entry: 600 × 600 pixels, square JPEG, 240 kB or less.',
     guide: { min: 0.5, max: 0.69, y: 0.46 },
   },
@@ -141,3 +141,86 @@ export function setJpegDpi(bytes, dpi = DPI) {
 
 /** "84 kB" (1 kB = 1,000 bytes, as the State Department counts it). */
 export const formatKB = (bytes) => `${Math.max(1, Math.round(bytes / 1000))} kB`;
+
+const near = (a, b) => Math.abs(a - b) <= Math.max(0.01 * b, 1e-9);
+
+/**
+ * Check a photo file against a size: format, file size, shape, pixel size and detail.
+ * `file` is { type, bytes, w, h }. Each row is { key, label, ok, detail } where ok is
+ * true, false, or null for "fine, just so you know".
+ */
+export function checkFile(file, p) {
+  const rows = [];
+  const kb = formatKB(file.bytes);
+  if (p.jpeg) {
+    const jpeg = file.type === 'image/jpeg';
+    rows.push({ key: 'format', label: 'Format', ok: jpeg, detail: jpeg ? 'JPEG' : `${(file.type.split('/')[1] || 'unknown').toUpperCase()}: must be JPEG` });
+  }
+  if (p.maxBytes) {
+    const ok = file.bytes <= p.maxBytes;
+    rows.push({ key: 'bytes', label: 'File size', ok, detail: ok ? `${kb}, within ${formatKB(p.maxBytes)}` : `${kb}: must be ${formatKB(p.maxBytes)} or less` });
+  }
+  const shapeOk = near(file.w / file.h, p.w / p.h);
+  const shapeName = p.w === p.h ? 'square' : `${p.w} : ${p.h}`;
+  rows.push({ key: 'shape', label: 'Shape', ok: shapeOk, detail: shapeOk ? (p.w === p.h ? 'Square' : 'Right shape') : `${file.w} × ${file.h} is not ${shapeName}` });
+  const sizeOk = file.w === p.w && file.h === p.h;
+  rows.push({ key: 'pixels', label: 'Size', ok: sizeOk, detail: sizeOk ? `${p.w} × ${p.h} pixels` : `${file.w} × ${file.h} pixels: needs ${p.w} × ${p.h}` });
+  if (!sizeOk) {
+    const enough = file.w >= p.w && file.h >= p.h;
+    rows.push({ key: 'detail', label: 'Detail', ok: enough ? true : null, detail: enough ? 'Big enough to crop down' : 'Smaller than the final size, so it may look blurry' });
+  }
+  return rows;
+}
+
+/**
+ * Look at the pixels of a photo (RGBA, w × h): is it in colour, and does the background
+ * look plain and light? The background is read from the top edge and the upper sides,
+ * where a passport-style photo has no person. These are hints, not a verdict.
+ */
+export function analyzePixels(data, w, h) {
+  let greyDiff = 0;
+  let n = 0;
+  for (let i = 0; i < data.length; i += 16) {
+    greyDiff += Math.abs(data[i] - data[i + 1]) + Math.abs(data[i + 1] - data[i + 2]);
+    n++;
+  }
+  let lum = 0;
+  let chroma = 0;
+  let m = 0;
+  const add = (x, y) => {
+    const i = (y * w + x) * 4;
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    lum += 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    chroma += Math.max(r, g, b) - Math.min(r, g, b);
+    m++;
+  };
+  const top = Math.max(1, Math.round(h * 0.1));
+  const side = Math.max(1, Math.round(w * 0.1));
+  for (let y = 0; y < top; y++) for (let x = 0; x < w; x++) add(x, y);
+  for (let y = top; y < Math.round(h * 0.45); y++) {
+    for (let x = 0; x < side; x++) { add(x, y); add(w - 1 - x, y); }
+  }
+  const bgLum = lum / m;
+  const bgChroma = chroma / m;
+  const background = bgLum >= 195 && bgChroma <= 35 ? 'light' : bgLum < 140 ? 'dark' : 'unclear';
+  return { grey: greyDiff / n < 4, background, bgLum: Math.round(bgLum) };
+}
+
+/** Checklist rows for the colour and background hints. */
+export function pixelRows(a) {
+  return [
+    { key: 'colour', label: 'Colour', ok: !a.grey, detail: a.grey ? 'Looks black and white: the photo must be in colour' : 'In colour' },
+    {
+      key: 'background',
+      label: 'Background',
+      ok: a.background === 'light' ? true : a.background === 'dark' ? false : null,
+      detail: a.background === 'light'
+        ? 'Looks plain and light'
+        : a.background === 'dark'
+          ? 'Looks dark: it must be plain white or off-white. This tool can’t change it, so take the photo again against a white wall'
+          : 'Not clearly white: check it is plain white or off-white',
+    },
+  ];
+}
