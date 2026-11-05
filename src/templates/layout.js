@@ -174,7 +174,7 @@ function footer() {
         <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode</a></li>
         <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
         <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
-        <li><a href="/tools/dv-photo-tool/">DV and passport photo tool</a></li>
+        <li><a href="/tools/dv-photo-tool/">DV lottery photo tool</a></li>
       </ul>
     </div>
     <div>
