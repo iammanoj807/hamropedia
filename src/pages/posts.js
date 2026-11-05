@@ -204,6 +204,7 @@ export function renderCategory(slug, posts, version) {
         : '';
   const body = `${pageHead({ crumbs, eyebrow: 'Topic', title: esc(c.name), lead: esc(c.description) })}
 <section class="wrap">
+  ${c.intro ? `<p class="cat-intro">${c.intro}</p>` : ''}
   ${extra}
   <div class="grid grid-3">${posts.map((p) => postCard(p)).join('\n')}</div>
 </section>`;

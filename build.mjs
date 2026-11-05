@@ -225,6 +225,27 @@ fs.writeFileSync(path.join(DIST, 'rss.xml'), rss);
 // GitHub Pages: don't run Jekyll on the output.
 fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
 
+// Minify the CSS and JavaScript we serve (smaller downloads; Semrush flags unminified files).
+// The source files stay readable. If esbuild is not installed, the site is served unminified.
+let minified = 0;
+try {
+  const { transformSync } = await import('esbuild');
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(p); continue; }
+      const loader = e.name.endsWith('.css') ? 'css' : e.name.endsWith('.js') ? 'js' : null;
+      if (!loader) continue;
+      const out = transformSync(fs.readFileSync(p, 'utf8'), { loader, minify: true, format: loader === 'js' ? 'esm' : undefined, target: 'es2020', legalComments: 'none' });
+      fs.writeFileSync(p, out.code);
+      minified++;
+    }
+  })(path.join(DIST, 'assets'));
+} catch (err) {
+  if (err.code !== 'ERR_MODULE_NOT_FOUND') throw err;
+  console.warn('esbuild not installed: CSS and JavaScript are served unminified');
+}
+
 console.log(
-  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts (${nePosts.length} in Nepali), ${phases.length} roadmap phases with ${lessons.length} lessons, ${sdLessons.length} system design lessons, ${sqlLessons.length} SQL lessons, ${dsaTopics.length} DSA topics, ${TOOLS.length} tools in ${Date.now() - t0} ms`,
+  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts (${nePosts.length} in Nepali), ${phases.length} roadmap phases with ${lessons.length} lessons, ${sdLessons.length} system design lessons, ${sqlLessons.length} SQL lessons, ${dsaTopics.length} DSA topics, ${TOOLS.length} tools, ${minified} CSS/JS files minified in ${Date.now() - t0} ms`,
 );

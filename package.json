@@ -25,6 +25,7 @@
     "marked": "^15.0.12"
   },
   "devDependencies": {
+    "esbuild": "^0.24.2",
     "sharp": "^0.34.5"
   }
 }

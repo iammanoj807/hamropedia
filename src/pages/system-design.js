@@ -125,6 +125,7 @@ const lessonCtx = {
     if (phase.slug === 'lld-practice') return `${t.name}: low-level design`;
     if (phase.slug === 'patterns') return /pattern/i.test(t.name) ? t.name : `${t.name} design pattern`;
     if (['networking', 'core-concepts', 'data', 'distributed'].includes(phase.slug)) return `${t.name} in system design`;
+    if (phase.slug === 'interview-basics') return /interview/i.test(t.name) ? t.name : `${t.name} (system design interview)`;
     return t.name;
   },
   level: (phase, t) => (t.priority === 'bonus' ? 'Advanced' : t.kind === 'design' || phase.number >= 4 ? 'Intermediate' : 'Beginner'),

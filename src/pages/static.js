@@ -75,6 +75,13 @@ export function renderContact(version) {
   <a class="contact-card" href="${site.social.facebook}" target="_blank" rel="noopener">${ICONS.facebook}<b>Facebook</b><span>manojthapa807</span></a>
   <a class="contact-card" href="${site.social.youtube}" target="_blank" rel="noopener">${ICONS.youtube}<b>YouTube</b><span>@thapam807</span></a>
 </div>
+<h2>What you can write to me about</h2>
+<ul>
+<li><strong>A mistake or an out-of-date fact</strong> in any guide, such as a fee, a date or a rule that has changed.</li>
+<li><strong>A Nepali tool you would like</strong>, or a word the Preeti converter or the typing tool gets wrong.</li>
+<li><strong>The free courses</strong>: a lesson that is unclear, an exercise with a wrong answer, or a topic you would like added.</li>
+<li><strong>Working together</strong>, for example linking to Hamropedia from your college, school or student resource page.</li>
+</ul>
 <h2>Reporting a mistake</h2>
 <p>Please include the page link and, if you can, the official source that shows the correct information. Corrections are made as quickly as possible and the article’s “updated” date changes.</p>
 <h2>Need a website or AI for your business?</h2>

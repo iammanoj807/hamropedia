@@ -46,22 +46,6 @@ export const TOOLS = [
 const toolPath = (slug) => `/tools/${slug}/`;
 const toolBySlug = (slug) => TOOLS.find((t) => t.slug === slug);
 
-function toolSchema(t, description) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: t.name,
-    url: `${site.url}${toolPath(t.slug)}`,
-    description,
-    applicationCategory: 'UtilitiesApplication',
-    operatingSystem: 'Any (runs in the browser)',
-    inLanguage: ['ne', 'en'],
-    isAccessibleForFree: true,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    publisher: { '@type': 'Organization', name: site.name, url: site.url },
-  };
-}
-
 function related(current) {
   return `<section class="related-tools" aria-labelledby="rt-h">
   <h2 id="rt-h">More free tools</h2>
@@ -92,7 +76,8 @@ function toolPage({ t, title, description, lead, toolHtml, explainer, faqs, scri
       version,
       section: '/tools/',
       scripts: [script],
-      schema: [toolSchema(t, description), faqSchema(faqs), breadcrumbSchema(crumbs)],
+      // No WebApplication schema: Google requires real ratings or reviews for it, and we don't have any yet.
+      schema: [faqSchema(faqs), breadcrumbSchema(crumbs)],
     });
 }
 

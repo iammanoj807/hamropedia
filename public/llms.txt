@@ -1,0 +1,38 @@
+# Hamropedia
+
+> Hamropedia (hamropedia.com) is a free website by Manoj Kumar Thapa, an AI software engineer in Birmingham, UK. It has sourced, dated guides for Nepali students going abroad, Nepal news explainers, four free courses (AI & ML, System Design, SQL, DSA) and free Nepali tools. Every article links to the official or named sources it is based on.
+
+## Study abroad guides
+- [How to apply for NOC online in Nepal](https://hamropedia.com/how-to-apply-noc-online-easy-steps-for-nepali-students/): the No Objection Certificate from Nepal's education ministry, step by step
+- [WES application: how to apply for WES evaluation](https://hamropedia.com/how-to-apply-for-wes-evaluation/): every screen of the form, transcripts from Nepal
+- [WES evaluation cost, fees and ICAP vs Basic](https://hamropedia.com/important-details-about-wes-evaluation-for-nepali-students/)
+- [UK student visa from Nepal](https://hamropedia.com/uk-student-visa-from-nepal/): requirements, fees, funds and costs in rupees
+- [UK Graduate visa: 18 months or 2 years](https://hamropedia.com/uk-graduate-visa-two-years-high-compliance-universities/)
+- [ILR new rules: indefinite leave to remain in 5 or 10 years](https://hamropedia.com/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/)
+- [UKVI credibility interview questions and answers](https://hamropedia.com/top-ukvi-interview-question-examples-and-answers/)
+- [EDV 2027 (DV lottery) status for Nepal](https://hamropedia.com/edv-2027-nepal-dv-lottery-open-date/)
+
+## Nepal
+- [Balen Shah, prime minister of Nepal: from the Gen Z protests to power](https://hamropedia.com/nepal-gen-z-protests-to-balen-shah-government-explained/)
+- [Nepal National AI Policy 2082](https://hamropedia.com/nepal-national-ai-policy-2082-explained/)
+- [How to type in Nepali (Nepali Unicode romanized)](https://hamropedia.com/how-to-type-in-nepali-unicode-romanized/)
+- [Nepali news in Nepali](https://hamropedia.com/ne/)
+
+## Free courses
+- [AI & Machine Learning roadmap](https://hamropedia.com/ai-roadmap/): 98 lessons, from NumPy to LLMs, RAG and agents
+- [System Design](https://hamropedia.com/system-design/): 72 lessons on high-level design, low-level design and AI/ML design
+- [SQL](https://hamropedia.com/sql/): 61 lessons with a query runner in the browser
+- [DSA: the NeetCode 150](https://hamropedia.com/dsa/): 18 patterns and 150 problems
+- [Learn & Build](https://hamropedia.com/learn/): where to start
+
+## Free tools
+- [Nepali typing: English to Nepali Unicode](https://hamropedia.com/tools/english-to-nepali/)
+- [Preeti to Unicode converter](https://hamropedia.com/tools/preeti-to-unicode/)
+- [Nepali keyboard (Preeti layout and Romanized)](https://hamropedia.com/tools/nepali-keyboard/)
+- [Nepali date converter (BS to AD)](https://hamropedia.com/tools/nepali-date-converter/)
+- [Age calculator (BS and AD)](https://hamropedia.com/tools/age-calculator/)
+
+## About
+- [About the author](https://hamropedia.com/about-us/)
+- [Contact](https://hamropedia.com/contact-us/)
+- [Open-source Preeti and Unicode converters](https://github.com/iammanoj807/nepali-unicode-tools)

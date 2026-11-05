@@ -200,7 +200,7 @@ ${topicMap()}`;
         educationalLevel: t.phase.id.includes('1') ? 'Beginner' : 'Intermediate',
         inLanguage: 'en',
         isAccessibleForFree: true,
-        isPartOf: { '@type': 'Course', name: 'DSA: the NeetCode 150, one pattern at a time', url: `${site.url}${BASE}`, provider: { '@type': 'Organization', name: site.name, url: site.url } },
+        isPartOf: { '@type': 'CreativeWorkSeries', name: 'DSA: the NeetCode 150, one pattern at a time', url: `${site.url}${BASE}`, publisher: { '@type': 'Organization', name: site.name, url: site.url } },
         author: { '@type': 'Person', name: site.author.name, url: `${site.url}/about-us/` },
         ...(t.updated ? { dateModified: t.updated } : {}),
       },

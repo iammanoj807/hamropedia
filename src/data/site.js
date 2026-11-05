@@ -75,24 +75,28 @@ export const categories = {
     name: 'Study Abroad',
     nameNe: 'विदेश अध्ययन',
     description: 'Step-by-step, sourced guides for students going abroad: NOC, WES, UK visas and more.',
+    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/how-to-apply-noc-online-easy-steps-for-nepali-students/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/how-to-apply-for-wes-evaluation/">how to apply for WES</a> and <a href="/important-details-about-wes-evaluation-for-nepali-students/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-from-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
     hue: 'blue',
   },
   coding: {
     name: 'Coding',
     nameNe: 'कोडिङ',
     description: 'Programming guides and roadmaps for beginners: pick a language, build projects, and learn Git, DSA and Python.',
+    intro: 'New to programming? Start with <a href="/how-to-learn-coding/">how to learn coding</a>, a free step-by-step roadmap. Then go deeper with the free courses: <a href="/dsa/">DSA with the NeetCode 150</a> for coding interviews, <a href="/sql/">SQL</a> with a query runner in your browser, and <a href="/system-design/">System Design</a> for building real systems. Not sure where to begin? The <a href="/learn/">Learn page</a> has a map and an order to take them in.',
     hue: 'green',
   },
   ai: {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
+    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-ai-and-machine-learning-for-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents. For AI in Nepal, see <a href="/nepal-national-ai-policy-2082-explained/">Nepal\'s National AI Policy 2082</a>.',
     hue: 'violet',
   },
   nepal: {
     name: 'Nepal',
     nameNe: 'नेपाल',
     description: 'Sourced news explainers and round-ups from Nepal, plus guides to typing and using Nepali online.',
+    intro: 'News from Nepal explained simply, with a link to the source for every fact, such as <a href="/nepal-gen-z-protests-to-balen-shah-government-explained/">how Balen Shah became prime minister after the Gen Z protests</a>. For typing Nepali online, read the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali Unicode typing guide</a> or use the free tools: <a href="/tools/english-to-nepali/">Nepali typing</a>, the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.',
     hue: 'indigo',
   },
 };

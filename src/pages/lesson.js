@@ -196,7 +196,7 @@ ${checks
         educationalLevel: ctx.level(phase, t),
         inLanguage: 'en',
         isAccessibleForFree: true,
-        isPartOf: { '@type': 'Course', name: ctx.schemaCourse, url: `${site.url}${ctx.base}`, provider: { '@type': 'Organization', name: site.name, url: site.url } },
+        isPartOf: { '@type': 'CreativeWorkSeries', name: ctx.schemaCourse, url: `${site.url}${ctx.base}`, publisher: { '@type': 'Organization', name: site.name, url: site.url } },
         author: { '@type': 'Person', name: site.author.name, url: `${site.url}/about-us/` },
         ...(t.updated ? { dateModified: t.updated } : {}),
       },
