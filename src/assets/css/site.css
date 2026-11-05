@@ -388,11 +388,8 @@ button { font: inherit; color: inherit; }
 .share .copy-link span { font-size: .9rem; font-weight: 500; }
 
 /* ---------- FAQ ---------- */
-.faq { margin: clamp(36px, 5vw, 56px) 0; counter-reset: faq; }
-.faq summary::before { counter-increment: faq; content: counter(faq) ". "; color: var(--accent); }
-.prose .faq-q { display: flex; gap: .5em; font-size: 1.08rem; line-height: 1.45; margin: 1.5em 0 .4em; }
-.prose .faq-n { flex: none; min-width: 1.7em; color: var(--accent); font-variant-numeric: tabular-nums; }
-.prose .faq-ans { margin-top: 0; padding-left: calc(1.7em + .5em); }
+.faq { margin: clamp(36px, 5vw, 56px) 0; }
+.prose .faq-post { margin: 1em 0 1.6em; }
 .faq details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); margin-bottom: 10px; }
 .faq summary { cursor: pointer; padding: 15px 44px 15px 18px; font-weight: 700; color: var(--text); position: relative; list-style: none; }
 .faq summary::-webkit-details-marker { display: none; }

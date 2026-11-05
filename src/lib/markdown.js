@@ -76,31 +76,25 @@ export function renderMarkdown(md, ctx) {
     /<blockquote>\s*<p><strong>(At a glance|एक नजरमा)<\/strong><\/p>/g,
     (m, label) => `<blockquote class="callout callout-glance"><p class="glance-h"><strong>${label}</strong></p>`,
   );
-  return { html: numberFaqs(html), toc };
+  return { html: faqDropdowns(html), toc };
 }
-
-const NE_DIGITS = '०१२३४५६७८९';
 
 /**
  * In the "Frequently asked questions" section, turn each "**Question?** Answer" paragraph
- * into a numbered question heading with its answer below, so readers can tell where one
- * question ends and the next begins. Nepali posts get Nepali digits.
+ * into an open/close dropdown, the same style as the FAQs on the tool and course pages.
  */
-function numberFaqs(html) {
+function faqDropdowns(html) {
   return html.replace(
-    /(<h2 id="[^"]*">(?:(?!<\/h2>)[\s\S])*?(Frequently asked questions|बारम्बार सोधिने प्रश्न)<\/h2>)([\s\S]*?)(?=<h2 |<hr>|$)/,
-    (m, head, label, body) => {
-      const ne = label !== 'Frequently asked questions';
-      let n = 0;
+    /(<h2 id="[^"]*">(?:(?!<\/h2>)[\s\S])*?(?:Frequently asked questions|बारम्बार सोधिने प्रश्न)<\/h2>)([\s\S]*?)(?=<h2 |<hr>|$)/,
+    (m, head, body) => {
       const items = body.replace(
-        /<p><strong>((?:(?!<\/strong>)[\s\S])*?[?？])<\/strong>\s*([\s\S]*?)<\/p>/g,
-        (mm, q, a) => {
-          n += 1;
-          const num = ne ? String(n).replace(/\d/g, (d) => NE_DIGITS[d]) : String(n);
-          return `<h3 class="faq-q"><span class="faq-n">${num}.</span> <span>${q}</span></h3>\n<p class="faq-ans">${a}</p>`;
-        },
+        /<p><strong>((?:(?!<\/strong>)[\s\S])*?[?？])<\/strong>\s*([\s\S]*?)<\/p>\s*/g,
+        (mm, q, a) => `<details><summary>${q}</summary><div class="faq-a">${a}</div></details>\n`,
       );
-      return head + items;
+      const first = items.indexOf('<details>');
+      if (first < 0) return m;
+      const last = items.lastIndexOf('</details>') + '</details>'.length;
+      return `${head}\n${items.slice(0, first)}<div class="faq faq-post">\n${items.slice(first, last)}\n</div>\n${items.slice(last)}`;
     },
   );
 }
