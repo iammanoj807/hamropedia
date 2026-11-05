@@ -9,7 +9,7 @@ import { renderMarkdown, extractFaqs } from './src/lib/markdown.js';
 import { readingMinutes, isoDate, rfc822, esc } from './src/lib/util.js';
 import { renderPost, renderBlogIndex, renderCategory, renderNews, renderNeHub } from './src/pages/posts.js';
 import { renderRoadmapIndex, renderPhase, renderLessons, lessonAnimations, phases } from './src/pages/roadmap.js';
-import { renderToolsHub, renderRomanized, renderPreeti, renderKeyboard, renderDate, renderAge, renderDvPhoto, TOOLS } from './src/pages/tools.js';
+import { renderToolsHub, renderRomanized, renderPreeti, renderKeyboard, renderDate, renderDvPhoto, TOOLS } from './src/pages/tools.js';
 import { renderHome } from './src/pages/home.js';
 import { renderLearn } from './src/pages/learn.js';
 import { renderSdIndex, renderSdPhase, renderSdLessons, renderSdRevise, sdAnimations, sdPhases } from './src/pages/system-design.js';
@@ -149,7 +149,6 @@ add('/tools/', renderToolsHub(version));
 add('/tools/english-to-nepali/', renderRomanized(version));
 add('/tools/preeti-to-unicode/', renderPreeti(version));
 add('/tools/nepali-keyboard/', renderKeyboard(version));
-add('/tools/age-calculator/', renderAge(version));
 add('/tools/nepali-date-converter/', renderDate(version));
 add('/tools/dv-photo-tool/', renderDvPhoto(version));
 

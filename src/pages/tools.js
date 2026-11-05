@@ -3,7 +3,7 @@ import { esc } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar, pageHead } from '../templates/components.js';
 import { CHEAT_SHEET } from '../assets/js/lib/romanized.js';
-import { exampleSvg } from '../lib/photo-figure.js';
+import { exampleSet } from '../assets/js/lib/photo-figure.js';
 import { BS_MONTHS_EN, BS_MONTHS_NE, BS_MIN_YEAR, BS_MAX_YEAR, BS_PROVISIONAL_FROM, AD_MONTHS_EN, WEEKDAYS_EN, bsToAd, daysInBsMonth, toNepaliDigits } from '../assets/js/lib/bs-date.js';
 
 export const TOOLS = [
@@ -24,8 +24,8 @@ export const TOOLS = [
   {
     slug: 'nepali-keyboard',
     name: 'Nepali Keyboard',
-    short: 'On-screen Nepali keyboard, Preeti or Romanized',
-    blurb: 'Type Nepali Unicode with your keyboard using the familiar Preeti layout or Romanized keys, or tap the on-screen keys on your phone.',
+    short: 'Nepali Unicode Traditional layout, on screen',
+    blurb: 'Type Nepali Unicode with the standard Nepali Unicode Traditional layout, close to the Preeti keys, or tap the on-screen keys on your phone.',
     sample: ['g]kfn', 'नेपाल'],
   },
   {
@@ -34,13 +34,6 @@ export const TOOLS = [
     short: 'BS ↔ AD, with a Nepali calendar',
     blurb: 'Convert Bikram Sambat (BS) to AD and back, see today’s Nepali date, and browse any month of the Nepali calendar.',
     sample: ['2083/07/15', '1 Nov 2026'],
-  },
-  {
-    slug: 'age-calculator',
-    name: 'Age Calculator',
-    short: 'Exact age in years, months and days',
-    blurb: 'Your exact age, total days lived and next birthday, for anyone, anywhere. Enter your birth date in AD or Nepali BS.',
-    sample: ['1 Jan 2000', '26 y 10 m'],
   },
   {
     slug: 'dv-photo-tool',
@@ -141,7 +134,7 @@ export function renderRomanized(version) {
 <h2>Nepali typing on phone, laptop and Word</h2>
 <p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
 <h2>Nepali Unicode, not Preeti</h2>
-<p>Everything you type here is <strong>Nepali Unicode</strong>: real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> keeps the same keys.</p>
+<p>Everything you type here is <strong>Nepali Unicode</strong>: real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> uses the standard Nepali Unicode Traditional layout, which keeps most Preeti keys.</p>
 <p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
@@ -200,7 +193,7 @@ export function renderPreeti(version) {
 </ol>
 <h2>Why convert Preeti to Unicode?</h2>
 <p><strong>Preeti</strong> is an old Nepali font that draws Devanagari shapes on top of ordinary English keys. Text typed in Preeti only looks Nepali on a computer that has the Preeti font, and becomes <code>g]kfn xf]</code> everywhere else: on phones, in email, on the web and in Google Docs. Google can't search it either.</p>
-<p><strong>Unicode</strong> stores real Nepali letters. It works on every device and in every app, with no special font, and it is what government offices, news sites and Google use. If you are starting something new, type in Unicode from the start with our <a href="/tools/english-to-nepali/">Nepali typing tool</a> or the <a href="/tools/nepali-keyboard/">Nepali keyboard</a> (which keeps the Preeti layout you know).</p>
+<p><strong>Unicode</strong> stores real Nepali letters. It works on every device and in every app, with no special font, and it is what government offices, news sites and Google use. If you are starting something new, type in Unicode from the start with our <a href="/tools/english-to-nepali/">Nepali typing tool</a> or the <a href="/tools/nepali-keyboard/">Nepali keyboard</a> (the standard Traditional layout, close to the Preeti keys you know).</p>
 <h2>Unicode to Preeti, for Preeti documents</h2>
 <p>Some offices and print shops still use documents set in Preeti. Choose <strong>Unicode → Preeti</strong>, paste Nepali Unicode text, and copy the result into your Preeti document. The result looks like English letters and symbols (<span lang="ne">नेपाल</span> → <code>g]kfn</code>) <strong>until you set the font to Preeti</strong> in Word; then it shows as Nepali.</p>
 <p><strong>Romanized → Preeti</strong> does the same, starting from Nepali typed in English letters: <code>mero naam</code> → <code>d]/f] gfd</code>, which shows as <span lang="ne">मेरो नाम</span> in the Preeti font.</p>
@@ -238,114 +231,62 @@ export function renderKeyboard(version) {
   const t = toolBySlug('nepali-keyboard');
   const toolHtml = `<div class="tool kb-tool" id="kb-tool">
   <div class="kb-top">
-    <div class="seg seg-lg" role="radiogroup" aria-label="Keyboard layout">
-      <button type="button" role="radio" aria-checked="true" data-layout="preeti">Preeti layout</button>
-      <button type="button" role="radio" aria-checked="false" data-layout="romanized">Romanized</button>
-    </div>
+    <p class="kb-layout-name"><b>Nepali Unicode Traditional</b> layout</p>
     <label class="switch"><input type="checkbox" id="kb-on" checked><span>Type in Nepali <kbd>Ctrl</kbd>+<kbd>Space</kbd></span></label>
   </div>
   <label for="kb-text" class="sr-only">Your Nepali text</label>
   <textarea id="kb-text" lang="ne" spellcheck="false" autocapitalize="off" autocomplete="off" rows="6" placeholder="यहाँ टाइप गर्नुहोस्… Start typing, or tap the keys below."></textarea>
   <div class="pane-foot kb-actions"><span id="kb-count">0 words</span><button type="button" class="btn" id="kb-copy">Copy</button><button type="button" class="btn-ghost" id="kb-download">Download .txt</button><button type="button" class="btn-ghost" id="kb-clear">Clear</button></div>
   <div class="kb" id="kb" aria-label="On-screen Nepali keyboard"></div>
-  <p class="tool-note" id="kb-note"></p>
+  <p class="tool-note" id="kb-note">Each key shows its letter, and the small letter above it is <b>Shift</b> + that key: <kbd>Shift</kbd>+<kbd>K</kbd> = <span lang="ne">फ</span>, <kbd>Shift</kbd>+<kbd>H</kbd> = <span lang="ne">झ</span>. Type <kbd>l</kbd> (<span lang="ne">ि</span>) after the letter: <code>xl</code> = <span lang="ne">हि</span>.</p>
 </div>`;
 
-  const explainer = `<h2>Two ways to type Nepali</h2>
-<p>This keyboard writes real <strong>Nepali Unicode</strong>, which works in Facebook, WhatsApp, Gmail, Word and Google Docs on every device. Choose the layout you know:</p>
-<ul>
-<li><strong>Preeti layout.</strong> The layout many people in Nepal learned to type on: the same keys as the Preeti font. <code>g]kfn</code> types <span lang="ne">नेपाल</span>. Your old habits work: type <kbd>l</kbd> (ि) <em>before</em> the letter, <kbd>{</kbd> (reph) after it, and <kbd>k</kbd> + <kbd>m</kbd> for <span lang="ne">फ</span>. The output is still proper Unicode, not Preeti font text.</li>
-<li><strong>Romanized.</strong> Type how it sounds: <code>namaste</code> → <span lang="ne">नमस्ते</span>. The same rules as our <a href="/tools/english-to-nepali/">English to Nepali typing tool</a>.</li>
-</ul>
-<h3>Tips</h3>
+  const LTK = 'https://ltk.org.np/keyboard_layouts.php';
+  const explainer = `<h2>One Nepali keyboard: Nepali Unicode Traditional</h2>
+<p>This keyboard uses the <strong>Nepali Unicode Traditional</strong> layout, the standard layout of Madan Puraskar Pustakalaya and Language Technology Kendra for typing Nepali in Unicode. Language Technology Kendra describes it as the layout “designed for True Type Font (TTF) like Preeti, Kantipur etc users” (<a href="${LTK}" rel="noopener">LTK keyboard layouts</a>), so if you learned to type on Preeti, most keys are where your fingers expect them: <code>g]kfn</code> still types <span lang="ne">नेपाल</span>.</p>
+<p>What you type is real <strong>Nepali Unicode</strong>, so it works in Facebook, WhatsApp, Gmail, Word, Google Docs and online forms such as the Lok Sewa application, on every device and without the Preeti font.</p>
+<h2>Coming from Preeti? What is different</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>To type</th><th>Traditional (this keyboard)</th><th>Preeti font</th></tr></thead>
+<tbody>
+<tr><td lang="ne">फ</td><td><kbd>Shift</kbd>+<kbd>K</kbd> (<kbd>k</kbd> then <kbd>m</kbd> also works)</td><td><kbd>k</kbd> then <kbd>m</kbd></td></tr>
+<tr><td lang="ne">झ</td><td><kbd>Shift</kbd>+<kbd>H</kbd> (<kbd>e</kbd> then <kbd>m</kbd> also works)</td><td><kbd>e</kbd> then <kbd>m</kbd></td></tr>
+<tr><td lang="ne">ि</td><td><kbd>l</kbd> <em>after</em> the letter: <code>xl</code> = <span lang="ne">हि</span></td><td><kbd>l</kbd> before the letter</td></tr>
+<tr><td lang="ne">र् (reph)</td><td><kbd>[</kbd> <em>before</em> the letter: <code>u[g</code> = <span lang="ne">गर्न</span></td><td><kbd>{</kbd> after the letter</td></tr>
+<tr><td>Half letters</td><td>letter + <kbd>\\</kbd> (<span lang="ne">्</span>): <code>s\\</code> = <span lang="ne">क्</span></td><td><kbd>Shift</kbd> + the letter</td></tr>
+<tr><td lang="ne">ो and ौ</td><td><kbd>Shift</kbd>+<kbd>J</kbd> and <kbd>Shift</kbd>+<kbd>B</kbd> (<kbd>f</kbd> then <kbd>]</kbd> also works)</td><td><kbd>f</kbd> then <kbd>]</kbd> or <kbd>}</kbd></td></tr>
+<tr><td>Numbers <span lang="ne">१२३</span></td><td>the number keys</td><td><kbd>Shift</kbd> + the number keys</td></tr>
+<tr><td lang="ne">ं</td><td><kbd>Shift</kbd>+<kbd>\\</kbd></td><td><kbd>Shift</kbd>+<kbd>=</kbd></td></tr>
+</tbody>
+</table></div>
+<p>Joined letters that are used a lot have their own keys: <kbd>!</kbd> <span lang="ne">ज्ञ</span>, <kbd>q</kbd> <span lang="ne">त्र</span>, <kbd>Q</kbd> <span lang="ne">त्त</span>, <kbd>Shift</kbd>+<kbd>I</kbd> <span lang="ne">क्ष</span>, <kbd>&gt;</kbd> <span lang="ne">श्र</span>, <kbd>$</kbd> <span lang="ne">द्ध</span> and <kbd>?</kbd> <span lang="ne">रु</span>.</p>
+<h2>Tips</h2>
 <ul>
 <li>Press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to switch between Nepali and English typing without leaving the box.</li>
-<li>The on-screen keys show the Nepali letter each key types. Hold <kbd>Shift</kbd> (or tap ⇧) to see the second letter on each key.</li>
-<li>On a phone, the on-screen keyboard replaces your phone’s keyboard, so you can type Nepali without installing anything.</li>
+<li>On a phone, the on-screen keys replace your phone’s keyboard, so you can type Nepali without installing anything. Tap ⇧ for the Shift letters.</li>
 <li>A space finishes each word. While you are still inside a word, backspace removes the last key you pressed.</li>
 </ul>
-<p>Have old text that was already typed in the Preeti font? Don't retype it: paste it into the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
+<p>Prefer to type Nepali the way it sounds in English letters (<code>namaste</code> → <span lang="ne">नमस्ते</span>)? Use <a href="/tools/english-to-nepali/">English to Nepali typing</a>. Have text that was typed in the Preeti font? Paste it into the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
-    { q: 'Is this the Preeti keyboard layout?', a: 'Yes. The “Preeti layout” option puts each letter on the same key as the Preeti font, which is the layout most people in Nepal learned to type on. The difference is that this keyboard produces Unicode, so your text works everywhere, not only on computers with the Preeti font.' },
+    { q: 'How do I type फ and झ?', a: '<kbd>Shift</kbd> + <kbd>K</kbd> types फ and <kbd>Shift</kbd> + <kbd>H</kbd> types झ. On the on-screen keyboard, tap ⇧ and then the key. The Preeti way, <kbd>k</kbd> then <kbd>m</kbd> for फ and <kbd>e</kbd> then <kbd>m</kbd> for झ, works too.' },
+    { q: 'Is this the same as the Preeti keyboard?', a: 'Most letter keys are the same as Preeti, because the Traditional layout was made for Preeti and Kantipur typists. A few things differ: ि is typed after the letter, half letters use <kbd>\\</kbd>, and the number keys type Nepali numbers. The table above lists them all. Unlike Preeti, the text is Unicode, so it works everywhere.' },
+    { q: 'Which Nepali keyboard layout should I learn?', a: 'For typing Nepali Unicode on a computer, Nepali Unicode Traditional: it is the standard layout from Madan Puraskar Pustakalaya and Language Technology Kendra, and it is close to Preeti. If you would rather type how words sound in English letters, use the Romanized method in our <a href="/tools/english-to-nepali/">English to Nepali typing tool</a>.' },
+    { q: 'How do I type ि, ी and half letters?', a: 'Type the letter first, then <kbd>l</kbd> for ि or <kbd>Shift</kbd> + <kbd>L</kbd> for ी: <code>xl</code> = हि. For a half letter, type the letter and then <kbd>\\</kbd> (्): <code>s\\</code> = क्.' },
     { q: 'Do I need to install anything?', a: 'No. It works in your browser on Windows, Mac, Android and iPhone. On a computer you can type with your physical keyboard; on a phone, tap the on-screen keys.' },
-    { q: 'Why does my keyboard type the wrong letter on some symbol keys?', a: 'It shouldn’t: the keyboard reads which physical key you press, using the standard US key positions that Preeti is based on, so it works the same on UK and other keyboards. If a key still looks wrong, <a href="/contact-us/">let me know which one</a>.' },
     { q: 'How do I type English words in between?', a: 'Turn off “Type in Nepali” (or press Ctrl + Space), type your English words, then switch back.' },
     { q: 'Where is my text saved?', a: 'Only in your own browser, so it is still there if you reload the page. Nothing is uploaded. Use Copy or Download to keep it.' },
   ];
 
   return toolPage({
     t,
-    title: `Nepali Keyboard Layout Online: Preeti and Romanized | ${site.name}`,
-    description: 'Free online Nepali keyboard: type Nepali Unicode with the Preeti layout or Romanized keys, or tap the on-screen keyboard. Copy to Facebook, Word or anywhere.',
-    lead: 'Type Nepali Unicode with the <strong>Preeti layout</strong> you already know, or with <strong>Romanized</strong> keys. On a phone, just tap the keys.',
+    title: 'Nepali Keyboard Online: Nepali Unicode Traditional Layout',
+    description: 'Free online Nepali keyboard with the standard Nepali Unicode Traditional layout (Preeti-style keys). Type or tap Nepali, then copy it to Facebook or Word.',
+    lead: 'Type Nepali Unicode with the standard <strong>Nepali Unicode Traditional</strong> layout, close to the Preeti keys you may already know. On a phone, just tap the keys: <kbd>Shift</kbd>+<kbd>K</kbd> = <span lang="ne">फ</span>, <kbd>Shift</kbd>+<kbd>H</kbd> = <span lang="ne">झ</span>.',
     toolHtml,
     explainer,
     faqs,
     script: '/assets/js/tool-keyboard.js',
-  })(version);
-}
-
-export function renderAge(version) {
-  const t = toolBySlug('age-calculator');
-  const years = [];
-  for (let y = BS_MIN_YEAR; y <= BS_MAX_YEAR; y++) years.push(y);
-  const toolHtml = `<div class="tool age-tool" id="age-tool">
-  <div class="seg seg-lg" role="radiogroup" aria-label="Date of birth calendar">
-    <button type="button" role="radio" aria-checked="true" data-cal="ad">Born (AD / English date)</button>
-    <button type="button" role="radio" aria-checked="false" data-cal="bs">Born (BS / Nepali date)</button>
-  </div>
-  <div class="age-inputs">
-    <label class="age-ad">Date of birth<input type="date" id="age-dob" min="1900-01-01"></label>
-    <div class="age-bs bs-selects" hidden>
-      <label>Year (BS)<select id="age-bs-y">${years.map((y) => `<option value="${y}">${y}</option>`).join('')}</select></label>
-      <label>Month<select id="age-bs-m">${BS_MONTHS_EN.map((m, i) => `<option value="${i + 1}">${i + 1} · ${m}</option>`).join('')}</select></label>
-      <label>Day<select id="age-bs-d"></select></label>
-    </div>
-    <label>Age on<input type="date" id="age-on"></label>
-  </div>
-  <div class="age-result" id="age-result" aria-live="polite">
-    <p class="age-big"><span id="age-y">–</span><small>years</small> <span id="age-m">–</span><small>months</small> <span id="age-d">–</span><small>days</small></p>
-    <div class="age-stats">
-      <div><b id="age-total-months">–</b><span>months</span></div>
-      <div><b id="age-total-weeks">–</b><span>weeks</span></div>
-      <div><b id="age-total-days">–</b><span>days</span></div>
-    </div>
-    <ul class="age-facts">
-      <li id="age-born"></li>
-      <li id="age-next"></li>
-      <li id="age-bs-born"></li>
-      <li id="age-bs-next"></li>
-    </ul>
-  </div>
-</div>`;
-
-  const explainer = `<h2>How the age is calculated</h2>
-<p>Your age is counted in <strong>whole calendar months</strong> from your date of birth, then the days left over, the same way people count birthdays. “Age on” starts at today’s date on <em>your</em> device, and you can change it to find your age on an exam date, a visa deadline or any other day.</p>
-<ul>
-<li><strong>Short months:</strong> if your birth day doesn’t exist in a month (for example the 31st), the last day of that month counts. Born on 31 January? On 1 March you are 1 month and 1 day older.</li>
-<li><strong>Born on 29 February?</strong> In years without a 29 February, this calculator counts your birthday on 28 February.</li>
-<li><strong>Nepali (BS) dates:</strong> choose “Born (BS)” to enter a Bikram Sambat date of birth, as on a Nepali citizenship certificate. The tool also shows when your next Nepali-calendar birthday falls, which moves in the English calendar every year.</li>
-</ul>
-<p>Need to convert a single date between BS and AD? Use the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.</p>`;
-
-  const faqs = [
-    { q: 'How do I calculate my exact age?', a: 'Enter your date of birth. The calculator shows your age in years, months and days as of today, plus the total months, weeks and days you have lived.' },
-    { q: 'Can I calculate my age on a specific date?', a: 'Yes. Change the “Age on” date to any day, such as the cut-off date in an application form, to see exactly how old you will be (or were) on that day.' },
-    { q: 'Can I enter my date of birth in Nepali (BS)?', a: 'Yes. Choose “Born (BS / Nepali date)” and pick the year, month and day from your citizenship certificate or birth registration. Dates from 2000 to 2090 BS are supported.' },
-    { q: 'How are birthdays on 29 February handled?', a: 'In years without a 29 February, the calculator treats 28 February as your birthday. Some countries use 1 March for legal purposes, so check if it matters for an official form.' },
-    { q: 'Is my date of birth stored anywhere?', a: 'No. The calculation runs on your device and nothing is sent or saved.' },
-  ];
-
-  return toolPage({
-    t,
-    title: `Age Calculator Nepali (BS & AD): Exact Age by Date of Birth | ${site.name}`,
-    description: 'Nepali age calculator: your exact age in years, months and days from your date of birth in BS or AD, plus total days lived and your next birthday. Free.',
-    lead: 'Your exact age in years, months and days, how many days you have lived, and when your next birthday is. For everyone, in AD or Nepali BS.',
-    toolHtml,
-    explainer,
-    faqs,
-    script: '/assets/js/tool-age.js',
   })(version);
 }
 
@@ -485,15 +426,20 @@ function photoToolHtml() {
         <legend class="ph-step-h"><span>2</span> Fit your head inside the oval</legend>
         <div class="ph-guide-row" id="ph-guide-row">
           <p id="ph-guide-text"></p>
+          <div class="ph-mini" id="ph-mini" aria-label="Examples"></div>
           <label class="switch"><input type="checkbox" id="ph-guide" checked><span>Show the oval</span></label>
         </div>
-        <label class="ph-range">Zoom<input type="range" id="ph-zoom" min="0.5" max="4" step="0.01" value="1"></label>
+        <label class="ph-range">Zoom<input type="range" id="ph-zoom" min="1" max="4" step="0.01" value="1"></label>
         <label class="ph-range">Straighten<input type="range" id="ph-tilt" min="-15" max="15" step="0.5" value="0"></label>
         <div class="ph-btns">
           <button type="button" class="btn-ghost" id="ph-rotl" aria-label="Rotate left">⟲ Rotate</button>
           <button type="button" class="btn-ghost" id="ph-rotr" aria-label="Rotate right">⟳ Rotate</button>
           <button type="button" class="btn-ghost" id="ph-reset">Reset</button>
           <button type="button" class="btn-ghost" id="ph-change">Change photo</button>
+        </div>
+        <div class="ph-headcheck">
+          <button type="button" class="btn" id="ph-headcheck">Check head size</button>
+          <p class="ph-head" id="ph-head" aria-live="polite"></p>
         </div>
       </fieldset>
       <section class="ph-step ph-out" aria-labelledby="ph-s3">
@@ -512,11 +458,10 @@ function photoToolHtml() {
 
 export function renderDvPhoto(version) {
   const t = toolBySlug('dv-photo-tool');
-  const examples = `<div class="ph-examples">
-${exampleSvg({ headShare: 0.6, label: 'Right: the head is between the two ovals', ok: true })}
-${exampleSvg({ headShare: 0.36, label: 'Too small: zoom in', ok: false })}
-${exampleSvg({ headShare: 0.84, label: 'Too big: zoom out', ok: false })}
-</div>`;
+  const examples = `<h3>DV lottery and 2 × 2 inch: between the two ovals</h3>
+<div class="ph-examples">${exampleSet('dv')}</div>
+<h3>Nepal passport size, 35 × 45 mm: fill the oval</h3>
+<div class="ph-examples ph-examples-np">${exampleSet('np')}</div>`;
 
   const explainer = `<blockquote class="callout callout-update"><p><strong>DV-2027 entries have not opened yet.</strong> You can get your photo ready now. For the opening date, follow the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV 2027 guide</a>.</p></blockquote>
 <h2>DV lottery photo size and requirements</h2>
@@ -534,9 +479,9 @@ ${exampleSvg({ headShare: 0.84, label: 'Too big: zoom out', ok: false })}
 <tr><th scope="row">Editing</th><td>Must not be digitally enhanced or altered to change your appearance</td></tr>
 </tbody>
 </table></div>
-<p>Steps 1 and 3 above check the file rules for you: format, file size, shape and pixel size. They also look at the colour and the background, but those are only hints. The head size you check by eye, with the oval.</p>
+<p>Steps 1 and 3 above check the file rules for you: format, file size, shape and pixel size. They also look at the colour and the background, but those are only hints. For the head size, press <strong>Check head size</strong>: face detection on your device estimates how big your head is, and the oval turns <strong>green</strong> when it looks right, amber when it is close to the limit and red when it is too small or too big.</p>
 <h2>How to fit your head inside the oval</h2>
-<p>For the DV size the tool shows two ovals. Move and zoom the photo until your head, from the chin to the top of your hair, is <strong>bigger than the inner oval and smaller than the outer one</strong>. That keeps it between 50% and 69% of the photo height.</p>
+<p>For the DV and 2 × 2 inch sizes the tool shows two ovals. Move and zoom the photo until your head, from the chin to the top of your hair, is <strong>bigger than the inner oval and smaller than the outer one</strong>. That keeps it between 50% and 69% of the photo height. For Nepal passport size there is one oval: your face should fill it (about 70% of the photo). The photo always fills the frame, so you can't zoom out into white space.</p>
 ${examples}
 <p>Not sure how it works? Press <strong>Try an example photo</strong> in the tool: the example person starts too small and off-centre, so you can practise zooming and moving them into the oval.</p>
 <h2>How to make your DV photo, step by step</h2>
@@ -565,7 +510,7 @@ ${examples}
 
   const faqs = [
     { q: 'What is the photo size for the DV lottery?', a: 'A square JPEG of <strong>600 × 600 pixels</strong>, <strong>240 kB or less</strong>, with your head 50% to 69% of the image height on a plain white or off-white background.' },
-    { q: 'How do I check if my DV photo is valid?', a: 'Choose it in step 1 of this tool. It checks the format (JPEG), the file size (240 kB or less), the shape (square) and the size (600 × 600 pixels), and gives hints on colour and background. Check the head size yourself with the oval. Only the State Department can make the final decision.' },
+    { q: 'How do I check if my DV photo is valid?', a: 'Choose it in step 1 of this tool. It checks the format (JPEG), the file size (240 kB or less), the shape (square) and the size (600 × 600 pixels), and gives hints on colour and background. Then press Check head size: the oval turns green when your head looks the right size. It is an estimate, and only the State Department can make the final decision.' },
     { q: 'How do I edit my photo for the DV lottery?', a: 'Crop and resize it: move and zoom it until your head fits between the ovals, then download it. The tool saves a 600 × 600 JPEG of 240 kB or less. Don’t change your face or the background: the State Department says photos must not be digitally altered to change your appearance.' },
     { q: 'How do I make my DV photo under 240 kB?', a: 'The tool does it for you: it lowers the JPEG quality step by step until the file is 240 kB or less, and step 3 shows the final size before you download. A 600 × 600 photo is usually well under the limit.' },
     { q: 'Can I edit the background of my DV photo?', a: 'No. The background must be plain white or off-white, and the photo must not be digitally altered. If yours is not, take the photo again against a white wall.' },
@@ -595,7 +540,7 @@ export function renderToolsHub(version) {
     crumbs,
     eyebrow: 'Free tools',
     title: 'Free tools that just work',
-    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Preeti to Unicode, convert Nepali dates, work out your exact age, and check and crop DV lottery and passport size photos. Free, fast and private: everything runs in your browser.',
+    lead: 'Type Nepali with an English keyboard or the familiar Preeti layout, convert Preeti to Unicode, convert Nepali dates, and check and crop DV lottery and passport size photos. Free, fast and private: everything runs in your browser.',
   })}
 <section class="wrap">
   <div class="tool-cards">
@@ -613,7 +558,7 @@ export function renderToolsHub(version) {
 </section>`;
   return layout({
     title: `Free Nepali Tools: Typing, Preeti, Date Converter, DV Photo | ${site.name}`,
-    description: 'Free tools: Nepali typing, Preeti to Unicode, Nepali keyboard, date converter, age calculator, and a DV lottery and passport size photo tool.',
+    description: 'Free tools: Nepali typing, Preeti to Unicode converter, Nepali keyboard, Nepali date converter, and a DV lottery and passport size photo tool.',
     path: '/tools/',
     body,
     version,

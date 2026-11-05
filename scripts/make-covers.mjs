@@ -136,7 +136,6 @@ const tools = {
   'english-to-nepali': 'English to Nepali typing, free and instant',
   'preeti-to-unicode': 'Preeti to Unicode converter, and Unicode to Preeti',
   'nepali-keyboard': 'Nepali keyboard: Preeti layout and Romanized',
-  'age-calculator': 'Age calculator: exact age in years, months and days',
   'nepali-date-converter': 'Nepali date converter: BS to AD, with calendar',
   'dv-photo-tool': 'DV photo checker and editor: 600×600 under 240 kB',
 };

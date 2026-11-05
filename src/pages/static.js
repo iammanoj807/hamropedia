@@ -26,7 +26,7 @@ export function renderAbout(version) {
     html: `<figure class="about-photo"><img src="/images/manojkumarthapa.webp" alt="Manoj Kumar Thapa" width="440" height="519" decoding="async"><figcaption>${esc(site.author.name)}<span>${esc(site.author.role)}, ${esc(site.author.location)}</span></figcaption></figure>
 <p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
-<li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and an <a href="/tools/age-calculator/">age calculator</a>.</li>
+<li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and a <a href="/tools/dv-photo-tool/">DV lottery and passport size photo tool</a>.</li>
 <li><strong>Learning</strong>: four free courses, the <a href="/ai-roadmap/">AI &amp; Machine Learning Roadmap</a>, <a href="/system-design/">System Design</a>, <a href="/sql/">SQL</a> (with a query runner in your browser) and <a href="/dsa/">DSA (NeetCode 150)</a>, where every lesson has an animation, a diagram and exercises with answers. There are also <a href="/category/coding/">coding guides</a> for beginners. <a href="/learn/#start-here">Start here</a> to see how they fit together.</li>
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
@@ -107,7 +107,7 @@ export function renderPrivacy(version) {
 <ul>
 <li><strong>No accounts.</strong> You can read everything without signing up, and we don’t ask for your name or email.</li>
 <li><strong>If you email us,</strong> we receive the information you choose to send and use it only to reply.</li>
-<li><strong>The tools</strong> (typing, Nepali keyboard, date converter, age calculator) run in your browser. The text and dates you enter are not sent to us.</li>
+<li><strong>The tools</strong> (typing, Nepali keyboard, date converter, photo tool) run in your browser. The text, dates and photos you enter are not sent to us.</li>
 <li><strong>Hosting:</strong> the site is hosted on GitHub Pages. GitHub may log technical information such as your IP address to run and secure the service; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
 <li><strong>Fonts:</strong> fonts are loaded from Google Fonts, which receives your IP address when the font files download; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a>.</li>
 ${supportUrl ? `<li><strong>Support:</strong> the “Buy me a coffee” buttons are plain links to <a href="${supportUrl}" target="_blank" rel="noopener">buymeacoffee.com</a>. Nothing from Buy Me a Coffee loads on this site. If you choose to support it, the payment is handled by Buy Me a Coffee under <a href="https://www.buymeacoffee.com/privacy-policy" target="_blank" rel="noopener">its own privacy policy</a>, and we see only what it shares with creators, such as the name and message you choose to leave.</li>
@@ -206,7 +206,7 @@ export function render404(version) {
     <li><a href="/tools/nepali-date-converter/">Nepali date converter</a></li>
     <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a></li>
     <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
-    <li><a href="/tools/age-calculator/">Age calculator</a></li>
+    <li><a href="/tools/dv-photo-tool/">DV lottery photo tool</a></li>
     <li><a href="/ai-roadmap/">AI &amp; ML roadmap</a></li>
     <li><a href="/system-design/">System Design</a></li>
     <li><a href="/sql/">SQL</a></li>
@@ -235,7 +235,7 @@ export function renderRedirect(r) {
 <script>location.replace(${JSON.stringify(r.to)});</script>
 </head>
 <body>
-<p>${r.moved ? `This ${r.from.startsWith('/tools/') ? 'tool' : 'article'} has moved to a new address.` : 'This article was retired because its information was out of date.'} Taking you to the updated page: <a href="${r.to}">${to}</a></p>
+<p>${r.moved ? `This ${r.from.startsWith('/tools/') ? 'tool' : 'article'} has moved to a new address.` : r.from.startsWith('/tools/') ? 'This tool has been removed.' : 'This article was retired because its information was out of date.'} ${!r.moved && r.from.startsWith('/tools/') ? 'Taking you to the other free tools:' : 'Taking you to the updated page:'} <a href="${r.to}">${to}</a></p>
 </body>
 </html>`;
 }

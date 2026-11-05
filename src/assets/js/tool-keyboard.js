@@ -1,4 +1,4 @@
-import { ROWS, LAYOUTS, initState, press, backspace, moveCaret, deleteRange, charForKeyEvent } from './lib/keyboard.js';
+import { ROWS, keyLabel, initState, press, backspace, moveCaret, deleteRange, charForKeyEvent } from './lib/keyboard.js';
 import { copyText, store } from './site.js';
 
 const $ = (id) => document.getElementById(id);
@@ -7,7 +7,6 @@ const kb = $('kb');
 const onBox = $('kb-on');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-let layout = store.get('hp-kb-layout') === 'romanized' ? 'romanized' : 'preeti';
 let shift = false;
 let state = initState(store.get('hp-kb-text') || '');
 
@@ -18,18 +17,13 @@ function applyInputMode() {
   else ta.removeAttribute('inputmode');
 }
 
-const NOTES = {
-  preeti: 'Preeti layout: <code>g]kfn</code> → <span lang="ne">नेपाल</span>. Type <kbd>l</kbd> (ि) before the letter and <kbd>{</kbd> after it, just like in Preeti.',
-  romanized: 'Romanized: type how it sounds, <code>namaste</code> → <span lang="ne">नमस्ते</span>. Double a vowel for the long sign: <code>aa</code> = ा.',
-};
 
 function renderKeys() {
-  const L = LAYOUTS[layout];
   const rows = ROWS.map((row, ri) => `<div class="kb-row kb-row-${ri}">${row
     .map(([code, normal, shifted]) => {
       const ch = shift ? shifted : normal;
       const alt = shift ? normal : shifted;
-      return `<button type="button" class="kb-key" data-ch="${esc(ch)}" data-code="${code}" aria-label="${esc(L.label(ch))} (${esc(ch)})"><span class="kb-main" lang="ne">${esc(L.label(ch))}</span><span class="kb-alt" lang="ne" aria-hidden="true">${esc(L.label(alt))}</span><span class="kb-cap" aria-hidden="true">${esc(ch)}</span></button>`;
+      return `<button type="button" class="kb-key" data-ch="${esc(ch)}" data-code="${code}" aria-label="${esc(keyLabel(ch))} (${esc(ch)})"><span class="kb-main" lang="ne">${esc(keyLabel(ch))}</span><span class="kb-alt" lang="ne" aria-hidden="true">${esc(keyLabel(alt))}</span><span class="kb-cap" aria-hidden="true">${esc(ch)}</span></button>`;
     })
     .join('')}</div>`).join('');
   kb.innerHTML = `${rows}<div class="kb-row kb-ctrl">
@@ -38,8 +32,6 @@ function renderKeys() {
     <button type="button" class="kb-key kb-back" data-act="back" aria-label="Backspace">⌫</button>
     <button type="button" class="kb-key kb-enter" data-act="enter" aria-label="New line">↵</button>
   </div>`;
-  document.querySelectorAll('[data-layout]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.layout === layout)));
-  $('kb-note').innerHTML = NOTES[layout];
 }
 
 function save() {
@@ -65,7 +57,7 @@ function syncFromDom() {
 
 function typeChar(ch) {
   if (ta.selectionStart !== ta.selectionEnd) state = deleteRange(state, ta.selectionStart, ta.selectionEnd);
-  state = press(state, ch, layout);
+  state = press(state, ch);
   sync();
 }
 
@@ -89,15 +81,14 @@ ta.addEventListener('keydown', (e) => {
   if (e.key === 'Backspace') {
     e.preventDefault();
     if (ta.selectionStart !== ta.selectionEnd) state = deleteRange(state, ta.selectionStart, ta.selectionEnd);
-    else state = backspace(state, layout);
+    else state = backspace(state);
     sync();
     return;
   }
   let ch = null;
   if (e.key === 'Enter') ch = '\n';
   else if (e.code === 'Space') ch = ' ';
-  else if (layout === 'preeti') ch = charForKeyEvent(e.code, e.key, e.shiftKey);
-  else if (e.key.length === 1) ch = e.key;
+  else ch = charForKeyEvent(e.code, e.key, e.shiftKey);
   if (ch === null) return; // arrows, Tab, Delete etc. behave normally
   e.preventDefault();
   flash(e.code);
@@ -123,7 +114,7 @@ kb.addEventListener('click', (e) => {
   if (act === 'shift') { shift = !shift; renderKeys(); return; }
   if (act === 'back') {
     if (ta.selectionStart !== ta.selectionEnd) state = deleteRange(state, ta.selectionStart, ta.selectionEnd);
-    else state = backspace(state, layout);
+    else state = backspace(state);
     sync();
     return;
   }
@@ -132,13 +123,6 @@ kb.addEventListener('click', (e) => {
   if (!touch) ta.focus();
 });
 
-document.querySelectorAll('[data-layout]').forEach((b) => b.addEventListener('click', () => {
-  layout = b.dataset.layout;
-  store.set('hp-kb-layout', layout);
-  state = moveCaret({ ...state, raw: '' }, state.caret);
-  renderKeys();
-  if (!touch) ta.focus();
-}));
 onBox.addEventListener('change', applyInputMode);
 $('kb-copy').addEventListener('click', (e) => copyText(ta.value, e.currentTarget, 'Copied ✓'));
 $('kb-clear').addEventListener('click', () => { state = initState(''); sync(); if (!touch) ta.focus(); });

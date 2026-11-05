@@ -1,4 +1,5 @@
-import { PRESETS, DPI, toPx, coverScale, rotatedBox, clampOffset, sheetLayout, encodeUnder, setJpegDpi, formatKB, checkFile, analyzePixels, pixelRows } from './lib/photo.js';
+import { PRESETS, DPI, toPx, coverScale, coversFrame, keepCovered, sheetLayout, encodeUnder, setJpegDpi, formatKB, checkFile, analyzePixels, pixelRows, estimateHead, assessHead } from './lib/photo.js';
+import { exampleSet } from './lib/photo-figure.js';
 import { store } from './site.js';
 
 // Everything happens in the browser: the photo is drawn on a canvas and saved with a
@@ -18,7 +19,11 @@ let img = null; // ImageBitmap or HTMLImageElement
 let source = null; // { type, bytes, w, h, example } of the chosen file
 let presetKey = location.hash === '#passport-size' ? 'np' : tool.dataset.default || 'dv';
 const view = { zoom: 1, ox: 0, oy: 0, quarter: 0, tilt: 0 };
+let lastGood = { ox: 0, oy: 0 };
 let checkTimer = 0;
+let head = null; // the last head check: { status, share, tips } or { status: 'none' }
+let faceapi = null; // loaded the first time someone presses Check head size
+let headTimer = 0;
 
 // ---- the current output size -------------------------------------------------------
 
@@ -108,8 +113,11 @@ function drawPhoto(c, W, H) {
   c.restore();
 }
 
+const GUIDE_COLOUR = { good: 'rgba(22,128,61,.95)', adjust: 'rgba(202,120,0,.95)', close: 'rgba(202,120,0,.95)', small: 'rgba(200,30,50,.9)', big: 'rgba(200,30,50,.9)', cut: 'rgba(200,30,50,.9)', none: 'rgba(200,30,50,.9)' };
+
 function drawGuide(c, W, H, g) {
   const ovals = g.min === g.max ? [g.max] : [g.min, g.max];
+  const colour = (head && !head.stale && GUIDE_COLOUR[head.status]) || 'rgba(36,83,196,.9)';
   c.save();
   c.setLineDash([Math.max(4, W / 60), Math.max(3, W / 90)]);
   c.lineWidth = Math.max(1.5, W / 220);
@@ -120,7 +128,7 @@ function drawGuide(c, W, H, g) {
     c.beginPath();
     c.ellipse(W / 2, g.y * H, rw, rh, 0, 0, Math.PI * 2);
     c.stroke();
-    c.strokeStyle = 'rgba(36,83,196,.9)';
+    c.strokeStyle = colour;
     c.lineDashOffset = Math.max(4, W / 60);
     c.stroke();
     c.lineDashOffset = 0;
@@ -185,7 +193,7 @@ async function checkOutput() {
   showChecks(el, [
     ...rows,
     ...pixelRows(hints),
-    { label: 'Head size', ok: null, detail: p.guide ? 'check by eye that your head fits the oval' : 'check it matches what your form asks for' },
+    headRow(p),
   ]);
   return out;
 }
@@ -227,6 +235,90 @@ async function downloadSheet() {
   note.textContent = `${layout.count} photos on a 4 × 6 inch (10 × 15 cm) sheet. Print at 100% (actual size), not “fit to page”.`;
 }
 
+// ---- head check (face landmarks, on this device) ---------------------------------------
+
+const HEAD_TEXT = {
+  good: 'Looks right',
+  adjust: 'Almost right',
+  close: 'Close to the limit',
+  small: 'Too small',
+  big: 'Too big',
+  cut: 'Cut off',
+};
+
+function headRow(p) {
+  if (!p.guide) return { label: 'Head size', ok: null, detail: 'check it matches what your form asks for' };
+  if (!head || head.stale || head.status === 'checking') return { label: 'Head size', ok: null, detail: 'press Check head size in step 2, or check by eye that your head fits the oval' };
+  if (head.status === 'none') return { label: 'Head size', ok: false, detail: 'no face found: check by eye' };
+  const pct = `about ${Math.round(head.share * 100)}% of the height (estimated)`;
+  return { label: 'Head size', ok: head.status === 'good' ? true : head.status === 'close' || head.status === 'adjust' ? null : false, detail: `${HEAD_TEXT[head.status].toLowerCase()}, ${pct}` };
+}
+
+function showHead() {
+  const el = $('ph-head');
+  if (!head) { el.className = 'ph-head'; el.innerHTML = ''; return; }
+  if (head.status === 'checking') { el.className = 'ph-head'; el.textContent = head.text || 'Checking…'; return; }
+  if (head.status === 'none') {
+    el.className = 'ph-head bad';
+    el.textContent = source && source.example
+      ? 'No face found. The example is a drawing, so the automatic check may not see it: try it with a real photo.'
+      : 'No face found. Use a sharp photo of one person looking at the camera, or check by eye.';
+    return;
+  }
+  const p = preset();
+  const range = p.guide.min === p.guide.max ? 'about 70%' : '50% to 69%';
+  el.className = `ph-head ${head.status === 'good' ? 'ok' : head.status === 'close' || head.status === 'adjust' ? 'warn' : 'bad'}`;
+  el.innerHTML = `<b>${head.status === 'good' ? '✓ ' : ''}${HEAD_TEXT[head.status]}:</b> your head is about ${Math.round(head.share * 100)}% of the photo height (needs ${range}).${head.tips.length ? ` ${head.tips.join(' ')}` : ''} <span class="ph-head-note">An estimate from face detection on your device.</span>`;
+}
+
+async function loadFaceApi() {
+  if (faceapi) return faceapi;
+  const mod = await import('/vendor/face-api/face-api.esm.js');
+  await mod.nets.tinyFaceDetector.loadFromUri('/vendor/face-api/model');
+  await mod.nets.faceLandmark68TinyNet.loadFromUri('/vendor/face-api/model');
+  faceapi = mod;
+  return mod;
+}
+
+async function checkHead() {
+  const p = preset();
+  if (!img || !p.guide) return;
+  const first = !faceapi;
+  head = { status: 'checking', text: first ? 'Loading the face check (about 1.5 MB, only the first time)…' : 'Checking…' };
+  showHead();
+  try {
+    const api = await loadFaceApi();
+    const c = photoCanvas(p);
+    const found = await api.detectAllFaces(c, new api.TinyFaceDetectorOptions({ inputSize: 416, scoreThreshold: 0.4 })).withFaceLandmarks(true);
+    if (!found.length) head = { status: 'none' };
+    else {
+      const biggest = found.reduce((a, b) => (b.detection.box.area > a.detection.box.area ? b : a));
+      head = assessHead(estimateHead(biggest.landmarks.positions), p.w, p.h, p.guide);
+      if ((head.status === 'cut' || head.status === 'big') && view.zoom <= 1.001) {
+        // Already zoomed out as far as the photo allows: the photo itself is too close.
+        head.tips = head.tips.filter((t) => !/^Zoom out|cut off/.test(t));
+        head.tips.unshift('This photo is taken too close to your head, so it can’t be zoomed out more. Take it again from a little further away, with space above your head and your shoulders in the photo.');
+      }
+      if (found.length > 1) head.tips.unshift('More than one face was found: the photo must show only you.');
+    }
+  } catch {
+    head = null;
+    $('ph-head').className = 'ph-head bad';
+    $('ph-head').textContent = 'The face check couldn’t load. Check by eye that your head fits the oval.';
+    return;
+  }
+  showHead();
+  render();
+  checkOutput();
+}
+
+/** Once the face check has loaded, check again by itself after each move or zoom. */
+function scheduleHeadCheck() {
+  if (!faceapi || !img || !preset().guide) return;
+  clearTimeout(headTimer);
+  headTimer = setTimeout(checkHead, 600);
+}
+
 // ---- loading a photo -----------------------------------------------------------------
 
 async function decode(blob) {
@@ -262,6 +354,8 @@ async function load(file, { example = false } = {}) {
     ? 'Example photo loaded. Drag it and zoom until the head fits the oval.'
     : `Your photo: ${img.width} × ${img.height} pixels, ${formatKB(file.size)}. It stays on this device.`;
   tool.classList.add('has-photo');
+  head = null;
+  showHead();
   reset();
   checkSource();
   canvas.focus({ preventScroll: true });
@@ -280,6 +374,7 @@ async function loadExample() {
 
 function reset() {
   Object.assign(view, { zoom: 1, ox: 0, oy: 0, quarter: 0, tilt: 0 });
+  lastGood = { ox: 0, oy: 0 };
   zoomEl.value = '1';
   tiltEl.value = '0';
   update();
@@ -287,12 +382,18 @@ function reset() {
 
 function update() {
   if (img) {
+    // Keep the photo covering the whole frame: no white edges or corners.
     const p = preset();
-    const k = coverScale(img.width, img.height, p.w, p.h, theta()) * view.zoom;
-    Object.assign(view, clampOffset(view.ox, view.oy, rotatedBox(img.width, img.height, k, theta()), p.w, p.h));
+    const t = theta();
+    const k = coverScale(img.width, img.height, p.w, p.h, t) * view.zoom;
+    const fits = (ox, oy) => coversFrame(ox, oy, k, img.width, img.height, p.w, p.h, t);
+    lastGood = keepCovered({ ox: view.ox, oy: view.oy }, lastGood, fits);
+    Object.assign(view, lastGood);
   }
+  if (head && head.status !== 'checking') head = { ...head, stale: true };
   render();
   scheduleCheck();
+  scheduleHeadCheck();
 }
 
 // ---- moving and zooming --------------------------------------------------------------
@@ -379,6 +480,7 @@ $('ph-dl').addEventListener('click', downloadPhoto);
 $('ph-sheet').addEventListener('click', downloadSheet);
 $('ph-change').addEventListener('click', () => fileInput.click());
 $('ph-example').addEventListener('click', loadExample);
+$('ph-headcheck').addEventListener('click', checkHead);
 fileInput.addEventListener('change', () => {
   load(fileInput.files && fileInput.files[0]);
   fileInput.value = '';
@@ -411,6 +513,10 @@ function setPreset(key) {
     : '';
   $('ph-sheet').hidden = !p.sheet;
   $('ph-sheet-note').textContent = '';
+  $('ph-mini').innerHTML = p.guide ? exampleSet(key === 'np' ? 'np' : 'dv') : '';
+  $('ph-headcheck').hidden = !p.guide;
+  head = null;
+  showHead();
   checkSource();
   update();
 }

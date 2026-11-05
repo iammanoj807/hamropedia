@@ -28,9 +28,8 @@
 ## Free tools
 - [Nepali typing: English to Nepali Unicode](https://hamropedia.com/tools/english-to-nepali/)
 - [Preeti to Unicode converter](https://hamropedia.com/tools/preeti-to-unicode/)
-- [Nepali keyboard (Preeti layout and Romanized)](https://hamropedia.com/tools/nepali-keyboard/)
+- [Nepali keyboard (Nepali Unicode Traditional layout, close to Preeti)](https://hamropedia.com/tools/nepali-keyboard/)
 - [Nepali date converter (BS to AD)](https://hamropedia.com/tools/nepali-date-converter/)
-- [Age calculator (BS and AD)](https://hamropedia.com/tools/age-calculator/)
 - [DV lottery photo checker and editor: 600x600 JPEG under 240 kB; also Nepal passport size 35x45 mm, 2x2 inch, custom size and kB limit, 4x6 print sheet](https://hamropedia.com/tools/dv-photo-tool/)
 
 ## About

@@ -128,3 +128,47 @@ test('photo checker: colour and background hints', async () => {
   assert.equal(grey.grey, true);
   assert.equal(pixelRows(grey).find((r) => r.key === 'colour').ok, false);
 });
+
+test('photo crop: the photo always covers the frame, also when tilted', async () => {
+  const { coversFrame, keepCovered, coverScale } = await import('../src/assets/js/lib/photo.js');
+  const [iw, ih, W, H] = [800, 1000, 600, 600];
+  const k = coverScale(iw, ih, W, H); // 0.75: the image is 600 x 750 on screen
+  assert.equal(coversFrame(0, 0, k, iw, ih, W, H), true);
+  assert.equal(coversFrame(0, 0.12, k, iw, ih, W, H), true); // 75 px of room up and down = 0.125
+  assert.equal(coversFrame(0, 0.13, k, iw, ih, W, H), false);
+  assert.equal(coversFrame(0.01, 0, k, iw, ih, W, H), false); // no room left or right
+  // dragging past the edge stops at the edge and still slides the other way
+  const fits = (ox, oy) => coversFrame(ox, oy, k, iw, ih, W, H);
+  const got = keepCovered({ ox: 0.2, oy: 0.5 }, { ox: 0, oy: 0 }, fits);
+  assert.ok(Math.abs(got.ox) < 1e-6 && Math.abs(got.oy - 0.125) < 1e-4);
+  // tilted 5 degrees: the cover scale for that angle covers the corners at the centre
+  const t = (5 * Math.PI) / 180;
+  const kt = coverScale(iw, ih, W, H, t);
+  assert.equal(coversFrame(0, 0, kt, iw, ih, W, H, t), true);
+  assert.equal(coversFrame(0, 0, k, iw, ih, W, H, t), false); // the untilted scale shows white corners
+});
+
+test('photo head check: estimated head size and the advice', async () => {
+  const { estimateHead, assessHead } = await import('../src/assets/js/lib/photo.js');
+  // 68 points: chin (8) at y 480, eyebrows (17-26) at y 300, eyes level, face centred at x 300
+  const pts = Array.from({ length: 68 }, () => ({ x: 300, y: 380 }));
+  pts[0] = { x: 200, y: 330 }; pts[16] = { x: 400, y: 330 }; pts[8] = { x: 300, y: 480 };
+  for (let i = 17; i <= 26; i++) pts[i] = { x: 230 + i, y: 300 };
+  for (let i = 36; i <= 41; i++) pts[i] = { x: 250, y: 330 };
+  for (let i = 42; i <= 47; i++) pts[i] = { x: 350, y: 330 };
+  const head = estimateHead(pts);
+  assert.equal(head.crownY, 300 - 0.75 * 180); // 165
+  assert.equal(Math.round(head.tiltDeg), 0);
+  const dv = { good: [0.53, 0.66], ok: [0.5, 0.69] };
+  const a = assessHead(head, 600, 600, dv); // (480 - 165) / 600 = 52.5%: inside the limits but close
+  assert.equal(a.status, 'close');
+  assert.equal(assessHead({ ...head, crownY: 120 }, 600, 600, dv).status, 'good'); // 60%
+  assert.equal(assessHead({ ...head, crownY: 250 }, 600, 600, dv).status, 'small');
+  assert.equal(assessHead({ ...head, crownY: 40 }, 600, 600, dv).status, 'big');
+  assert.equal(assessHead({ ...head, crownY: -30 }, 600, 600, dv).status, 'cut');
+  const off = assessHead({ ...head, crownY: 120, faceCx: 380 }, 600, 600, dv);
+  assert.equal(off.status, 'adjust'); // right size, but not in the middle
+  assert.match(off.tips.join(' '), /Move the photo left/);
+  const tilted = assessHead({ ...head, crownY: 120, tiltDeg: 6 }, 600, 600, dv);
+  assert.match(tilted.tips.join(' '), /Straighten about 6° to the left/);
+});

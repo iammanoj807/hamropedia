@@ -21,7 +21,7 @@ Before anything else, make sure you are typing **Unicode**:
 - **Unicode Nepali** stores real Devanagari letters. It works on every phone, in Facebook, Gmail, Word and Google Docs, and Google can search it.
 - **Preeti** is an old font that draws Nepali shapes on English keys. Without the font, <span lang="ne">नेपाल</span> appears as `g]kfn`.
 
-Learned to type on the Preeti layout? The [Nepali keyboard](/tools/nepali-keyboard/) lets you keep using the same keys, but produces proper Unicode. Already have text in Preeti? Paste it into the free [Preeti to Unicode converter](/tools/preeti-to-unicode/) instead of retyping it.
+Learned to type on the Preeti layout? The [Nepali keyboard](/tools/nepali-keyboard/) uses the standard Nepali Unicode Traditional layout, which keeps most Preeti keys and produces proper Unicode. Already have text in Preeti? Paste it into the free [Preeti to Unicode converter](/tools/preeti-to-unicode/) instead of retyping it.
 
 ## Nepali Unicode Romanized typing rules
 
@@ -87,7 +87,7 @@ There are two common Nepali Unicode keyboard layouts, and both produce the same 
 - **Romanized (Nepali romanized keyboard):** keys follow the sound in English letters, so `k` gives <span lang="ne">क</span> and `m` gives <span lang="ne">म</span>. Easiest if you already type in English. It is what the rules above and our [typing tool](/tools/english-to-nepali/) use.
 - **Traditional:** the old typewriter-style layout, where each key is a fixed Nepali letter that doesn't match its English sound. Quicker for people trained on it, but slow to learn from scratch. Windows' built-in Nepali keyboard is a Devanagari layout of this kind.
 
-If you learned on Preeti, use the [Nepali keyboard tool](/tools/nepali-keyboard/): it keeps the Preeti key positions and still gives you Unicode.
+If you learned on Preeti, use the [Nepali keyboard tool](/tools/nepali-keyboard/): its Nepali Unicode Traditional layout keeps most Preeti key positions and gives you Unicode.
 
 ## Nepali font: use a Unicode font
 

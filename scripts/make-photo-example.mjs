@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { personShapes } from '../src/lib/photo-figure.js';
+import { personShapes } from '../src/assets/js/lib/photo-figure.js';
 
 const W = 1500;
 const H = 2000;

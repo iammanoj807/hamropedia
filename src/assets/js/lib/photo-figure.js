@@ -1,5 +1,6 @@
 // A drawn (not real) person for the photo tool: the "right / too small / too big" examples
-// on the page, and the practice photo in public/images/tools/ (scripts/make-photo-example.mjs).
+// on the page and in the tool, and the practice photo in public/images/tools/
+// (scripts/make-photo-example.mjs). Used by the build and in the browser.
 
 /**
  * The person as SVG shapes. `headH` is the head height, chin to top of hair; `top` is where
@@ -36,14 +37,24 @@ export function guideOvals(W, H, shares = [0.5, 0.69], cy = 0.46) {
     .join('');
 }
 
-/** One example square (600 × 600) with the guide, for the page. */
-export function exampleSvg({ headShare, label, ok }) {
-  const W = 600;
-  const H = 600;
+/** One example photo with its oval guide (DV and 2×2: 600 × 600; Nepal: 413 × 531). */
+export function exampleSvg({ W = 600, H = 600, headShare, shares = [0.5, 0.69], cy = 0.46, label, ok }) {
   const s = headShare * H;
-  const top = 0.46 * H - s / 2;
+  const top = cy * H - s / 2;
   return `<figure class="ph-example ${ok ? 'is-ok' : 'is-bad'}">
-<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}"><rect width="${W}" height="${H}" fill="#f6f6f3"/>${personShapes({ cx: W / 2, top, headH: s, frameH: H })}${guideOvals(W, H)}</svg>
+<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}"><rect width="${W}" height="${H}" fill="#f6f6f3"/>${personShapes({ cx: W / 2, top, headH: s, frameH: H })}${guideOvals(W, H, shares, cy)}</svg>
 <figcaption><span aria-hidden="true">${ok ? '✓' : '✗'}</span> ${label}</figcaption>
 </figure>`;
+}
+
+/** Right, too small and too big, for one photo size. */
+export function exampleSet(key) {
+  const np = key === 'np';
+  const size = np ? { W: 413, H: 531, shares: [0.7], cy: 0.48 } : { W: 600, H: 600, shares: [0.5, 0.69], cy: 0.46 };
+  const rightLabel = np ? 'Right: the face fills the oval' : 'Right: the head is between the two ovals';
+  return [
+    exampleSvg({ ...size, headShare: np ? 0.7 : 0.6, label: rightLabel, ok: true }),
+    exampleSvg({ ...size, headShare: np ? 0.46 : 0.36, label: 'Too small: zoom in', ok: false }),
+    exampleSvg({ ...size, headShare: np ? 0.92 : 0.84, label: 'Too big: zoom out', ok: false }),
+  ].join('\n');
 }
