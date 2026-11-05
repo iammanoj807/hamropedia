@@ -48,7 +48,7 @@ export function layout(p) {
   const image = abs(site.url, p.image || '/images/og-default.jpg');
   const schemas = (p.schema || []).map(jsonLd).join('\n');
   const scripts = ['/assets/js/site.js', ...(p.scripts || [])]
-    .map((s) => `<script type="module" src="${s}"></script>`)
+    .map((s) => `<script type="module" src="${s}?v=${p.version}"></script>`)
     .join('\n');
   const verify = site.googleSiteVerification
     ? `<meta name="google-site-verification" content="${esc(site.googleSiteVerification)}">`

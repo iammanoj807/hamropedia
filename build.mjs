@@ -29,8 +29,32 @@ fs.mkdirSync(DIST, { recursive: true });
 fs.cpSync(PUBLIC, DIST, { recursive: true });
 fs.cpSync(path.join(ROOT, 'src/assets'), path.join(DIST, 'assets'), { recursive: true });
 
-const css = fs.readFileSync(path.join(ROOT, 'src/assets/css/site.css'), 'utf8');
-const version = crypto.createHash('sha1').update(css).digest('hex').slice(0, 8);
+// The asset version changes whenever any CSS or JavaScript file changes. It goes on every
+// stylesheet, script and module import (?v=...), so after a deploy a browser can never mix a
+// new page with an old cached script (GitHub Pages lets browsers cache files for 10 minutes).
+const assetHash = crypto.createHash('sha1');
+(function hashDir(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) hashDir(p);
+    else if (/\.(css|js)$/.test(e.name)) assetHash.update(e.name).update(fs.readFileSync(p));
+  }
+})(path.join(ROOT, 'src/assets'));
+const version = assetHash.digest('hex').slice(0, 8);
+
+// Add the version to relative module imports in the served JavaScript: './lib/photo.js' → './lib/photo.js?v=…'.
+(function versionImports(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) { versionImports(p); continue; }
+    if (!e.name.endsWith('.js')) continue;
+    const src = fs.readFileSync(p, 'utf8');
+    const out = src
+      .replace(/(\bfrom\s*)(['"])(\.{1,2}\/[^'"?]+\.js)\2/g, (m, a, q, spec) => `${a}${q}${spec}?v=${version}${q}`)
+      .replace(/(\bimport\s*\(\s*)(['"])(\.{1,2}\/[^'"?]+\.js)\2/g, (m, a, q, spec) => `${a}${q}${spec}?v=${version}${q}`);
+    if (out !== src) fs.writeFileSync(p, out);
+  }
+})(path.join(DIST, 'assets', 'js'));
 
 // ---------------------------------------------------------------------------
 // Posts
