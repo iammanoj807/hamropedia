@@ -95,6 +95,15 @@ ${post.html}
     </div>
   </div>
   <footer class="post-foot wrap-narrow">
+    <aside class="author-box" aria-label="${ne ? 'लेखकबारे' : 'About the author'}">
+      <img src="/images/manojkumarthapa.webp" alt="${esc(t.authorName)}" width="72" height="85" loading="lazy" decoding="async">
+      <div>
+        <p class="author-box-name">${ne ? 'लेखक' : 'Written by'} <a href="/about-us/">${esc(t.authorName)}</a></p>
+        <p>${ne
+          ? 'बेलायतको बर्मिङ्घममा बस्ने नेपाली एआई सफ्टवेयर इन्जिनियर। एस्टन विश्वविद्यालयबाट आर्टिफिसियल इन्टेलिजेन्समा एमएससी (डिस्टिङ्सन), र पहिले एक्सेन्चरमा सफ्टवेयर इन्जिनियर। यस लेखमा दिइएका नियम, शुल्क र मितिमा आधिकारिक स्रोतको लिंक छ।'
+          : 'AI software engineer from Nepal, living in Birmingham, UK. MSc in Artificial Intelligence (Distinction) from Aston University, and previously a software engineer at Accenture. Where this article gives a rule, fee or date, it links to the official source.'}</p>
+      </div>
+    </aside>
     ${shareBar(abs(site.url, post.url), post.title, lang)}
     ${supportNote(lang)}
   </footer>
@@ -260,7 +269,7 @@ ${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/
 ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
     title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
-    description: 'News explained simply: the EDV 2027 (DV lottery) update, PM Balen Shah and Nepal\'s 2026 election, the UK Graduate visa change and Nepal\'s AI policy. Also in Nepali.',
+    description: 'News explained simply: the EDV 2027 (DV lottery) update, PM Balen Shah and Nepal\'s 2026 election, the UK Graduate visa change and Nepal\'s AI policy.',
     path: '/news/',
     body,
     version,

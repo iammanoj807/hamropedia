@@ -11,7 +11,7 @@ import { codeBlock } from '../lib/markdown.js';
 import { createGlossary, paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, progressBackup, courseByline, newest } from './course-parts.js';
+import { readCourse, progressBackup, courseByline, newest, clip } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions } from './lesson.js';
 
 const PHASE_COLOURS = ['#64748b', '#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7', '#6366f1', '#0f766e'];
@@ -451,7 +451,7 @@ export function renderSqlPhase(p, i, version) {
   return layout({
     title: `${PHASE_TITLES[p.slug] || `SQL, phase ${p.number}: ${p.short}`} | ${site.name}`,
     ogTitle: `SQL, phase ${p.number}: ${p.title}`,
-    description: `${p.goal} ${p.topics.length} free ${unit} with examples you can run in your browser.`.slice(0, 300),
+    description: clip(`${p.goal} ${p.topics.length} free ${unit} with examples you can run in your browser.`),
     path: phasePath(p),
     image: '/images/og/sql.jpg',
     body,

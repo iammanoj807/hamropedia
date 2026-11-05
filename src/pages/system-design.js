@@ -6,7 +6,7 @@ import { esc } from '../lib/util.js';
 import { createGlossary, paragraphs, plain } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, progressBackup, courseByline, newest } from './course-parts.js';
+import { readCourse, progressBackup, courseByline, newest, clip } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions, topicCode } from './lesson.js';
 
 const PHASE_COLOURS = ['#64748b', '#2563eb', '#0891b2', '#4f46e5', '#0d9488', '#7c3aed', '#0284c7', '#6366f1', '#0f766e', '#9333ea'];
@@ -308,7 +308,7 @@ export function renderSdPhase(p, i, version) {
   return layout({
     title: `${PHASE_TITLES[p.slug] || `System Design, phase ${p.number}: ${p.short}`} | ${site.name}`,
     ogTitle: `System design, phase ${p.number}: ${p.title}`,
-    description: `${p.goal} ${p.topics.length} free lessons with diagrams, interview answers and exercises.`.slice(0, 300),
+    description: clip(`${p.goal} ${p.topics.length} free lessons with diagrams, interview answers and exercises.`),
     path: phasePath(p),
     image: '/images/og/system-design.jpg',
     body,

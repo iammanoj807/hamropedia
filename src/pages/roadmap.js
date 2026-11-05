@@ -5,7 +5,7 @@ import { esc } from '../lib/util.js';
 import { createGlossary, paragraphs } from '../lib/glossary.js';
 import { layout } from '../templates/layout.js';
 import { breadcrumbs, breadcrumbSchema, faqBlock, faqSchema, shareBar } from '../templates/components.js';
-import { readCourse, backbone, progressBackup, courseByline, newest, KIND } from './course-parts.js';
+import { readCourse, backbone, progressBackup, courseByline, newest, KIND, clip } from './course-parts.js';
 import { renderLesson, list, animationBox, diagramBox, questions } from './lesson.js';
 import { codeBlock } from '../lib/markdown.js';
 
@@ -190,7 +190,7 @@ export function renderPhase(p, i, version) {
   return layout({
     title: `${PHASE_TITLES[p.slug] || `Phase ${p.number}: ${p.title}, free lessons`} | ${site.name}`,
     ogTitle: `AI roadmap, phase ${p.number}: ${p.title}`,
-    description: `${p.goal} ${p.topics.length} free lessons, each with an animation, a diagram and exercises with answers.`.slice(0, 300),
+    description: clip(`${p.goal} ${p.topics.length} free lessons, each with an animation, a diagram and exercises with answers.`),
     path: phasePath(p),
     image: '/images/og/ai-roadmap.jpg',
     body,

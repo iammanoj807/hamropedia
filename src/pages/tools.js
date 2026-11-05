@@ -150,7 +150,7 @@ export function renderRomanized(version) {
   return toolPage({
     t,
     title: `Nepali Typing Online: Easy English to Nepali Unicode Typing | ${site.name}`,
-    description: 'Type in English letters and get Nepali Unicode instantly: “mero naam” → “मेरो नाम”. Free Romanized Nepali typing with smart spelling, copy and download. Works on phone.',
+    description: 'Type in English letters and get Nepali Unicode instantly: “mero naam” → “मेरो नाम”. Free Nepali typing with smart spelling. Copy, download, works on phone.',
     lead: 'Type Nepali the way it sounds in English letters. <span lang="ne">“mero naam” → “मेरो नाम”</span>, instantly, right in your browser.',
     toolHtml,
     explainer,
@@ -268,7 +268,7 @@ export function renderKeyboard(version) {
   return toolPage({
     t,
     title: `Nepali Keyboard Layout Online: Preeti and Romanized | ${site.name}`,
-    description: 'Free online Nepali keyboard. Type Nepali Unicode with the familiar Preeti layout or Romanized keys, or tap the on-screen keyboard on your phone. Copy to Facebook, Word or anywhere.',
+    description: 'Free online Nepali keyboard: type Nepali Unicode with the Preeti layout or Romanized keys, or tap the on-screen keyboard. Copy to Facebook, Word or anywhere.',
     lead: 'Type Nepali Unicode with the <strong>Preeti layout</strong> you already know, or with <strong>Romanized</strong> keys. On a phone, just tap the keys.',
     toolHtml,
     explainer,
