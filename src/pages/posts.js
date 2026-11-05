@@ -2,7 +2,7 @@ import { site, categories } from '../data/site.js';
 import { esc, longDate, isoDate, abs } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import {
-  categoryChip, postCard, breadcrumbs, breadcrumbSchema, shareBar, supportNote, pageHead, cover, displayDate,
+  categoryChip, postCard, breadcrumbs, breadcrumbSchema, faqSchema, shareBar, supportNote, pageHead, cover, displayDate,
 } from '../templates/components.js';
 import { toNepaliDigits } from '../assets/js/lib/bs-date.js';
 import fs from 'node:fs';
@@ -122,6 +122,8 @@ ${post.html}
       inLanguage: lang,
     },
     breadcrumbSchema(crumbs),
+    // FAQPage from the post's own FAQ section, so the schema always matches what readers see.
+    ...(post.faqs && post.faqs.length >= 2 ? [faqSchema(post.faqs)] : []),
   ];
 
   return layout({

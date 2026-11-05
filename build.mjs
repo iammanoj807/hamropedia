@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
 import matter from 'gray-matter';
 import { site, categories, redirects } from './src/data/site.js';
-import { renderMarkdown } from './src/lib/markdown.js';
+import { renderMarkdown, extractFaqs } from './src/lib/markdown.js';
 import { readingMinutes, isoDate, rfc822, esc } from './src/lib/util.js';
 import { renderPost, renderBlogIndex, renderCategory, renderNews, renderNeHub } from './src/pages/posts.js';
 import { renderRoadmapIndex, renderPhase, renderLessons, lessonAnimations, phases } from './src/pages/roadmap.js';
@@ -82,6 +82,7 @@ const toPost = ({ file, data, content, lang }) => {
     html,
     toc,
     readingMinutes: readingMinutes(content),
+    faqs: extractFaqs(content),
     ogImage: exists(og) ? og : '/images/og-default.jpg',
   };
 };

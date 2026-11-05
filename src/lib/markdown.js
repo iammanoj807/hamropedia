@@ -78,3 +78,18 @@ export function renderMarkdown(md, ctx) {
   );
   return { html, toc };
 }
+
+/**
+ * The questions and answers in a post's FAQ section, for FAQPage schema.
+ * Reads "## Frequently asked questions" (or the Nepali heading) up to the next "## " or "---",
+ * where each question is a bold line ending in "?" followed by its answer: **Question?** Answer.
+ */
+export function extractFaqs(markdown) {
+  const start = markdown.search(/^## (Frequently asked questions|बारम्बार सोधिने प्रश्न)\s*$/m);
+  if (start < 0) return [];
+  const rest = markdown.slice(start).split('\n').slice(1).join('\n');
+  const end = rest.search(/^(## |---\s*$)/m);
+  const section = end < 0 ? rest : rest.slice(0, end);
+  const plain = (t) => t.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/\*\*|`/g, '').replace(/<[^>]+>/g, '').trim();
+  return [...section.matchAll(/^\*\*(.+?[?？])\*\*\s+(.+)$/gm)].map(([, q, a]) => ({ q: plain(q), a: plain(a) }));
+}
