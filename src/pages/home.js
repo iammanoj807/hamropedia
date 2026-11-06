@@ -1,13 +1,15 @@
 import { site } from '../data/site.js';
 import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
-import { postCard, categoryChip, displayDate, recentList } from '../templates/components.js';
+import { postCard, categoryChip, displayDate, byLatestActivity } from '../templates/components.js';
 import { roadmapBand } from './learn.js';
 
 export function renderHome(posts, version) {
-  const news = posts.filter((p) => p.type === 'news');
   const guides = posts.filter((p) => p.type !== 'news');
-  const [topNews, ...moreNews] = news;
+  // Latest news: the newest or most recently updated articles of any kind.
+  const [top, ...more] = byLatestActivity(posts);
+  const topNews = top && top.p;
+  const moreNews = more;
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
   const learning = guides.filter((p) => p.category === 'ai' || p.category === 'coding').slice(0, 3);
   const popularSlugs = [
@@ -47,17 +49,12 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>New and updated</h2><a href="/blog/">All articles</a></div>
-  ${recentList(posts)}
-</section>
-
-<section class="wrap section">
   <div class="section-head"><h2>Latest news</h2><a href="/news/">All news</a></div>
   <div class="news-lead">
     ${topNews ? postCard(topNews, { size: 'lg' }) : ''}
     <div class="news-side">
       <ol class="headline-list">
-        ${moreNews.slice(0, 4).map((p) => `<li>${categoryChip(p.category, false)}<a href="${p.url}">${esc(p.title)}</a><span>${displayDate(p.date)}</span></li>`).join('')}
+        ${moreNews.slice(0, 4).map(({ p, updated, when }) => `<li>${categoryChip(p.category, false)}<a href="${p.url}">${esc(p.title)}</a><span>${updated ? 'Updated ' : ''}${displayDate(when)}</span></li>`).join('')}
       </ol>
       <p class="side-note"><a class="lang-switch" href="/ne/" lang="ne" hreflang="ne">नेपालीमा पढ्नुहोस्</a></p>
     </div>

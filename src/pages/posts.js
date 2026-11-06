@@ -2,7 +2,7 @@ import { site, categories } from '../data/site.js';
 import { esc, longDate, isoDate, abs } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import {
-  categoryChip, postCard, breadcrumbs, breadcrumbSchema, faqSchema, shareBar, supportNote, pageHead, cover, displayDate, recentList,
+  categoryChip, postCard, breadcrumbs, breadcrumbSchema, faqSchema, shareBar, supportNote, pageHead, cover, displayDate,
 } from '../templates/components.js';
 import { toNepaliDigits } from '../assets/js/lib/bs-date.js';
 import fs from 'node:fs';
@@ -281,10 +281,6 @@ export function renderNeHub(nePosts, version) {
     title: 'नेपाली समाचार',
     lead: 'नेपाल, एआई र विदेश अध्ययनसम्बन्धी प्रमुख समाचार, सरल नेपालीमा। <a class="lang-switch" href="/news/" lang="en" hreflang="en">Read in English</a>',
   })}
-<section class="wrap section">
-  <div class="section-head"><h2>नयाँ र अपडेट</h2></div>
-  ${recentList(nePosts, { lang: 'ne' })}
-</section>
 ${newsLead(nePosts, 'ne')}
 ${newsSection('नेपाल', nePosts.filter((p) => p.category === 'nepal'), null)}
 ${newsSection('एआई र प्रविधि', nePosts.filter((p) => p.category === 'ai'), null)}
