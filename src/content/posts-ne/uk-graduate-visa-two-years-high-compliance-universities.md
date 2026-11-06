@@ -41,7 +41,7 @@ gov.uk अनुसार ग्राजुएट भिसा **२०२६ �
 
 ## बजेटमा के भनियो
 
-बजेटमा भनिएको छ: *"the graduate visa duration will be set at two years for individuals who graduate from high-compliance universities"*, अर्थात् *"strong labour market outcomes"* (राम्रो रोजगारी नतिजा) भएका उच्च अनुपालन विश्वविद्यालयका स्नातकका लागि ग्राजुएट भिसा दुई वर्षको हुनेछ। यसलाई "योग्य विश्वविद्यालयका लागि १८ महिनाबाट दुई वर्ष" गरिएको भनिएको छ ([द पाई न्युज, 28 Oct 2026](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/))।
+बजेटमा भनिएको छ: *"the graduate visa duration will be set at two years for individuals who graduate from high-compliance universities"*, अर्थात् *"strong labour market outcomes"* (राम्रो रोजगारी नतिजा) भएका उच्च अनुपालन विश्वविद्यालयका स्नातकका लागि ग्राजुएट भिसा दुई वर्षको हुनेछ। यसलाई "योग्य विश्वविद्यालयका लागि १८ महिनाबाट दुई वर्ष" गरिएको भनिएको छ ([द पाई न्युज, २८ अक्टोबर २०२६](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/))।
 
 ## कसले कति पाउँछ
 
@@ -91,4 +91,4 @@ gov.uk अनुसार ग्राजुएट भिसा **२०२६ �
 
 ---
 
-**स्रोत:** [द पाई न्युज, 28 Oct 2026](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [एप्लाईबोर्ड](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [स्टडी ट्राभल नेटवर्क](https://studytravel.network/magazine/news/0/32504) · [यूकेसीसा](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)
+**स्रोत:** [द पाई न्युज, २८ अक्टोबर २०२६](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [एप्लाईबोर्ड](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [स्टडी ट्राभल नेटवर्क](https://studytravel.network/magazine/news/0/32504) · [यूकेसीसा](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)

@@ -1,5 +1,5 @@
 ---
-title: "EDV 2027 (ईडीभी २०२७) खुल्यो? डीभी लटरीको पछिल्लो अपडेट"
+title: "ईडीभी २०२७ खुल्यो? डीभी लटरीको पछिल्लो अपडेट"
 seoTitle: "EDV 2027 नेपाल: ईडीभी फारम खुल्यो? पछिल्लो अपडेट"
 description: "ईडीभी २०२७ (डीभी-२०२७) फारम अझै खुलेको छैन: अमेरिकी अदालतले २०२६ नोभेम्बर १ मा फारम खोल्ने आदेश रोकेको छ। के भयो, खुल्दा के नयाँ हुन्छ, र ठगीबाट कसरी जोगिने।"
 date: 2026-10-30
@@ -20,7 +20,7 @@ coverAlt: "ईडीभी २०२७ डीभी लटरी अपडे�
 > - **ईडीभी २०२७ खुल्यो?** खुलेको छैन। डीभी-२०२७ को दर्ता सुरु भएको छैन।
 > - **किन?** अमेरिकी विदेश मन्त्रालयले डिसेम्बर २०२५ मा कार्यक्रम रोकेको थियो, र यसलाई खोल्ने अदालतको आदेश २९ अक्टोबर २०२६ मा रोकियो।
 > - **कहिले खुल्छ?** अझै कसैलाई थाहा छैन। आधिकारिक वेबसाइट **dvprogram.state.gov** मात्र हेर्नुहोस्।
-> - **खुल्दा नयाँ कुरा:** **१ अमेरिकी डलर** (US$1) दर्ता शुल्क, र मुख्य आवेदकका लागि **मान्य राहदानी**।
+> - **खुल्दा नयाँ कुरा:** **१ अमेरिकी डलर** (US$१) दर्ता शुल्क, र मुख्य आवेदकका लागि **मान्य राहदानी**।
 
 ## के भयो, क्रमैसँग
 
@@ -40,7 +40,7 @@ coverAlt: "ईडीभी २०२७ डीभी लटरी अपडे�
 
 ## खुल्दा के फरक हुन्छ
 
-- **१ अमेरिकी डलर शुल्क:** नयाँ नियमअनुसार हरेक आवेदनमा **१ अमेरिकी डलर** (US$1) अनलाइन दर्ता शुल्क लाग्छ, जुन फारम बुझाउँदा तिर्नुपर्छ ([क्याम्प लिगल](https://camplegal.com/understanding-the-dv-2027-lotterys-new-1-electronic-registration-fee/))। पहिले आवेदन निःशुल्क थियो।
+- **१ अमेरिकी डलर शुल्क:** नयाँ नियमअनुसार हरेक आवेदनमा **१ अमेरिकी डलर** (US$१) अनलाइन दर्ता शुल्क लाग्छ, जुन फारम बुझाउँदा तिर्नुपर्छ ([क्याम्प लिगल](https://camplegal.com/understanding-the-dv-2027-lotterys-new-1-electronic-registration-fee/))। पहिले आवेदन निःशुल्क थियो।
 - **राहदानी अनिवार्य:** **१० अप्रिल २०२६** देखि लागू अन्तिम नियमअनुसार मुख्य आवेदकले फारममा **म्याद बाँकी रहेको मान्य राहदानी** को विवरण दिनुपर्छ र फोटो तथा हस्ताक्षर भएको पृष्ठको स्क्यान अपलोड गर्नुपर्छ ([ईआईजी ल](https://eiglaw.com/dos-finalizes-new-passport-and-identity-requirements-for-diversity-visa-program/); [जीटी ल](https://www.gtlaw-insidebusinessimmigration.com/u-s-department-of-state-dos/state-department-final-rule-reinstates-passport-requirement-for-diversity-visa-lottery-entries-beginning-with-dv-2027/))।
 
 ## फारम खुल्नुअघि अहिले नै के तयार गर्ने
@@ -48,7 +48,7 @@ coverAlt: "ईडीभी २०२७ डीभी लटरी अपडे�
 दर्ता अवधि खुल्दा सामान्यतया करिब एक महिना मात्र हुन्छ, र अन्तिम दिनहरूमा भीड हुन्छ। यी कुरा अहिले नै तयार राख्नुहोस्:
 
 1. **मुख्य आवेदकको मान्य राहदानी।** छैन भने अहिले नै आवेदन दिनुहोस्: नेपाली राहदानी बनाउन समय लाग्छ।
-2. **आवेदनमा समावेश हरेक व्यक्तिको हालसालैको डिजिटल फोटो**: तपाईं, श्रीमान्/श्रीमती र २१ वर्षमुनिका अविवाहित छोराछोरी, उनीहरू साथमा नजाने भए पनि। फोटो **240 kB वा सोभन्दा सानो** JPEG, वर्गाकार र हालसालैको हुनुपर्छ ([फोटोसम्बन्धी आधिकारिक नियम](https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html))। हाम्रो निःशुल्क [डीभी फोटो टुल](/tools/dv-photo-tool/) ले फोनमै फोटोलाई 600×600 पिक्सेलमा काटेर 240 kB भन्दा सानो बनाउँछ। पुरानो फोटो दोहोर्‍याएर नराख्नुहोस्।
+2. **आवेदनमा समावेश हरेक व्यक्तिको हालसालैको डिजिटल फोटो**: तपाईं, श्रीमान्/श्रीमती र २१ वर्षमुनिका अविवाहित छोराछोरी, उनीहरू साथमा नजाने भए पनि। फोटो **२४० kB वा सोभन्दा सानो** JPEG, वर्गाकार र हालसालैको हुनुपर्छ ([फोटोसम्बन्धी आधिकारिक नियम](https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html))। हाम्रो निःशुल्क [डीभी फोटो टुल](/tools/dv-photo-tool/) ले फोनमै फोटोलाई ६००×६०० पिक्सेलमा काटेर २४० kB भन्दा सानो बनाउँछ। पुरानो फोटो दोहोर्‍याएर नराख्नुहोस्।
 3. **योग्यताको प्रमाण**: हाई स्कुल वा सोसरहको शिक्षा, वा योग्य कामको अनुभव ([USA.gov](https://www.usa.gov/dv-lottery-eligibility))। अमेरिकी विदेश मन्त्रालयले यसलाई १२ वर्षको औपचारिक पढाइ मान्दै आएको छ, त्यसैले नेपालमा **कक्षा १२ (+२)** पूरा भएको हुनुपर्ने ठान्नुहोस्, एसईई मात्र होइन। डीभी-२०२७ को निर्देशिका आएपछि पक्का गर्नुहोस्।
 4. **अनलाइन १ अमेरिकी डलर तिर्ने उपाय**, जस्तै बैंकको डलर कार्ड।
 5. **परिवारको विवरण**: सबैको पूरा नाम, जन्म मिति (वि.सं. लाई ई.सं. मा बदल्न [नेपाली मिति परिवर्तक](/tools/nepali-date-converter/) प्रयोग गर्नुहोस्) र जन्मस्थान।
@@ -94,4 +94,4 @@ coverAlt: "ईडीभी २०२७ डीभी लटरी अपडे�
 
 ---
 
-**स्रोत:** [फ्रागोमेन, 30 Oct 2026](https://www.fragomen.com/insights/united-states-ninth-circuit-stays-district-court-order-leaving-fy-2027-diversity-visa-lottery-program-halted-while-litigation-continues.html) · [ब्लुमबर्ग ल, 30 Oct 2026](https://news.bloomberglaw.com/business-and-practice/diversity-immigrant-visa-lottery-can-remain-paused-as-us-appeals) · [फ्रागोमेन: अदालतको आदेश](https://www.fragomen.com/insights/united-states-court-orders-state-department-to-open-fy-2027-diversity-visa-lottery-registration.html) · [ईआईजी ल](https://eiglaw.com/dos-finalizes-new-passport-and-identity-requirements-for-diversity-visa-program/) · [जीटी ल](https://www.gtlaw-insidebusinessimmigration.com/u-s-department-of-state-dos/state-department-final-rule-reinstates-passport-requirement-for-diversity-visa-lottery-entries-beginning-with-dv-2027/) · [क्याम्प लिगल](https://camplegal.com/understanding-the-dv-2027-lotterys-new-1-electronic-registration-fee/) · [एन्भोय ग्लोबल](https://www.envoyglobal.com/news-alert/u-s-diversity-visa-lottery-2027-program-remains-suspended-after-appeals-court-stay/) · [USA.gov](https://www.usa.gov/dv-lottery-eligibility) · [न्युजवीक](https://www.newsweek.com/green-card-update-judge-freezes-reopening-of-diversity-visa-lottery-12639675)
+**स्रोत:** [फ्रागोमेन, ३० अक्टोबर २०२६](https://www.fragomen.com/insights/united-states-ninth-circuit-stays-district-court-order-leaving-fy-2027-diversity-visa-lottery-program-halted-while-litigation-continues.html) · [ब्लुमबर्ग ल, ३० अक्टोबर २०२६](https://news.bloomberglaw.com/business-and-practice/diversity-immigrant-visa-lottery-can-remain-paused-as-us-appeals) · [फ्रागोमेन: अदालतको आदेश](https://www.fragomen.com/insights/united-states-court-orders-state-department-to-open-fy-2027-diversity-visa-lottery-registration.html) · [ईआईजी ल](https://eiglaw.com/dos-finalizes-new-passport-and-identity-requirements-for-diversity-visa-program/) · [जीटी ल](https://www.gtlaw-insidebusinessimmigration.com/u-s-department-of-state-dos/state-department-final-rule-reinstates-passport-requirement-for-diversity-visa-lottery-entries-beginning-with-dv-2027/) · [क्याम्प लिगल](https://camplegal.com/understanding-the-dv-2027-lotterys-new-1-electronic-registration-fee/) · [एन्भोय ग्लोबल](https://www.envoyglobal.com/news-alert/u-s-diversity-visa-lottery-2027-program-remains-suspended-after-appeals-court-stay/) · [USA.gov](https://www.usa.gov/dv-lottery-eligibility) · [न्युजवीक](https://www.newsweek.com/green-card-update-judge-freezes-reopening-of-diversity-visa-lottery-12639675)

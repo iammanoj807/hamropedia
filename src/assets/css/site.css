@@ -1041,3 +1041,5 @@ table.trace-rows td { white-space: pre; }
 .ph-badge.is-bad { color: var(--crimson); }
 .ph-badge.is-wait { color: var(--muted); }
 .ph-controls > .switch { display: flex; }
+/* Nepali pages: numbered lists count in Nepali digits (१. २. ३.) */
+html[lang="ne"] .prose ol { list-style-type: devanagari; }
