@@ -10,7 +10,7 @@ coverWord: "WES Cost"
 coverAlt: "WES evaluation cost in dollars and Nepali rupees"
 ---
 
-The **WES evaluation cost** for US admissions is **$239** for a Course-by-Course evaluation with WES ICAP, about **NPR 36,200**. With standard delivery it comes to **$253 (about NPR 38,300)**. A Document-by-Document ICAP evaluation costs **$171**. For Canadian immigration, the WES **ECA** costs **C$264 plus 13% HST**, about **C$298 (NPR 32,400)**, before delivery. These are the fees on [wes.org](https://www.wes.org/evaluations-and-fees/education/graduate-admissions/), checked on **6 November 2026**. Rupee amounts use Nepal Rastra Bank's selling rate that day: **NPR 151.47 per US dollar** and **NPR 108.54 per Canadian dollar** ([NRB](https://www.nrb.org.np/forex/)).
+The **WES evaluation cost** for US admissions is **$239** for a Course-by-Course evaluation with WES ICAP, about **NPR 36,200**. With standard delivery it comes to **$253 (about NPR 38,300)**. A Document-by-Document ICAP evaluation costs **$171**. For Canadian immigration, the WES **ECA** costs **C$264 plus 13% HST**, about **C$298 (NPR 32,400)**, before delivery. These are the fees on [wes.org](https://www.wes.org/evaluations-and-fees/education/graduate-admissions/), checked on **6 November 2026**. For a WES evaluation in Nepal, rupee amounts use Nepal Rastra Bank's selling rate that day: **NPR 151.47 per US dollar** and **NPR 108.54 per Canadian dollar** ([NRB](https://www.nrb.org.np/forex/)).
 
 Ready to apply? Follow the [WES application guide](/wes-application-from-nepal/).
 
@@ -53,7 +53,7 @@ For Express Entry and other Canadian immigration programmes you need WES's **Edu
 
 WES says the ECA price "does not include delivery fees, additional fees, or a 13% Harmonized Sales Tax (HST)". The ECA includes an electronic report for you, access to the report for IRCC, an official paper report (delivery fees apply) and storage of your report and verified transcripts. For **admission to a Canadian university** (not immigration), check what your university asks for and WES Canada's own price list before you pay.
 
-## What a WES evaluation costs in total from Nepal
+## WES evaluation cost in Nepal: what you pay in total
 
 | You are | You pay WES | In rupees |
 |---|---|---|
@@ -103,7 +103,7 @@ WES only starts once **all** your documents have arrived ([WES processing times]
 
 Add the time your university needs to send transcripts and any courier time from Nepal. Paying for a faster courier for **your report** doesn't speed up the evaluation itself.
 
-## Estimate your WES GPA for free
+## WES GPA calculator: estimate your GPA for free
 
 A Course-by-Course report converts your Nepali grades into a GPA on the US 4.0 scale, using WES's own rules for each country and institution. A simple "percentage divided by 25" often gives a different answer. Before you pay, try WES's free [iGPA calculator](https://apps.wes.org/igpa-calculator/); the GPA in your final report is what counts.
 

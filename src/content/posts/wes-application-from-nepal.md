@@ -10,7 +10,7 @@ coverWord: "WES Application"
 coverAlt: "Applying for a WES credential evaluation from Nepal"
 ---
 
-A **WES application** is how you get your Nepali degree evaluated by **World Education Services (WES)** for a university, employer or immigration in the **USA or Canada**. You create an account at [wes.org](https://www.wes.org/), choose the country and purpose, add each qualification, pick the evaluation type, add the recipients and pay online. You then get a **WES reference number**, and your university sends your official transcripts to WES with that number. WES verifies them in about **2 weeks** and evaluates them in **1 to 4 weeks** more ([WES processing times](https://www.wes.org/processing-times/)). The part Nepali students find hardest is getting transcripts from TU or KU to WES, and this guide covers it in detail.
+A **WES application** is how you get your Nepali degree evaluated by **World Education Services (WES)** for a university, employer or immigration in the **USA or Canada**. You create an account at [wes.org](https://www.wes.org/), choose the country and purpose, add each qualification, pick the evaluation type, add the recipients and pay online. You then get a **WES reference number**, and your university sends your official transcripts to WES with that number. WES verifies them in about **2 weeks** and evaluates them in **1 to 4 weeks** more ([WES processing times](https://www.wes.org/processing-times/)). The part Nepali students find hardest is getting transcripts from TU or KU to WES, and this guide covers it in detail, so you can finish your WES evaluation from Nepal without an agent.
 
 For prices in dollars and rupees, see [WES evaluation cost](/wes-evaluation-cost/).
 
@@ -177,6 +177,8 @@ Times are from [WES processing times](https://www.wes.org/processing-times/), ch
 **How do I send my Tribhuvan University transcript to WES?** Get your transcripts from TU's Office of the Controller of Examinations at Balkhu in a sealed, stamped envelope, or ask whether the office can send them to WES directly. If you courier the sealed envelope yourself, never open it, and add your WES reference number.
 
 **What is a WES reference number?** The number WES gives you when you complete the online application. It links every document to your file, so it must be on every envelope and message you send, and you give it to your university when you request transcripts.
+
+**How do I log in to WES?** Go to wes.org and use the email address and password you created when you opened your WES account. If you forgot the password, reset it from the login page with the same email. Your WES login shows your reference number, required documents and status.
 
 **How do I check my WES application status?** Log in at wes.org and look at the tracker: Application, Documents and Evaluation, each turning green when done. The message under it explains what WES is waiting for, and WES emails you as your evaluation moves forward.
 

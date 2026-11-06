@@ -10,9 +10,9 @@ coverWord: "NOC Online"
 coverAlt: "Applying for a NOC online in Nepal"
 ---
 
-**NOC online** is how Nepali students get a **No Objection Certificate** (<span lang="ne">अनापत्ति पत्र</span>) to study abroad. You apply on the government portal [noc.moest.gov.np](https://noc.moest.gov.np/), run by the **Ministry of Education and Sports** (formerly the Ministry of Education, Science and Technology). Register with an **NTC mobile number**, fill in your citizenship, passport and study details, upload your documents, and pay the **NRs 2,000** fee once your application is verified. You then download the NOC from the portal. Banks ask for it before they send your tuition or living costs abroad. This guide covers every screen of the form, with real screenshots, and everything that changed in 2026.
+**NOC online** is how Nepali students get a **No Objection Certificate** (<span lang="ne">अनापत्ति पत्र</span>) to study abroad, often searched as **NOC Nepal**. You apply on the government portal [noc.moest.gov.np](https://noc.moest.gov.np/), run by the **Ministry of Education and Sports** (formerly the Ministry of Education, Science and Technology). Register with an **NTC mobile number**, fill in your citizenship, passport and study details, upload your documents, and pay the **NRs 2,000** fee once your application is verified. You then download the NOC from the portal. Banks ask for it before they send your tuition or living costs abroad. This guide covers every screen of the form, with real screenshots, and everything that changed in 2026.
 
-## What changed in 2026
+## NOC Nepal: what changed in 2026
 
 - **The ministry has a new name.** The portal now says Ministry of Education and Sports. The address is the same: noc.moest.gov.np.
 - **Only NTC numbers work.** The apply box now says "Please Enter Only NTC Number": register with a Nepal Telecom mobile, not Ncell.
@@ -21,7 +21,7 @@ coverAlt: "Applying for a NOC online in Nepal"
 - **Consultancies were warned.** The same notice tells consultancies to stop spreading wrong information about the NOC or sending students to the office for no reason.
 - **Bigger reforms are only proposals.** In April 2026 the government proposed overhauling the NOC, for example approving foreign exchange only for "priority" subjects. These are proposals, not rules in force ([The PIE News, 7 April 2026](https://thepienews.com/nepal-proposes-scrapping-current-noc-process-in-sweeping-reform-push/)).
 
-## NOC full form and meaning
+## NOC full form and NOC meaning in Nepali
 
 **NOC** stands for **No Objection Certificate**. In Nepali it is <span lang="ne">अनापत्ति पत्र</span>, literally a "letter of no objection". The portal defines it as "a No Objection Certificate granted by Government of Nepal for the Nepalese student to study abroad". In practice it means:
 
@@ -61,7 +61,7 @@ Some countries need extra documents: an **English test certificate for New Zeala
 
 ## NOC online form: how to apply, step by step
 
-The form screenshots below are from a real application, with personal details blurred. They were taken before the ministry's rename, so they show the old name (Ministry of Education, Science and Technology); the screens are otherwise the same. The first screenshot shows the portal as it looks today (6 November 2026).
+The NOC form has eight parts, from your mobile number to the final review. The form screenshots below are from a real application, with personal details blurred. They were taken before the ministry's rename, so they show the old name (Ministry of Education, Science and Technology); the screens are otherwise the same. The first screenshot shows the portal as it looks today (6 November 2026).
 
 ### Step 1: Register with an NTC mobile number
 
@@ -121,7 +121,7 @@ Check every detail. **You can't edit the application after submitting.** Click *
 
 ![Application submitted successfully](/images/posts/noc/step-10-1.webp "Download a copy of your form")
 
-## NOC status check, login and fee
+## NOC login, status check and fee
 
 **Log in:** go to [noc.moest.gov.np](https://noc.moest.gov.np/), click **Login** and use your mobile number and password.
 
@@ -165,6 +165,8 @@ The official fee is NRs 2,000, paid through the portal. In June 2025 Onlinekhaba
 ## Frequently asked questions
 
 **What is the full form of NOC?** No Objection Certificate. In Nepali it is called अनापत्ति पत्र. For students it is the education ministry's certificate that lets you send money from Nepal for your studies abroad, to the institution named on it.
+
+**What is the NOC meaning in Nepali?** अनापत्ति पत्र, which means a letter saying there is no objection. For students it is the ministry's permission to study abroad and send money for it from Nepal. Banks ask for it before they transfer your tuition fee or living costs.
 
 **How do I apply for NOC online in Nepal?** Go to noc.moest.gov.np, register with an NTC mobile number, create a password, verify your email, then fill in your citizenship, passport and study details and upload your documents. You pay the NRs 2,000 fee after your application is verified and download the NOC from the portal.
 
