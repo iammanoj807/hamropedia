@@ -24,6 +24,7 @@ const OLD_WORDPRESS_URLS = [
   '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/',
   '/top-ukvi-interview-question-examples-and-answers/',
   '/how-to-apply-noc-online-easy-steps-for-nepali-students/',
+  '/how-to-apply-for-wes-evaluation/',
 ];
 
 function resolve(urlPath) {

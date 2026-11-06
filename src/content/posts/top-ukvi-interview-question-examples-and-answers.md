@@ -175,6 +175,6 @@ To save this list as a PDF, use your browser's **Print** option and choose **Sav
 
 ---
 
-Related: [UK student visa rules explained (2026)](/uk-student-visa-from-nepal/) · [How to apply for NOC online](/how-to-apply-noc-online-easy-steps-for-nepali-students/)
+Related: [UK student visa rules explained (2026)](/uk-student-visa-from-nepal/) · [How to apply for NOC online](/noc-online-nepal/)
 
 *This guide is general preparation advice, not legal advice. Follow the instructions from your university and from [gov.uk](https://www.gov.uk/student-visa).*

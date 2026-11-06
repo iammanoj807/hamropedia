@@ -14,8 +14,8 @@ export function renderHome(posts, version) {
     'ilr-changes-uk-5-year-vs-10-year-route-earned-settlement',
     'edv-2027-nepal-dv-lottery-open-date',
     'uk-graduate-visa-two-years-high-compliance-universities',
-    'how-to-apply-noc-online-easy-steps-for-nepali-students',
-    'how-to-apply-for-wes-evaluation',
+    'noc-online-nepal',
+    'wes-application-from-nepal',
   ];
   const popular = popularSlugs.map((s) => posts.find((p) => p.slug === s)).filter(Boolean);
 

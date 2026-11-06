@@ -68,7 +68,7 @@ The lists use AD dates (2026-APR-27), while DoTM notices use BS dates. The [Nepa
 
 DoTM prints licenses urgently (<span lang="ne">अत्यावश्यक सवारी चालक अनुमतिपत्र छपाइ</span>) for people who need their card before leaving Nepal. According to DoTM's citizen charter ([PDF](https://giwmscdnone.gov.np/media/pages/files/Badapatra%20_o6i6l6m.pdf)), the documents depend on why you are going:
 
-- **To study abroad:** a No Objection Certificate (NOC) or Certificate of Eligibility (COE) or university offer letter, plus your passport, visa and ticket. See [how to apply for the NOC online](/how-to-apply-noc-online-easy-steps-for-nepali-students/).
+- **To study abroad:** a No Objection Certificate (NOC) or Certificate of Eligibility (COE) or university offer letter, plus your passport, visa and ticket. See [how to apply for the NOC online](/noc-online-nepal/).
 - **To work abroad:** passport, visa or residence card, ticket and labour permit.
 - **UN peacekeeping missions:** a recommendation from your office, nomination letter and ID.
 - **Non-resident Nepalis:** NRN card or PR card, ticket and passport.
@@ -152,7 +152,7 @@ Check the card before you leave the counter: name, categories and dates. DoTM ha
 
 **Is there an SMS to check my license print?** Some websites mention sending LC and a number to 33001, but we couldn't find this service on any DoTM page or in its citizen charter. Use the printed lists or the official portals instead.
 
-Related: [NID card check](/nid-card-check-nepal/) (you need an NID number for a new license) · [NOC online in Nepal](/how-to-apply-noc-online-easy-steps-for-nepali-students/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
+Related: [NID card check](/nid-card-check-nepal/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-online-nepal/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
 
 ---
 

@@ -75,7 +75,7 @@ export const categories = {
     name: 'Study Abroad',
     nameNe: 'विदेश अध्ययन',
     description: 'Step-by-step, sourced guides for students going abroad: NOC, WES, UK visas and more.',
-    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/how-to-apply-noc-online-easy-steps-for-nepali-students/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/how-to-apply-for-wes-evaluation/">how to apply for WES</a> and <a href="/important-details-about-wes-evaluation-for-nepali-students/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-from-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
+    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-online-nepal/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-from-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-from-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
     hue: 'blue',
   },
   coding: {
@@ -136,7 +136,11 @@ export const redirects = [
   // Removed on 5 November 2026 (the photo tool is now DV size only).
   { from: '/tools/age-calculator/', to: '/tools/', title: 'Age calculator' },
   { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/', title: 'Passport size photo maker' },
-  { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/how-to-apply-for-wes-evaluation/', title: 'How to apply for WES evaluation', moved: true },
+  { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/wes-application-from-nepal/', title: 'WES application from Nepal', moved: true },
+  // Rewritten from scratch on 6 November 2026 under new URLs (old posts removed; the old addresses forward here).
+  { from: '/how-to-apply-noc-online-easy-steps-for-nepali-students/', to: '/noc-online-nepal/', title: 'NOC online in Nepal', moved: true },
+  { from: '/how-to-apply-for-wes-evaluation/', to: '/wes-application-from-nepal/', title: 'WES application from Nepal', moved: true },
+  { from: '/important-details-about-wes-evaluation-for-nepali-students/', to: '/wes-evaluation-cost/', title: 'WES evaluation cost', moved: true },
   { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-from-nepal/', title: 'UK student visa from Nepal', moved: true },
   { from: '/category/online-marketing/', to: '/blog/', title: 'Online marketing' },
   { from: '/home/', to: '/', title: 'Home' },

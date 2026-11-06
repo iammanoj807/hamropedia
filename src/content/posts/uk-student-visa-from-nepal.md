@@ -62,7 +62,7 @@ For a typical one-year master's outside London, applying on or after 30 November
 | Living costs to show in your account | £10,827 | 22.2 lakh |
 | Unpaid first-year tuition | your CAS amount | — |
 
-The TB test, document translation and courier costs come on top. To send tuition fees or living costs out of Nepal, you also need a [No Objection Certificate (NOC)](/how-to-apply-noc-online-easy-steps-for-nepali-students/) from the education ministry.
+The TB test, document translation and courier costs come on top. To send tuition fees or living costs out of Nepal, you also need a [No Objection Certificate (NOC)](/noc-online-nepal/) from the education ministry.
 
 ## 4. UK student visa requirements for Nepalese students
 
@@ -126,7 +126,7 @@ Some of these need further legislation or consultation, and details change. **Tr
 - [ ] English test or evidence your sponsor accepts.
 - [ ] TB test certificate from an approved clinic in Nepal.
 - [ ] Visa fee (£558) and IHS (£776 per year) budgeted.
-- [ ] [NOC](/how-to-apply-noc-online-easy-steps-for-nepali-students/) for sending fees from Nepal.
+- [ ] [NOC](/noc-online-nepal/) for sending fees from Nepal.
 - [ ] Preparation for a possible [credibility interview](/top-ukvi-interview-question-examples-and-answers/).
 
 ## Sources

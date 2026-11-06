@@ -3,9 +3,9 @@
 > Hamropedia (hamropedia.com) is a free website by Manoj Kumar Thapa, an AI software engineer in Birmingham, UK. It has sourced, dated guides for Nepali students going abroad, Nepal news explainers, four free courses (AI & ML, System Design, SQL, DSA) and free Nepali tools. Every article links to the official or named sources it is based on.
 
 ## Study abroad guides
-- [How to apply for NOC online in Nepal](https://hamropedia.com/how-to-apply-noc-online-easy-steps-for-nepali-students/): the No Objection Certificate from Nepal's education ministry, step by step
-- [WES application: how to apply for WES evaluation](https://hamropedia.com/how-to-apply-for-wes-evaluation/): every screen of the form, transcripts from Nepal
-- [WES evaluation cost, fees and ICAP vs Basic](https://hamropedia.com/important-details-about-wes-evaluation-for-nepali-students/)
+- [NOC online in Nepal](https://hamropedia.com/noc-online-nepal/): how to apply for the No Objection Certificate, documents by level, the NRs 2,000 fee and status check
+- [WES application from Nepal](https://hamropedia.com/wes-application-from-nepal/): every screen of the form, sending TU and KU transcripts to WES
+- [WES evaluation cost](https://hamropedia.com/wes-evaluation-cost/): every fee in US$, C$ and Nepali rupees, ICAP vs Basic, Canada ECA
 - [UK student visa from Nepal](https://hamropedia.com/uk-student-visa-from-nepal/): requirements, fees, funds and costs in rupees
 - [UK Graduate visa: 18 months or 2 years](https://hamropedia.com/uk-graduate-visa-two-years-high-compliance-universities/)
 - [ILR new rules: indefinite leave to remain in 5 or 10 years](https://hamropedia.com/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/)
