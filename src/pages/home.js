@@ -1,7 +1,7 @@
 import { site } from '../data/site.js';
 import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
-import { postCard, categoryChip, displayDate } from '../templates/components.js';
+import { postCard, categoryChip, displayDate, recentList } from '../templates/components.js';
 import { roadmapBand } from './learn.js';
 
 export function renderHome(posts, version) {
@@ -44,6 +44,11 @@ export function renderHome(posts, version) {
       </div>
     </div>
   </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-head"><h2>New and updated</h2><a href="/blog/">All articles</a></div>
+  ${recentList(posts)}
 </section>
 
 <section class="wrap section">

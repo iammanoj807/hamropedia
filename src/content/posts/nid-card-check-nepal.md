@@ -3,7 +3,7 @@ title: "NID Card Check in Nepal: Find Your NID Number, Card Status and eNID (202
 seoTitle: "NID Card Check Nepal 2026: NID Number, Status & eNID"
 description: "NID card check in Nepal: find your NID number, check card status and download your eNID on the official portal. Why citizenship number no longer works."
 date: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-06
 category: nepal
 tags: [nid, nid card check, nid number, national identity card, rastriya parichaya patra, enid, nepal]
 coverWord: "NID Check"
@@ -20,7 +20,7 @@ To do an **NID card check in Nepal**, use the official **Citizen Portal** of the
 |---|---|---|
 | Find your NID number (NIN) | Citizen Portal → **Download eNID** | Full name in Nepali and English, date of birth (BS), citizenship issue date, then an OTP on your NID mobile |
 | Download a digital NID (eNID) | Citizen Portal → **Download eNID** | The same as above |
-| Check if your NID card is printed | Citizen Portal → **NID Card Status** | Your application (request) number or your NIN |
+| Check if your NID card is printed | Citizen Portal → **NID Card Status** | Your request number (RSN) or your NIN |
 | Get your NID number without internet | SMS to **30001** | `N <space> application number` |
 | Replace a lost or damaged card | Citizen Portal → **NID Card Replacement Payment**, then your District Administration Office | Your NIN and mobile number; fee Rs 500 |
 
@@ -47,21 +47,50 @@ Two things trip people up:
 
 These steps follow DoNIDCR's eNID user manual. The **eNID** is a provisional digital NID: a password-protected PDF with your photo, your NID number and a QR code. The department started the service on **4 Asar 2083 (18 June 2026)** ([DoNIDCR notice](https://donidcr.gov.np/content/440/enid--provisional-nid--downloadable-service-initiation-notification/)).
 
-1. Open [citizenportal.donidcr.gov.np](https://citizenportal.donidcr.gov.np/en). Click **En** at the top for English.
-2. Click **Download Your eNID** (<span lang="ne">eNID डाउनलोड</span>).
-3. Enter your full name in Nepali, your full name in English, your date of birth (BS) and your citizenship issue date. Fill in the captcha.
-4. Click **Search** (<span lang="ne">खोज्नुहोस्</span>). A **6-digit OTP** is sent by SMS to the mobile number you gave when you registered for your NID.
-5. Enter the OTP and click the verify button (<span lang="ne">OTP प्रमाणित गर्नुहोस्</span>). If it doesn't arrive, use the resend link (<span lang="ne">OTP पुनः पठाउनुहोस्</span>).
-6. A box appears with your **NID number and photo**. That is your NID number check done.
-7. Click the download button (<span lang="ne">कार्ड डाउनलोड गर्नुहोस्</span>) to save your eNID. It downloads as a **password-protected PDF**.
+The screenshots below show every step. Ours were taken on 6 November 2026 with sample details (a made-up name and dates); the screens after the OTP come from DoNIDCR's own manual, with personal details blurred.
 
-### What is the eNID PDF password?
+### Step 1: Open the Citizen Portal and click Download Your eNID
 
-The password is the **first four letters of your full name in English, in capitals**, followed by the **first four digits of your date of birth in BS** (the year).
+Go to [citizenportal.donidcr.gov.np](https://citizenportal.donidcr.gov.np/en). Click **En** at the top right for English, or **Ne** for Nepali. Then click the **Download Your eNID** box (<span lang="ne">eNID डाउनलोड</span>).
+
+![Citizen Portal home page with the Download Your eNID box marked](/images/posts/nid/nid-1-portal-home.webp "Step 1: on the Citizen Portal, click Download Your eNID")
+
+### Step 2: Fill in your citizenship details and click Search
+
+Copy each detail exactly from your citizenship certificate:
+
+1. **Full Name (Nepali):** in Nepali Unicode, as on your NID record.
+2. **Full Name:** in English, in capitals.
+3. **Date of Birth (BS):** year-month-day, for example 2050-01-01. You can type English digits; the portal shows them in Nepali digits.
+4. **Citizenship Issuing Date:** also in BS, in the same format.
+5. **Captcha:** type the letters in the picture. Click the arrows to get a new picture if you can't read it.
+6. Click **Search** (<span lang="ne">खोज्नुहोस्</span>).
+
+![eNID download form filled in with sample details, fields numbered 1 to 6](/images/posts/nid/nid-2-enid-form.webp "Step 2: the eNID form, filled in with a sample name and dates")
+
+### Step 3: Enter the OTP from the SMS
+
+A box opens and a **6-digit OTP** is sent by SMS to the mobile number linked to your NID. It shows the number with most digits hidden, so you can see which phone to check. The SMS comes from **DONIDCR_ALT** and the code is **valid for 5 minutes**. Type it in and click the verify button (<span lang="ne">OTP प्रमाणित गर्नुहोस्</span>). If no SMS arrives, wait for the short countdown and click the resend link (<span lang="ne">OTP पुनः पठाउनुहोस्</span>).
+
+![OTP verification box with a six-digit code entered](/images/posts/nid/nid-3-otp.webp "Step 3: enter the 6-digit OTP. Screenshot: DoNIDCR eNID user manual (phone number blurred)")
+
+![SMS from DONIDCR_ALT with the eNID verification code, valid for 5 minutes](/images/posts/nid/nid-4-otp-sms.webp "The OTP SMS. Screenshot: DoNIDCR eNID user manual")
+
+### Step 4: See your NID number and download your eNID
+
+A box shows **your NID number** at the top, in the format **XXX-XXX-XXX-X** (10 digits), with your photo, name, date of birth and permanent address. That is your NID number check done: write the number down. Then click **Download card** (<span lang="ne">कार्ड डाउनलोड गर्नुहोस्</span>). The eNID downloads as a **password-protected PDF**.
+
+![Result box with the NID number, blurred personal details and the Download card button](/images/posts/nid/nid-5-nin-result.webp "Step 4: your NID number and the Download card button. Screenshot: DoNIDCR eNID user manual (details blurred by Hamropedia)")
+
+### Step 5: Open the PDF with your password
+
+When you open the PDF it asks for a password. The password is the **first four letters of your full name in English, in capitals**, followed by the **first four digits of your date of birth in BS** (the year). The result box shows the same rule.
 
 | Name in English | Date of birth (BS) | Password |
 |---|---|---|
 | RAMESH | 2050-01-01 | `RAME2050` |
+
+![PDF password prompt for the downloaded eNID](/images/posts/nid/nid-6-pdf-password.webp "Step 5: type the password to open your eNID. Screenshot: DoNIDCR eNID user manual")
 
 That example comes from the official manual. Keep the PDF safe: save it to Google Drive or print it. You can scan its QR code with any phone QR scanner to check it.
 
@@ -78,8 +107,10 @@ DoNIDCR's notice asks government bodies and organisations that used to accept a 
 The NID number and the plastic **NID card** are separate. You can have a number long before your card is printed. To check the card:
 
 1. Open the Citizen Portal and click **NID Card Status** (<span lang="ne">राष्ट्रिय परिचयपत्र अवस्था</span>).
-2. Enter your **application number** (the English page calls it the request number) **or your NID number**.
+2. Enter **either** your **request number (RSN)**, the 16-digit application number you were given when you registered, **or** your NID number (XXX-XXX-XXX-X).
 3. Fill in the captcha and click **Search**.
+
+![NID card status form with the request number and NID number fields marked](/images/posts/nid/nid-7-card-status.webp "Check your NID card status with your request number or your NID number")
 
 When your card is printed, DoNIDCR sends you an **SMS saying it is ready to collect**. Collect it **from the same place where you registered** your details, and go **in person**: your fingerprints are checked when the card is handed over, so nobody else can collect it for you ([DoNIDCR FAQ](https://donidcr.gov.np/pages/abboyed-asked-questions--rational-identity-10)).
 
@@ -116,7 +147,9 @@ What it means for you:
 ## Lost card, damaged card or wrong details
 
 - **Wrong details:** apply at the registration station of your District or Area Administration Office. Your **NID number does not change** when details are corrected.
-- **Lost or damaged card:** apply at the same office, giving the reason, and they issue a copy (<span lang="ne">प्रतिलिपि</span>). The fee is **Rs 500** under rule 13(3) of the National ID and Registration Rules, 2077. You can pay it online on the Citizen Portal under **NID Card Replacement Payment** (you enter your NID number, mobile number, name in English and Nepali, and the office that will verify you). The FAQ also lists payment at any **Rastriya Banijya Bank** branch: office code 314013501, revenue heading 14229, account number 1000100200010000.
+- **Lost or damaged card:** apply at the same office, giving the reason, and they issue a copy (<span lang="ne">प्रतिलिपि</span>). The fee is **Rs 500** under rule 13(3) of the National ID and Registration Rules, 2077. You can pay it online on the Citizen Portal under **NID Card Replacement Payment**: you enter your NID number, mobile number, full name in English and Nepali, and choose an appointment office. The FAQ also lists payment at any **Rastriya Banijya Bank** branch: office code 314013501, revenue heading 14229, account number 1000100200010000.
+
+![NID Card Replacement Payment form for the Rs 500 fee](/images/posts/nid/nid-8-replacement-fee.webp "The online form for the Rs 500 replacement card fee")
 
 ## Keep your NID number safe
 
@@ -130,7 +163,7 @@ What it means for you:
 
 **Can I check my national identity card by citizenship number?** Not any more. The current Citizen Portal form doesn't ask for a citizenship number. You use the name, date of birth and citizenship issue date from your citizenship certificate, then verify with an OTP sent to the mobile number on your NID record.
 
-**How do I check if my NID card is printed?** On the Citizen Portal, open NID Card Status and enter your application (request) number or NID number. When the card is printed you also get an SMS. Collect it in person from the office where you registered.
+**How do I check if my NID card is printed?** On the Citizen Portal, open NID Card Status and enter your request number (RSN) or your NID number. When the card is printed you also get an SMS. Collect it in person from the office where you registered.
 
 **What is the eNID password?** The first four letters of your full name in English in capitals, then your birth year in BS. For example, RAMESH born 2050-01-01 has the password RAME2050. The rule comes from DoNIDCR's official eNID manual.
 
@@ -138,7 +171,7 @@ What it means for you:
 
 **Can I check my NID number with my mobile number or name only?** No. The portal needs your full name in Nepali and English, date of birth and citizenship issue date together. The mobile number is used only to send you the OTP, so it must be the number on your NID record.
 
-**Why am I not getting the OTP?** The OTP goes only to the mobile number you gave when you registered for your NID. If you gave no number or changed it, update it at your nearest NID registration unit. You don't need to give fingerprints or a photo again.
+**Why am I not getting the OTP?** The OTP goes only to the mobile number you gave when you registered for your NID, and it is valid for 5 minutes. If you gave no number or changed it, update it at your nearest NID registration unit. You don't need to give fingerprints or a photo again.
 
 **How many digits is the NID number in Nepal?** Ten. DoNIDCR describes it as a unique 10-digit number that is never repeated, and it stays the same even if your details are later corrected.
 

@@ -38,6 +38,26 @@ export function postCard(post, { size = 'md' } = {}) {
 </article>`;
 }
 
+/**
+ * "New and updated": the most recently published or updated articles, newest first.
+ * A post counts as updated when its `updated` date is later than its publish date.
+ */
+export function recentList(posts, { lang = 'en', limit = 5 } = {}) {
+  const ne = lang === 'ne';
+  const items = posts
+    .map((p) => {
+      const updated = Boolean(p.updated && p.updated > p.date);
+      return { p, updated, when: updated ? p.updated : p.date };
+    })
+    .sort((a, b) => b.when.localeCompare(a.when) || Number(a.updated) - Number(b.updated) || b.p.date.localeCompare(a.p.date))
+    .slice(0, limit);
+  const label = (u) => (ne ? (u ? 'अपडेट' : 'नयाँ') : u ? 'Updated' : 'New');
+  const when = (u, d) => (ne ? `${u ? 'अपडेट गरिएको' : 'प्रकाशित'} ${displayDate(d, 'ne')}` : `${u ? 'Updated' : 'Published'} ${displayDate(d)}`);
+  return `<ol class="headline-list">
+        ${items.map(({ p, updated, when: d }) => `<li><span class="chip ${updated ? 'chip-soft' : 'chip-live'}">${label(updated)}</span><a href="${p.url}">${esc(p.title)}</a><span><time datetime="${isoDate(d)}">${when(updated, d)}</time></span></li>`).join('\n        ')}
+      </ol>`;
+}
+
 export function breadcrumbs(items) {
   // items: [{ name, path }], last is the current page
   const html = items
