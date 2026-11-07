@@ -104,9 +104,19 @@ Some of these need further legislation or consultation, and details change. **Tr
 
 ## Frequently asked questions
 
+**What are the new UK student visa rules for 2026?** The main changes are higher money requirements from 30 November 2026 (£1,203 a month outside London, £1,570 in London), the £558 visa fee from April 2026, and the Graduate visa dropping to 18 months for applications from 1 January 2027.
+
+**How much bank balance is required for a UK student visa from Nepal?** Your unpaid first-year tuition plus 9 months of living costs. Applying on or after 30 November 2026, that is £10,827 outside London (about NPR 22.2 lakh) or £14,130 in London (about NPR 28.9 lakh), held for 28 days in a row.
+
+**How much does a UK student visa cost from Nepal?** The visa fee is £558 (about NPR 1.14 lakh). With the health surcharge, a one-year master's usually costs about £1,722 (about NPR 3.5 lakh) before living costs and tuition.
+
 **Is IELTS compulsory for a UK student visa?** No single test is compulsory. You need English at B2 level for a degree course; many universities accept IELTS or another approved test, and some assess you themselves. Check what your university's CAS says.
 
 **How much GPA is required to study in the UK from Nepal?** The visa has no GPA rule. Each university sets its own entry grades, so check your course page.
+
+**Can I bring my husband or wife on a UK student visa?** Only if you are on a postgraduate research course such as a PhD, or on some government-funded scholarships.
+
+**What about the Graduate visa after my course?** See [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) for the dates, fee and exceptions.
 
 ## Checklist before you apply
 

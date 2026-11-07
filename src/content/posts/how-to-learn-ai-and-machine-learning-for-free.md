@@ -68,11 +68,17 @@ Put each one on GitHub with a short README: the problem, the data, how you measu
 
 ## Frequently asked questions
 
+**Can I learn machine learning for free?** Yes. The best courses and books are free online, and the [Hamropedia AI & ML roadmap](/ai-roadmap/) puts them in order with 98 free lessons. You only need a laptop; free cloud notebooks such as Google Colab give you a GPU when you need one.
+
+**How do I teach myself machine learning?** Follow one ordered path instead of collecting courses: Python and NumPy, then the maths, then classical ML, then deep learning. Build a small project at the end of each stage.
+
 **How long does it take to learn machine learning?** At about an hour a day, plan on several months to get through the foundations (Python, the maths and classical ML), and longer for deep learning and LLMs. Consistency matters more than speed.
 
 **Can I learn ML in 1 week?** You can learn what ML is and train your first model in a week. Learning it properly takes months of steady practice.
 
 **Can I do machine learning without maths?** You can use ML libraries without much maths, but to understand, debug and improve models you need some linear algebra, calculus and probability. Phase 1 of the roadmap teaches exactly the parts you need.
+
+**How do I become an AI engineer?** Learn Python and the maths, then classical ML, deep learning and LLMs, and finish with AI engineering: retrieval (RAG), evaluation, agents and deployment. Build and publish projects at each stage. The [AI & ML roadmap](/ai-roadmap/) follows exactly this order.
 
 **Python or C++ for AI?** Python. C++ is used inside the libraries for speed, but you write AI code in Python.
 

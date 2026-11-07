@@ -72,6 +72,22 @@ IRD's site also has a **tax clearance search** (<span lang="ne">कर चुक
 
 If you have an NID, you can get a personal PAN online on IRD's new taxpayer portal. The [PAN card registration guide](/pan-card-registration-nepal/) shows every step with screenshots, including how to print your PAN card.
 
+## Frequently asked questions
+
+**How do I do an IRD PAN search?** Go to ird.gov.np/pan-search, type the PAN number in the स्थाई लेखा नम्बर box, tick the captcha and click खोज्नुहोस्. It is free and needs no login. You can also search a PAN in IRD's official IRD Nepal app on Android or iPhone.
+
+**Is a PAN ID search the same as a PAN search?** Yes. Your PAN is your tax ID number, so a PAN ID search, a PAN card search and a PAN number search all mean checking the number on ird.gov.np/pan-search. Type the number, tick the captcha and click खोज्नुहोस्.
+
+**Can I search PAN by name in Nepal?** No. IRD's official PAN search only accepts the PAN number, with no field for a name or citizenship number. If you forgot your own PAN, check your PAN card or IRD's SMS and email, or ask the office that holds your PAN.
+
+**How do I find my PAN number if I forgot it?** Look at your PAN card or the SMS and email from IRD. IRD's FAQ says you can print a lost personal PAN card from your taxpayer login, or take your citizenship certificate to the office that holds your PAN and ask them to search for it.
+
+**Is the IRD PAN search free?** Yes. The page at ird.gov.np/pan-search has no fee and no login. You only type the PAN number and tick the captcha. Be wary of other sites that charge money or ask for your details to "check" a PAN.
+
+**Can I check a PAN number on my phone?** Yes. Open ird.gov.np/pan-search in your phone's browser, or install IRD's official IRD Nepal app from Google Play or the App Store. IRD's banner for the app lists PAN Search among its services.
+
+**What is the difference between a PAN search and a tax clearance search?** A PAN search checks a PAN number. A tax clearance search, at ird.gov.np/tax-clearance, checks a tax clearance certificate. It needs the PAN, the fiscal year and the tax clearance number printed on the certificate.
+
 Related: [PAN card registration](/pan-card-registration-nepal/) (get a PAN online with your NID) · [NID card check](/nid-card-check-nepal/) · [Driving licence online form](/driving-licence-online-form-nepal/)
 
 ---

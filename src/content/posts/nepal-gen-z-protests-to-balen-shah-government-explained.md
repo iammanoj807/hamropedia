@@ -14,7 +14,7 @@ coverAlt: "Balen Shah sworn in as Nepal's prime minister"
 
 > **At a glance**
 >
-> - **Who:** Balendra "Balen" Shah, former mayor of Kathmandu, Rastriya Swatantra Party (RSP). Born 27 April 1990, he is 36 and was 35 when sworn in.
+> - **Who:** Balendra "Balen" Shah, former mayor of Kathmandu, Rastriya Swatantra Party (RSP). Born 27 April 1990, he was 35 when sworn in.
 > - **When:** sworn in on 27 March 2026 (Chaitra 13, 2082).
 > - **Why:** the RSP won 182 of 275 seats in the 5 March 2026 election, after the September 2025 Gen Z protests brought down the Oli government.
 
@@ -78,6 +78,24 @@ The result was a clear vote against the parties that had led Nepal for decades. 
 - **Press freedom:** in late October, police went to several newsrooms and held journalists for questioning over their reports, including one about the police chief, drawing protests from journalists' bodies ([OnlineKhabar](https://english.onlinekhabar.com/police-visit-offices-of-multiple-media-outlets-several-journalists-taken-into-custody.html)).
 - **The courts:** RSP lawmakers have recommended forming an impeachment recommendation committee, citing Article 101 on judicial misconduct ([Nepal News, 1 Nov 2026](https://english.nepalnews.com/s/main-left/nepal-news-evening-briefing-sunday-november-01-2026/)).
 - **The economy:** public debt has passed Rs 3 trillion, and the UN has given Nepal until 24 November 2029 to graduate from Least Developed Country status ([Nepal News, 30 Oct 2026](https://english.nepalnews.com/s/business/nepal-news-evening-economic-brief-october-30-2026/)).
+
+## Frequently asked questions
+
+**Who is the new (current) prime minister of Nepal?** Balendra "Balen" Shah of the Rastriya Swatantra Party, since 27 March 2026.
+
+**When did Balen Shah become prime minister?** He was sworn in on 27 March 2026 (Chaitra 13, 2082 BS) by President Ram Chandra Paudel.
+
+**How old is Balen Shah?** He was born on 27 April 1990, so he is 36 (he was 35 when sworn in) ([Wikipedia](https://en.wikipedia.org/wiki/Balen_Shah)).
+
+**Is Balen Shah the youngest prime minister of Nepal?** He is the youngest since Nepal became a federal democratic republic, and was described at his swearing-in as the youngest in decades.
+
+**Why is Balen Shah famous?** He was first known as a rapper in Nepal's hip-hop scene and as a structural engineer. He became the first independent mayor of Kathmandu in 2022, and his profile grew during the 2025 Gen Z protests.
+
+**When did the Gen Z protests in Nepal happen?** They began on 8 September 2025 (Bhadra 23, 2082). Prime Minister Oli resigned the next day.
+
+**Why did Gen Z protest in Nepal?** The trigger was the government's block on 26 social media platforms. The protests quickly grew into a revolt against corruption and the old political leadership.
+
+**How many people died in the Gen Z protests?** At least 76 people, with thousands injured, according to figures reported by Reuters.
 
 ---
 

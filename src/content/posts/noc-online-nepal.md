@@ -161,6 +161,30 @@ The official fee is NRs 2,000, paid through the portal. In June 2025 Onlinekhaba
 - **The wrong institution** was selected. Choose the exact campus on your offer letter.
 - **Scans are blurry or over 5 MB.**
 
+## Frequently asked questions
+
+**What is the full form of NOC?** No Objection Certificate. In Nepali it is called अनापत्ति पत्र. For students it is the education ministry's certificate that lets you send money from Nepal for your studies abroad, to the institution named on it.
+
+**What is the NOC meaning in Nepali?** अनापत्ति पत्र, which means a letter saying there is no objection. For students it is the ministry's permission to study abroad and send money for it from Nepal. Banks ask for it before they transfer your tuition fee or living costs.
+
+**How do I apply for NOC online in Nepal?** Go to noc.moest.gov.np, register with an NTC mobile number, create a password, verify your email, then fill in your citizenship, passport and study details and upload your documents. You pay the NRs 2,000 fee after your application is verified and download the NOC from the portal.
+
+**What is the NOC fee in Nepal?** NRs 2,000, paid only after the ministry verifies your application, using the voucher number the portal gives you. Pay the amount shown on your own voucher, and never pay anyone extra to speed things up.
+
+**Can I apply for NOC with an Ncell number?** No. The apply box on the portal says "Please Enter Only NTC Number", so register with a Nepal Telecom mobile number. Use the same number for every login, because your application is linked to it.
+
+**How do I check my NOC status?** Log in at noc.moest.gov.np with your mobile number and password and open My NOC. The status moves from Not Seen / Waiting Verification to Application Verified / Waiting Payment, and the NOC is issued after you pay.
+
+**Do I need to visit the NOC office in Sanothimi?** Only if your details can't be verified online. Students whose citizenship and academic records match ("DOB Verified") can finish without a visit; the portal tells others to come in person. TU and KU degrees are checked automatically.
+
+**Where is the NOC office?** The NOC branch of the Ministry of Education and Sports is at Sanothimi, Bhaktapur. The portal lists phone 01-6635419 and email noc@moest.gov.np.
+
+**Can I get a NOC for a language course?** Only together with an academic course, and you apply for both. Japan is the exception: language courses there are accepted on their own, according to the portal's FAQ.
+
+**Which courses can't get a NOC?** Level 3, Level 4, Certificate III, Certificate IV, top-up degrees and 1-year diploma courses, according to the portal. Study in Taiwan and Mauritius is also restricted. Check the FAQ on the portal before you pay a deposit.
+
+**Do I need a new NOC if I change university?** Yes. A NOC is tied to one institution, and money can only be sent to the institution named on it. If you change university or country, apply for a new NOC.
+
 Next steps: going to the USA or Canada? See the [WES application guide](/wes-application-from-nepal/) and [what a WES evaluation costs](/wes-evaluation-cost/). Going to the UK? Read the [UK student visa from Nepal](/uk-student-visa-from-nepal/) guide.
 
 ---

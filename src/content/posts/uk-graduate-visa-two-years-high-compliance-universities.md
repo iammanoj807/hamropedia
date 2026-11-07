@@ -101,6 +101,24 @@ The Budget also said the **High Potential Individual (HPI) visa** will be opened
 
 ## Frequently asked questions
 
+**How long is the post-study work visa in the UK?** 2 years if you apply on or before 31 December 2026, 18 months if you apply from 1 January 2027, and 3 years for PhD graduates.
+
+**Is PSW still available in the UK?** The old Tier 1 Post-Study Work visa closed in April 2012. What students call PSW today is the Graduate visa, open since 1 July 2021: 2 years if you apply by 31 December 2026, 18 months from 1 January 2027, and 3 years for PhD graduates.
+
+**Will the UK Graduate visa be shortened in January 2027?** Yes, to 18 months for applications made on or after 1 January 2027. The Budget says graduates of "high-compliance" universities will keep 2 years, once the details are published.
+
+**Is the UK Graduate visa still 2 years?** Yes, for applications made on or before 31 December 2026.
+
+**How much does a Graduate visa cost?** £937, plus the health surcharge: £1,552.50 for 18 months or £2,070 for 2 years.
+
+**Can a Graduate visa be refused?** Yes. Common reasons are applying from outside the UK, applying after your Student visa has expired, or applying before your university has reported that you completed your course.
+
+**Can I stay in the UK while I wait for a Graduate visa decision?** Yes, as long as you applied before your Student visa expired. Don't travel outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision.
+
+**Can I bring my wife or husband on a Graduate visa?** Only if they were already your dependant on your Student visa. New partners can't join you on a Graduate visa.
+
+**Can I extend my Graduate visa?** No. You would need to switch to another visa, such as a Skilled Worker visa.
+
 **Can I switch from a Graduate visa to a Skilled Worker visa?** Yes, from inside the UK, if you have a job offer from a licensed sponsor that meets the Skilled Worker job and salary rules. The Graduate visa is not on gov.uk's list of visas you can't switch from ([gov.uk: switch to a Skilled Worker visa](https://www.gov.uk/skilled-worker-visa/switch-to-this-visa)).
 
 **Does the Graduate visa count towards ILR?** Not under the new Earned Settlement rules: time on Student and Graduate visas will not count, and the 10-year Long Residence route, where it used to count, will close. See [ILR new rules](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).

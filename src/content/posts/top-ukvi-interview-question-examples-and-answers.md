@@ -160,9 +160,17 @@ To save this list as a PDF, use your browser's **Print** option and choose **Sav
 
 ## Frequently asked questions
 
+**What questions are asked in a UKVI credibility interview?** Questions about your course and modules, why you chose the university and the UK, your previous study and any gaps, who pays and how much, and your plans after the course. See the 30 practice questions above.
+
+**What is the difference between a pre-CAS interview and a UKVI interview?** Your university runs the pre-CAS interview before issuing your CAS; UKVI runs the credibility interview after you apply for the visa. The questions are similar.
+
+**How long does a UKVI credibility interview take?** It is usually short and conversational, often by video. Your invitation tells you the format.
+
 **Do all students get a credibility interview?** No, but prepare as if you will. Many universities interview applicants before issuing a CAS, and UKVI can invite anyone.
 
-**Is there a UKVI interview questions and answers PDF?** There's no official one, and memorised answers are a red flag. Practise with your own true details instead.
+**Is there a UKVI interview questions and answers PDF?** There's no official one, and memorised answers are a red flag. Use the printable list above with your own true details, and save it as a PDF from your browser.
+
+**Can I bring documents to the interview?** Keep them nearby, but don't read from notes unless the interviewer asks you to check something.
 
 ---
 

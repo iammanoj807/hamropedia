@@ -132,6 +132,24 @@ Many older guides send you to **applydl.dotm.gov.np** for the DoTM online form, 
 - Your own **email address**.
 - For renewal: your **licence number** and your **date of birth in AD**.
 
+## Frequently asked questions
+
+**How do I fill the driving licence online form in Nepal?** Open edlvrs.dotm.gov.np, choose your province and click New Driving License. Choose "register with NID", enter your NID number, upload a photo of your NID, add your own mobile number and email, and confirm the OTP. Then follow the stages: medical, approval, fee, written exam and trial.
+
+**Is NID compulsory for a driving licence in Nepal?** Yes. The province portals say an NID is compulsory for every driving licence service, including new licences, renewals and adding a category. Foreigners and diplomats have their own registration options using a passport or diplomatic ID.
+
+**Which website is the DoTM online form?** Start at edlvrs.dotm.gov.np, DoTM's page that lists the seven province portals, such as edlvrs.bagamati.gov.np/edl for Bagmati. Each province runs its own driving licence portal with the same services: new licence, renewal, tracking and more.
+
+**How do I renew my driving licence online?** On your province portal, choose License Renewal. Enter your licence number, NID number, a photo of your NID, your date of birth in AD and your email, then confirm the OTP. Renewal goes through medical, office approval and the renewal fee.
+
+**What happens if my licence expired more than 90 days ago?** The portal says a late-renewal fine applies after 90 days. After 5 years an expired licence can no longer be renewed. In both cases it advises visiting your transport office in person after your medical examination.
+
+**What is the likhit exam?** Likhit means written. The likhit exam is the written test, stage 5 of a new licence application. It comes after the medical, office approval and application fee, and before the trial (the driving test).
+
+**Can I apply for a bike licence online?** Yes. There is no separate bike license form: start with New Driving License on your province portal, the same as for any licence. Your application then goes through the same stages, including the written exam and the trial.
+
+**How do I check my driving licence application status?** Use Application Tracking on your province portal. Enter your application number, and an OTP goes to the mobile and email you registered. To check whether your smart card has been printed, use DoTM's printed lists instead.
+
 Related: [License print check](/license-print-check-nepal/) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [Nepali date converter](/tools/nepali-date-converter/) (date of birth in AD) · [PAN card registration](/pan-card-registration-nepal/)
 
 ---

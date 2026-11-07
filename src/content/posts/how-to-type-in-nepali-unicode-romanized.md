@@ -133,4 +133,18 @@ Try these in the [tool](/tools/english-to-nepali/):
 
 Once the long-vowel and capital-letter rules click, you'll type Nepali as fast as English.
 
+## Frequently asked questions
+
+**How do I type in Nepali on my laptop?** The quickest way is the free [online typing tool](/tools/english-to-nepali/): type with English letters and copy the result. For typing directly in every app, add a Nepali keyboard in Windows or Mac settings.
+
+**How can I type Nepali in MS Word?** Add a Nepali keyboard to Windows (or paste from the online tool), and use a Unicode font like Nirmala UI or Kalimati, not Preeti.
+
+**Where can I download Nepali Unicode Romanized?** From Language Technology Kendra's official downloads page, ltk.org.np/downloads.php. Click Nepali Unicode Romanized, extract the ZIP and run setup.exe. There is also a Mac version on the same page. If you don't want to install anything, use the free online typing tool instead.
+
+**What is Nepali Unicode Romanized?** A way of typing Nepali Unicode with English letters by sound: `mero naam` becomes <span lang="ne">मेरो नाम</span>. The rules are above.
+
+**Unicode or Preeti: which should I use?** Unicode. It works everywhere and Google can search it; Preeti only works where the font is installed.
+
+**How do I type Nepali on iPhone?** Add the Nepali keyboard in Settings → General → Keyboard → Keyboards. It uses a Devanagari layout; to type with English letters, use the online tool and copy.
+
 Related tools: [English to Nepali typing](/tools/english-to-nepali/) · [Nepali keyboard](/tools/nepali-keyboard/) · [Nepali date converter](/tools/nepali-date-converter/)
