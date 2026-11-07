@@ -95,4 +95,4 @@ Put each one on GitHub with a short README: the problem, the data, how you measu
 
 ---
 
-Start now: [Phase 0: Your toolkit →](/ai-roadmap/your-toolkit/) · Also read: [Nepal's National AI Policy, explained](/nepal-national-ai-policy-2082-explained/)
+Start now: [Phase 0: Your toolkit →](/ai-roadmap/your-toolkit/)

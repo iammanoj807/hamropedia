@@ -91,7 +91,7 @@ export const categories = {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
-    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-ai-and-machine-learning-for-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents. For AI in Nepal, see <a href="/nepal-national-ai-policy-2082-explained/">Nepal\'s National AI Policy 2082</a>.',
+    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-ai-and-machine-learning-for-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents.',
     hue: 'violet',
   },
   nepal: {
@@ -144,6 +144,9 @@ export const redirects = [
   { from: '/how-to-apply-for-wes-evaluation/', to: '/wes-application-from-nepal/', title: 'WES application from Nepal', moved: true },
   { from: '/important-details-about-wes-evaluation-for-nepali-students/', to: '/wes-evaluation-cost/', title: 'WES evaluation cost', moved: true },
   { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-from-nepal/', title: 'UK student visa from Nepal', moved: true },
+  // Removed on 7 November 2026: little search demand for the topic.
+  { from: '/nepal-national-ai-policy-2082-explained/', to: '/category/ai/', title: 'Nepal National AI Policy 2082', note: 'This article has been removed.' },
+  { from: '/ne/nepal-national-ai-policy-2082-explained/', to: '/ne/', title: 'Nepal National AI Policy 2082', note: 'यो लेख हटाइएको छ।' },
   { from: '/category/online-marketing/', to: '/blog/', title: 'Online marketing' },
   { from: '/home/', to: '/', title: 'Home' },
   { from: '/feed/', to: '/rss.xml', title: 'RSS feed' },

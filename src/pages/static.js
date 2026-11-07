@@ -222,8 +222,9 @@ export function render404(version) {
 /** A static "moved" page. GitHub Pages cannot send 301s, so this uses a canonical + instant refresh. */
 export function renderRedirect(r) {
   const to = r.to.startsWith('http') ? r.to : site.url + r.to;
+  const lang = r.from.startsWith('/ne/') ? 'ne' : 'en';
   return `<!doctype html>
-<html lang="en">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <title>Moved: ${esc(r.title)} | ${site.name}</title>
@@ -235,7 +236,7 @@ export function renderRedirect(r) {
 <script>location.replace(${JSON.stringify(r.to)});</script>
 </head>
 <body>
-<p>${r.moved ? `This ${r.from.startsWith('/tools/') ? 'tool' : 'article'} has moved to a new address.` : r.from.startsWith('/tools/') ? 'This tool has been removed.' : 'This article was retired because its information was out of date.'} ${!r.moved && r.from.startsWith('/tools/') ? 'Taking you to:' : 'Taking you to the updated page:'} <a href="${r.to}">${to}</a></p>
+<p>${r.note ? `${r.note} ${lang === 'ne' ? 'तपाईंलाई यहाँ लगिँदै छ:' : 'Taking you to:'}` : `${r.moved ? `This ${r.from.startsWith('/tools/') ? 'tool' : 'article'} has moved to a new address.` : r.from.startsWith('/tools/') ? 'This tool has been removed.' : 'This article was retired because its information was out of date.'} ${!r.moved && r.from.startsWith('/tools/') ? 'Taking you to:' : 'Taking you to the updated page:'}`} <a href="${r.to}">${to}</a></p>
 </body>
 </html>`;
 }

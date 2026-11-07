@@ -25,6 +25,8 @@ const OLD_WORDPRESS_URLS = [
   '/top-ukvi-interview-question-examples-and-answers/',
   '/how-to-apply-noc-online-easy-steps-for-nepali-students/',
   '/how-to-apply-for-wes-evaluation/',
+  '/nepal-national-ai-policy-2082-explained/',
+  '/ne/nepal-national-ai-policy-2082-explained/',
 ];
 
 function resolve(urlPath) {
