@@ -32,7 +32,7 @@ A **Unicode Nepali font** stores real Nepali letters. Text typed in Kalimati or 
 
 So:
 
-- **New work, online forms, email, social media:** a Unicode font.
+- **New work, online forms, email, social media:** a Unicode font. For a form that asks for your name in Nepali, type it in the [Nepali typing tool](/tools/english-to-nepali/) and paste the Unicode text.
 - **An old file typed in Preeti:** install Preeti to read it, or convert it to Unicode once with the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
 
 ## Kalimati font download
@@ -104,13 +104,6 @@ The steps are the same for Kalimati, Preeti or any other `.ttf` file.
 macOS supports TrueType (`.ttf`) and OpenType (`.otf`) fonts, so Preeti and Kalimati both install the same way.
 
 **Phone:** Android and iPhone show Unicode Nepali without installing a font. To type, add a Nepali keyboard or use the [Nepali typing tool](/tools/english-to-nepali/). See [how to type in Nepali](/how-to-type-in-nepali-unicode-romanized/) for phone and laptop setup.
-
-## Which Nepali font should you use?
-
-- **Online forms that ask for your name in Nepali**, such as the [eNID form](/nid-card-check-nepal/): type in Unicode. The [Nepali typing tool](/tools/english-to-nepali/) gives Unicode text you can paste into any form.
-- **Word documents you will send to others:** Kalimati, Nirmala UI or Mangal. If the other person doesn't have Kalimati, their computer usually shows the text in another Nepali Unicode font, so it stays readable.
-- **Old Preeti files:** install Preeti to open them, then convert to Unicode with the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
-- **Websites and designs:** Noto Sans Devanagari, because its licence allows it.
 
 ## Frequently asked questions
 

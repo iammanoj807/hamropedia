@@ -21,9 +21,8 @@ To do an **NID card check in Nepal**, use the official **Citizen Portal** of the
 | NID card download (digital eNID PDF) | Citizen Portal → **Download eNID** | The same as above |
 | Check if your NID card is printed | Citizen Portal → **NID Card Status** | Your request number (RSN) or your NIN |
 | Get your NID number without internet | SMS to **30001** | `N <space> application number` |
-| Replace a lost or damaged card | Citizen Portal → **NID Card Replacement Payment**, then your District Administration Office | Your NIN and mobile number; fee Rs 500 |
 
-The portal checks don't ask for any payment; only a replacement card has a fee. Ignore Facebook pages or apps that ask for money or your OTP "to check your NID".
+The portal checks don't ask for any payment. Ignore Facebook pages or apps that ask for money or your OTP "to check your NID".
 
 ## National identity card check by citizenship number: does it still work?
 
@@ -103,7 +102,7 @@ DoNIDCR's notice asks government bodies and organisations that used to accept a 
 
 ## NID card status and print check: is my card printed?
 
-The NID number and the plastic **NID card** are separate. You can have a number long before your card is printed. To check the card:
+The NID number and the plastic **NID card** are separate. You can have a number long before your card is printed. To do an **NID status check** for the card:
 
 1. Open the Citizen Portal and click **NID Card Status** (<span lang="ne">राष्ट्रिय परिचयपत्र अवस्था</span>).
 2. Enter **either** your **request number (RSN)**, the 16-digit application number you were given when you registered, **or** your NID number (XXX-XXX-XXX-X).
@@ -111,13 +110,12 @@ The NID number and the plastic **NID card** are separate. You can have a number 
 
 ![NID card status form with the request number and NID number fields marked](/images/posts/nid/nid-7-card-status.webp "Check your NID card status with your request number or your NID number")
 
-When your card is printed, DoNIDCR sends you an **SMS saying it is ready to collect**. Collect it **from the same place where you registered** your details, and go **in person**: your fingerprints are checked when the card is handed over, so nobody else can collect it for you ([DoNIDCR FAQ](https://donidcr.gov.np/pages/abboyed-asked-questions--rational-identity-10)).
+When your card is printed, DoNIDCR sends you an **SMS saying it is ready to collect**. Collect it **from the same place where you registered** your details (who can collect it is in the questions below).
 
-## NID number check by SMS and phone
+## NID number help: phone, Viber and email
 
-If you registered but never got your number by SMS, DoNIDCR's FAQ gives these options:
+If you registered but never got your number, DoNIDCR's FAQ lists these contacts (the SMS check is in the questions below):
 
-- **SMS:** type `N`, a space and your **application number**, and send it to **30001**.
 - **Viber or WhatsApp:** 9851316034 or 9851316035.
 - **Phone:** 9847346412 or 01-4200014. The FAQ also lists a call centre, 01-5970449, for NID problems.
 - **Toll-free:** **1147** (on the DoNIDCR homepage).

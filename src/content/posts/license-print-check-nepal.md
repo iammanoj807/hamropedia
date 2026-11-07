@@ -1,29 +1,26 @@
 ---
 title: "License Print Check in Nepal: How to Check if Your Smart Driving License Is Printed (2026)"
 seoTitle: "License Print Check Nepal 2026: Smart License Status Online"
-description: "License print check in Nepal: find your smart driving license in DoTM's printed lists, check license details online and know what to bring to collect it."
+description: "License print check in Nepal: do a smart license print check online in DoTM's printed lists or your office's page, and know what to bring to collect it."
 date: 2026-11-05
 category: nepal
 tags: [driving license, license print check, license check, smart license, dotm, nepal]
 coverWord: "License Check"
 coverAlt: "Checking if a Nepal smart driving license is printed"
 ---
+A **license print check** (or **driving license print check**) tells you whether your smart driving license card has been printed and is ready to collect. In Nepal you do a **smart license print check online** in two official ways: find your **license number in the printed-license lists** that the Department of Transport Management (DoTM) publishes on [dotm.gov.np](https://dotm.gov.np/category/details-of-printed-licenses/), or use your **transport office's own print-status search**, where one exists. This guide shows both, then what to do when you collect the card and how the urgent license for people going abroad works. Still applying for your license? See the [driving licence online form guide](/driving-licence-online-form-nepal/).
 
-A **license print check** tells you whether your smart driving license card has been printed and is ready to collect. In Nepal there are three official ways to do it. First, find your **license number in the printed-license lists** that the Department of Transport Management (DoTM) publishes on [dotm.gov.np](https://dotm.gov.np/category/details-of-printed-licenses/). Second, use your **transport office's own print-status search**, where one exists. Third, see your **license details or track an application** on DoTM's license check page and the new province license portals. This guide covers all three, plus the urgent license for people going abroad and what to bring when you collect your card.
-
-## Quick answer: which license check do you need?
+## License check Nepal: which print check do you need?
 
 | You want to | Where | What you need |
 |---|---|---|
 | Check if your smart license is printed | DoTM's printed-license lists (PDF), regular and urgent | Your license number (XX-XX-XXXXXXXX) |
 | Check in Lumbini Province (Rupandehi office) | The office's [license print status page](http://tmolicense.p5gov.com/pages/license-print-status) | Your license number |
-| See your license details | DoTM's license check page or your province license portal | Your license details |
-| Track a new application | Your province license portal → **License Tracking** | Your application ID, then an OTP |
 | Get an urgent license before going abroad | DoTM's urgent printing service | Visa, ticket and other travel documents |
 
-## License print check in DoTM's printed-license lists
+## License print check: DoTM's smart licence printed list
 
-This is the main way, and it works for every office. DoTM posts the lists under [details of printed licenses](https://dotm.gov.np/category/details-of-printed-licenses/) (<span lang="ne">छपाई भएका सवारी चालक अनुमतिपत्रहरुको विवरण</span>). There are two kinds:
+This is the main **DoTM license check**, and it works for every office. DoTM posts the lists under [details of printed licenses](https://dotm.gov.np/category/details-of-printed-licenses/) (<span lang="ne">छपाई भएका सवारी चालक अनुमतिपत्रहरुको विवरण</span>). There are two kinds:
 
 - **Regular lists** (<span lang="ne">नियमित</span>), one per transport office: licenses printed and sent to that office. For example, the list for Pokhara (Kaski) ([DoTM](https://dotm.gov.np/content/75/regular-print-license-pokhara/)).
 - **Urgent lists** (<span lang="ne">अत्यावश्यक</span>): urgent licenses ready for collection at DoTM on a given date (see the urgent license section below).
@@ -51,17 +48,19 @@ The lists are long: the Pokhara list we opened has **2,634 pages**, sorted by na
 4. Type your **license number exactly as printed, with the hyphens**, for example `01-07-00123456`. If that finds nothing, try the last eight digits only.
 5. If you find it, the **License Printed Date** tells you when your card was printed.
 
-Search by number, not name. The same name often appears several times. The lists we checked were made from Excel, so the text is searchable.
+The lists we checked were made from Excel, so the text is searchable.
 
-### Not on the list doesn't mean not printed
+## Check on your office's own print-status page
 
-The lists come out well after printing. The Pokhara list posted on **22 Asoj 2083 (8 October 2026)** covers cards printed on **27 April 2026**. So if you can't find your number:
+Some transport offices have their own search. The **Transport Management Office (driving license), Rupandehi** in Butwal, Lumbini Province, has a [license print status page](http://tmolicense.p5gov.com/pages/license-print-status) where you type your license number in the format **XX-XX-XXXXXXXX**. The office says printed licenses are handed out from **room no. 11, 9:00 am to 5:00 pm**.
 
-- check that you opened your own office's list, and the urgent list too,
-- check the newest list for your office on dotm.gov.np or on your office's notice page,
-- track your application on your province portal (below).
+Other provinces may not have a page like this. Check your own office's website or notices, and use the DoTM lists if there is none.
 
-The lists use AD dates (2026-APR-27), while DoTM notices use BS dates. The [Nepali date converter](/tools/nepali-date-converter/) converts between them.
+## When you collect your smart license
+
+DoTM in Minbhawan, Kathmandu, is open Monday to Friday, **9:00 to 4:00 in winter** (16 Kartik to 15 Magh) and 9:00 to 5:00 the rest of the year ([dotm.gov.np](https://dotm.gov.np/)). Transport offices set their own hours; Rupandehi's are above. What to bring is in the questions below.
+
+Check the card before you leave the counter: name, categories and dates. DoTM has published a [sample smart card license with its security features](https://dotm.gov.np/content/56/smart-card-driving-license-with-security-features/) you can compare it with.
 
 ## Urgent driving license for people going abroad
 
@@ -78,56 +77,13 @@ How it works, per the charter:
 1. You apply on DoTM's online portal (the charter lists [applydlnew.dotm.gov.np/login](https://applydlnew.dotm.gov.np/login)). Staff check your documents and **approve** the application.
 2. **72 hours after approval**, you can check on DoTM's [Facebook page](https://www.facebook.com/dotmgovnp/) ("Hello Yatayat Byawastha Bibhag") whether your license is printed. The charter gives the service time as "at least 72 hours" and lists no fee for the urgent service itself.
 3. DoTM also posts PDF lists of urgent licenses ready for distribution. The latest one we saw was dated **8 Asar 2083 (22 June 2026)** ([DoTM](https://dotm.gov.np/content/104/urgent-driving-license-830308/)).
-4. You collect the card in person at DoTM's license distribution room; the charter says this is done the same day you go. If you can't go yourself, the charter allows someone else to collect it with your **consent letter** (<span lang="ne">मञ्जुरीनामा</span>) in the format of schedule 5 of the urgent license printing directive, 2081, plus their own application.
+4. You collect the card in person at DoTM's license distribution room; the charter says this is done the same day you go. Someone else can collect it with your consent letter (see the questions below).
 
-## Check on your office's own print-status page
-
-Some transport offices have their own search. The **Transport Management Office (driving license), Rupandehi** in Butwal, Lumbini Province, has a [license print status page](http://tmolicense.p5gov.com/pages/license-print-status) where you type your license number in the format **XX-XX-XXXXXXXX**. The office says printed licenses are handed out from **room no. 11, 9:00 am to 5:00 pm**.
-
-Other provinces may not have a page like this. Check your own office's website or notices, and use the DoTM lists if there is none.
-
-## Check your license details or track an application online
-
-- **License details:** DoTM's citizen charter gives [applydlnew.dotm.gov.np/licensecheck](https://applydlnew.dotm.gov.np/licensecheck) as the page "to see your smart license details". It's useful to confirm that a new, renewed or duplicate card's details are right.
-- **Province license portals:** DoTM's [EDLVRS page](https://edlvrs.dotm.gov.np/) now lists a separate driving license portal for each province. Their screens include **License Tracking** ("Enter your application id to verify an OTP and view your tracking link"; the OTP goes to the mobile number and email on your application) and **Driving License Details** (to access your license record).
-
-| Province | License portal |
-|---|---|
-| Koshi | [edlvrs.koshi.gov.np/edl](https://edlvrs.koshi.gov.np/edl) |
-| Madhesh | [edlvrs.madhesh.gov.np/edl](https://edlvrs.madhesh.gov.np/edl) |
-| Bagmati | [edlvrs.bagamati.gov.np/edl](https://edlvrs.bagamati.gov.np/edl) |
-| Gandaki | [edlvrs.gandaki.gov.np/edl](https://edlvrs.gandaki.gov.np/edl) |
-| Lumbini | [edlvrs.lumbini.gov.np/edl](https://edlvrs.lumbini.gov.np/edl) |
-| Karnali | [edlvrs.karnali.gov.np/edl](https://edlvrs.karnali.gov.np/edl) |
-| Sudurpashchim | [edlvrs.sudurpashchim.gov.np/edl](https://edlvrs.sudurpashchim.gov.np/edl) |
-
-Applying for a new license? The portals say you need a valid **National Identity Number (NID)** and a **mobile number registered in your own name** first. If you don't know your NID number, see the [NID card check guide](/nid-card-check-nepal/).
-
-DoTM's applydlnew pages didn't load when we tested them from outside Nepal. If one doesn't open for you, try again later or from a Nepali internet connection.
-
-## License number or application ID?
-
-- Your **license number** has the format **XX-XX-XXXXXXXX** (two digits, two digits, eight digits), as in the DoTM lists. Use it for the printed-list search and the office print-status pages.
-- Your **application ID** belongs to your online application. Use it for **License Tracking** on the province portal.
-
-Keep both, with your payment receipts, until you have the card in your hand.
-
-## What to bring when you collect your smart license
-
-- **Original receipts for all the fees** (revenue) you paid. DoTM's notices with the printed lists ask for these.
-- **Your old license**, if you renewed or added a category.
-- For an urgent license collected by someone else: your consent letter and their application (see above).
-
-DoTM in Minbhawan, Kathmandu, is open Monday to Friday, **9:00 to 4:00 in winter** (16 Kartik to 15 Magh) and 9:00 to 5:00 the rest of the year ([dotm.gov.np](https://dotm.gov.np/)). Transport offices set their own hours; Rupandehi's are above.
-
-Check the card before you leave the counter: name, categories and dates. DoTM has published a [sample smart card license with its security features](https://dotm.gov.np/content/56/smart-card-driving-license-with-security-features/) you can compare it with.
-
-## Help, complaints and SMS
+## Help and complaints
 
 - **DoTM help desk:** 01-4574921 or 01-4575922 (citizen charter).
 - **Complaints:** gunaso@dotm.gov.np.
 - **Facebook:** [facebook.com/dotmgovnp](https://www.facebook.com/dotmgovnp/), where urgent license updates are posted.
-- **SMS:** some websites mention checking by SMS (LC and a number sent to 33001). We couldn't find this on any DoTM page or in the citizen charter, so don't rely on it.
 
 ## Frequently asked questions
 
@@ -135,9 +91,9 @@ Check the card before you leave the counter: name, categories and dates. DoTM ha
 
 **How can I check my license print status online?** Use DoTM's printed-license lists, your office's print-status page if it has one (such as Rupandehi in Lumbini), or DoTM's license check page for your license details. To follow a new application, use License Tracking on your province license portal with your application ID.
 
-**Why is my license not on the printed list?** The lists are published well after printing. The Pokhara list posted on 8 October 2026 covers cards printed on 27 April 2026. Check your own office's newest list and the urgent list, and track your application on your province portal.
+**Why is my license not on the printed list?** The lists are published well after printing. The Pokhara list posted on 8 October 2026 covers cards printed on 27 April 2026. Check your own office's newest list and the urgent list, and track your application on your province portal. The lists use AD dates; convert DoTM's BS dates with the [Nepali date converter](/tools/nepali-date-converter/).
 
-**Can I check my license print by name?** The lists include names, so you can search a name, but the same name often appears several times. Search by your license number instead; it is unique and shows the correct record.
+**Can I check my license print by name?** The lists include names, so you can search a name, but the same name often appears several times. Search by your license number instead; it is unique and shows the correct record in the smart licence printed list.
 
 **What is the format of a Nepal driving license number?** Two digits, two digits and eight digits, separated by hyphens: XX-XX-XXXXXXXX, for example 01-07-00123456. Type it with the hyphens when you search a printed list or an office print-status page.
 

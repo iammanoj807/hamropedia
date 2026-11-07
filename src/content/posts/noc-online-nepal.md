@@ -20,12 +20,11 @@ coverAlt: "Applying for a NOC online in Nepal"
 - **Consultancies were warned.** The same notice tells consultancies to stop spreading wrong information about the NOC or sending students to the office for no reason.
 - **Bigger reforms are only proposals.** In April 2026 the government proposed overhauling the NOC, for example approving foreign exchange only for "priority" subjects. These are proposals, not rules in force ([The PIE News, 7 April 2026](https://thepienews.com/nepal-proposes-scrapping-current-noc-process-in-sweeping-reform-push/)).
 
-## NOC full form and NOC meaning in Nepali
+## What the NOC is for
 
-**NOC** stands for **No Objection Certificate**. In Nepali it is <span lang="ne">अनापत्ति पत्र</span>, literally a "letter of no objection". The portal defines it as "a No Objection Certificate granted by Government of Nepal for the Nepalese student to study abroad". In practice it means:
+The portal defines it as "a No Objection Certificate granted by Government of Nepal for the Nepalese student to study abroad". The NOC full form and the NOC meaning in Nepali are in the questions below. In practice:
 
 - **Banks need it** to transfer your tuition fee or living costs abroad and to exchange rupees into foreign currency for your studies.
-- **It is tied to one institution.** Money can only go to the institution named on it. If you change university or country, you apply for a new NOC.
 - **It is about sending money, not your visa.** It comes from the education ministry, not an embassy, and it is your bank that asks for it.
 
 People search for an "NOC letter" and an "NOC certificate": they mean the same thing, the certificate you download from the portal.
@@ -34,13 +33,10 @@ People search for an "NOC letter" and an "NOC certificate": they mean the same t
 
 According to the portal's FAQ:
 
-- **No NOC is issued** for Level 3, Level 4, Certificate III, Certificate IV, top-up degrees or 1-year diploma courses.
-- **Restricted countries:** Taiwan and Mauritius.
-- **Language courses:** you must also have an academic course and apply for both, **except for Japan**.
 - **Diplomas** must be at least 2 years long. Graduate certificates and postgraduate diplomas of 1 year after a bachelor's degree are accepted.
 - **Medicine, nursing and other regulated subjects** may need a pre-approval or licence first, for example from the Medical Education Commission, NHPC or the Nursing Council.
 
-Check the FAQ on [noc.moest.gov.np](https://noc.moest.gov.np/) for your course before you pay any deposit.
+The courses and countries that can't get a NOC, and the rule for language courses, are in the questions below. Check the FAQ on [noc.moest.gov.np](https://noc.moest.gov.np/) for your course before you pay any deposit.
 
 ## NOC documents required
 
@@ -140,17 +136,13 @@ Check every detail. **You can't edit the application after submitting.** Click *
 
 ## NOC office: do you need to visit?
 
-Only if your details can't be verified online. The **NOC branch is at Sanothimi, Bhaktapur** (phone **01-6635419**, email noc@moest.gov.np, as listed on the portal).
-
-- **DOB Verified students** can finish without a visit. That means your citizenship and academic details match each other in the government's records.
-- **Everyone else must visit** for physical verification, and the portal tells you so. In April 2026 the Kathmandu Post reported that of everyone who had applied since online NOCs began in May 2023, **74% had to visit the branch**, mostly because of mistakes or missing documents ([The Kathmandu Post, 28 April 2026](https://kathmandupost.com/national/2026/04/28/over-88-000-students-obtain-nocs-online-in-three-years-as-system-expands)).
-- **TU and KU graduates** are most likely to finish online, because their degrees are now checked automatically.
+Only if your details can't be verified online; who has to go, and the office address and contacts, are in the questions below. Most applicants have ended up visiting: in April 2026 the Kathmandu Post reported that of everyone who had applied since online NOCs began in May 2023, **74% had to visit the branch**, mostly because of mistakes or missing documents ([The Kathmandu Post, 28 April 2026](https://kathmandupost.com/national/2026/04/28/over-88-000-students-obtain-nocs-online-in-three-years-as-system-expands)).
 
 Many people still search for "Keshar Mahal NOC" or the "NOC office in Kathmandu". The portal lists Sanothimi, Bhaktapur as the office address.
 
 ## Pay only the official fee
 
-The official fee is NRs 2,000, paid through the portal. In June 2025 Onlinekhabar reported students being made to pay bribes of up to Rs 100,000 at the NOC branch to get their applications cleared ([Onlinekhabar](https://english.onlinekhabar.com/noc-branch-turns-into-bribery-hub-students-forced-to-pay-up-to-rs-100000-for-clearance-to-study-abroad.html)). The ministry's 2026 notice warns consultancies against misleading students. Don't pay anyone extra to "speed up" your NOC; use the portal and the official contacts above.
+In June 2025 Onlinekhabar reported students being made to pay bribes of up to Rs 100,000 at the NOC branch to get their applications cleared ([Onlinekhabar](https://english.onlinekhabar.com/noc-branch-turns-into-bribery-hub-students-forced-to-pay-up-to-rs-100000-for-clearance-to-study-abroad.html)). The ministry's 2026 notice warns consultancies against misleading students. Don't pay anyone extra to "speed up" your NOC; use the portal and the official contacts above.
 
 ## Why NOC applications get delayed or rejected
 
