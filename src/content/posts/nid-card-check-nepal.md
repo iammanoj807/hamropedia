@@ -3,7 +3,6 @@ title: "NID Card Check in Nepal: Find Your NID Number, Card Status and eNID (202
 seoTitle: "NID Card Check Nepal 2026: NID Number, Status & eNID"
 description: "NID card check in Nepal: find your NID number, check card status and download your eNID on the official portal. Why citizenship number no longer works."
 date: 2026-11-05
-updated: 2026-11-07
 category: nepal
 tags: [nid, nid card check, nid number, national identity card, rastriya parichaya patra, enid, nepal]
 coverWord: "NID Check"

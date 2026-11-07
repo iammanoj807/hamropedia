@@ -3,7 +3,6 @@ title: "UKVI Credibility Interview Questions and Answers: Pre-CAS and Visa Inter
 seoTitle: "UKVI Credibility Interview Questions and Answers (2026)"
 description: "UKVI credibility interview questions and answers: pre-CAS vs UKVI interviews, 30 likely questions, answer templates you can adapt and red flags to avoid."
 date: 2025-06-16
-updated: 2026-11-05
 category: study-abroad
 tags: [uk, student visa, interview, study abroad]
 coverWord: "Interview"

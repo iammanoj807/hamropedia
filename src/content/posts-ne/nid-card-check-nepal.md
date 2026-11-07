@@ -3,7 +3,6 @@ title: "राष्ट्रिय परिचयपत्र नम्बर 
 seoTitle: "NID Card Check: राष्ट्रिय परिचयपत्र नम्बर कसरी हेर्ने"
 description: "राष्ट्रिय परिचयपत्र (NID) नम्बर अनलाइन कसरी हेर्ने, कार्ड छापियो कि छापिएन कसरी थाहा पाउने र eNID कसरी डाउनलोड गर्ने। नागरिकता नम्बरले अब किन काम गर्दैन।"
 date: 2026-11-05
-updated: 2026-11-07
 category: nepal
 tags: [nid, nid card check, nid number, national identity card, rastriya parichaya patra, enid, nepal]
 coverWord: "NID चेक"

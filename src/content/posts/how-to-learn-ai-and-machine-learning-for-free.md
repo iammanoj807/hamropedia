@@ -3,7 +3,6 @@ title: "How to Learn AI and Machine Learning for Free: A Realistic Roadmap"
 seoTitle: "How to Learn Machine Learning and AI for Free: 2026 Roadmap"
 description: "A realistic, free path into AI and machine learning: what to learn first, the best free courses and videos, the tools you need, and projects that stand out."
 date: 2026-11-01
-updated: 2026-11-05
 category: ai
 tags: [ai, machine learning, roadmap, learning, python]
 coverWord: "Learn AI"

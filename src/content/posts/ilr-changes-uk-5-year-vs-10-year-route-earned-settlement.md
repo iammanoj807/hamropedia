@@ -3,7 +3,6 @@ title: "ILR New Rules 2026: Who Still Gets Indefinite Leave to Remain in 5 Years
 seoTitle: "ILR New Rules: Indefinite Leave to Remain in 5 or 10 Years"
 description: "Confirmed on 2 November 2026: the UK's standard wait for ILR rises from 5 to 10 years. Who still settles in 3 or 5 years, what changes for workers and students."
 date: 2026-11-02
-updated: 2026-11-05
 category: study-abroad
 type: news
 tags: [uk, ilr, ilr changes, settlement, skilled worker, earned settlement]

@@ -3,7 +3,6 @@ title: "PAN Card Registration in Nepal: How to Apply Online with Your NID (2026)
 seoTitle: "PAN Card Registration Nepal 2026: Apply Online with NID"
 description: "PAN card registration in Nepal online: get a personal PAN with your NID on IRD's new taxpayer portal, step by step with screenshots, then print the card."
 date: 2026-11-07
-updated: 2026-11-07
 category: nepal
 tags: [pan card, pan card registration, pan registration nepal, online pan registration, personal pan, ird, nepal]
 coverWord: "PAN Card"

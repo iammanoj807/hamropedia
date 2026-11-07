@@ -3,7 +3,6 @@ title: "How to Type in Nepali: Nepali Unicode Romanized Typing on Laptop, Phone 
 seoTitle: "How to Type in Nepali: Nepali Unicode Romanized Typing"
 description: "How to type in Nepali on a laptop, phone or MS Word with English letters: Romanized rules, the official Nepali Unicode Romanized download and a free tool."
 date: 2026-11-01
-updated: 2026-11-07
 category: nepal
 tags: [nepali typing, unicode, romanized, preeti, nepali language]
 coverWord: "Type Nepali"

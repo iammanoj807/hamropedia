@@ -3,7 +3,6 @@ title: "NOC Nepal 2026: How to Apply for NOC Online, Documents, Fee and Status"
 seoTitle: "NOC Nepal 2026: Apply NOC Online, Documents, Fee & Status"
 description: "NOC Nepal: how to apply for NOC online, step by step with real screenshots. Who can get a NOC, documents by level, the NRs 2,000 fee and status check."
 date: 2026-11-06
-updated: 2026-11-06
 category: study-abroad
 tags: [noc, noc online, noc nepal, no objection certificate, study abroad, nepal]
 coverWord: "NOC Online"

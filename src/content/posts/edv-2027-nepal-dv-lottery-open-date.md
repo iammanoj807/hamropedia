@@ -3,7 +3,6 @@ title: "EDV 2027 (DV Lottery 2027) Opening Date in Nepal: Is the Form Open?"
 seoTitle: "EDV 2027 and DV Lottery 2027 in Nepal: Is the Form Open?"
 description: "Is the EDV 2027 form open? Not yet: a US appeals court paused the 1 November opening. The latest for Nepal, the US$1 fee, passport rule and what to prepare."
 date: 2026-10-30
-updated: 2026-11-05
 category: study-abroad
 type: news
 tags: [edv, dv lottery, edv 2027, edv result, usa, visa, nepal]

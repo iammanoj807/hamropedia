@@ -3,7 +3,6 @@ title: "Coding for Beginners: How to Learn Coding from Zero (2026 Roadmap)"
 seoTitle: "How to Learn Coding: A Free Coding Roadmap for Beginners"
 description: "Start coding from zero: which language to pick, setting up VS Code, the best free courses, projects, DSA, Git, and how to use AI tools wisely."
 date: 2024-03-07
-updated: 2026-11-05
 category: coding
 tags: [coding, programming, beginners, roadmap, python, javascript]
 coverWord: "Start coding"

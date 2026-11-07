@@ -3,7 +3,6 @@ title: "License Print Check in Nepal: How to Check if Your Smart Driving License
 seoTitle: "License Print Check Nepal 2026: Smart License Status Online"
 description: "License print check in Nepal: find your smart driving license in DoTM's printed lists, check license details online and know what to bring to collect it."
 date: 2026-11-05
-updated: 2026-11-05
 category: nepal
 tags: [driving license, license print check, license check, smart license, dotm, nepal]
 coverWord: "License Check"

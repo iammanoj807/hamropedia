@@ -3,7 +3,6 @@ title: "WES Application from Nepal: How to Apply for WES Credential Evaluation (
 seoTitle: "WES Application 2026: How to Apply for WES from Nepal"
 description: "WES application from Nepal, step by step with screenshots: required documents, sending TU and KU transcripts to WES, reference number and status."
 date: 2026-11-06
-updated: 2026-11-06
 category: study-abroad
 tags: [wes, wes application, wes credential evaluation, wes transcript, usa, canada, nepal]
 coverWord: "WES Application"

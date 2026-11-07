@@ -3,7 +3,6 @@ title: "बेलायतको ग्राजुएट भिसा २०२
 seoTitle: "यूके ग्राजुएट भिसा (PSW): १८ महिना कि २ वर्ष? (२०२७ नियम)"
 description: "बेलायतको २०२६ को बजेटअनुसार 'उच्च अनुपालन' विश्वविद्यालयका स्नातकले दुई वर्षको ग्राजुएट भिसा पाउनेछन्, अरूलाई जनवरी २०२७ देखि १८ महिना मात्र।"
 date: 2026-10-28
-updated: 2026-11-07
 category: study-abroad
 type: news
 tags: [uk, student visa, graduate route, psw, study abroad]

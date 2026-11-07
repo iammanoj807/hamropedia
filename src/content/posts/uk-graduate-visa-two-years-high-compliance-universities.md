@@ -3,7 +3,6 @@ title: "Graduate Visa UK: Cut to 18 Months in 2027, and Who Still Gets Two Years
 seoTitle: "Graduate Visa UK (PSW) 2026: 18 Months or 2 Years?"
 description: "The UK Graduate visa is 2 years if you apply by 31 December 2026, then 18 months, except at 'high-compliance' universities. Rules, the £937 fee, what to do."
 date: 2026-10-28
-updated: 2026-11-07
 category: study-abroad
 type: news
 tags: [uk, graduate visa, graduate route, post-study work, psw, study abroad]

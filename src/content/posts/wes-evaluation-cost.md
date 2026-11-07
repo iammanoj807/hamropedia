@@ -3,7 +3,6 @@ title: "WES Evaluation Cost 2026: Every Fee in Dollars and Nepali Rupees (ICAP v
 seoTitle: "WES Evaluation Cost 2026: Fees, ICAP vs Basic, Canada ECA"
 description: "WES evaluation cost in 2026: every fee in US$ and Nepali rupees, ICAP vs Basic, the Canada ECA with HST, processing time and the extra costs from Nepal."
 date: 2026-11-06
-updated: 2026-11-06
 category: study-abroad
 tags: [wes, wes evaluation cost, wes fee, wes icap, wes eca, usa, canada, nepal]
 coverWord: "WES Cost"
