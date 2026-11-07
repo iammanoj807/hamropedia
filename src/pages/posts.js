@@ -260,7 +260,7 @@ ${newsSection('AI &amp; technology', news.filter((p) => p.category === 'ai'), '/
 ${newsSection('Study abroad &amp; visas', news.filter((p) => p.category === 'study-abroad'), '/category/study-abroad/', 'All study-abroad guides')}`;
   return layout({
     title: `Nepal news, AI news and UK visa updates, explained with sources | ${site.name}`,
-    description: 'News explained simply: the EDV 2027 (DV lottery) update, PM Balen Shah and Nepal\'s 2026 election, the UK Graduate visa change and Nepal\'s AI policy.',
+    description: 'News explained simply: the EDV 2027 (DV lottery) update, PM Balen Shah and Nepal\'s 2026 election, and the UK Graduate visa change.',
     path: '/news/',
     body,
     version,

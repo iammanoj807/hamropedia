@@ -152,7 +152,7 @@ Check the card before you leave the counter: name, categories and dates. DoTM ha
 
 **Is there an SMS to check my license print?** Some websites mention sending LC and a number to 33001, but we couldn't find this service on any DoTM page or in its citizen charter. Use the printed lists or the official portals instead.
 
-Related: [NID card check](/nid-card-check-nepal/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-online-nepal/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
+Related: [Driving licence online form](/driving-licence-online-form-nepal/) (apply for or renew a license online) · [NID card check](/nid-card-check-nepal/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-online-nepal/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
 
 ---
 
