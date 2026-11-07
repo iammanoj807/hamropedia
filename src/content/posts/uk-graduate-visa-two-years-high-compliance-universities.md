@@ -114,7 +114,7 @@ The Budget also said the **High Potential Individual (HPI) visa** will be opened
 
 **Does the Graduate visa count towards ILR?** Not under the new Earned Settlement rules: time on Student and Graduate visas will not count, and the 10-year Long Residence route, where it used to count, will close. See [ILR new rules](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
 
-For all the current UK student visa numbers (fees, funds, dependants), see [UK student visa rules explained](/uk-student-visa-from-nepal/). Planning to stay long term? Graduate visa time will not count towards settlement under the new rules: see [UK ILR changes: 5-year vs 10-year routes](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
+For all the current UK student visa numbers (fees, funds, dependants), see [UK student visa rules explained](/uk-student-visa-nepal/). Planning to stay long term? Graduate visa time will not count towards settlement under the new rules: see [UK ILR changes: 5-year vs 10-year routes](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
 
 ---
 

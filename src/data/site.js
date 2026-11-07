@@ -77,7 +77,7 @@ export const categories = {
     name: 'Study Abroad',
     nameNe: 'विदेश अध्ययन',
     description: 'Step-by-step, sourced guides for students going abroad: NOC, WES, UK visas and more.',
-    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-online-nepal/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-from-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-from-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
+    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-nepal-apply-online/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost-nepal/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
     hue: 'blue',
   },
   coding: {
@@ -98,7 +98,7 @@ export const categories = {
     name: 'Nepal',
     nameNe: 'नेपाल',
     description: 'Sourced news explainers and round-ups from Nepal, plus guides to typing and using Nepali online.',
-    intro: 'News from Nepal explained simply, with a link to the source for every fact, such as <a href="/nepal-gen-z-protests-to-balen-shah-government-explained/">how Balen Shah became prime minister after the Gen Z protests</a>. Need your national ID number? The <a href="/nid-card-check/">NID card check guide</a> shows how to find your NID number, check if your card is printed and download your eNID, the <a href="/driving-licence-online-form/">driving licence online form guide</a> shows how to apply for or renew a license on the DoTM eDLVRS portals, and the <a href="/smart-license-print-check/">license print check guide</a> shows how to find out if your smart driving license is printed. For your tax number, the <a href="/pan-card-registration/">PAN card registration guide</a> shows how to get a personal PAN online with your NID, and the <a href="/ird-pan-search-nepal/">IRD PAN search guide</a> shows how to check a PAN number. For typing Nepali online, read the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali Unicode typing guide</a> and the <a href="/nepali-font-download/">Nepali font download guide</a> (Preeti, Kalimati and Unicode fonts) or use the free tools: <a href="/tools/english-to-nepali/">Nepali typing</a>, the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.',
+    intro: 'News from Nepal explained simply, with a link to the source for every fact, such as <a href="/nepal-gen-z-protests-to-balen-shah-government-explained/">how Balen Shah became prime minister after the Gen Z protests</a>. Need your national ID number? The <a href="/nid-card-check/">NID card check guide</a> shows how to find your NID number, check if your card is printed and download your eNID, the <a href="/driving-licence-online-form/">driving licence online form guide</a> shows how to apply for or renew a license on the DoTM eDLVRS portals, and the <a href="/smart-license-print-check/">license print check guide</a> shows how to find out if your smart driving license is printed. For your tax number, the <a href="/pan-card-registration/">PAN card registration guide</a> shows how to get a personal PAN online with your NID, and the <a href="/ird-pan-search-nepal/">IRD PAN search guide</a> shows how to check a PAN number. For typing Nepali online, read the <a href="/nepali-unicode-romanized-typing/">Nepali Unicode typing guide</a> and the <a href="/nepali-font-download-preeti-kalimati/">Nepali font download guide</a> (Preeti, Kalimati and Unicode fonts) or use the free tools: <a href="/tools/english-to-nepali/">Nepali typing</a>, the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.',
     hue: 'indigo',
   },
 };
@@ -138,12 +138,12 @@ export const redirects = [
   // Removed on 5 November 2026 (the photo tool is now DV size only).
   { from: '/tools/age-calculator/', to: '/tools/', title: 'Age calculator' },
   { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/', title: 'Passport size photo maker' },
-  { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/wes-application-from-nepal/', title: 'WES application from Nepal', moved: true },
+  { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
   // Rewritten from scratch on 6 November 2026 under new URLs (old posts removed; the old addresses forward here).
-  { from: '/how-to-apply-noc-online-easy-steps-for-nepali-students/', to: '/noc-online-nepal/', title: 'NOC online in Nepal', moved: true },
-  { from: '/how-to-apply-for-wes-evaluation/', to: '/wes-application-from-nepal/', title: 'WES application from Nepal', moved: true },
-  { from: '/important-details-about-wes-evaluation-for-nepali-students/', to: '/wes-evaluation-cost/', title: 'WES evaluation cost', moved: true },
-  { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-from-nepal/', title: 'UK student visa from Nepal', moved: true },
+  { from: '/how-to-apply-noc-online-easy-steps-for-nepali-students/', to: '/noc-nepal-apply-online/', title: 'NOC online in Nepal', moved: true },
+  { from: '/how-to-apply-for-wes-evaluation/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
+  { from: '/important-details-about-wes-evaluation-for-nepali-students/', to: '/wes-evaluation-cost-nepal/', title: 'WES evaluation cost', moved: true },
+  { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-nepal/', title: 'UK student visa from Nepal', moved: true },
   // Removed on 7 November 2026: little search demand for the topic.
   { from: '/nepal-national-ai-policy-2082-explained/', to: '/category/ai/', title: 'Nepal National AI Policy 2082', note: 'This article has been removed.' },
   { from: '/ne/nepal-national-ai-policy-2082-explained/', to: '/ne/', title: 'Nepal National AI Policy 2082', note: 'यो लेख हटाइएको छ।' },
@@ -156,4 +156,10 @@ export const redirects = [
   { from: '/ne/nid-card-check-nepal/', to: '/ne/nid-card-check/', title: 'NID card check in Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
   { from: '/pan-card-registration-nepal/', to: '/pan-card-registration/', title: 'PAN card registration in Nepal', moved: true },
   { from: '/ird-pan-search/', to: '/ird-pan-search-nepal/', title: 'IRD PAN search', moved: true },
+  { from: '/noc-online-nepal/', to: '/noc-nepal-apply-online/', title: 'NOC online in Nepal', moved: true },
+  { from: '/nepali-font-download/', to: '/nepali-font-download-preeti-kalimati/', title: 'Nepali font download', moved: true },
+  { from: '/how-to-type-in-nepali-unicode-romanized/', to: '/nepali-unicode-romanized-typing/', title: 'How to type in Nepali', moved: true },
+  { from: '/wes-application-from-nepal/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
+  { from: '/wes-evaluation-cost/', to: '/wes-evaluation-cost-nepal/', title: 'WES evaluation cost', moved: true },
+  { from: '/uk-student-visa-from-nepal/', to: '/uk-student-visa-nepal/', title: 'UK student visa from Nepal', moved: true },
 ];

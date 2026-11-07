@@ -108,7 +108,7 @@ This is the biggest change for international students. Today, years on a **Stude
 
 (Home Office, Chapter 4)
 
-If you are studying now, see what is changing with the [UK Graduate visa](/uk-graduate-visa-two-years-high-compliance-universities/) and the [UK student visa rules](/uk-student-visa-from-nepal/).
+If you are studying now, see what is changing with the [UK Graduate visa](/uk-graduate-visa-two-years-high-compliance-universities/) and the [UK student visa rules](/uk-student-visa-nepal/).
 
 ## Partners and children
 
@@ -177,7 +177,7 @@ The plan is about how people **qualify** for settlement. The Home Office respons
 
 **Is ILR the same as EU settled status?** Settled status under the EU Settlement Scheme is a form of indefinite leave for EU citizens and their families who lived in the UK before 2021. The EU Settlement Scheme keeps its own rules and is not affected by Earned Settlement.
 
-Related: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) · [UK student visa rules explained](/uk-student-visa-from-nepal/) · [UKVI credibility interview questions](/top-ukvi-interview-question-examples-and-answers/)
+Related: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) · [UK student visa rules explained](/uk-student-visa-nepal/) · [UKVI credibility interview questions](/top-ukvi-interview-question-examples-and-answers/)
 
 ---
 

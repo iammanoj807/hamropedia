@@ -33,6 +33,12 @@ const OLD_WORDPRESS_URLS = [
   '/ne/nid-card-check-nepal/',
   '/pan-card-registration-nepal/',
   '/ird-pan-search/',
+  '/noc-online-nepal/',
+  '/nepali-font-download/',
+  '/how-to-type-in-nepali-unicode-romanized/',
+  '/wes-application-from-nepal/',
+  '/wes-evaluation-cost/',
+  '/uk-student-visa-from-nepal/',
 ];
 
 function resolve(urlPath) {

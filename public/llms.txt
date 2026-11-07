@@ -3,10 +3,10 @@
 > Hamropedia (hamropedia.com) is a free website by Manoj Kumar Thapa, an AI software engineer in Birmingham, UK. It has sourced, dated guides for Nepali students going abroad, Nepal news explainers, four free courses (AI & ML, System Design, SQL, DSA) and free Nepali tools. Every article links to the official or named sources it is based on.
 
 ## Study abroad guides
-- [NOC online in Nepal](https://hamropedia.com/noc-online-nepal/): how to apply for the No Objection Certificate, documents by level, the NRs 2,000 fee and status check
-- [WES application from Nepal](https://hamropedia.com/wes-application-from-nepal/): every screen of the form, sending TU and KU transcripts to WES
-- [WES evaluation cost](https://hamropedia.com/wes-evaluation-cost/): every fee in US$, C$ and Nepali rupees, ICAP vs Basic, Canada ECA
-- [UK student visa from Nepal](https://hamropedia.com/uk-student-visa-from-nepal/): requirements, fees, funds and costs in rupees
+- [NOC online in Nepal](https://hamropedia.com/noc-nepal-apply-online/): how to apply for the No Objection Certificate, documents by level, the NRs 2,000 fee and status check
+- [WES application from Nepal](https://hamropedia.com/wes-application-nepal/): every screen of the form, sending TU and KU transcripts to WES
+- [WES evaluation cost](https://hamropedia.com/wes-evaluation-cost-nepal/): every fee in US$, C$ and Nepali rupees, ICAP vs Basic, Canada ECA
+- [UK student visa from Nepal](https://hamropedia.com/uk-student-visa-nepal/): requirements, fees, funds and costs in rupees
 - [UK Graduate visa: 18 months or 2 years](https://hamropedia.com/uk-graduate-visa-two-years-high-compliance-universities/)
 - [ILR new rules: indefinite leave to remain in 5 or 10 years](https://hamropedia.com/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/)
 - [UKVI credibility interview questions and answers](https://hamropedia.com/top-ukvi-interview-question-examples-and-answers/)
@@ -14,8 +14,8 @@
 
 ## Nepal
 - [Balen Shah, prime minister of Nepal: from the Gen Z protests to power](https://hamropedia.com/nepal-gen-z-protests-to-balen-shah-government-explained/)
-- [How to type in Nepali (Nepali Unicode romanized)](https://hamropedia.com/how-to-type-in-nepali-unicode-romanized/)
-- [Nepali font download: Preeti, Kalimati and Unicode fonts](https://hamropedia.com/nepali-font-download/)
+- [How to type in Nepali (Nepali Unicode romanized)](https://hamropedia.com/nepali-unicode-romanized-typing/)
+- [Nepali font download: Preeti, Kalimati and Unicode fonts](https://hamropedia.com/nepali-font-download-preeti-kalimati/)
 - [PAN card registration in Nepal: apply online with your NID](https://hamropedia.com/pan-card-registration/)
 - [IRD PAN search: check a PAN number online](https://hamropedia.com/ird-pan-search-nepal/)
 - [Driving licence online form in Nepal: apply and renew on DoTM eDLVRS](https://hamropedia.com/driving-licence-online-form/)

@@ -178,7 +178,7 @@ What this means for you:
 
 **Do I need an NID number for a passport?** Yes. DoNIDCR's FAQ says the national identity number is compulsory when you apply for a passport.
 
-Related: [License print check](/smart-license-print-check/) (is your smart driving license printed?) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates) · [How to type in Nepali](/how-to-type-in-nepali-unicode-romanized/)
+Related: [License print check](/smart-license-print-check/) (is your smart driving license printed?) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates) · [How to type in Nepali](/nepali-unicode-romanized-typing/)
 
 ---
 

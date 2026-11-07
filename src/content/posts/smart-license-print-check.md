@@ -67,7 +67,7 @@ Before you walk away from the counter, check the name, categories and dates on t
 
 If you need your card before you leave Nepal, DoTM can print it urgently (<span lang="ne">अत्यावश्यक सवारी चालक अनुमतिपत्र छपाइ</span>). DoTM's citizen charter ([PDF](https://giwmscdnone.gov.np/media/pages/files/Badapatra%20_o6i6l6m.pdf)) lists the documents according to why you are going:
 
-- **Study abroad:** a No Objection Certificate (NOC), Certificate of Eligibility (COE) or university offer letter, plus your passport, visa and ticket. Our guide shows [how to apply for the NOC online](/noc-online-nepal/).
+- **Study abroad:** a No Objection Certificate (NOC), Certificate of Eligibility (COE) or university offer letter, plus your passport, visa and ticket. Our guide shows [how to apply for the NOC online](/noc-nepal-apply-online/).
 - **Work abroad:** passport, visa or residence card, ticket and labour permit.
 - **UN peacekeeping missions:** a recommendation from your office, the nomination letter and ID.
 - **Non-resident Nepalis:** NRN card or PR card, ticket and passport.
@@ -108,7 +108,7 @@ The charter describes the process like this:
 
 **Is there an SMS to check my license print?** Some websites say you can send LC and a number to 33001, but we found no such service on any DoTM page or in its citizen charter. Rely on the printed lists and the official portals instead.
 
-Related: [Driving licence online form](/driving-licence-online-form/) (apply for or renew a license online) · [NID card check](/nid-card-check/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-online-nepal/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
+Related: [Driving licence online form](/driving-licence-online-form/) (apply for or renew a license online) · [NID card check](/nid-card-check/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-nepal-apply-online/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
 
 ---
 
