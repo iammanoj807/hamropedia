@@ -53,7 +53,6 @@ Aiming for an AI engineer job? Interviews usually test more than machine learnin
 - **A normal laptop.** Phases 0 to 3 run fine on any recent computer.
 - **Python** (free) and a code editor such as VS Code (free).
 - **Free GPU time** when you need it: [Google Colab](https://colab.research.google.com/) and [Kaggle notebooks](https://www.kaggle.com/code) both offer free GPU hours, which is enough for this roadmap's projects.
-- **Time:** consistency beats intensity. One focused hour a day, every day, goes further than a ten-hour weekend once a month.
 
 ## Projects that make you stand out
 

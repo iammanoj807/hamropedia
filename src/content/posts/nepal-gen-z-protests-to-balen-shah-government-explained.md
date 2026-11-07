@@ -10,13 +10,7 @@ coverWord: "PM Balen"
 coverAlt: "Balen Shah sworn in as Nepal's prime minister"
 ---
 
-**Balendra "Balen" Shah was sworn in as Nepal's prime minister on 27 March 2026 (Chaitra 13, 2082)**, capping one of the most dramatic years in the country's modern politics. In just over six months, Nepal went from deadly street protests to the biggest single-party election win in decades. This explainer sets out what happened, in order, with links to the reports behind each fact.
-
-> **At a glance**
->
-> - **Who:** Balendra "Balen" Shah, former mayor of Kathmandu, Rastriya Swatantra Party (RSP). Born 27 April 1990, he was 35 when sworn in.
-> - **When:** sworn in on 27 March 2026 (Chaitra 13, 2082).
-> - **Why:** the RSP won 182 of 275 seats in the 5 March 2026 election, after the September 2025 Gen Z protests brought down the Oli government.
+**Balen Shah (Balendra Shah) was sworn in as Nepal's prime minister on 27 March 2026 (Chaitra 13, 2082)**, capping one of the most dramatic years in the country's modern politics. In just over six months, Nepal went from deadly street protests to the biggest single-party election win in decades. This explainer sets out what happened, in order, with links to the reports behind each fact.
 
 ## Timeline at a glance
 
@@ -63,7 +57,7 @@ In the most watched race, Shah stood against Oli himself in **Jhapa-5**, and won
 
 ## Prime Minister Balen Shah
 
-Shah, a structural engineer and former rapper who became Kathmandu's mayor as an independent in 2022, was sworn in by President Paudel under Article 76(1) of the Constitution. At 35, he is described as Nepal's youngest prime minister in decades, and the youngest since Nepal became a federal democratic republic ([Wikipedia](https://en.wikipedia.org/wiki/Balen_Shah)), as well as the first from the **Madhesh** region ([SCMP](https://www.scmp.com/news/asia/south-asia/article/3348119/balendra-shah-sworn-nepals-prime-minister); [Outlook India](https://www.outlookindia.com/international/nepal-swears-in-balendra-shah-as-youngest-prime-minister)). Harvard-educated economist **Swarnim Waglé** became finance minister.
+Nepal's new prime minister, Shah, a structural engineer and former rapper who became Kathmandu's mayor as an independent in 2022, was sworn in by President Paudel under Article 76(1) of the Constitution. At 35, he is described as Nepal's youngest prime minister in decades, and the youngest since Nepal became a federal democratic republic ([Wikipedia](https://en.wikipedia.org/wiki/Balen_Shah)), as well as the first from the **Madhesh** region ([SCMP](https://www.scmp.com/news/asia/south-asia/article/3348119/balendra-shah-sworn-nepals-prime-minister); [Outlook India](https://www.outlookindia.com/international/nepal-swears-in-balendra-shah-as-youngest-prime-minister)). Harvard-educated economist **Swarnim Waglé** became finance minister.
 
 ## Why it matters
 

@@ -9,7 +9,7 @@ coverWord: "Start coding"
 coverAlt: "A coding roadmap for beginners"
 ---
 
-Learning to code is one of the most useful things you can do as a student: the skills are in demand at home and abroad, you can learn coding entirely for free, and you can practise on any laptop. This coding roadmap for beginners shows how to learn programming from zero to your first real projects, step by step, in order.
+Learning to code is one of the most useful things you can do as a student: the skills are in demand at home and abroad, you can learn coding entirely for free, and you can practise on any laptop. This coding roadmap for beginners shows how to learn coding from zero to your first real projects, step by step, in order.
 
 > **Update:** Refreshed for 2026, with the free resources checked, retired tools removed, and a new section on learning to code in the age of AI assistants.
 
@@ -90,10 +90,6 @@ AI coding assistants can write a lot of code. That makes understanding code **mo
 - **Deploy** your projects so others can use them: [GitHub Pages](https://pages.github.com/) hosts websites for free (this site runs on it).
 - **Join communities:** your college's coding club, local meetups and hackathons, and open-source projects on GitHub.
 - **Share your progress** on LinkedIn or a blog. Explaining what you learned is the best way to remember it.
-
-## A realistic schedule
-
-There is no perfect timeline, but a steady pace works: **an hour a day, every day**. Roughly: basics and small projects first, then DSA alongside bigger projects, then a specialisation. Consistency matters far more than speed.
 
 ## Frequently asked questions
 
