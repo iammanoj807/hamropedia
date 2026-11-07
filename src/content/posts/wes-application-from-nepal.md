@@ -131,32 +131,6 @@ If you courier a sealed envelope yourself, put it unopened inside a courier enve
 
 ![Example courier envelope addressed to WES](/images/posts/wes/courier.webp "The courier envelope: WES reference number and address")
 
-## Your WES reference number
-
-You get a **WES reference number** when you complete the online application. WES uses it to match every document to your file, so put it **on every envelope and every message** you send. WES says it is not responsible for documents that arrive without one ([WES Help: reference number](https://us-help.wes.org/support/solutions/articles/14000126499-what-is-a-wes-reference-number-)). Give it to your university when you ask for transcripts: KU's online WES request asks for it.
-
-## WES login and status check
-
-Log in at wes.org with the email and password you created. Your dashboard has a **tracker with three stages: Application, Documents and Evaluation**, and each turns green when it is complete. The message under it says what WES is waiting for, such as "We are waiting for your documents", with links to the next steps and to **View Required Documents**. WES also emails you as your evaluation moves on ([WES: check your status](https://www.wes.org/resource-library/blog/credential-advice/how-to-check-the-status-of-your-wes-credential-evaluation/)).
-
-## How long a WES application takes from Nepal
-
-| Step | Time |
-|---|---|
-| Create your account and pay | Same day |
-| Get transcripts from your university to WES | The slowest step: start it first |
-| WES verifies your documents | Typically 2 weeks after **all** have arrived |
-| WES evaluates: ECA or Document-by-Document | Typically 1 week (complex cases up to 2) |
-| WES evaluates: Course-by-Course | Typically 2 weeks (complex cases up to 4) |
-
-Times are from [WES processing times](https://www.wes.org/processing-times/), checked 6 November 2026. WES only starts once every required document has arrived.
-
-## Cancelling or changing your WES application
-
-- **Cancelling** a file or application costs a **$56** processing fee. A **completed** evaluation can't be cancelled and its fees aren't refunded ([WES Help: cancellation fee](https://us-help.wes.org/support/solutions/articles/14000126395-is-there-a-cancellation-fee-)).
-- **Upgrading from Basic to ICAP** costs **$53** while the evaluation is in progress.
-- **Updating a completed evaluation**, for example adding a new degree, costs **$92** ([WES fees](https://www.wes.org/evaluations-and-fees/education/graduate-admissions/)).
-
 ## Tips to avoid delays
 
 - **Start with your transcripts.** They take longest from Nepal.
@@ -175,19 +149,19 @@ Times are from [WES processing times](https://www.wes.org/processing-times/), ch
 
 **How do I send my Tribhuvan University transcript to WES?** Get your transcripts from TU's Office of the Controller of Examinations at Balkhu in a sealed, stamped envelope, or ask whether the office can send them to WES directly. If you courier the sealed envelope yourself, never open it, and add your WES reference number.
 
-**What is a WES reference number?** The number WES gives you when you complete the online application. It links every document to your file, so it must be on every envelope and message you send, and you give it to your university when you request transcripts.
+**What is a WES reference number?** The number WES gives you when you complete the online application. It links every document to your file, so it must be on every envelope and message you send: WES says it is not responsible for documents that arrive without one ([WES Help](https://us-help.wes.org/support/solutions/articles/14000126499-what-is-a-wes-reference-number-)). Give it to your university when you request transcripts.
 
 **How do I log in to WES?** Go to wes.org and use the email address and password you created when you opened your WES account. If you forgot the password, reset it from the login page with the same email. Your WES login shows your reference number, required documents and status.
 
-**How do I check my WES application status?** Log in at wes.org and look at the tracker: Application, Documents and Evaluation, each turning green when done. The message under it explains what WES is waiting for, and WES emails you as your evaluation moves forward.
+**How do I check my WES application status?** Log in at wes.org and look at the tracker: Application, Documents and Evaluation, each turning green when done. The message under it explains what WES is waiting for, and WES emails you as your evaluation moves forward ([WES: check your status](https://www.wes.org/resource-library/blog/credential-advice/how-to-check-the-status-of-your-wes-credential-evaluation/)).
 
-**How long does WES take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, longer if complex. Getting transcripts out of Nepal comes on top, so start early.
+**How long does WES take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, longer if complex ([WES processing times](https://www.wes.org/processing-times/), checked 6 November 2026). Getting transcripts out of Nepal comes on top, so start early.
 
 **Can I send my transcripts to WES myself?** WES prefers your university to send them. If your university won't, you can send them yourself, but only in the university's sealed envelope, signed or stamped across the flap and never opened.
 
 **What if my university is not on the WES list?** WES doesn't publish a list of institutions it evaluates. Start the application anyway: the form usually flags institutions WES doesn't evaluate before you pay. If evaluators later can't assess a credential, your account is updated to say so.
 
-**Can I cancel my WES application?** Yes, for a $56 processing fee. A completed evaluation can't be cancelled and its fees aren't refunded, so confirm which evaluation your university or IRCC wants before you pay.
+**Can I cancel my WES application?** Yes, for a $56 processing fee. A completed evaluation can't be cancelled and its fees aren't refunded, so confirm which evaluation your university or IRCC wants before you pay. Upgrading from Basic to ICAP costs $53 and updating a completed evaluation $92: see [WES evaluation cost](/wes-evaluation-cost/).
 
 Related: [WES evaluation cost in dollars and rupees](/wes-evaluation-cost/) · [NOC online in Nepal](/noc-online-nepal/) (needed to send money for your studies) · [Nepali date converter](/tools/nepali-date-converter/)
 

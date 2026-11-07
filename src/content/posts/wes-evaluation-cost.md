@@ -90,25 +90,9 @@ On top of the WES fee, budget for:
 
 If you are applying for a master's or PhD, or the university mentions a GPA, you most likely need Course-by-Course. Your university's instructions always win.
 
-## How long does a WES evaluation take?
-
-WES only starts once **all** your documents have arrived ([WES processing times](https://www.wes.org/processing-times/), checked 6 November 2026):
-
-| Evaluation | Document verification | Evaluation |
-|---|---|---|
-| ECA for Canadian immigration | Typically 2 weeks | Typically 1 week (up to 2 if complex) |
-| Document-by-Document | Typically 2 weeks | Typically 1 week (up to 2 if complex) |
-| Course-by-Course | Typically 2 weeks | Typically 2 weeks (up to 4 if complex) |
-
-Add the time your university needs to send transcripts and any courier time from Nepal. Paying for a faster courier for **your report** doesn't speed up the evaluation itself.
-
 ## WES GPA calculator: estimate your GPA for free
 
 A Course-by-Course report converts your Nepali grades into a GPA on the US 4.0 scale, using WES's own rules for each country and institution. A simple "percentage divided by 25" often gives a different answer. Before you pay, try WES's free [iGPA calculator](https://apps.wes.org/igpa-calculator/); the GPA in your final report is what counts.
-
-## How long is a WES evaluation valid?
-
-For **Canadian immigration**, your ECA must be **less than 5 years old** when you create your Express Entry profile and when you apply ([IRCC](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/how.html)). For **university admission** there is no single rule: each university decides how old a report it accepts.
 
 ## Frequently asked questions
 
@@ -122,7 +106,7 @@ For **Canadian immigration**, your ECA must be **less than 5 years old** when yo
 
 **Is the WES fee the same for every university?** The evaluation fee is the same, but each extra recipient, copy and courier delivery adds to it. Choose the evaluation type your university asks for, because changing it later costs $92.
 
-**How long does a WES evaluation take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, up to 4 if complex. Transcripts from Nepal add time on top.
+**How long does a WES evaluation take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, up to 4 if complex ([WES processing times](https://www.wes.org/processing-times/), checked 6 November 2026). Transcripts from Nepal add time on top, and paying for a faster courier for your report doesn't speed up the evaluation itself.
 
 **Can I get a WES evaluation for free?** No. Every WES evaluation has a fee. Some universities accept other evaluators or assess transcripts themselves, so check your university's requirements before you pay.
 
@@ -130,7 +114,7 @@ For **Canadian immigration**, your ECA must be **less than 5 years old** when yo
 
 **How do I pay WES from Nepal?** Online, in dollars (or Canadian dollars for an ECA), so you need a card that works for international online payments. Keep the receipt and your WES reference number.
 
-**Is a WES evaluation valid for 5 years?** The 5-year limit is for Canadian immigration: your ECA must be under 5 years old when you create your Express Entry profile and when you apply. Universities set their own rules for how old a report can be.
+**Is a WES evaluation valid for 5 years?** The 5-year limit is for Canadian immigration: your ECA must be under 5 years old when you create your Express Entry profile and when you apply ([IRCC](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/how.html)). Universities set their own rules for how old a report can be.
 
 Related: [WES application from Nepal, step by step](/wes-application-from-nepal/) · [NOC online in Nepal](/noc-online-nepal/) (needed to send money from Nepal for your studies)
 

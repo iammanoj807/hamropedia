@@ -80,11 +80,7 @@ The **Graduate visa**, which many Nepali students call **PSW** (post-study work)
 
 The October 2026 Budget says graduates of **"high-compliance" universities** will keep two years, but no list has been published. Full details: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/)
 
-## 6. Dependants
-
-For courses starting from **January 2024**, most international students **cannot bring family members** (dependants). The exceptions are students on **postgraduate research** programmes such as a PhD, and some government-funded scholarship holders ([gov.uk: Student visa, family members](https://www.gov.uk/student-visa/family-members)).
-
-## 7. Working while you study
+## 6. Working while you study
 
 On a degree-level course you can usually work up to **20 hours a week during term time**, and full time during official vacations, unless your CAS or visa says otherwise ([gov.uk: Student visa](https://www.gov.uk/student-visa)).
 
@@ -102,6 +98,16 @@ The [May 2025 immigration white paper](https://www.gov.uk/government/publication
 
 Some of these need further legislation or consultation, and details change. **Treat them as proposals until they appear in the official Immigration Rules or on gov.uk.**
 
+## Checklist before you apply
+
+- [ ] CAS from a licensed sponsor.
+- [ ] Money held for 28 days, at the rate for your application date.
+- [ ] English test or evidence your sponsor accepts.
+- [ ] TB test certificate from an approved clinic in Nepal.
+- [ ] Visa fee (£558) and IHS (£776 per year) budgeted.
+- [ ] [NOC](/noc-online-nepal/) for sending fees from Nepal.
+- [ ] Preparation for a possible [credibility interview](/top-ukvi-interview-question-examples-and-answers/).
+
 ## Frequently asked questions
 
 **What are the new UK student visa rules for 2026?** The main changes are higher money requirements from 30 November 2026 (£1,203 a month outside London, £1,570 in London), the £558 visa fee from April 2026, and the Graduate visa dropping to 18 months for applications from 1 January 2027.
@@ -114,19 +120,9 @@ Some of these need further legislation or consultation, and details change. **Tr
 
 **How much GPA is required to study in the UK from Nepal?** The visa has no GPA rule. Each university sets its own entry grades, so check your course page.
 
-**Can I bring my husband or wife on a UK student visa?** Only if you are on a postgraduate research course such as a PhD, or on some government-funded scholarships.
+**Can I bring my husband or wife on a UK student visa?** For courses starting from January 2024, only if you are on a postgraduate research course such as a PhD, or on some government-funded scholarships ([gov.uk: Student visa, family members](https://www.gov.uk/student-visa/family-members)).
 
 **What about the Graduate visa after my course?** See [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) for the dates, fee and exceptions.
-
-## Checklist before you apply
-
-- [ ] CAS from a licensed sponsor.
-- [ ] Money held for 28 days, at the rate for your application date.
-- [ ] English test or evidence your sponsor accepts.
-- [ ] TB test certificate from an approved clinic in Nepal.
-- [ ] Visa fee (£558) and IHS (£776 per year) budgeted.
-- [ ] [NOC](/noc-online-nepal/) for sending fees from Nepal.
-- [ ] Preparation for a possible [credibility interview](/top-ukvi-interview-question-examples-and-answers/).
 
 ## Sources
 
