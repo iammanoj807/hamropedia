@@ -140,7 +140,7 @@ ${post.html}
     lang,
     alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : ['coding', 'ai'].includes(post.category) ? '/learn/' : '/blog/',
+    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : post.category === 'ai' ? '/learn/' : '/blog/',
   });
 }
 
@@ -156,7 +156,7 @@ export function renderBlogIndex(posts, version) {
     crumbs: [{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }],
     eyebrow: 'The blog',
     title: 'Guides, roadmaps and explainers',
-    lead: 'Study-abroad steps that match the official sites, coding and AI guides, and Nepal news explained with sources. Every article shows when it was published and last checked. For full courses, see <a href="/learn/">Learn &amp; Build</a>.',
+    lead: 'Study-abroad steps that match the official sites, AI guides, and Nepal news explained with sources. Every article shows when it was published and last checked. For full courses, see <a href="/learn/">Learn &amp; Build</a>.',
   })}
 <section class="wrap blog-tools" id="search">
   <label class="search-box"><span class="sr-only">Search articles</span>
@@ -172,8 +172,8 @@ export function renderBlogIndex(posts, version) {
   <p class="empty" id="no-results" hidden>No articles match that search yet. Try a shorter word, or <a href="/contact-us/">suggest a topic</a>.</p>
 </section>`;
   return layout({
-    title: `Blog: study abroad, coding, AI and Nepal guides | ${site.name}`,
-    description: 'All Hamropedia articles: NOC and WES guides, UK student visa rules, coding and AI guides, and news explainers with sources.',
+    title: `Blog: study abroad, AI and Nepal guides | ${site.name}`,
+    description: 'All Hamropedia articles: NOC and WES guides, UK student visa rules, AI guides, and news explainers with sources.',
     path: '/blog/',
     body,
     version,
@@ -197,8 +197,6 @@ export function renderCategory(slug, posts, version) {
   const extra =
     slug === 'ai'
       ? `<a class="banner" href="/ai-roadmap/"><strong>The free AI &amp; ML roadmap</strong><span>8 phases and 98 lessons, each with an animation, a diagram and exercises with answers.</span></a>`
-      : slug === 'coding'
-        ? `<a class="banner" href="/learn/#start-here"><strong>Free courses: System Design, SQL and DSA</strong><span>Full lessons with diagrams, a SQL runner in your browser, and the NeetCode 150 with reviews.</span></a>`
       : slug === 'nepal'
         ? `<a class="banner" href="/ne/" lang="ne"><strong>नेपाली समाचार</strong><span>यी समाचार नेपाली भाषामा पढ्नुहोस्।</span></a>`
         : '';
@@ -214,7 +212,7 @@ export function renderCategory(slug, posts, version) {
     path: `/category/${slug}/`,
     body,
     version,
-    section: ['coding', 'ai'].includes(slug) ? '/learn/' : '/blog/',
+    section: slug === 'ai' ? '/learn/' : '/blog/',
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: c.name, url: `${site.url}/category/${slug}/`, description: c.description },
       breadcrumbSchema(crumbs),

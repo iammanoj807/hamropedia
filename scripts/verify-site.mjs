@@ -1,6 +1,7 @@
 // Post-build checks. Fails (exit 1) if anything is broken.
 //  - every internal href/src in dist/*.html points to a file that exists
 //  - every URL from the old WordPress site still resolves (page or redirect)
+//  - every removed page has no file, so it shows the 404 page
 //  - no references to the old wp-content uploads remain
 //  - every page has exactly one <h1>, a title, a description and a canonical
 import fs from 'node:fs';
@@ -12,21 +13,13 @@ const problems = [];
 
 const OLD_WORDPRESS_URLS = [
   '/', '/about-us/', '/contact-us/', '/blog/', '/privacy-policy/', '/terms-of-use-hamropedia/',
-  '/category/coding/', '/category/study-abroad/', '/category/online-marketing/', '/sitemap_index.xml', '/ads.txt',
-  '/python-decorators-explained-for-beginners/',
-  '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
-  '/the-top-destination-for-nepali-students-studying-abroad-in-2025/',
-  '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
-  '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/',
-  '/devin-the-worlds-first-ai-software-engineer-who-never-sleeps/',
+  '/category/study-abroad/', '/sitemap_index.xml', '/ads.txt',
   '/important-details-about-wes-evaluation-for-nepali-students/',
   '/uk-immigration-2025-new-student-visa-rules-explained-simply/',
   '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/',
   '/ukvi-credibility-interview-questions/',
   '/how-to-apply-noc-online-easy-steps-for-nepali-students/',
   '/how-to-apply-for-wes-evaluation/',
-  '/nepal-national-ai-policy-2082-explained/',
-  '/ne/nepal-national-ai-policy-2082-explained/',
   '/driving-licence-online-form-nepal/',
   '/license-print-check-nepal/',
   '/nid-card-check-nepal/',
@@ -45,11 +38,27 @@ const OLD_WORDPRESS_URLS = [
   '/top-ukvi-interview-question-examples-and-answers/',
   '/edv-2027-nepal-dv-lottery-open-date/',
   '/ne/edv-2027-nepal-dv-lottery-open-date/',
-  '/how-to-learn-coding/',
-  '/how-to-learn-coding-free/',
   '/how-to-learn-ai-and-machine-learning-for-free/',
   '/nepal-gen-z-protests-to-balen-shah-government-explained/',
   '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/',
+];
+
+// Pages removed on purpose: these must NOT exist, so GitHub Pages serves 404.html.
+const REMOVED_URLS = [
+  '/python-decorators-explained-for-beginners/',
+  '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
+  '/the-top-destination-for-nepali-students-studying-abroad-in-2025/',
+  '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
+  '/devin-the-worlds-first-ai-software-engineer-who-never-sleeps/',
+  '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/',
+  '/tools/age-calculator/',
+  '/tools/passport-size-photo-maker/',
+  '/nepal-national-ai-policy-2082-explained/',
+  '/ne/nepal-national-ai-policy-2082-explained/',
+  '/category/online-marketing/',
+  '/how-to-learn-coding/',
+  '/how-to-learn-coding-free/',
+  '/category/coding/',
 ];
 
 function resolve(urlPath) {
@@ -97,6 +106,7 @@ for (const file of htmlFiles) {
 }
 
 for (const u of OLD_WORDPRESS_URLS) if (!resolve(u)) problems.push(`old WordPress URL no longer resolves: ${u}`);
+for (const u of REMOVED_URLS) if (resolve(u)) problems.push(`removed URL still has a page (it should show the 404): ${u}`);
 
 // Language versions: every hreflang target must exist and link back; Nepali pages must say lang="ne".
 const pageFor = (url) => {

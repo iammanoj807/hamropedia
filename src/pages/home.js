@@ -11,7 +11,7 @@ export function renderHome(posts, version) {
   const topNews = top && top.p;
   const moreNews = more;
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
-  const learning = guides.filter((p) => p.category === 'ai' || p.category === 'coding').slice(0, 3);
+  const learning = guides.filter((p) => p.category === 'ai').slice(0, 3);
   const popularSlugs = [
     'ilr-new-rules-uk',
     'edv-2027-nepal',
@@ -67,7 +67,7 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Learn to code</h2><a href="/blog/">All articles</a></div>
+  <div class="section-head"><h2>Learn AI for free</h2><a href="/learn/">All courses</a></div>
   <div class="grid grid-3">${learning.map((p) => postCard(p)).join('')}</div>
 </section>
 

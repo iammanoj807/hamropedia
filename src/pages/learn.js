@@ -90,7 +90,7 @@ const PROJECTS = [
 ];
 
 export function renderLearn(posts, version) {
-  const guides = posts.filter((p) => p.type !== 'news' && (p.category === 'coding' || p.category === 'ai'));
+  const guides = posts.filter((p) => p.type !== 'news' && p.category === 'ai');
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Learn & Build', path: '/learn/' }];
   const projectsLink = '/how-to-learn-machine-learning-free/#projects-that-make-you-stand-out';
 
@@ -98,7 +98,7 @@ export function renderLearn(posts, version) {
     crumbs,
     eyebrow: 'Learn &amp; Build',
     title: 'Learn the skills, then build something real',
-    lead: 'Four free courses (AI & ML, System Design, SQL and DSA), beginner coding guides, and project ideas you can build and show. Start with the map below.',
+    lead: 'Four free courses (AI & ML, System Design, SQL and DSA), a guide to learning machine learning, and project ideas you can build and show. Start with the map below.',
   })}
 ${startHere()}
 <section class="wrap section" aria-labelledby="rm-h" data-course="ml" data-checks="explain,derive,build,break">
@@ -176,7 +176,7 @@ ${startHere()}
   return layout({
     title: `Learn & Build: free AI, System Design, SQL and DSA courses | ${site.name}`,
     ogTitle: 'Learn & Build: free AI, System Design, SQL and DSA courses',
-    description: `Learn AI, system design, SQL and DSA for free: ${totals.topics + sdTotals.topics + sqlTotals.topics} lessons, the NeetCode 150, coding guides and project ideas.`,
+    description: `Learn AI, system design, SQL and DSA for free: ${totals.topics + sdTotals.topics + sqlTotals.topics} lessons, the NeetCode 150 and project ideas.`,
     path: '/learn/',
     image: '/images/og/ai-roadmap.jpg',
     body,

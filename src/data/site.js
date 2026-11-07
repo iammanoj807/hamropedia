@@ -96,51 +96,15 @@ export const categories = {
   },
 };
 
-// Old WordPress posts that were removed because they were outdated or
-// inaccurate. Each old URL now forwards to the closest useful page, so links
-// and Google results do not end in a 404.
+// Old addresses of pages that still exist (renamed posts and old WordPress
+// aliases) forward to the new address. Removed posts and tools have no entry
+// here, so their old URLs show the 404 page.
 export const redirects = [
-  {
-    // Removed on 3 November 2026; the old address still works (it was on the WordPress site).
-    from: '/python-decorators-explained-for-beginners/',
-    to: '/learn/',
-    title: 'Python decorators explained for beginners',
-  },
-  {
-    from: '/top-skills-for-nepali-students-to-get-high-paying-jobs-in-canada-in-2025/',
-    to: '/category/study-abroad/',
-    title: 'Top skills for Nepali students to get jobs in Canada',
-  },
-  {
-    from: '/the-top-destination-for-nepali-students-studying-abroad-in-2025/',
-    to: '/category/study-abroad/',
-    title: 'Top study-abroad destinations for Nepali students',
-  },
-  {
-    from: '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
-    to: '/learn/',
-    title: 'Top programming languages to learn',
-  },
-  {
-    from: '/devin-the-worlds-first-ai-software-engineer-who-never-sleeps/',
-    to: '/how-to-learn-machine-learning-free/',
-    title: 'Devin, the AI software engineer',
-  },
-  // Renamed on 5 November 2026 to short URLs without a year (the year lives in the title).
-  { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/learn/', title: 'How to learn coding' },
-  // Removed on 5 November 2026 (the photo tool is now DV size only).
-  { from: '/tools/age-calculator/', to: '/tools/', title: 'Age calculator' },
-  { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/', title: 'Passport size photo maker' },
   { from: '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
-  // Rewritten from scratch on 6 November 2026 under new URLs (old posts removed; the old addresses forward here).
   { from: '/how-to-apply-noc-online-easy-steps-for-nepali-students/', to: '/noc-nepal-apply-online/', title: 'NOC online in Nepal', moved: true },
   { from: '/how-to-apply-for-wes-evaluation/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
   { from: '/important-details-about-wes-evaluation-for-nepali-students/', to: '/wes-evaluation-cost-nepal/', title: 'WES evaluation cost', moved: true },
   { from: '/uk-immigration-2025-new-student-visa-rules-explained-simply/', to: '/uk-student-visa-nepal/', title: 'UK student visa from Nepal', moved: true },
-  // Removed on 7 November 2026: little search demand for the topic.
-  { from: '/nepal-national-ai-policy-2082-explained/', to: '/category/ai/', title: 'Nepal National AI Policy 2082', note: 'This article has been removed.' },
-  { from: '/ne/nepal-national-ai-policy-2082-explained/', to: '/ne/', title: 'Nepal National AI Policy 2082', note: 'यो लेख हटाइएको छ।' },
-  { from: '/category/online-marketing/', to: '/blog/', title: 'Online marketing' },
   { from: '/home/', to: '/', title: 'Home' },
   { from: '/feed/', to: '/rss.xml', title: 'RSS feed' },
   { from: '/driving-licence-online-form-nepal/', to: '/driving-licence-online-form/', title: 'Driving licence online form in Nepal', moved: true },
@@ -161,10 +125,6 @@ export const redirects = [
   { from: '/top-ukvi-interview-question-examples-and-answers/', to: '/ukvi-credibility-interview-questions/', title: 'UKVI credibility interview questions', moved: true },
   { from: '/edv-2027-nepal-dv-lottery-open-date/', to: '/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true },
   { from: '/ne/edv-2027-nepal-dv-lottery-open-date/', to: '/ne/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
-  // Removed on 7 November 2026 at the owner's request; old addresses go to the Learn page.
-  { from: '/how-to-learn-coding/', to: '/learn/', title: 'How to learn coding' },
-  { from: '/how-to-learn-coding-free/', to: '/learn/', title: 'How to learn coding' },
-  { from: '/category/coding/', to: '/learn/', title: 'Coding' },
   { from: '/how-to-learn-ai-and-machine-learning-for-free/', to: '/how-to-learn-machine-learning-free/', title: 'How to learn machine learning for free', moved: true },
   { from: '/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true },
   { from: '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/ne/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },

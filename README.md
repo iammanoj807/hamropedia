@@ -126,12 +126,12 @@ same device or another one. Nothing is sent anywhere: see the
 - **[Study abroad guides](https://hamropedia.com/category/study-abroad/)**: step-by-step guides for
   NOC, WES evaluation, UK student visas, the UKVI credibility interview and more, checked against
   the official websites.
-- **[Coding guides](https://hamropedia.com/category/coding/)** for beginners.
 - **[Tools](https://hamropedia.com/tools/)**, all running in your browser:
   [English to Nepali typing](https://hamropedia.com/tools/english-to-nepali/),
-  [Nepali keyboard](https://hamropedia.com/tools/nepali-keyboard/) (Preeti and Romanized),
+  [Nepali keyboard](https://hamropedia.com/tools/nepali-keyboard/),
+  [Preeti to Unicode converter](https://hamropedia.com/tools/preeti-to-unicode/),
   [Nepali date converter](https://hamropedia.com/tools/nepali-date-converter/) (BS ↔ AD) and
-  [age calculator](https://hamropedia.com/tools/age-calculator/).
+  [DV lottery photo tool](https://hamropedia.com/tools/dv-photo-tool/).
 
 ## How the site is built
 

@@ -117,7 +117,6 @@ export const AD_MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'Ju
 
 const NE_DIGITS = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
 export const toNepaliDigits = (v) => String(v).replace(/[0-9]/g, (d) => NE_DIGITS[d]);
-export const toLatinDigits = (v) => String(v).replace(/[०-९]/g, (d) => String(NE_DIGITS.indexOf(d)));
 
 export function daysInBsMonth(year, month) {
   checkBsYear(year);
@@ -136,8 +135,6 @@ function checkBsYear(year) {
   }
 }
 
-const adMin = () => ({ year: 1943, month: 4, day: 14 });
-export const AD_MIN = adMin();
 export const AD_MAX = (() => {
   const end = bsToAd(BS_MAX_YEAR, 12, MONTH_DAYS[BS_MAX_YEAR - BS_MIN_YEAR][11]);
   return end;
