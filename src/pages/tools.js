@@ -134,7 +134,7 @@ export function renderRomanized(version) {
 <h2>Nepali typing on phone, laptop and Word</h2>
 <p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
 <h2>Nepali Unicode, not Preeti</h2>
-<p>Everything you type here is <strong>Nepali Unicode</strong>: real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> uses the standard Nepali Unicode Traditional layout, which keeps most Preeti keys.</p>
+<p>This is an English to Nepali converter for Unicode: everything you type here becomes <strong>Nepali Unicode</strong>, real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> uses the standard Nepali Unicode Traditional layout, which keeps most Preeti keys.</p>
 <p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
@@ -194,8 +194,8 @@ export function renderPreeti(version) {
 <h2>Why convert Preeti to Unicode?</h2>
 <p><strong>Preeti</strong> is an old Nepali font that draws Devanagari shapes on top of ordinary English keys. Text typed in Preeti only looks Nepali on a computer that has the Preeti font, and becomes <code>g]kfn xf]</code> everywhere else: on phones, in email, on the web and in Google Docs. Google can't search it either.</p>
 <p><strong>Unicode</strong> stores real Nepali letters. It works on every device and in every app, with no special font, and it is what government offices, news sites and Google use. If you are starting something new, type in Unicode from the start with our <a href="/tools/english-to-nepali/">Nepali typing tool</a> or the <a href="/tools/nepali-keyboard/">Nepali keyboard</a> (the standard Traditional layout, close to the Preeti keys you know).</p>
-<h2>Unicode to Preeti, for Preeti documents</h2>
-<p>Some offices and print shops still use documents set in Preeti. Choose <strong>Unicode → Preeti</strong>, paste Nepali Unicode text, and copy the result into your Preeti document. The result looks like English letters and symbols (<span lang="ne">नेपाल</span> → <code>g]kfn</code>) <strong>until you set the font to Preeti</strong> in Word; then it shows as Nepali.</p>
+<h2>Unicode to Preeti converter, for Preeti documents</h2>
+<p>Some offices and print shops still use documents set in Preeti. To convert to Preeti, choose <strong>Unicode → Preeti</strong>, paste Nepali Unicode text, and copy the result into your Preeti document. It works as a <strong>Mangal to Preeti converter</strong> too: Mangal and Kalimati are Unicode fonts, so text typed in them converts the same way. The result looks like English letters and symbols (<span lang="ne">नेपाल</span> → <code>g]kfn</code>) <strong>until you set the font to Preeti</strong> in Word; then it shows as Nepali.</p>
 <p><strong>Romanized → Preeti</strong> does the same, starting from Nepali typed in English letters: <code>mero naam</code> → <code>d]/f] gfd</code>, which shows as <span lang="ne">मेरो नाम</span> in the Preeti font.</p>
 <h2>Tips for a clean conversion</h2>
 <ul>
@@ -209,7 +209,7 @@ export function renderPreeti(version) {
   const faqs = [
     { q: 'Why does the Unicode → Preeti result look like English letters?', a: 'That is normal. Preeti text is stored as English keys, so <span lang="ne">नेपाल</span> becomes <code>g]kfn</code>. Paste it into Word (or any program) and set the font to <strong>Preeti</strong>, and it shows as Nepali.' },
     { q: 'How do I convert Preeti to Kalimati?', a: 'Kalimati is a Unicode font, so converting Preeti to Kalimati is the same as converting Preeti to Unicode. Paste your Preeti text here, copy the Unicode result, paste it into your document and set the font to Kalimati.' },
-    { q: 'How do I convert Mangal or Kalimati text to Preeti?', a: 'Mangal and Kalimati are Unicode fonts. Choose <strong>Unicode → Preeti</strong>, paste the text, and set the font of the result to Preeti in your document.' },
+    { q: 'Is this a Mangal to Preeti converter?', a: 'Yes. Mangal and Kalimati are Unicode fonts, so this Unicode Nepali converter handles them. Choose <strong>Unicode → Preeti</strong>, paste the text, and set the font of the result to Preeti in your document.' },
     { q: 'Can I convert a whole Word file?', a: 'Yes, by copy and paste: select all the Preeti text in Word (Ctrl + A), copy it, paste it here, then paste the Unicode result back into Word and choose a Unicode font. Plain .txt files can also be opened directly with the “Open .txt” button.' },
     { q: 'Where can I download the Preeti font?', a: 'Preeti is a font owned by its creator, so we don’t host it. For anything new, you don’t need it: type and share in Unicode, which needs no special font. Keep Preeti only for old documents that require it.' },
     { q: 'Is my text uploaded anywhere?', a: 'No. The conversion runs entirely in your browser, and nothing you paste is sent to a server.' },
@@ -218,8 +218,8 @@ export function renderPreeti(version) {
   return toolPage({
     t,
     title: `Preeti to Unicode Converter: Nepali Unicode & Unicode to Preeti | ${site.name}`,
-    description: 'Free Preeti to Unicode converter (Nepali Unicode converter): paste Preeti text, get Kalimati or Mangal Unicode instantly. Also Unicode to Preeti.',
-    lead: 'Paste old <strong>Preeti</strong> text and get proper <strong>Nepali Unicode</strong>, instantly: <code>g]kfn</code> → <span lang="ne">नेपाल</span>. Or convert Unicode back to Preeti.',
+    description: 'Free Preeti to Unicode converter and Unicode to Preeti converter: paste Preeti text and get Kalimati or Mangal Unicode instantly, or convert to Preeti.',
+    lead: 'Paste old <strong>Preeti</strong> text and get proper <strong>Nepali Unicode</strong>, instantly: <code>g]kfn</code> → <span lang="ne">नेपाल</span>. It is also a <strong>Unicode to Preeti converter</strong>, so you can convert Nepali Unicode back to Preeti.',
     toolHtml,
     explainer,
     faqs,
@@ -349,6 +349,8 @@ export function renderDate(version) {
 <li>The English (AD) date and the weekday appear straight away. This is the date used on passports and applications abroad.</li>
 <li>For the other way, pick a date in the <strong>English to Nepali date</strong> box to get the BS date in Nepali and English.</li>
 </ol>
+<h2>English date converter and DOB converter</h2>
+<p>This page is an <strong>English date converter</strong> in both directions. For a <strong>date converter AD to BS</strong>, use the English to Nepali date box; for BS to AD, use the Nepali to English date box. As a <strong>DOB converter</strong>, enter the date of birth from your citizenship certificate (BS) to get the English date for your passport, visa or university forms.</p>
 <h2>Nepali calendar ${CAL_YEAR} (<span lang="ne">नेपाली पात्रो ${toNepaliDigits(CAL_YEAR)}</span>)</h2>
 <p>Nepali year ${CAL_YEAR} BS began on <strong>1 Baisakh ${CAL_YEAR} = 14 April 2026</strong> and ends on 30 Chaitra; 1 Baisakh ${CAL_YEAR + 1} falls on ${nextNy.day} ${AD_MONTHS_EN[nextNy.month - 1]} ${nextNy.year}. Each month starts on:</p>
 <div class="table-wrap"><table><thead><tr><th>Month</th><th>Days</th><th>1st of the month (AD)</th></tr></thead><tbody>${calRows}</tbody></table></div>
@@ -366,10 +368,11 @@ export function renderDate(version) {
   const faqs = [
     { q: 'How do I convert my date of birth from BS to AD?', a: 'Choose your birth year, month and day in the “BS → AD” box. The English (AD) date and the weekday appear immediately. This is the date normally used on passports and foreign applications.' },
     { q: 'How do I convert an English date to a Nepali date?', a: 'Pick the date in the “English to Nepali date (AD → BS)” box. You get the Bikram Sambat date in Nepali and English, with the weekday.' },
-    { q: 'Is this a date of birth converter from Nepali to English?', a: 'Yes. Enter your BS date of birth in the “Nepali to English date” box to get the AD date for your passport, visa or university forms. Always check it against the date on your official documents.' },
+    { q: 'Is this a DOB converter (date of birth converter) from Nepali to English?', a: 'Yes. Enter your BS date of birth in the “Nepali to English date” box to get the AD date for your passport, visa or university forms. Always check it against the date on your official documents.' },
     { q: 'What is today’s Nepali date?', a: 'It is shown at the top of this page, calculated for Nepal Standard Time (UTC+5:45), so it changes at midnight in Nepal, not at midnight where you are.' },
     { q: 'Why do Nepali months have 29, 30, 31 or 32 days?', a: 'BS months follow the Sun’s movement through the zodiac signs, which takes slightly different lengths of time. The official calendar fixes the length of each month every year, so the number of days in, say, Asar is not the same every year.' },
     { q: 'Which years can I convert?', a: `${BS_MIN_YEAR} to ${BS_MAX_YEAR} BS, which is 14 April 1943 to April 2034 AD. Years from ${BS_PROVISIONAL_FROM} BS are provisional until the official calendar is final.` },
+    { q: 'Is there an English to Nepali date converter in Excel?', a: 'Excel doesn’t include the Bikram Sambat calendar, and BS month lengths change from year to year, so no simple Excel formula converts the dates correctly. Convert each date here and paste the result into your spreadsheet.' },
     { q: 'What are the 12 Nepali months?', a: 'Baisakh (बैशाख), Jestha (जेठ), Asar (असार), Shrawan (साउन), Bhadra (भदौ), Ashwin (असोज), Kartik (कात्तिक), Mangsir (मंसिर), Poush (पुस), Magh (माघ), Falgun (फागुन) and Chaitra (चैत).' },
   ];
 
