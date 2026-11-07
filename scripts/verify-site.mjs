@@ -46,6 +46,7 @@ const OLD_WORDPRESS_URLS = [
   '/edv-2027-nepal-dv-lottery-open-date/',
   '/ne/edv-2027-nepal-dv-lottery-open-date/',
   '/how-to-learn-coding/',
+  '/how-to-learn-coding-free/',
   '/how-to-learn-ai-and-machine-learning-for-free/',
   '/nepal-gen-z-protests-to-balen-shah-government-explained/',
   '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/',

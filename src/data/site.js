@@ -80,13 +80,6 @@ export const categories = {
     intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-nepal-apply-online/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost-nepal/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-nepal/">UK student visa from Nepal</a> guide, the <a href="/graduate-visa-uk-psw/">Graduate visa</a> rules, the <a href="/ilr-new-rules-uk/">new ILR rules</a> and <a href="/ukvi-credibility-interview-questions/">UKVI interview questions</a>.',
     hue: 'blue',
   },
-  coding: {
-    name: 'Coding',
-    nameNe: 'कोडिङ',
-    description: 'Programming guides and roadmaps for beginners: pick a language, build projects, and learn Git, DSA and Python.',
-    intro: 'New to programming? Start with <a href="/how-to-learn-coding-free/">how to learn coding</a>, a free step-by-step roadmap. Then go deeper with the free courses: <a href="/dsa/">DSA with the NeetCode 150</a> for coding interviews, <a href="/sql/">SQL</a> with a query runner in your browser, and <a href="/system-design/">System Design</a> for building real systems. Not sure where to begin? The <a href="/learn/">Learn page</a> has a map and an order to take them in.',
-    hue: 'green',
-  },
   ai: {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
@@ -110,7 +103,7 @@ export const redirects = [
   {
     // Removed on 3 November 2026; the old address still works (it was on the WordPress site).
     from: '/python-decorators-explained-for-beginners/',
-    to: '/category/coding/',
+    to: '/learn/',
     title: 'Python decorators explained for beginners',
   },
   {
@@ -125,7 +118,7 @@ export const redirects = [
   },
   {
     from: '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
-    to: '/how-to-learn-coding-free/',
+    to: '/learn/',
     title: 'Top programming languages to learn',
   },
   {
@@ -134,7 +127,7 @@ export const redirects = [
     title: 'Devin, the AI software engineer',
   },
   // Renamed on 5 November 2026 to short URLs without a year (the year lives in the title).
-  { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/how-to-learn-coding-free/', title: 'How to learn coding', moved: true },
+  { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/learn/', title: 'How to learn coding' },
   // Removed on 5 November 2026 (the photo tool is now DV size only).
   { from: '/tools/age-calculator/', to: '/tools/', title: 'Age calculator' },
   { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/', title: 'Passport size photo maker' },
@@ -168,7 +161,10 @@ export const redirects = [
   { from: '/top-ukvi-interview-question-examples-and-answers/', to: '/ukvi-credibility-interview-questions/', title: 'UKVI credibility interview questions', moved: true },
   { from: '/edv-2027-nepal-dv-lottery-open-date/', to: '/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true },
   { from: '/ne/edv-2027-nepal-dv-lottery-open-date/', to: '/ne/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
-  { from: '/how-to-learn-coding/', to: '/how-to-learn-coding-free/', title: 'How to learn coding for free', moved: true },
+  // Removed on 7 November 2026 at the owner's request; old addresses go to the Learn page.
+  { from: '/how-to-learn-coding/', to: '/learn/', title: 'How to learn coding' },
+  { from: '/how-to-learn-coding-free/', to: '/learn/', title: 'How to learn coding' },
+  { from: '/category/coding/', to: '/learn/', title: 'Coding' },
   { from: '/how-to-learn-ai-and-machine-learning-for-free/', to: '/how-to-learn-machine-learning-free/', title: 'How to learn machine learning for free', moved: true },
   { from: '/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true },
   { from: '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/ne/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
