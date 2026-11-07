@@ -92,7 +92,7 @@ export function renderRoadmapIndex(version) {
     <ol>${course.rules.map((r) => `<li>${esc(r)}</li>`).join('')}</ol>
     <p class="muted">Extra resource types: ${['watch', 'play', 'read', 'code', 'paper'].map((k) => `<span class="kind ${KIND[k][1]}">${KIND[k][0]}</span>`).join(' ')}</p>
     <a class="btn" href="${lessonPath(phases[0], phases[0].topics[0])}">Start the first lesson</a>
-    <a class="text-link" href="/how-to-learn-ai-and-machine-learning-for-free/">Read the guide to this roadmap →</a>
+    <a class="text-link" href="/how-to-learn-machine-learning-free/">Read the guide to this roadmap →</a>
   </aside>
 </section>
 <section class="wrap-narrow">${faqBlock(ROADMAP_FAQ)}</section>`;

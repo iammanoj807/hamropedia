@@ -84,21 +84,21 @@ export const categories = {
     name: 'Coding',
     nameNe: 'कोडिङ',
     description: 'Programming guides and roadmaps for beginners: pick a language, build projects, and learn Git, DSA and Python.',
-    intro: 'New to programming? Start with <a href="/how-to-learn-coding/">how to learn coding</a>, a free step-by-step roadmap. Then go deeper with the free courses: <a href="/dsa/">DSA with the NeetCode 150</a> for coding interviews, <a href="/sql/">SQL</a> with a query runner in your browser, and <a href="/system-design/">System Design</a> for building real systems. Not sure where to begin? The <a href="/learn/">Learn page</a> has a map and an order to take them in.',
+    intro: 'New to programming? Start with <a href="/how-to-learn-coding-free/">how to learn coding</a>, a free step-by-step roadmap. Then go deeper with the free courses: <a href="/dsa/">DSA with the NeetCode 150</a> for coding interviews, <a href="/sql/">SQL</a> with a query runner in your browser, and <a href="/system-design/">System Design</a> for building real systems. Not sure where to begin? The <a href="/learn/">Learn page</a> has a map and an order to take them in.',
     hue: 'green',
   },
   ai: {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
-    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-ai-and-machine-learning-for-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents.',
+    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-machine-learning-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents.',
     hue: 'violet',
   },
   nepal: {
     name: 'Nepal',
     nameNe: 'नेपाल',
     description: 'Sourced news explainers and round-ups from Nepal, plus guides to typing and using Nepali online.',
-    intro: 'News from Nepal explained simply, with a link to the source for every fact, such as <a href="/nepal-gen-z-protests-to-balen-shah-government-explained/">how Balen Shah became prime minister after the Gen Z protests</a>. Need your national ID number? The <a href="/nid-card-check/">NID card check guide</a> shows how to find your NID number, check if your card is printed and download your eNID, the <a href="/driving-licence-online-form/">driving licence online form guide</a> shows how to apply for or renew a license on the DoTM eDLVRS portals, and the <a href="/smart-license-print-check/">license print check guide</a> shows how to find out if your smart driving license is printed. For your tax number, the <a href="/pan-card-registration/">PAN card registration guide</a> shows how to get a personal PAN online with your NID, and the <a href="/ird-pan-search-nepal/">IRD PAN search guide</a> shows how to check a PAN number. For typing Nepali online, read the <a href="/nepali-unicode-romanized-typing/">Nepali Unicode typing guide</a> and the <a href="/nepali-font-download-preeti-kalimati/">Nepali font download guide</a> (Preeti, Kalimati and Unicode fonts) or use the free tools: <a href="/tools/english-to-nepali/">Nepali typing</a>, the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.',
+    intro: 'News from Nepal explained simply, with a link to the source for every fact, such as <a href="/balen-shah-prime-minister-nepal/">how Balen Shah became prime minister after the Gen Z protests</a>. Need your national ID number? The <a href="/nid-card-check/">NID card check guide</a> shows how to find your NID number, check if your card is printed and download your eNID, the <a href="/driving-licence-online-form/">driving licence online form guide</a> shows how to apply for or renew a license on the DoTM eDLVRS portals, and the <a href="/smart-license-print-check/">license print check guide</a> shows how to find out if your smart driving license is printed. For your tax number, the <a href="/pan-card-registration/">PAN card registration guide</a> shows how to get a personal PAN online with your NID, and the <a href="/ird-pan-search-nepal/">IRD PAN search guide</a> shows how to check a PAN number. For typing Nepali online, read the <a href="/nepali-unicode-romanized-typing/">Nepali Unicode typing guide</a> and the <a href="/nepali-font-download-preeti-kalimati/">Nepali font download guide</a> (Preeti, Kalimati and Unicode fonts) or use the free tools: <a href="/tools/english-to-nepali/">Nepali typing</a>, the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a> and the <a href="/tools/nepali-date-converter/">Nepali date converter</a>.',
     hue: 'indigo',
   },
 };
@@ -125,16 +125,16 @@ export const redirects = [
   },
   {
     from: '/a-guide-to-the-top-5-programming-languages-to-learn-in-2025/',
-    to: '/how-to-learn-coding/',
+    to: '/how-to-learn-coding-free/',
     title: 'Top programming languages to learn',
   },
   {
     from: '/devin-the-worlds-first-ai-software-engineer-who-never-sleeps/',
-    to: '/how-to-learn-ai-and-machine-learning-for-free/',
+    to: '/how-to-learn-machine-learning-free/',
     title: 'Devin, the AI software engineer',
   },
   // Renamed on 5 November 2026 to short URLs without a year (the year lives in the title).
-  { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/how-to-learn-coding/', title: 'How to learn coding', moved: true },
+  { from: '/coding-for-beginners-the-complete-roadmap-for-nepali-students-in-2025/', to: '/how-to-learn-coding-free/', title: 'How to learn coding', moved: true },
   // Removed on 5 November 2026 (the photo tool is now DV size only).
   { from: '/tools/age-calculator/', to: '/tools/', title: 'Age calculator' },
   { from: '/tools/passport-size-photo-maker/', to: '/tools/dv-photo-tool/', title: 'Passport size photo maker' },
@@ -168,4 +168,8 @@ export const redirects = [
   { from: '/top-ukvi-interview-question-examples-and-answers/', to: '/ukvi-credibility-interview-questions/', title: 'UKVI credibility interview questions', moved: true },
   { from: '/edv-2027-nepal-dv-lottery-open-date/', to: '/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true },
   { from: '/ne/edv-2027-nepal-dv-lottery-open-date/', to: '/ne/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
+  { from: '/how-to-learn-coding/', to: '/how-to-learn-coding-free/', title: 'How to learn coding for free', moved: true },
+  { from: '/how-to-learn-ai-and-machine-learning-for-free/', to: '/how-to-learn-machine-learning-free/', title: 'How to learn machine learning for free', moved: true },
+  { from: '/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true },
+  { from: '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/', to: '/ne/balen-shah-prime-minister-nepal/', title: 'Balen Shah, Prime Minister of Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
 ];

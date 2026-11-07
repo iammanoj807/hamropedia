@@ -92,7 +92,7 @@ const PROJECTS = [
 export function renderLearn(posts, version) {
   const guides = posts.filter((p) => p.type !== 'news' && (p.category === 'coding' || p.category === 'ai'));
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Learn & Build', path: '/learn/' }];
-  const projectsLink = '/how-to-learn-ai-and-machine-learning-for-free/#projects-that-make-you-stand-out';
+  const projectsLink = '/how-to-learn-machine-learning-free/#projects-that-make-you-stand-out';
 
   const body = `${pageHead({
     crumbs,

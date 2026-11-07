@@ -45,6 +45,10 @@ const OLD_WORDPRESS_URLS = [
   '/top-ukvi-interview-question-examples-and-answers/',
   '/edv-2027-nepal-dv-lottery-open-date/',
   '/ne/edv-2027-nepal-dv-lottery-open-date/',
+  '/how-to-learn-coding/',
+  '/how-to-learn-ai-and-machine-learning-for-free/',
+  '/nepal-gen-z-protests-to-balen-shah-government-explained/',
+  '/ne/nepal-gen-z-protests-to-balen-shah-government-explained/',
 ];
 
 function resolve(urlPath) {
