@@ -1,9 +1,9 @@
 ---
 title: "How to Type in Nepali: Nepali Unicode Romanized Typing on Laptop, Phone and MS Word"
 seoTitle: "How to Type in Nepali: Nepali Unicode Romanized Typing"
-description: "How to type in Nepali on a laptop, phone, MS Word and Google Docs using English letters: Romanized Unicode rules, keyboard setup and a free typing tool."
+description: "How to type in Nepali on a laptop, phone or MS Word with English letters: Romanized rules, the official Nepali Unicode Romanized download and a free tool."
 date: 2026-11-01
-updated: 2026-11-05
+updated: 2026-11-07
 category: nepal
 tags: [nepali typing, unicode, romanized, preeti, nepali language]
 coverWord: "Type Nepali"
@@ -76,9 +76,24 @@ The [typing tool](/tools/english-to-nepali/) has a full cheat sheet, and its **s
 2. Select **Add a language**, search for **Nepali** and install it.
 3. To switch between English and Nepali, press the **Windows key + Spacebar**, or click the language icon in the taskbar ([Microsoft Support](https://support.microsoft.com/en-us/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2)).
 
-Windows' built-in Nepali keyboard uses a Devanagari layout (each key is a Nepali letter), not Romanized typing. If you want to type with English letters every day, install a Romanized Nepali Unicode keyboard, or keep using the [online tool](/tools/english-to-nepali/). If you learned the Preeti layout, the [Nepali keyboard tool](/tools/nepali-keyboard/) uses the same keys and gives you Unicode.
+Windows' built-in Nepali keyboard uses a Devanagari layout (each key is a Nepali letter), not Romanized typing. If you want to type with English letters every day, install the [Nepali Unicode Romanized keyboard](#nepali-unicode-romanized-download-for-windows) (below), or keep using the [online tool](/tools/english-to-nepali/). If you learned the Preeti layout, the [Nepali keyboard tool](/tools/nepali-keyboard/) uses the same keys and gives you Unicode.
 
 **Mac:** open **System Settings → Keyboard → Text Input → Edit**, click **+** and add a Nepali input source, then switch with the input menu in the menu bar.
+
+## Nepali Unicode Romanized download for Windows
+
+The **Nepali Unicode Romanized** keyboard is made by **Language Technology Kendra (LTK)**, a joint project of Madan Puraskar Pustakalaya, Tribhuvan University and Kathmandu University. Download it from LTK's official page, [ltk.org.np/downloads.php](https://ltk.org.np/downloads.php), rather than from download sites that repackage it.
+
+1. On the LTK downloads page, click **Nepali Unicode Romanized**. The file is `nepali_romanised.zip`.
+2. Right-click the ZIP and choose **Extract All**.
+3. Open the extracted folder and run **setup.exe**. The ZIP includes 64-bit and 32-bit installers.
+4. Switch between English and Nepali with **Windows key + Spacebar**, or the language icon on the taskbar ([Microsoft Support](https://support.microsoft.com/en-us/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2)). LTK's own notes use **Alt + Shift**.
+
+Good to know before you install:
+
+- The installer dates from **2011** and was made with Microsoft's Keyboard Layout Creator. LTK's install notes were written for Windows XP, and the page doesn't say whether it supports Windows 10 or 11.
+- **Mac:** LTK also has **Nepali Romanized for Mac** on the same page. Its instructions say to copy the files into **Library/Keyboard Layouts**, log out, then add the layout under your Mac's keyboard **Input Sources**.
+- **No install:** the [online typing tool](/tools/english-to-nepali/) uses the same Romanized idea and works in any browser.
 
 ## Nepali Unicode Romanized vs Traditional keyboard
 
@@ -91,7 +106,7 @@ If you learned on Preeti, use the [Nepali keyboard tool](/tools/nepali-keyboard/
 
 ## Nepali font: use a Unicode font
 
-For Nepali text that works everywhere, choose a **Unicode** font such as **Kalimati**, **Mangal**, **Nirmala UI** or **Noto Sans Devanagari**. Preeti, Kantipur and other old fonts are not Unicode: text typed in them breaks on any device without the font. To change old Preeti text into Unicode, use the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
+For Nepali text that works everywhere, choose a **Unicode** font such as **Kalimati**, **Mangal**, **Nirmala UI** or **Noto Sans Devanagari**. On Windows 10 and 11, **Nirmala UI** is already installed ([Microsoft](https://learn.microsoft.com/en-us/typography/font-list/nirmala-ui)). **Noto Sans Devanagari** is free on [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+Devanagari) under the Open Font License. **Kalimati** is not part of Windows, so you have to install it yourself. Preeti, Kantipur and other old fonts are not Unicode: text typed in them breaks on any device without the font. To change old Preeti text into Unicode, use the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
 
 ## How to type in Nepali in MS Word
 
@@ -124,6 +139,8 @@ Once the long-vowel and capital-letter rules click, you'll type Nepali as fast a
 **How do I type in Nepali on my laptop?** The quickest way is the free [online typing tool](/tools/english-to-nepali/): type with English letters and copy the result. For typing directly in every app, add a Nepali keyboard in Windows or Mac settings.
 
 **How can I type Nepali in MS Word?** Add a Nepali keyboard to Windows (or paste from the online tool), and use a Unicode font like Nirmala UI or Kalimati, not Preeti.
+
+**Where can I download Nepali Unicode Romanized?** From Language Technology Kendra's official downloads page, ltk.org.np/downloads.php. Click Nepali Unicode Romanized, extract the ZIP and run setup.exe. There is also a Mac version on the same page. If you don't want to install anything, use the free online typing tool instead.
 
 **What is Nepali Unicode Romanized?** A way of typing Nepali Unicode with English letters by sound: `mero naam` becomes <span lang="ne">मेरो नाम</span>. The rules are above.
 

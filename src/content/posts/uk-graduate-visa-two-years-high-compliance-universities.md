@@ -1,17 +1,17 @@
 ---
 title: "Graduate Visa UK: Cut to 18 Months in 2027, and Who Still Gets Two Years"
-seoTitle: "Graduate Visa UK 2026: 18 Months or 2 Years? Fee and Rules"
+seoTitle: "Graduate Visa UK (PSW) 2026: 18 Months or 2 Years?"
 description: "The UK Graduate visa is 2 years if you apply by 31 December 2026, then 18 months, except at 'high-compliance' universities. Rules, the £937 fee, what to do."
 date: 2026-10-28
-updated: 2026-11-05
+updated: 2026-11-07
 category: study-abroad
 type: news
-tags: [uk, graduate visa, graduate route, post-study work, study abroad]
+tags: [uk, graduate visa, graduate route, post-study work, psw, study abroad]
 coverWord: "18 months?"
 coverAlt: "UK Graduate visa: 18 months or 2 years"
 ---
 
-The **Graduate visa UK** (the post-study work visa) is being cut from 2 years to **18 months** for applications made from **1 January 2027** ([gov.uk](https://www.gov.uk/graduate-visa)). But the government has partly reversed the cut: in its **Budget on 28 October 2026**, it said graduates of **"high-compliance universities"** will keep **two years**. Here is who gets 18 months, who still gets 2 years, and what to do now.
+The **Graduate visa UK** (the post-study work visa, which many students call **PSW**) is being cut from 2 years to **18 months** for applications made from **1 January 2027** ([gov.uk](https://www.gov.uk/graduate-visa)). But the government has partly reversed the cut: in its **Budget on 28 October 2026**, it said graduates of **"high-compliance universities"** will keep **two years**. Here is who gets 18 months, who still gets 2 years, and what to do now.
 
 > **At a glance**
 >
@@ -24,6 +24,10 @@ The **Graduate visa UK** (the post-study work visa) is being cut from 2 years to
 ## Is the UK Graduate visa 18 months now?
 
 Not yet. gov.uk says a Graduate visa lasts **"2 years if you apply on or before 31 December 2026"** and **"18 months if you apply on or after 1 January 2027"**. Doctoral graduates get 3 years ([gov.uk: Graduate visa](https://www.gov.uk/graduate-visa)). What counts is the date you **apply**, not the date you graduate or the date your course started.
+
+## Is the Graduate visa the same as PSW?
+
+In everyday talk, yes. Students and agents in Nepal often call the Graduate visa **PSW** (post-study work), but gov.uk never uses that name. The old **Tier 1 (Post-Study Work)** visa closed to new applicants on **6 April 2012** ([Home Office inspection report, PDF](https://assets.publishing.service.gov.uk/media/5a8093aced915d74e33fb372/An-Inspection-of-Tier-1-PBS-Investor-and-Entrepreneur-Applications_Sept_2013.pdf)). The **Graduate route** that students now call PSW opened on **1 July 2021** ([gov.uk](https://www.gov.uk/government/news/graduate-route-for-best-and-brightest-launches)). Despite the nickname, you don't have to work on it: the Migration Advisory Committee notes there is "no requirement to undertake any form of work" ([MAC review, PDF](https://assets.publishing.service.gov.uk/media/6745b2eecdd295aea88098b6/MAC+Rapid+Review+of+Graduate+Route+-+FINAL+Nov+24__1_.pdf)).
 
 ## How to apply for the Graduate visa
 
@@ -100,6 +104,8 @@ The Budget also said the **High Potential Individual (HPI) visa** will be opened
 
 **How long is the post-study work visa in the UK?** 2 years if you apply on or before 31 December 2026, 18 months if you apply from 1 January 2027, and 3 years for PhD graduates.
 
+**Is PSW still available in the UK?** The old Tier 1 Post-Study Work visa closed in April 2012. What students call PSW today is the Graduate visa, open since 1 July 2021: 2 years if you apply by 31 December 2026, 18 months from 1 January 2027, and 3 years for PhD graduates.
+
 **Will the UK Graduate visa be shortened in January 2027?** Yes, to 18 months for applications made on or after 1 January 2027. The Budget says graduates of "high-compliance" universities will keep 2 years, once the details are published.
 
 **Is the UK Graduate visa still 2 years?** Yes, for applications made on or before 31 December 2026.
@@ -122,4 +128,4 @@ For all the current UK student visa numbers (fees, funds, dependants), see [UK s
 
 ---
 
-**Sources:** [gov.uk: Graduate visa](https://www.gov.uk/graduate-visa) · [gov.uk: healthcare surcharge](https://www.gov.uk/healthcare-immigration-application/how-much-pay) · [The PIE News, 28 Oct 2026](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [ApplyBoard: UK update](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [StudyTravel Network](https://studytravel.network/magazine/news/0/32504) · [UKCISA](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)
+**Sources:** [gov.uk: Graduate visa](https://www.gov.uk/graduate-visa) · [gov.uk: Graduate route launches, 1 July 2021](https://www.gov.uk/government/news/graduate-route-for-best-and-brightest-launches) · [Home Office inspection report (Tier 1 Post-Study Work closed 6 April 2012), PDF](https://assets.publishing.service.gov.uk/media/5a8093aced915d74e33fb372/An-Inspection-of-Tier-1-PBS-Investor-and-Entrepreneur-Applications_Sept_2013.pdf) · [gov.uk: healthcare surcharge](https://www.gov.uk/healthcare-immigration-application/how-much-pay) · [The PIE News, 28 Oct 2026](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [ApplyBoard: UK update](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [StudyTravel Network](https://studytravel.network/magazine/news/0/32504) · [UKCISA](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)

@@ -75,9 +75,9 @@ The TB test, document translation and courier costs come on top. To send tuition
 
 **When to apply:** from outside the UK, as early as **6 months** before your course starts. A decision usually takes about **3 weeks** ([gov.uk](https://www.gov.uk/student-visa)).
 
-## 5. The Graduate visa is getting shorter
+## 5. The Graduate visa (PSW) is getting shorter
 
-The **Graduate visa** lets you stay and work in the UK after a UK degree, without a job offer. It lasts **2 years if you apply on or before 31 December 2026**, and **18 months if you apply on or after 1 January 2027**. PhD graduates still get 3 years. You must apply from inside the UK, and it costs **£937** plus the health surcharge ([gov.uk: Graduate visa](https://www.gov.uk/graduate-visa)).
+The **Graduate visa**, which many Nepali students call **PSW** (post-study work), lets you stay and work in the UK after a UK degree, without a job offer. It lasts **2 years if you apply on or before 31 December 2026**, and **18 months if you apply on or after 1 January 2027**. PhD graduates still get 3 years. You must apply from inside the UK, and it costs **£937** plus the health surcharge ([gov.uk: Graduate visa](https://www.gov.uk/graduate-visa)).
 
 The October 2026 Budget says graduates of **"high-compliance" universities** will keep two years, but no list has been published. Full details: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/)
 

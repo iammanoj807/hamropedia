@@ -3,7 +3,7 @@ title: "NID Card Check in Nepal: Find Your NID Number, Card Status and eNID (202
 seoTitle: "NID Card Check Nepal 2026: NID Number, Status & eNID"
 description: "NID card check in Nepal: find your NID number, check card status and download your eNID on the official portal. Why citizenship number no longer works."
 date: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-07
 category: nepal
 tags: [nid, nid card check, nid number, national identity card, rastriya parichaya patra, enid, nepal]
 coverWord: "NID Check"
@@ -19,7 +19,7 @@ To do an **NID card check in Nepal**, use the official **Citizen Portal** of the
 | You want to | Where | What you need |
 |---|---|---|
 | Find your NID number (NIN) | Citizen Portal → **Download eNID** | Full name in Nepali and English, date of birth (BS), citizenship issue date, then an OTP on your NID mobile |
-| Download a digital NID (eNID) | Citizen Portal → **Download eNID** | The same as above |
+| NID card download (digital eNID PDF) | Citizen Portal → **Download eNID** | The same as above |
 | Check if your NID card is printed | Citizen Portal → **NID Card Status** | Your request number (RSN) or your NIN |
 | Get your NID number without internet | SMS to **30001** | `N <space> application number` |
 | Replace a lost or damaged card | Citizen Portal → **NID Card Replacement Payment**, then your District Administration Office | Your NIN and mobile number; fee Rs 500 |
@@ -43,7 +43,7 @@ Two things trip people up:
 - **The Nepali name must be typed in Nepali Unicode**, not Preeti. If you don't have a Nepali keyboard, type your name with English letters in the free [Nepali typing tool](/tools/english-to-nepali/) and paste it in. For example, `raam bahaadur` becomes <span lang="ne">राम बहादुर</span> (type `aa` for <span lang="ne">ा</span>).
 - **Both dates are in BS.** If you only know a date in AD, convert it first with the [Nepali date converter](/tools/nepali-date-converter/).
 
-## How to find your NID number online and download your eNID
+## NID card download: find your NID number and download your eNID
 
 These steps follow DoNIDCR's eNID user manual. The **eNID** is a provisional digital NID: a password-protected PDF with your photo, your NID number and a QR code. The department started the service on **4 Asar 2083 (18 June 2026)** ([DoNIDCR notice](https://donidcr.gov.np/content/440/enid--provisional-nid--downloadable-service-initiation-notification/)).
 
@@ -160,6 +160,8 @@ What it means for you:
 ## Frequently asked questions
 
 **How can I check my NID number in Nepal?** Go to citizenportal.donidcr.gov.np, click Download Your eNID and enter your full name in Nepali and English, date of birth (BS) and citizenship issue date. After the OTP on your registered mobile, the portal shows your NID number and photo.
+
+**How do I download my NID card?** Download the eNID, the digital version of your NID. On citizenportal.donidcr.gov.np, click Download Your eNID, enter your full name in Nepali and English, date of birth (BS) and citizenship issue date, type the OTP sent to your NID mobile, then click Download card. You get a password-protected PDF.
 
 **Can I check my national identity card by citizenship number?** Not any more. The current Citizen Portal form doesn't ask for a citizenship number. You use the name, date of birth and citizenship issue date from your citizenship certificate, then verify with an OTP sent to the mobile number on your NID record.
 

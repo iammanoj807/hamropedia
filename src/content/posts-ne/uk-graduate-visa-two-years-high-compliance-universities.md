@@ -1,17 +1,17 @@
 ---
 title: "बेलायतको ग्राजुएट भिसा २०२७ देखि १८ महिना: कसले अझै दुई वर्ष पाउँछ?"
-seoTitle: "यूके ग्राजुएट भिसा: १८ महिना कि २ वर्ष? (२०२७ नियम)"
+seoTitle: "यूके ग्राजुएट भिसा (PSW): १८ महिना कि २ वर्ष? (२०२७ नियम)"
 description: "बेलायतको २०२६ को बजेटअनुसार 'उच्च अनुपालन' विश्वविद्यालयका स्नातकले दुई वर्षको ग्राजुएट भिसा पाउनेछन्, अरूलाई जनवरी २०२७ देखि १८ महिना मात्र।"
 date: 2026-10-28
-updated: 2026-11-05
+updated: 2026-11-07
 category: study-abroad
 type: news
-tags: [uk, student visa, graduate route, study abroad]
+tags: [uk, student visa, graduate route, psw, study abroad]
 coverWord: "१८ महिना?"
 coverAlt: "बेलायतको ग्राजुएट भिसा: १८ महिना कि दुई वर्ष"
 ---
 
-बेलायत सरकारले **ग्राजुएट भिसा** (पढाइपछि काम गर्ने भिसा) छोट्याउने योजना आंशिक रूपमा फिर्ता लिएको छ। **२८ अक्टोबर २०२६ को बजेट** मा सरकारले **"उच्च अनुपालन" (हाई-कम्प्लायन्स) भएका विश्वविद्यालय** का स्नातकले जनवरी २०२७ देखि लागू हुने १८ महिनाको सट्टा **दुई वर्ष** नै पाउने बताएको छ।
+बेलायत सरकारले **ग्राजुएट भिसा** (पढाइपछि काम गर्ने भिसा, जसलाई धेरै विद्यार्थी **PSW** भन्छन्) छोट्याउने योजना आंशिक रूपमा फिर्ता लिएको छ। **२८ अक्टोबर २०२६ को बजेट** मा सरकारले **"उच्च अनुपालन" (हाई-कम्प्लायन्स) भएका विश्वविद्यालय** का स्नातकले जनवरी २०२७ देखि लागू हुने १८ महिनाको सट्टा **दुई वर्ष** नै पाउने बताएको छ।
 
 > **एक नजरमा**
 >
@@ -19,6 +19,10 @@ coverAlt: "बेलायतको ग्राजुएट भिसा: १�
 > - **अरू सबैलाई:** १ जनवरी २०२७ देखिका आवेदनमा **१८ महिना**।
 > - **१ जनवरी २०२७ अघि आवेदन दिनुभयो?** जुनसुकै विश्वविद्यालय भए पनि २ वर्ष।
 > - **अझै तय भएको छैन:** कुन विश्वविद्यालय "उच्च अनुपालन" मा पर्छन्।
+
+## ग्राजुएट भिसा र PSW एउटै हो?
+
+बोलीचालीमा हो। नेपालमा विद्यार्थी र एजेन्टहरूले ग्राजुएट भिसालाई प्रायः **PSW** (पोस्ट-स्टडी वर्क) भन्छन्, तर gov.uk ले यो नाम प्रयोग गर्दैन। पुरानो **टियर १ (पोस्ट-स्टडी वर्क)** भिसा **६ अप्रिल २०१२** देखि नयाँ आवेदकका लागि बन्द भएको थियो ([गृह कार्यालयको निरीक्षण प्रतिवेदन, PDF](https://assets.publishing.service.gov.uk/media/5a8093aced915d74e33fb372/An-Inspection-of-Tier-1-PBS-Investor-and-Entrepreneur-Applications_Sept_2013.pdf))। अहिले विद्यार्थीले PSW भन्ने **ग्राजुएट रुट** **१ जुलाई २०२१** मा खुलेको हो ([gov.uk](https://www.gov.uk/government/news/graduate-route-for-best-and-brightest-launches))। नाम "पोस्ट-स्टडी वर्क" भए पनि यसमा काम गर्नैपर्ने बाध्यता छैन; माइग्रेसन एडभाइजरी कमिटीले "कुनै पनि प्रकारको काम गर्नुपर्ने आवश्यकता छैन" भनेको छ ([MAC समीक्षा, PDF](https://assets.publishing.service.gov.uk/media/6745b2eecdd295aea88098b6/MAC+Rapid+Review+of+Graduate+Route+-+FINAL+Nov+24__1_.pdf))।
 
 ## ग्राजुएट भिसाको नियम, शुल्क र योग्यता
 
@@ -91,4 +95,4 @@ gov.uk अनुसार ग्राजुएट भिसा **२०२६ �
 
 ---
 
-**स्रोत:** [द पाई न्युज, २८ अक्टोबर २०२६](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [एप्लाईबोर्ड](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [स्टडी ट्राभल नेटवर्क](https://studytravel.network/magazine/news/0/32504) · [यूकेसीसा](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)
+**स्रोत:** [gov.uk: ग्राजुएट रुट सुरु, १ जुलाई २०२१](https://www.gov.uk/government/news/graduate-route-for-best-and-brightest-launches) · [गृह कार्यालयको निरीक्षण प्रतिवेदन (टियर १ पोस्ट-स्टडी वर्क ६ अप्रिल २०१२ मा बन्द), PDF](https://assets.publishing.service.gov.uk/media/5a8093aced915d74e33fb372/An-Inspection-of-Tier-1-PBS-Investor-and-Entrepreneur-Applications_Sept_2013.pdf) · [द पाई न्युज, २८ अक्टोबर २०२६](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/) · [एप्लाईबोर्ड](https://assist.applyboard.com/hc/en-us/articles/49993314492173-UK-Update-Graduate-Visa-to-Stay-at-Two-Years-for-Graduates-of-High-Compliance-Universities-2026) · [स्टडी ट्राभल नेटवर्क](https://studytravel.network/magazine/news/0/32504) · [यूकेसीसा](https://www.ukcisa.org.uk/news/student-update-changes-to-the-student-and-graduate-rules/)
