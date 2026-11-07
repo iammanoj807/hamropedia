@@ -33,6 +33,8 @@ export const site = {
   // Google AdSense publisher ID ("ca-pub-..."; ads.txt uses the same number as "pub-...").
   // The AdSense tag also shows Google's consent message, set up in AdSense > Privacy & messaging.
   adsenseClient: 'ca-pub-2805610183510543',
+  // Ahrefs Web Analytics site key (Ahrefs > Web Analytics > project settings > tracking code).
+  ahrefsAnalyticsKey: 'V4417NRGR/Pok/eQAnOZYw',
   established: 2024,
 };
 

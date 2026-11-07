@@ -61,6 +61,10 @@ export function layout(p) {
     ? `<meta name="google-adsense-account" content="${esc(site.adsenseClient)}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(site.adsenseClient)}" crossorigin="anonymous"></script>`
     : '';
+  // Ahrefs Web Analytics runs on every page built from this layout, English and Nepali.
+  const ahrefs = site.ahrefsAnalyticsKey
+    ? `<script src="https://analytics.ahrefs.com/analytics.js" data-key="${esc(site.ahrefsAnalyticsKey)}" async></script>`
+    : '';
   // Google shows the site name above each result and cuts titles at about 60 characters,
   // so long titles drop the "| Hamropedia" suffix to keep the important words visible.
   const brand = ` | ${site.name}`;
@@ -98,6 +102,7 @@ ${hreflang}
 <meta name="color-scheme" content="light">
 ${verify}
 ${ads}
+${ahrefs}
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
