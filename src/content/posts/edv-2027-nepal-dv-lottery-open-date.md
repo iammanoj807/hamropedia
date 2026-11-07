@@ -14,13 +14,6 @@ Thousands of people in Nepal are searching for the **EDV 2027 opening date**. Th
 
 > **Latest, 5 November 2026:** still not open. No new date has been announced, and no further court ruling has been reported since the 29 October pause ([Envoy Global](https://www.envoyglobal.com/news-alert/u-s-diversity-visa-lottery-2027-program-remains-suspended-after-appeals-court-stay/); [Goeschl Law](https://www.golawcorp.com/news/ninth-circuit-stays-order-to-reopen-dv-2027-lottery-diversity-visa-program-remains-paused)). We update this page when anything changes.
 
-> **At a glance**
->
-> - **Is EDV 2027 open?** No. The DV-2027 registration has not opened anywhere in the world.
-> - **Why not?** The US State Department paused the programme in December 2025, and a court order to reopen it was put on hold on 29 October 2026.
-> - **What is the EDV 2027 opening date?** There isn't one yet. Watch only the official site, **dvprogram.state.gov**.
-> - **New when it opens:** a **US$1** entry fee, and a **valid passport** for the main applicant.
-
 ## What happened to the DV lottery 2027, step by step
 
 | Date | What happened |

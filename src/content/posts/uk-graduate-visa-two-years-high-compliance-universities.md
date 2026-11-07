@@ -1,7 +1,7 @@
 ---
 title: "Graduate Visa UK: Cut to 18 Months in 2027, and Who Still Gets Two Years"
 seoTitle: "Graduate Visa UK (PSW) 2026: 18 Months or 2 Years?"
-description: "The UK Graduate visa is 2 years if you apply by 31 December 2026, then 18 months, except at 'high-compliance' universities. Rules, the £937 fee, what to do."
+description: "Graduate visa UK: 2 years if you apply by 31 December 2026, then 18 months, except at 'high-compliance' universities. The rules, the £937 fee, what to do."
 date: 2026-10-28
 category: study-abroad
 type: news
@@ -28,15 +28,6 @@ Not yet. gov.uk says a Graduate visa lasts **"2 years if you apply on or before 
 
 In everyday talk, yes. Students and agents in Nepal often call the Graduate visa **PSW** (post-study work), but gov.uk never uses that name. The old **Tier 1 (Post-Study Work)** visa closed to new applicants on **6 April 2012** ([Home Office inspection report, PDF](https://assets.publishing.service.gov.uk/media/5a8093aced915d74e33fb372/An-Inspection-of-Tier-1-PBS-Investor-and-Entrepreneur-Applications_Sept_2013.pdf)). The **Graduate route** that students now call PSW opened on **1 July 2021** ([gov.uk](https://www.gov.uk/government/news/graduate-route-for-best-and-brightest-launches)). Despite the nickname, you don't have to work on it: the Migration Advisory Committee notes there is "no requirement to undertake any form of work" ([MAC review, PDF](https://assets.publishing.service.gov.uk/media/6745b2eecdd295aea88098b6/MAC+Rapid+Review+of+Graduate+Route+-+FINAL+Nov+24__1_.pdf)).
 
-## How to apply for the Graduate visa
-
-1. **Wait until your university has reported that you completed your course.** You can't apply before that.
-2. **Apply online from inside the UK**, while your Student visa is still valid ([gov.uk: apply](https://www.gov.uk/graduate-visa/apply)).
-3. **Prove your identity**, either with the **UK Immigration: ID Check app** (and a UKVI account) or by giving fingerprints and a photo at a UKVCAS service point.
-4. **Pay the £937 fee and the health surcharge.**
-5. **Don't travel** outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision, or your application is withdrawn.
-6. **Decision:** usually within 8 weeks. If approved, you get an **eVisa** (a digital record of your status).
-
 ## What the Budget said
 
 The Budget states that *"the graduate visa duration will be set at two years for individuals who graduate from high-compliance universities"* where there are *"strong labour market outcomes"*, describing it as an extension "from 18 months to two years for eligible universities" ([The PIE News, 28 Oct 2026](https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/)).
@@ -60,21 +51,21 @@ From the official gov.uk page ([Graduate visa](https://www.gov.uk/graduate-visa)
 - **Course completion:** your university must have **told the Home Office you have successfully completed your course** before you can apply. This is the most common reason people can't apply on time.
 - **Fee:** **£937**, plus the health surcharge, usually **£1,035 for each year**. For 18 months that is £1,035 + £517.50 = **£1,552.50**; for 2 years, £2,070 ([gov.uk: healthcare surcharge](https://www.gov.uk/healthcare-immigration-application/how-much-pay)).
 - **Decision:** usually within **8 weeks**.
-- **No extension:** you **cannot extend** a Graduate visa. To stay longer you must switch to another visa, such as a Skilled Worker visa.
+
+## How to apply for the Graduate visa
+
+1. **Wait until your university has reported that you completed your course.** You can't apply before that.
+2. **Apply online from inside the UK**, while your Student visa is still valid ([gov.uk: apply](https://www.gov.uk/graduate-visa/apply)).
+3. **Prove your identity**, either with the **UK Immigration: ID Check app** (and a UKVI account) or by giving fingerprints and a photo at a UKVCAS service point.
+4. **Pay the £937 fee and the health surcharge.**
+5. **Don't travel** outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision, or your application is withdrawn.
+6. **Decision:** usually within 8 weeks. If approved, you get an **eVisa** (a digital record of your status).
 
 ## What you can and cannot do on a Graduate visa
 
 You **can** work in most jobs, look for work, be self-employed, do voluntary work, travel abroad and return, and keep living in the UK with your partner and children. You **cannot** claim most benefits (public funds) or the State Pension, or work as a professional sportsperson. You can only study on a course that isn't eligible for a Student visa ([gov.uk: Graduate visa](https://www.gov.uk/graduate-visa)).
 
 You **don't need a job offer or a sponsor**, and you can stay in the UK while you wait for a decision.
-
-## Can my partner and children stay?
-
-Only family who are **already your dependants**:
-
-- **Partner:** must have been your dependant on your Student visa, and still be your partner (married, in a civil partnership, or together for at least 2 years).
-- **Children under 18:** usually must have been your dependants on your Student visa, unless they were **born in the UK** while you held your Student or Graduate visa.
-- **New dependants can't join you from abroad** on a Graduate visa. They may be able to if you switch to another visa, such as a Skilled Worker visa ([gov.uk: partner and children](https://www.gov.uk/graduate-visa/your-partner-and-children)).
 
 ## What is not decided yet
 
@@ -115,7 +106,7 @@ The Budget also said the **High Potential Individual (HPI) visa** will be opened
 
 **Can I stay in the UK while I wait for a Graduate visa decision?** Yes, as long as you applied before your Student visa expired. Don't travel outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision.
 
-**Can I bring my wife or husband on a Graduate visa?** Only if they were already your dependant on your Student visa. New partners can't join you on a Graduate visa.
+**Can I bring my wife or husband on a Graduate visa?** Only if they were already your dependant on your Student visa. New partners can't join you on a Graduate visa. Children under 18 usually must have been your dependants too, unless they were born in the UK while you held your Student or Graduate visa ([gov.uk](https://www.gov.uk/graduate-visa/your-partner-and-children)).
 
 **Can I extend my Graduate visa?** No. You would need to switch to another visa, such as a Skilled Worker visa.
 

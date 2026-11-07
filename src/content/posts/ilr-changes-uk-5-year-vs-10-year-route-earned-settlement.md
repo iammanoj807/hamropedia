@@ -50,6 +50,16 @@ So 10 years on a student visa followed by work will no longer get you settlement
 
 The earnings thresholds are tied to the UK income tax bands (£12,571 is where basic-rate tax starts, £50,271 higher rate, £125,141 additional rate), so they will move if those bands change.
 
+## Key dates
+
+| Date | What happens |
+|---|---|
+| May 2025 | Immigration white paper proposes 10 years as the standard |
+| 2 November 2026 | Government confirms Earned Settlement |
+| December 2026 | First changes laid in the Immigration Rules |
+| During 2027 | The rest of the reforms come in |
+| Until 2035 | Pre-April 2024 Skilled Workers below RQF 6 can keep extending on current terms |
+
 ## Who still gets ILR after 5 years
 
 - **Higher earners:** at least **£50,271** a year in 3 of the 5 years before applying. Two lower years are allowed, for example for maternity leave or illness. The 3- and 5-year earnings routes are for people on the **Skilled Worker, Global Talent, Scale-up, Innovator Founder** and **International Sportsperson** routes.
@@ -124,16 +134,6 @@ How the confirmed rules would apply, once in force (based on the Home Office res
 | **Care worker** who joined before May 2025, earning £25,000+ | **5 years** (transitional protection) |
 | Claimed specified public funds in the last 5 years | **20 years**, unless you then go 5 years in a row without claiming |
 
-## Key dates
-
-| Date | What happens |
-|---|---|
-| May 2025 | Immigration white paper proposes 10 years as the standard |
-| 2 November 2026 | Government confirms Earned Settlement |
-| December 2026 | First changes laid in the Immigration Rules |
-| During 2027 | The rest of the reforms come in |
-| Until 2035 | Pre-April 2024 Skilled Workers below RQF 6 can keep extending on current terms |
-
 ## Who is not affected
 
 These keep their own arrangements (Home Office, Chapters 4 and 6):
@@ -146,16 +146,6 @@ These keep their own arrangements (Home Office, Chapters 4 and 6):
 
 The plan is about how people **qualify** for settlement. The Home Office response does not propose taking ILR away from people who already have it.
 
-## ILR application fee and decision time (today)
-
-Under the current rules, applying for ILR after a Skilled Worker visa costs **£3,226 per person**. Giving your fingerprints and photo is free, and you usually get a decision **within 6 months** of doing so. If you are aged 18 to 64 you must pass the Life in the UK test, and you must not travel outside the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision ([gov.uk: ILR for Skilled Workers](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)). Fees usually change each April, so check gov.uk before you apply.
-
-## When do the changes start?
-
-**Not yet.** The new system has been announced but is **not law** until it appears in the Immigration Rules. In her statement to Parliament, the Home Secretary said the first changes will be laid in the **December Immigration Rules**, and the reforms will be brought in **over the course of 2027** ([EIN, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement)). More guidance is due before then.
-
-One point matters for everyone already in the UK. The government says that, unless transitional rules say otherwise, settlement applications are normally decided under **the rules in force on the date of the decision**, not the rules when you arrived (Home Office, Chapter 8). Apart from the groups listed above, there is **no general protection** for people who are already here.
-
 ## What you should do now
 
 1. **Work out which route fits you:** your visa type, your salary over the last few years, and whether your job is on the public service list.
@@ -167,7 +157,7 @@ One point matters for everyone already in the UK. The government says that, unle
 
 ## Frequently asked questions
 
-**Is ILR now 10 years in the UK? Is it confirmed?** It has been confirmed as the new standard, but it is **not in force yet**. The changes start in the December Immigration Rules and roll out over 2027.
+**Is ILR now 10 years in the UK? Is it confirmed?** It has been confirmed as the new standard, but it is **not in force yet**. The Home Secretary said the first changes will be laid in the December Immigration Rules and the reforms will roll out over 2027 ([EIN, 2 Nov 2026](https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement)).
 
 **Can I still get ILR in 5 years on a Skilled Worker visa?** Yes, if you earn at least **£50,271** in 3 of the 5 years before applying, work in an eligible public service job, have a British partner, or are a care, health or education worker covered by the transitional rules. Otherwise the standard will be 10 years.
 
@@ -177,7 +167,7 @@ One point matters for everyone already in the UK. The government says that, unle
 
 **Is the Long Residence route closing?** Yes. The government has confirmed it will close under Earned Settlement.
 
-**How much is the ILR fee?** £3,226 per person for a Skilled Worker ILR application, with no extra charge for biometrics ([gov.uk](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)).
+**How much is the ILR fee?** £3,226 per person for a Skilled Worker ILR application under the current rules, with no extra charge for biometrics. You usually get a decision within 6 months, and if you are 18 to 64 you must pass the Life in the UK test ([gov.uk](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)). Fees usually change each April.
 
 **What English level will I need for ILR?** **B2**, up from B1, unless you are exempt (children, people aged 65 and over, or people with a relevant physical or mental condition).
 

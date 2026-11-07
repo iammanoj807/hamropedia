@@ -111,7 +111,6 @@ It is usually short and conversational, often by video call. Your university or 
 ## On the day
 
 - Test your camera, microphone and internet beforehand if it is online, and sit somewhere quiet.
-- Keep your documents nearby, but don't read from notes.
 - If you don't understand a question, ask: *"Could you repeat the question, please?"* That is completely fine.
 - Speak clearly and at a normal pace. **Nobody expects a British accent**; they expect you to understand and be understood.
 - Never guess or invent. "I'm not sure, but I believe..." is better than a confident wrong answer.
