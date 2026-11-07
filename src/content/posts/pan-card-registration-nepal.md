@@ -50,20 +50,26 @@ It must be the number on your NID record, not just any number you use. If you ch
 
 An **OTP Verification** box asks you to "Enter OTP sent to your Mobile". Type the code from the SMS and click **Continue**.
 
+![OTP Verification box on the IRD taxpayer portal asking for the OTP sent to your mobile](/images/posts/pan/pan-4-otp.webp "Step 3: type the OTP from the SMS. Screenshot: IRD video, 21 November 2025 (personal details blurred)")
+
 ### Step 4: Choose your Inland Revenue Office and enter your NID number
 
 Choose the **Inland Revenue Office** (IRO) that is convenient for you from the **IRO Name** list. Under **National Identification Number (NIN)**, answer **YES** to "Do you have a National Identification Number (NIN)?" and type your NIN. Click **Continue**.
+
+![IRO Name list and the National Identification Number (NIN) question with YES ticked](/images/posts/pan/pan-5-iro-nin.webp "Step 4: choose your Inland Revenue Office, tick YES and enter your NIN. Screenshot: IRD video, 21 November 2025 (personal details blurred)")
 
 The portal then confirms which office will hold your record, for example: <span lang="ne">"तपाईंको यो विवरण आ.रा.का. विराटनगर मा दर्ता हुनेछ। के तपाईं अघि बढ्न चाहनुहुन्छ?"</span> (your details will be registered at the Biratnagar IRO; do you want to continue?). Click **Yes**.
 
 ### Step 5: Check the form tabs
 
-The form opens with these tabs: **Personal Info**, **Address**, **Documents**, a tab for family details, **Financial Info**, and **Preview & Submit**. Much of it is already filled in from your NID record, so mostly you check the details and add what is missing:
+![PAN registration form with the Personal Info, Address, Documents, Relatives, Financial Info and Preview & Submit tabs](/images/posts/pan/pan-6-form-tabs.webp "Step 5: the form tabs, starting with Personal Info. Screenshot: IRD video, 21 November 2025 (personal details blurred)")
 
-- **Personal Info:** your name in Nepali and English, gender and date of birth. Need to type your name in Nepali? Use the [Nepali typing tool](/tools/english-to-nepali/).
+The form opens with these tabs: **Personal Info**, **Address**, **Documents**, **Relatives**, **Financial Info**, and **Preview & Submit**. Much of it is already filled in from your NID record, so mostly you check the details and add what is missing:
+
+- **Personal Info:** your name in Nepali and English, gender and date of birth. Need to type your name in Nepali? Open the [Nepali typing tool in normal English spelling mode](/tools/english-to-nepali/?mode=english) and type it as written in English on your citizenship, such as Ram Bahadur Thapa.
 - **Address:** permanent address, with tick boxes to copy it as your temporary or mailing address.
 - **Documents:** your citizenship certificate details are listed here.
-- **Family details:** add family members' names.
+- **Relatives:** add family members' names.
 - **Financial Info:** your source of income (employment, investment, business, occupation or others) and, if you like, your bank account. The form notes: "Bank details are not mandatory, but providing them will make the tax refund process easier."
 
 Dates on IRD forms are in Bikram Sambat. To check a BS date, use the [Nepali date converter](/tools/nepali-date-converter/).
@@ -140,7 +146,7 @@ IRD also has the **IRD Nepal** app for [Android](https://play.google.com/store/a
 
 **Do I need to give bank details for a PAN?** No. The Financial Info tab says bank details are not mandatory, but giving them makes the tax refund process easier. You can add your bank, branch and account number if you want refunds paid straight into your account.
 
-Related: [IRD PAN search](/ird-pan-search/) (check a PAN number) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [License print check](/license-print-check-nepal/) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates)
+Related: [IRD PAN search](/ird-pan-search/) (check a PAN number) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [License print check](/license-print-check-nepal/) · [Nepali typing tool](/tools/english-to-nepali/?mode=english) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates)
 
 ---
 
