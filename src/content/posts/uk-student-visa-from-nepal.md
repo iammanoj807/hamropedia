@@ -1,7 +1,7 @@
 ---
 title: "UK Student Visa from Nepal (2026): Requirements, Fees, Funds and the New Rules"
 seoTitle: "UK Student Visa from Nepal 2026: Requirements, Fees, Funds"
-description: "UK student visa rules 2026: funds rise to £1,203 a month (£1,570 in London) from 30 November, the £558 fee, £776 surcharge and the cost from Nepal in rupees."
+description: "UK student visa from Nepal 2026: funds rise to £1,203 a month (£1,570 in London) from 30 November, the £558 fee, £776 surcharge and the cost in rupees."
 date: 2025-05-12
 category: study-abroad
 tags: [uk, student visa, uk student visa rules 2026, nepal, study abroad]
