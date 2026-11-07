@@ -27,6 +27,12 @@ const OLD_WORDPRESS_URLS = [
   '/how-to-apply-for-wes-evaluation/',
   '/nepal-national-ai-policy-2082-explained/',
   '/ne/nepal-national-ai-policy-2082-explained/',
+  '/driving-licence-online-form-nepal/',
+  '/license-print-check-nepal/',
+  '/nid-card-check-nepal/',
+  '/ne/nid-card-check-nepal/',
+  '/pan-card-registration-nepal/',
+  '/ird-pan-search/',
 ];
 
 function resolve(urlPath) {

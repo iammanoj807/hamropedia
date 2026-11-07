@@ -2,7 +2,7 @@
 title: "राष्ट्रिय परिचयपत्र नम्बर कसरी हेर्ने: कार्डको अवस्था र ई-एनआईडी डाउनलोड (२०८३)"
 seoTitle: "NID Card Check: राष्ट्रिय परिचयपत्र नम्बर कसरी हेर्ने"
 description: "राष्ट्रिय परिचयपत्र (NID) नम्बर अनलाइन कसरी हेर्ने, कार्ड छापियो कि छापिएन कसरी थाहा पाउने र eNID कसरी डाउनलोड गर्ने। नागरिकता नम्बरले अब किन काम गर्दैन।"
-date: 2026-11-05
+date: 2026-11-07
 category: nepal
 tags: [nid, nid card check, nid number, national identity card, rastriya parichaya patra, enid, nepal]
 coverWord: "NID चेक"
@@ -176,7 +176,7 @@ PDF खोल्दा पासवर्ड माग्छ। पासवर�
 
 **राहदानीका लागि राष्ट्रिय परिचय नम्बर चाहिन्छ?** चाहिन्छ। विभागको प्रश्नोत्तरअनुसार राहदानी लिन राष्ट्रिय परिचय नम्बर अनिवार्य गरिएको छ।
 
-सम्बन्धित: [लाइसेन्स प्रिन्ट चेक (अंग्रेजीमा)](/license-print-check-nepal/) · [नेपाली टाइपिङ टुल](/tools/english-to-nepali/) (नेपाली नाम भर्न) · [नेपाली मिति परिवर्तक](/tools/nepali-date-converter/) (वि.सं. मितिका लागि) · [नेपालीमा कसरी टाइप गर्ने](/how-to-type-in-nepali-unicode-romanized/)
+सम्बन्धित: [लाइसेन्स प्रिन्ट चेक (अंग्रेजीमा)](/smart-license-print-check/) · [नेपाली टाइपिङ टुल](/tools/english-to-nepali/) (नेपाली नाम भर्न) · [नेपाली मिति परिवर्तक](/tools/nepali-date-converter/) (वि.सं. मितिका लागि) · [नेपालीमा कसरी टाइप गर्ने](/how-to-type-in-nepali-unicode-romanized/)
 
 ---
 
