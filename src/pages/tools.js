@@ -91,20 +91,16 @@ const cheatTable = (rows) =>
 export function renderRomanized(version) {
   const t = toolBySlug('english-to-nepali');
   const toolHtml = `<div class="tool" id="rz-tool">
-  <div class="rz-modes" role="radiogroup" aria-label="How do you type?">
-    <label class="rz-mode"><input type="radio" name="rz-mode" value="roman" checked><span><strong>Romanized</strong> <small>raam bahaadur</small></span></label>
-    <label class="rz-mode"><input type="radio" name="rz-mode" value="english"><span><strong>Normal English spelling</strong> <small>Ram Bahadur</small></span></label>
-  </div>
   <div class="tool-options" role="group" aria-label="Options">
-    <label class="switch" id="rz-smart-wrap"><input type="checkbox" id="rz-smart" checked><span>Smart spelling</span></label>
+    <label class="switch"><input type="checkbox" id="rz-smart" checked><span>Smart spelling</span></label>
     <label class="switch"><input type="checkbox" id="rz-digits" checked><span>Nepali digits (१२३)</span></label>
     <label class="switch"><input type="checkbox" id="rz-danda" checked><span>Full stop → ।</span></label>
   </div>
   <div class="panes">
     <div class="pane">
-      <label for="rz-in" class="pane-label" id="rz-in-label">Type in English letters</label>
+      <label for="rz-in" class="pane-label">Type in English letters</label>
       <textarea id="rz-in" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Try: mero naam Hari ho. ma nepalma baschhu." rows="8"></textarea>
-      <div class="pane-foot"><span id="rz-count">0 words</span><button type="button" class="btn-ghost" id="rz-clear">Clear</button></div>
+      <div class="pane-foot"><span id="rz-count">0 words</span><span class="pane-actions"><a class="btn-ghost" id="rz-translate" href="https://translate.google.com/?sl=en&amp;tl=ne&amp;op=translate" target="_blank" rel="noopener" title="Opens Google Translate with your text">Translate with Google ↗</a><button type="button" class="btn-ghost" id="rz-clear">Clear</button></span></div>
     </div>
     <div class="pane pane-out">
       <label for="rz-out" class="pane-label">नेपाली (Unicode)</label>
@@ -112,14 +108,10 @@ export function renderRomanized(version) {
       <div class="pane-foot"><button type="button" class="btn" id="rz-copy">Copy Nepali</button><button type="button" class="btn-ghost" id="rz-download">Download .txt</button></div>
     </div>
   </div>
-  <div class="rz-check" id="rz-check" hidden aria-live="polite"></div>
-  <div class="examples" data-mode="english" aria-label="Examples" hidden><span>Try:</span>
-    ${['Ram Bahadur Thapa', 'Sita Kumari Shrestha', 'Bishnu Prasad Adhikari', 'Ward 10, Lalitpur'].map((e) => `<button type="button" class="ex" data-ex="${esc(e)}">${esc(e)}</button>`).join('')}
-  </div>
-  <div class="examples" data-mode="roman" aria-label="Examples"><span>Try:</span>
+  <div class="examples" aria-label="Examples"><span>Try:</span>
     ${['namaste', 'mero desh nepal ho.', 'tapaai*lai dashain ko shubhakaamanaa!', 'kasto xa?', 'bidyaarthI', '{Facebook} maa share garnus\\'].map((e) => `<button type="button" class="ex" data-ex="${esc(e)}">${esc(e)}</button>`).join('')}
   </div>
-  <details class="cheatsheet" id="rz-cheat" open>
+  <details class="cheatsheet" open>
     <summary>Typing cheat sheet</summary>
     <div class="cheat-grid">
       <div><h3>Vowels</h3>${cheatTable(CHEAT_SHEET.vowels)}</div>
@@ -139,9 +131,6 @@ export function renderRomanized(version) {
 <li><strong>Put English words in braces.</strong> <code>{Facebook}</code> stays “Facebook”.</li>
 </ol>
 <p><strong>Smart spelling</strong> fixes a few dozen everyday words that people usually type with short vowels, such as <code>nepal</code> → नेपाल, <code>kathmandu</code> → काठमाडौं and <code>dhanyabad</code> → धन्यवाद, and turns a final <code>lai</code> into लाई. Switch it off to get the strict letter-by-letter result.</p>
-<h2>Type your name in normal English spelling</h2>
-<p>Filling a <a href="/pan-card-registration-nepal/">PAN</a>, <a href="/nid-card-check-nepal/">NID</a> or <a href="/driving-licence-online-form-nepal/">driving licence</a> form that asks for your name in Nepali? Choose <strong>Normal English spelling</strong> and type your name the way it is written in English on your documents, for example <code>Ram Bahadur Thapa</code>. You get <span lang="ne">राम बहादुर थापा</span>, with no Romanized rules to learn. Capital letters don't matter in this mode.</p>
-<p>The tool knows a few hundred common Nepali first names, middle names, surnames and address words. If it has to guess a word, or a name has more than one common spelling (such as <span lang="ne">विकास</span> and <span lang="ne">बिकास</span>), it lists the word under the result with other spellings to choose from. <strong>Spell your name exactly as on your citizenship certificate</strong>, then copy it into the form.</p>
 <h2>Nepali typing on phone, laptop and Word</h2>
 <p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
 <h2>Nepali Unicode, not Preeti</h2>
@@ -149,9 +138,7 @@ export function renderRomanized(version) {
 <p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
-    { q: 'Is this English to Nepali translation?', a: 'No. It converts the <em>sounds</em> you type in English letters into Nepali script (transliteration). “mero naam” becomes “मेरो नाम”. To translate meaning from English to Nepali you need a translator; this tool is for typing Nepali when you only have an English keyboard.' },
-    { q: 'Can I type my name in normal English spelling?', a: 'Yes. Choose <strong>Normal English spelling</strong> above the box and type your name as it is written in English, such as Ram Bahadur Thapa, to get राम बहादुर थापा. Romanized mode is for typing any Nepali text by sound, such as raam bahaadur thaapaa.' },
-    { q: 'What if my name comes out with the wrong spelling?', a: 'In Normal English spelling mode, any word the tool guessed or that has more than one common spelling appears under the result. Click the spelling on your citizenship certificate and the result changes. You can also switch to Romanized mode to type the exact letters.' },
+    { q: 'Is this English to Nepali translation?', a: 'No. It converts the <em>sounds</em> you type in English letters into Nepali script (transliteration): “mero naam” becomes “मेरो नाम”. To translate the meaning of an English sentence, such as “My name is Manoj” into “मेरो नाम मनोज हो”, type it in the box and click <strong>Translate with Google</strong>, which opens Google Translate with your text.' },
     { q: 'How do I type आ, ई and ऊ?', a: 'Double the vowel or use a capital: <code>aa</code> or <code>A</code> for आ/ा, <code>ee</code> or <code>I</code> for ई/ी, <code>oo</code> or <code>U</code> for ऊ/ू.' },
     { q: 'How do I type ट, ठ, ड, ढ, ण and ष?', a: 'Use capitals: <code>T</code> ट, <code>Th</code> ठ, <code>D</code> ड, <code>Dh</code> ढ, <code>N</code> ण and <code>Sh</code> ष.' },
     { q: 'How do I write ऋ and कृ?', a: 'Use capital <code>R</code> (or <code>rri</code>): <code>R</code> gives ऋ, and <code>kR</code> gives कृ, so <code>kRShNa</code> becomes कृष्ण.' },
@@ -159,7 +146,7 @@ export function renderRomanized(version) {
     { q: 'Can I paste the result into Facebook, Word or Google Docs?', a: 'Yes. The output is standard Unicode Devanagari, so it works in Facebook, Messenger, WhatsApp, Gmail, Word, Google Docs and websites, on phones and computers, with no special font.' },
     { q: 'Is this Nepali typing tool free?', a: 'Yes, completely free, with no sign-up and no limit on how much you type. The conversion runs in your browser, so it keeps working even if your internet drops after the page has loaded.' },
     { q: 'Can I type Nepali on my phone with this?', a: 'Yes. Open this page in your phone browser, type with your normal English keyboard, and copy the Nepali. If you type Nepali every day, add a Nepali keyboard to your phone instead; the <a href="/how-to-type-in-nepali-unicode-romanized/">typing guide</a> shows how.' },
-    { q: 'Is my text sent anywhere?', a: 'No. The conversion runs entirely in your browser. Nothing you type is uploaded or stored on a server.' },
+    { q: 'Is my text sent anywhere?', a: 'No. The conversion runs entirely in your browser, and nothing you type is uploaded or stored on our server. Only if you click <strong>Translate with Google</strong> is your text sent to Google Translate, in a new tab.' },
   ];
 
   return toolPage({

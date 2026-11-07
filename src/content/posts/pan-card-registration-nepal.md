@@ -66,7 +66,7 @@ The portal then confirms which office will hold your record, for example: <span 
 
 The form opens with these tabs: **Personal Info**, **Address**, **Documents**, **Relatives**, **Financial Info**, and **Preview & Submit**. Much of it is already filled in from your NID record, so mostly you check the details and add what is missing:
 
-- **Personal Info:** your name in Nepali and English, gender and date of birth. Need to type your name in Nepali? Open the [Nepali typing tool in normal English spelling mode](/tools/english-to-nepali/?mode=english) and type it as written in English on your citizenship, such as Ram Bahadur Thapa.
+- **Personal Info:** your name in Nepali and English, gender and date of birth. Need to type your name in Nepali? Use the [Nepali typing tool](/tools/english-to-nepali/): type it by sound, such as `raam bahaadur thaapaa` for राम बहादुर थापा.
 - **Address:** permanent address, with tick boxes to copy it as your temporary or mailing address.
 - **Documents:** your citizenship certificate details are listed here.
 - **Relatives:** add family members' names.
@@ -146,7 +146,7 @@ IRD also has the **IRD Nepal** app for [Android](https://play.google.com/store/a
 
 **Do I need to give bank details for a PAN?** No. The Financial Info tab says bank details are not mandatory, but giving them makes the tax refund process easier. You can add your bank, branch and account number if you want refunds paid straight into your account.
 
-Related: [IRD PAN search](/ird-pan-search/) (check a PAN number) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [License print check](/license-print-check-nepal/) · [Nepali typing tool](/tools/english-to-nepali/?mode=english) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates)
+Related: [IRD PAN search](/ird-pan-search/) (check a PAN number) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [License print check](/license-print-check-nepal/) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates)
 
 ---
 
