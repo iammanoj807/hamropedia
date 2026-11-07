@@ -165,30 +165,6 @@ Times are from [WES processing times](https://www.wes.org/processing-times/), ch
 - **Get professional translations** before you upload.
 - **Don't send originals.** WES doesn't return documents.
 
-## Frequently asked questions
-
-**How do I apply for a WES evaluation from Nepal?** Create an account at wes.org, choose the USA or Canada and the purpose, add each degree, choose the evaluation type and package, add recipients and pay. Then upload your degree certificate and ask your university to send your official transcripts to WES with your WES reference number.
-
-**What are the WES required documents?** A copy of your degree certificate, which you upload, and official transcripts sent to WES by your university, electronically or in a sealed envelope, with your reference number. Documents not in English need a professional translation. Your account lists the exact documents for your qualification.
-
-**How do I send my transcript to WES from Kathmandu University?** Make an online WES verification request at KU's Office of the Controller of Examinations and give your WES reference number. KU sends electronic copies of your transcripts and degree certificate directly to WES. It sends no paper copies.
-
-**How do I send my Tribhuvan University transcript to WES?** Get your transcripts from TU's Office of the Controller of Examinations at Balkhu in a sealed, stamped envelope, or ask whether the office can send them to WES directly. If you courier the sealed envelope yourself, never open it, and add your WES reference number.
-
-**What is a WES reference number?** The number WES gives you when you complete the online application. It links every document to your file, so it must be on every envelope and message you send, and you give it to your university when you request transcripts.
-
-**How do I log in to WES?** Go to wes.org and use the email address and password you created when you opened your WES account. If you forgot the password, reset it from the login page with the same email. Your WES login shows your reference number, required documents and status.
-
-**How do I check my WES application status?** Log in at wes.org and look at the tracker: Application, Documents and Evaluation, each turning green when done. The message under it explains what WES is waiting for, and WES emails you as your evaluation moves forward.
-
-**How long does WES take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, longer if complex. Getting transcripts out of Nepal comes on top, so start early.
-
-**Can I send my transcripts to WES myself?** WES prefers your university to send them. If your university won't, you can send them yourself, but only in the university's sealed envelope, signed or stamped across the flap and never opened.
-
-**What if my university is not on the WES list?** WES doesn't publish a list of institutions it evaluates. Start the application anyway: the form usually flags institutions WES doesn't evaluate before you pay. If evaluators later can't assess a credential, your account is updated to say so.
-
-**Can I cancel my WES application?** Yes, for a $56 processing fee. A completed evaluation can't be cancelled and its fees aren't refunded, so confirm which evaluation your university or IRCC wants before you pay.
-
 Related: [WES evaluation cost in dollars and rupees](/wes-evaluation-cost/) · [NOC online in Nepal](/noc-online-nepal/) (needed to send money for your studies) · [Nepali date converter](/tools/nepali-date-converter/)
 
 ---

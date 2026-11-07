@@ -126,22 +126,6 @@ Your PAN record is kept at the Inland Revenue Office you chose. The full list of
 
 IRD also has the **IRD Nepal** app for [Android](https://play.google.com/store/apps/details?id=com.prixa.irdnepal) and [iOS](https://apps.apple.com/us/app/ird-nepal/id1475260354). IRD's banner for it lists personal PAN (PPAN) registration among its services.
 
-## Frequently asked questions
-
-**How do I make a PAN card in Nepal?** If you have an NID, register online. Open taxpayerportalb.ird.gov.np, choose Application For PPAN Registration, enter your NID mobile number, the OTP and your NID number, check the form and submit. IRD creates your PAN, and you can print the card with the Print Card button.
-
-**Can I do PAN card registration online in Nepal?** Yes. IRD's new taxpayer portal creates a personal PAN online from your national ID number. You need the mobile number registered with your NID for the OTP. IRD explained the process in a video on 21 November 2025.
-
-**What is the full form of PAN?** PAN stands for Permanent Account Number, स्थायी लेखा नम्बर in Nepali. It is the tax number that the Inland Revenue Department (IRD) gives to individuals (personal PAN) and to businesses (business PAN).
-
-**I forgot my PAN number. How do I find it?** Check your PAN card or the SMS and email IRD sent when you registered. IRD's FAQ says that if you don't remember it, you can take your citizenship certificate to the office that holds your PAN and ask them to find it. The IRD PAN search only works if you already know the number.
-
-**Can I get a PAN without an NID?** The online route needs an NID and its registered mobile number. Without one, register for your NID first, or ask your nearest Inland Revenue Office or Taxpayer Service Office. IRD lists the personal PAN registration form on its PAN forms page.
-
-**Why am I not getting the OTP for PAN registration?** The OTP goes only to the mobile number registered in the NID system. If your NID has an old number or none, update it at an NID registration unit, then try again. Check that you typed the number and the captcha correctly.
-
-**Do I need to give bank details for a PAN?** No. The Financial Info tab says bank details are not mandatory, but giving them makes the tax refund process easier. You can add your bank, branch and account number if you want refunds paid straight into your account.
-
 Related: [IRD PAN search](/ird-pan-search/) (check a PAN number) · [NID card check](/nid-card-check-nepal/) (find your NID number) · [License print check](/license-print-check-nepal/) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates)
 
 ---

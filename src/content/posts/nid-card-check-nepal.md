@@ -156,30 +156,6 @@ What it means for you:
 - Never share your OTP. DoNIDCR staff don't need it, and nobody can "speed up" your card for a fee.
 - Don't post a photo of your eNID or NID number in Facebook groups or comments.
 
-## Frequently asked questions
-
-**How can I check my NID number in Nepal?** Go to citizenportal.donidcr.gov.np, click Download Your eNID and enter your full name in Nepali and English, date of birth (BS) and citizenship issue date. After the OTP on your registered mobile, the portal shows your NID number and photo.
-
-**How do I download my NID card?** Download the eNID, the digital version of your NID. On citizenportal.donidcr.gov.np, click Download Your eNID, enter your full name in Nepali and English, date of birth (BS) and citizenship issue date, type the OTP sent to your NID mobile, then click Download card. You get a password-protected PDF.
-
-**Can I check my national identity card by citizenship number?** Not any more. The current Citizen Portal form doesn't ask for a citizenship number. You use the name, date of birth and citizenship issue date from your citizenship certificate, then verify with an OTP sent to the mobile number on your NID record.
-
-**How do I check if my NID card is printed?** On the Citizen Portal, open NID Card Status and enter your request number (RSN) or your NID number. When the card is printed you also get an SMS. Collect it in person from the office where you registered.
-
-**What is the eNID password?** The first four letters of your full name in English in capitals, then your birth year in BS. For example, RAMESH born 2050-01-01 has the password RAME2050. The rule comes from DoNIDCR's official eNID manual.
-
-**Can I check my NID number by SMS?** Yes. Type N, a space and your application number, and send it to 30001. DoNIDCR's FAQ lists this for people who registered but did not receive their NID number.
-
-**Can I check my NID number with my mobile number or name only?** No. The portal needs your full name in Nepali and English, date of birth and citizenship issue date together. The mobile number is used only to send you the OTP, so it must be the number on your NID record.
-
-**Why am I not getting the OTP?** The OTP goes only to the mobile number you gave when you registered for your NID, and it is valid for 5 minutes. If you gave no number or changed it, update it at your nearest NID registration unit. You don't need to give fingerprints or a photo again.
-
-**How many digits is the NID number in Nepal?** Ten. DoNIDCR describes it as a unique 10-digit number that is never repeated, and it stays the same even if your details are later corrected.
-
-**Can someone else collect my NID card for me?** No. Your fingerprints are checked when the card is handed over, so you must go yourself, to the same place where you registered your details.
-
-**Do I need an NID number for a passport?** Yes. DoNIDCR's FAQ says the national identity number is mandatory when you apply for a passport.
-
 Related: [License print check](/license-print-check-nepal/) (is your smart driving license printed?) · [Nepali typing tool](/tools/english-to-nepali/) (for the Nepali name field) · [Nepali date converter](/tools/nepali-date-converter/) (for BS dates) · [How to type in Nepali](/how-to-type-in-nepali-unicode-romanized/)
 
 ---

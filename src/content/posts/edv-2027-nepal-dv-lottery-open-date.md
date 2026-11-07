@@ -37,6 +37,8 @@ The programme was suspended after a Portuguese national who had received a visa 
 
 The appeals court said "we do not endorse the Department's failure to open the lottery registration period", but found that the law firm that brought the case was unlikely to win, mainly because it is not a lottery applicant itself. The decision does **not** end the case or the programme: the appeal continues, and the situation could change (Bloomberg Law; Fragomen).
 
+**DV-2027 or DV-2028?** The programme is named after the US fiscal year of the visas. DV-2027 is the one currently delayed, and no dates for DV-2028 have been announced either.
+
 ## What will be different when it opens
 
 - **US$1 entry fee:** a new rule introduced a **US$1** electronic registration fee per entry, paid online when you submit ([Camp Legal](https://camplegal.com/understanding-the-dv-2027-lotterys-new-1-electronic-registration-fee/)). Entering used to be free.
@@ -72,26 +74,6 @@ Results for DV-2027 can only come after the entry period opens and closes, so an
 - The official fee is **US$1**. Don't pay anyone for "guaranteed" or "priority" entries.
 - When you enter, save your **confirmation number** yourself. You need it to check your result, so don't leave it only with an agent.
 - Keep your photo and details exactly correct: one entry per person; duplicate entries are disqualified.
-
-## Frequently asked questions
-
-**Is EDV 2027 open in Nepal?** No. As of 5 November 2026, DV-2027 registration has not opened anywhere in the world.
-
-**What is the EDV 2027 opening date in Nepal?** No date has been announced. It depends on the court case and the US State Department. When a date is announced, it applies worldwide, including Nepal.
-
-**What happened to the DV lottery 2027?** The State Department paused the programme in December 2025. A judge ordered it to open by 1 November 2026, but an appeals court put that order on hold on 29 October 2026 while the appeal continues.
-
-**Where do I register for the DV lottery 2027?** Only at **dvprogram.state.gov**, once it opens. There is no other official form, app or website.
-
-**Is there a fee for the DV-2027 lottery?** Yes, a new **US$1** registration fee per entry, paid online when you submit. Anyone charging more is charging for their own service, not the lottery.
-
-**Who is eligible for the DV-2027 lottery? Can Nepalis apply?** You must be a native of an eligible country and have a high school education or its equivalent, or qualifying work experience (USA.gov). Nepal has been among the eligible countries in recent years; the official DV-2027 instructions, when published, will confirm the list.
-
-**Is there an EDV result Nepal name list?** No. The State Department doesn't publish names. You can only check your own result at dvprogram.state.gov with your confirmation number.
-
-**When will EDV 2027 results come out?** Not known, because entries have not opened. Results are checked only on the official Entrant Status Check with your confirmation number. Any DV-2027 visas must still be issued by **30 September 2027**, so a late lottery means less time for winners ([VisaVerge](https://www.visaverge.com/greencard/dv-2027-winners-have-less-than-a-year-to-secure-their-green-card-visas/)).
-
-**Is the DV lottery open for 2028?** No. The programme is named after the US fiscal year of the visas. DV-2027 is the one currently delayed; no dates for DV-2028 have been announced.
 
 Related: [UK Graduate visa: 18 months from 2027](/uk-graduate-visa-two-years-high-compliance-universities/) · [How to apply for WES evaluation](/wes-application-from-nepal/) (if you plan to study in the US) · [Nepali date converter](/tools/nepali-date-converter/)
 

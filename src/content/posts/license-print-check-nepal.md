@@ -131,25 +131,9 @@ Check the card before you leave the counter: name, categories and dates. DoTM ha
 
 ## Frequently asked questions
 
-**How do I check if my license is printed in Nepal?** Open DoTM's printed-license lists on dotm.gov.np, choose the list for the office where you applied, and search the PDF for your license number with Ctrl+F or Find in page. If it's there, the License Printed Date column shows when the card was printed.
-
-**How can I check my license print status online?** Use DoTM's printed-license lists, your office's print-status page if it has one (such as Rupandehi in Lumbini), or DoTM's license check page for your license details. To follow a new application, use License Tracking on your province license portal with your application ID.
-
-**Why is my license not on the printed list?** The lists are published well after printing. The Pokhara list posted on 8 October 2026 covers cards printed on 27 April 2026. Check your own office's newest list and the urgent list, and track your application on your province portal.
-
 **Can I check my license print by name?** The lists include names, so you can search a name, but the same name often appears several times. Search by your license number instead; it is unique and shows the correct record.
 
-**What is the format of a Nepal driving license number?** Two digits, two digits and eight digits, separated by hyphens: XX-XX-XXXXXXXX, for example 01-07-00123456. Type it with the hyphens when you search a printed list or an office print-status page.
-
 **How long does license printing take?** DoTM gives no fixed time for regular licenses. For the urgent service, the citizen charter says at least 72 hours after your application is approved. Regular lists can appear months after printing, as the Pokhara example shows.
-
-**Can I get my driving license urgently if I'm going abroad?** Yes. DoTM's urgent printing service is for people going abroad to study or work, UN peacekeepers, non-resident Nepalis and diplomats. You need documents such as your NOC or offer letter, passport, visa and ticket, and DoTM must approve the application.
-
-**Can someone else collect my license?** For urgent licenses, DoTM's citizen charter allows a person to collect it with your consent letter (in the format of schedule 5 of the urgent printing directive, 2081) and their own application. For a regular license, ask your transport office first.
-
-**What do I need to bring to collect my smart license?** The original receipts for all the fees you paid and, if you renewed or added a category, your old license. DoTM's notices with the printed lists ask license holders to bring these.
-
-**Is there an SMS to check my license print?** Some websites mention sending LC and a number to 33001, but we couldn't find this service on any DoTM page or in its citizen charter. Use the printed lists or the official portals instead.
 
 Related: [Driving licence online form](/driving-licence-online-form-nepal/) (apply for or renew a license online) · [NID card check](/nid-card-check-nepal/) (you need an NID number for a new license) · [NOC online in Nepal](/noc-online-nepal/) (for an urgent license before studying abroad) · [Nepali date converter](/tools/nepali-date-converter/)
 

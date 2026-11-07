@@ -167,22 +167,6 @@ One point matters for everyone already in the UK. The government says that, unle
 
 ## Frequently asked questions
 
-**Is ILR now 10 years in the UK? Is it confirmed?** It has been confirmed as the new standard, but it is **not in force yet**. The changes start in the December Immigration Rules and roll out over 2027.
-
-**Can I still get ILR in 5 years on a Skilled Worker visa?** Yes, if you earn at least **£50,271** in 3 of the 5 years before applying, work in an eligible public service job, have a British partner, or are a care, health or education worker covered by the transitional rules. Otherwise the standard will be 10 years.
-
-**Will the ILR changes affect people already in the UK? Is it retrospective?** Generally yes, for people who do not have ILR yet. The government says "settlement rules will otherwise continue to apply at the point of application" ([gov.uk, 2 Nov 2026](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)). Applications are normally decided under the rules in force on the decision date. Only specific groups have transitional protection: some care, health and education workers who arrived before May 2025 keep 5 years, and pre-April 2024 Skilled Workers in roles below RQF 6 can keep extending their visas on current terms until 2035.
-
-**Does Student or Graduate visa time count towards ILR?** Not under the new system. Time on temporary routes will not count, and the 10-year Long Residence route will close.
-
-**Is the Long Residence route closing?** Yes. The government has confirmed it will close under Earned Settlement.
-
-**How much is the ILR fee?** £3,226 per person for a Skilled Worker ILR application, with no extra charge for biometrics ([gov.uk](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa)).
-
-**What English level will I need for ILR?** **B2**, up from B1, unless you are exempt (children, people aged 65 and over, or people with a relevant physical or mental condition).
-
-**Does my partner need to earn £12,571?** Not necessarily. Couples can combine income to reach **£25,142** together.
-
 **I already have ILR. Am I affected?** No. The government says "settled status will never be removed from anyone who already holds it" ([gov.uk, 2 Nov 2026](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)).
 
 **Is ILR the same as EU settled status?** Settled status under the EU Settlement Scheme is a form of indefinite leave for EU citizens and their families who lived in the UK before 2021. The EU Settlement Scheme keeps its own rules and is not affected by Earned Settlement.

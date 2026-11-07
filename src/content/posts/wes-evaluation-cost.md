@@ -112,25 +112,9 @@ For **Canadian immigration**, your ECA must be **less than 5 years old** when yo
 
 ## Frequently asked questions
 
-**How much does a WES evaluation cost?** For US admissions, Course-by-Course costs $239 with WES ICAP or $186 with Basic, and Document-by-Document costs $171 with ICAP or $118 with Basic. Delivery is extra, from $14 for standard post. These are WES's fees as of 6 November 2026.
-
-**How much is WES evaluation in Nepali rupees?** A Course-by-Course ICAP evaluation ($239) is about NPR 36,200, or about NPR 38,300 with standard delivery, at Nepal Rastra Bank's selling rate of NPR 151.47 per dollar on 6 November 2026. Your bank's card rate may differ slightly.
-
-**How much does the WES ECA cost for Canada?** C$264, plus 13% HST, which makes C$298.32, about NPR 32,400 at NRB's 6 November 2026 rate. Delivery is extra: C$14 standard or C$97 by courier outside Canada.
-
-**What is the difference between WES ICAP and Basic?** ICAP sends your verified transcripts with the evaluation report and stores them, so later reports cost $35. Basic is the report only, and later reports cost $58. ICAP costs $53 more, and many universities require it.
-
 **Is the WES fee the same for every university?** The evaluation fee is the same, but each extra recipient, copy and courier delivery adds to it. Choose the evaluation type your university asks for, because changing it later costs $92.
 
-**How long does a WES evaluation take?** Typically 2 weeks to verify your documents after they all arrive, then 1 week for an ECA or Document-by-Document evaluation, or 2 weeks for Course-by-Course, up to 4 if complex. Transcripts from Nepal add time on top.
-
 **Can I get a WES evaluation for free?** No. Every WES evaluation has a fee. Some universities accept other evaluators or assess transcripts themselves, so check your university's requirements before you pay.
-
-**Can I get a refund from WES?** You can cancel a file or application for a $56 processing fee, but a completed evaluation can't be cancelled and its fees aren't refunded. Confirm which evaluation you need before you pay.
-
-**How do I pay WES from Nepal?** Online, in dollars (or Canadian dollars for an ECA), so you need a card that works for international online payments. Keep the receipt and your WES reference number.
-
-**Is a WES evaluation valid for 5 years?** The 5-year limit is for Canadian immigration: your ECA must be under 5 years old when you create your Express Entry profile and when you apply. Universities set their own rules for how old a report can be.
 
 Related: [WES application from Nepal, step by step](/wes-application-from-nepal/) · [NOC online in Nepal](/noc-online-nepal/) (needed to send money from Nepal for your studies)
 

@@ -99,15 +99,9 @@ There is no perfect timeline, but a steady pace works: **an hour a day, every da
 
 **How should a beginner start coding?** Pick one language (Python is the easiest start), install VS Code, and write a little code every day. Build a tiny project within your first two weeks; that teaches more than watching videos.
 
-**What is the best programming language for beginners?** Python, for most people: its code reads almost like English. If you mainly want to build websites, start with HTML, CSS and JavaScript instead.
-
-**Can I learn coding for free?** Yes. Everything in this roadmap is free: the courses, the tools and the practice sites.
-
 **Is 3 months enough to learn coding?** Enough to learn the basics and build a few small projects at an hour or two a day. Being job-ready usually takes longer, because you also need DSA, Git and bigger projects.
 
 **Is C++ harder than Python?** Yes, for a beginner. C++ makes you manage more details yourself. It's worth learning later, especially for competitive programming, but Python lets you focus on problem solving first.
-
-**What jobs can coding get you?** Web and app development, data analysis, machine learning and AI, testing and DevOps, among others. Step 7 above shows the main directions and what to learn for each.
 
 ---
 

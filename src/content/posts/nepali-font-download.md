@@ -112,24 +112,6 @@ macOS supports TrueType (`.ttf`) and OpenType (`.otf`) fonts, so Preeti and Kali
 - **Old Preeti files:** install Preeti to open them, then convert to Unicode with the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
 - **Websites and designs:** Noto Sans Devanagari, because its licence allows it.
 
-## Frequently asked questions
-
-**What is the best Nepali font?** For most people, a Unicode font: Nirmala UI is already on Windows, Kalimati is popular for documents, and Noto Sans Devanagari is free for websites. Unicode fonts work everywhere. Preeti only works on computers that have it installed, so use it only for old files.
-
-**How do I install a Nepali font?** On Windows, double-click the .ttf file and select Install. On a Mac, double-click it and click Install in Font Book. Then restart Word or the program you use. The steps are the same for Kalimati, Preeti and other Nepali fonts.
-
-**How do I install Preeti font?** Download PREETI.TTF from a trusted page such as the UN OHCHR Nepal downloads page, double-click it and select Install. Remember that Preeti text only shows correctly on computers with Preeti installed. For new work, type in Unicode or convert with a Preeti to Unicode converter.
-
-**Which Nepali font should I use in MS Word?** Use a Unicode font such as Nirmala UI (already on Windows 10 and 11), Kalimati or Mangal. Choose it from Word's font list after you start typing in Nepali. Avoid Preeti for new documents: it breaks on computers that don't have the font.
-
-**Can I use Preeti font on Mac?** Yes. macOS supports .ttf fonts, so double-click PREETI.TTF and click Install in Font Book. The same limit applies as on Windows: anyone you send the file to also needs Preeti. Converting the text to Unicode avoids that problem.
-
-**Is Kalimati a Unicode font?** Yes. Kalimati is a Unicode Devanagari font, so text typed in it stays Nepali on any device, even one without Kalimati, which usually shows it in another Nepali font. That is the main difference from Preeti.
-
-**Do I need to download a Nepali font for Windows 10?** No. Windows 10 and 11 already include Nirmala UI, which shows and types Nepali. You can also add Kokila and Mangal free through Devanagari Supplemental Fonts in Settings. Only Kalimati, Preeti and other third-party fonts need a separate download.
-
-**Why does my Nepali text turn into English letters?** The text was typed in Preeti or another non-Unicode font, and the computer showing it doesn't have that font. Install the font to read it, or paste the text into a Preeti to Unicode converter to change it into Unicode that works everywhere.
-
 Related: [Preeti to Unicode converter](/tools/preeti-to-unicode/) · [Nepali typing tool](/tools/english-to-nepali/) · [Nepali keyboard (Preeti key positions)](/tools/nepali-keyboard/) · [How to type in Nepali](/how-to-type-in-nepali-unicode-romanized/)
 
 ---

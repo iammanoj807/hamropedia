@@ -69,18 +69,54 @@ if (bar && article && document.querySelector('.post')) {
 }
 
 // ---- table of contents highlight ----
-const tocLinks = [...document.querySelectorAll('.toc a')];
-if (tocLinks.length && 'IntersectionObserver' in window) {
-  const map = new Map(tocLinks.map((a) => [a.getAttribute('href').slice(1), a]));
-  const io = new IntersectionObserver((entries) => {
-    for (const en of entries) {
-      if (en.isIntersecting) {
-        tocLinks.forEach((a) => a.classList.remove('active'));
-        map.get(en.target.id)?.classList.add('active');
+// The active item is the last heading that has scrolled past the line just below the
+// sticky header, worked out from the scroll position on every frame. That stays right when
+// scrolling up, scrolling fast or reading a long section, unlike an IntersectionObserver
+// that only reacts when a heading crosses a band of the screen.
+const tocBox = document.querySelector('.toc');
+const tocItems = [...document.querySelectorAll('.toc a')]
+  .map((a) => {
+    const id = a.getAttribute('href').slice(1);
+    let h = document.getElementById(id);
+    if (!h) { try { h = document.getElementById(decodeURIComponent(id)); } catch { /* keep null */ } }
+    return { a, h };
+  })
+  .filter((x) => x.h);
+if (tocItems.length) {
+  // Where a heading stops after a contents click: html scroll-padding-top plus the heading's
+  // own scroll-margin-top (they add up). Measured, so a CSS change can't break the highlight.
+  const px = (v) => parseFloat(v) || 0;
+  const LINE = px(getComputedStyle(document.documentElement).scrollPaddingTop)
+    + px(getComputedStyle(tocItems[0].h).scrollMarginTop) + 12;
+  let current = null;
+  let queued = false;
+  const update = () => {
+    queued = false;
+    let active = null;
+    for (const it of tocItems) {
+      if (it.h.getBoundingClientRect().top <= LINE) active = it;
+      else break;
+    }
+    const doc = document.documentElement;
+    if (window.innerHeight + window.scrollY >= doc.scrollHeight - 4) active = tocItems[tocItems.length - 1];
+    if (active === current) return;
+    current?.a.classList.remove('active');
+    current = active;
+    if (!active) return;
+    active.a.classList.add('active');
+    // On wide screens the sticky list can be taller than the window and scrolls on its own:
+    // keep the active item in view. Never scroll the page itself from here.
+    if (tocBox && tocBox.scrollHeight > tocBox.clientHeight + 4) {
+      const top = active.a.getBoundingClientRect().top - tocBox.getBoundingClientRect().top + tocBox.scrollTop;
+      if (top < tocBox.scrollTop + 24 || top > tocBox.scrollTop + tocBox.clientHeight - 48) {
+        tocBox.scrollTo({ top: Math.max(0, top - tocBox.clientHeight / 3) });
       }
     }
-  }, { rootMargin: '-80px 0px -70% 0px' });
-  map.forEach((_, id) => { const h = document.getElementById(id); if (h) io.observe(h); });
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  document.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  update();
 }
 
 // ---- copy buttons ----
