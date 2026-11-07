@@ -104,9 +104,9 @@ There are two common Nepali Unicode keyboard layouts, and both produce the same 
 
 If you learned on Preeti, use the [Nepali keyboard tool](/tools/nepali-keyboard/): its Nepali Unicode Traditional layout keeps most Preeti key positions and gives you Unicode.
 
-## Nepali font: use a Unicode font
+## Use a Unicode font
 
-For Nepali text that works everywhere, choose a **Unicode** font such as **Kalimati**, **Mangal**, **Nirmala UI** or **Noto Sans Devanagari**. On Windows 10 and 11, **Nirmala UI** is already installed ([Microsoft](https://learn.microsoft.com/en-us/typography/font-list/nirmala-ui)). **Noto Sans Devanagari** is free on [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+Devanagari) under the Open Font License. **Kalimati** is not part of Windows, so you have to install it yourself. Preeti, Kantipur and other old fonts are not Unicode: text typed in them breaks on any device without the font. To change old Preeti text into Unicode, use the [Preeti to Unicode converter](/tools/preeti-to-unicode/).
+Type in a **Unicode** font such as **Nirmala UI** (already on Windows 10 and 11), **Kalimati** or **Mangal**, not Preeti: Preeti text breaks on any device without the font. To change old Preeti text into Unicode, use the [Preeti to Unicode converter](/tools/preeti-to-unicode/). For safe downloads of Kalimati, Preeti, Kokila and other fonts, see [Nepali font download](/nepali-font-download/).
 
 ## How to type in Nepali in MS Word
 
