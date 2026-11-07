@@ -132,10 +132,10 @@ export function renderRomanized(version) {
 </ol>
 <p><strong>Smart spelling</strong> fixes a few dozen everyday words that people usually type with short vowels, such as <code>nepal</code> → नेपाल, <code>kathmandu</code> → काठमाडौं and <code>dhanyabad</code> → धन्यवाद, and turns a final <code>lai</code> into लाई. Switch it off to get the strict letter-by-letter result.</p>
 <h2>Nepali typing on phone, laptop and Word</h2>
-<p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/how-to-type-in-nepali-unicode-romanized/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
+<p>This tool works in any browser, so it is the quickest way to type Nepali on a laptop, a library computer or a phone with no Nepali keyboard installed: type here, then copy into Facebook, WhatsApp, Gmail, Word or Google Docs. To type Nepali directly in every app, add a Nepali keyboard to your phone or computer; the <a href="/nepali-unicode-romanized-typing/">Nepali typing guide</a> shows how on Android, iPhone, Windows, Mac, MS Word and Google Docs.</p>
 <h2>Nepali Unicode, not Preeti</h2>
 <p>This is an English to Nepali converter for Unicode: everything you type here becomes <strong>Nepali Unicode</strong>, real Devanagari letters that work on every device and that Google can search. Old fonts such as <strong>Preeti</strong> only look Nepali on computers that have the font. Already have text in Preeti? Change it with the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>. Learned to type on the Preeti layout? The <a href="/tools/nepali-keyboard/">Nepali keyboard</a> uses the standard Nepali Unicode Traditional layout, which keeps most Preeti keys.</p>
-<p>New to Nepali typing? Read the full guide: <a href="/how-to-type-in-nepali-unicode-romanized/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
+<p>New to Nepali typing? Read the full guide: <a href="/nepali-unicode-romanized-typing/">how to type in Nepali Unicode on phone and computer</a>. Need to change old Preeti text into Unicode? Use the <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>.</p>`;
 
   const faqs = [
     { q: 'Is this English to Nepali translation?', a: 'No. It converts the <em>sounds</em> you type in English letters into Nepali script (transliteration): “mero naam” becomes “मेरो नाम”. To translate the meaning of an English sentence, such as “My name is Manoj” into “मेरो नाम मनोज हो”, type it in the box and click <strong>Translate with Google</strong>, which opens Google Translate with your text.' },
@@ -145,7 +145,7 @@ export function renderRomanized(version) {
     { q: 'How do I end a word with a halanta (्)?', a: 'Type a backslash after it: <code>garchhan\\</code> gives गर्छन्. Without the backslash a final consonant keeps its normal sound, so <code>naam</code> gives नाम.' },
     { q: 'Can I paste the result into Facebook, Word or Google Docs?', a: 'Yes. The output is standard Unicode Devanagari, so it works in Facebook, Messenger, WhatsApp, Gmail, Word, Google Docs and websites, on phones and computers, with no special font.' },
     { q: 'Is this Nepali typing tool free?', a: 'Yes, completely free, with no sign-up and no limit on how much you type. The conversion runs in your browser, so it keeps working even if your internet drops after the page has loaded.' },
-    { q: 'Can I type Nepali on my phone with this?', a: 'Yes. Open this page in your phone browser, type with your normal English keyboard, and copy the Nepali. If you type Nepali every day, add a Nepali keyboard to your phone instead; the <a href="/how-to-type-in-nepali-unicode-romanized/">typing guide</a> shows how.' },
+    { q: 'Can I type Nepali on my phone with this?', a: 'Yes. Open this page in your phone browser, type with your normal English keyboard, and copy the Nepali. If you type Nepali every day, add a Nepali keyboard to your phone instead; the <a href="/nepali-unicode-romanized-typing/">typing guide</a> shows how.' },
     { q: 'Is my text sent anywhere?', a: 'No. The conversion runs entirely in your browser, and nothing you type is uploaded or stored on our server. Only if you click <strong>Translate with Google</strong> is your text sent to Google Translate, in a new tab.' },
   ];
 
@@ -441,7 +441,7 @@ function photoToolHtml() {
 
 export function renderDvPhoto(version) {
   const t = toolBySlug('dv-photo-tool');
-  const explainer = `<blockquote class="callout callout-update"><p><strong>DV-2027 entries have not opened yet.</strong> You can get your photo ready now. For the opening date, follow the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV 2027 guide</a>.</p></blockquote>
+  const explainer = `<blockquote class="callout callout-update"><p><strong>DV-2027 entries have not opened yet.</strong> You can get your photo ready now. For the opening date, follow the <a href="/edv-2027-nepal/">EDV 2027 guide</a>.</p></blockquote>
 <h2>DV lottery photo size and requirements</h2>
 <p>This is what the U.S. Department of State asks for in the online DV entry (<a href="${DOS_PHOTOS}" rel="noopener">official photo requirements</a>):</p>
 <div class="table-wrap"><table>
@@ -469,7 +469,7 @@ export function renderDvPhoto(version) {
 <li><strong>Crop it</strong>: drag and zoom until the ovals turn green. Use Straighten if your head is tilted.</li>
 <li><strong>Download it</strong> when step 3 shows the head size is OK, 600 × 600 pixels, JPEG and 240 kB or less, then upload that file in your entry.</li>
 </ol>
-<p>Every person on the entry needs their own photo: you, your spouse and each unmarried child under 21, even if they won't move with you (see the <a href="/edv-2027-nepal-dv-lottery-open-date/">EDV guide</a>). If you are selected, each applicant brings two identical 2 × 2 inch (51 × 51 mm) printed photos to the interview.</p>
+<p>Every person on the entry needs their own photo: you, your spouse and each unmarried child under 21, even if they won't move with you (see the <a href="/edv-2027-nepal/">EDV guide</a>). If you are selected, each applicant brings two identical 2 × 2 inch (51 × 51 mm) printed photos to the interview.</p>
 <h2>What this DV photo editor changes, and what it doesn't</h2>
 <p>It crops, rotates, straightens and resizes, and it saves the file small enough. It does not smooth skin, change colours or remove backgrounds, because the State Department says photos must not be digitally enhanced or altered to change your appearance. If step 1 says the background looks dark, take the photo again against a white wall.</p>
 <p>The State Department also has its own free <a href="https://tsg.phototool.state.gov/photo" rel="noopener">photo tool</a> that crops a photo to 600 × 600 pixels. Whichever you use, a State Department employee makes the final decision on your photo: no tool can promise it will be accepted.</p>`;

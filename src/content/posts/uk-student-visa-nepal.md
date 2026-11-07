@@ -70,7 +70,7 @@ Add the TB test, translations and courier costs on top. And to send tuition or l
 - **English at CEFR level B2** for a degree-level course (B1 below degree level), shown through an approved test or your university's own assessment, depending on your sponsor ([gov.uk: knowledge of English](https://www.gov.uk/student-visa/knowledge-of-english)).
 - **A TB test certificate.** Nepal is on the list of countries whose nationals need one for visas over 6 months ([gov.uk: TB test](https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk)). It's valid for **6 months** from your chest X-ray and must come from an approved clinic in Nepal.
 - **Your academic documents**, as listed on your CAS.
-- **Preparation for a [credibility interview](/top-ukvi-interview-question-examples-and-answers/)**: universities and UKVI often interview Nepali applicants about their course, money and plans.
+- **Preparation for a [credibility interview](/ukvi-credibility-interview-questions/)**: universities and UKVI often interview Nepali applicants about their course, money and plans.
 
 **When to apply:** from outside the UK, up to **6 months** before your course starts. A decision usually takes about **3 weeks** ([gov.uk](https://www.gov.uk/student-visa)).
 
@@ -78,7 +78,7 @@ Add the TB test, translations and courier costs on top. And to send tuition or l
 
 The **Graduate visa**, which many Nepali students call **PSW** (post-study work), lets you stay and work in the UK after a UK degree without needing a job offer. It lasts **2 years if you apply on or before 31 December 2026** and **18 months if you apply on or after 1 January 2027**; PhD graduates still get 3 years. You apply from inside the UK, and it costs **£937** plus the health surcharge ([gov.uk: Graduate visa](https://www.gov.uk/graduate-visa)).
 
-The October 2026 Budget says graduates of **"high-compliance" universities** will keep two years, but no list has appeared yet. All the details: [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/)
+The October 2026 Budget says graduates of **"high-compliance" universities** will keep two years, but no list has appeared yet. All the details: [UK Graduate visa: 18 months or 2 years?](/graduate-visa-uk-psw/)
 
 ## 6. Working while you study
 
@@ -94,7 +94,7 @@ The [May 2025 immigration white paper](https://www.gov.uk/government/publication
 
 - **tougher compliance thresholds** for universities that sponsor international students;
 - a **levy on universities' income from international students**;
-- making **10 years**, not 5, the normal qualifying period for settlement (permanent residence). **Update (2 November 2026):** the government has since confirmed this, starting in December 2026 and running through 2027, and time on Student and Graduate visas won't count towards settlement. See [UK ILR changes: 5-year vs 10-year routes](/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/).
+- making **10 years**, not 5, the normal qualifying period for settlement (permanent residence). **Update (2 November 2026):** the government has since confirmed this, starting in December 2026 and running through 2027, and time on Student and Graduate visas won't count towards settlement. See [UK ILR changes: 5-year vs 10-year routes](/ilr-new-rules-uk/).
 
 Some of these still need legislation or consultation, and the details keep moving. **Treat them as proposals until they appear in the official Immigration Rules or on gov.uk.**
 
@@ -106,7 +106,7 @@ Some of these still need legislation or consultation, and the details keep movin
 - [ ] TB test certificate from an approved clinic in Nepal.
 - [ ] Visa fee (£558) and IHS (£776 per year) budgeted.
 - [ ] [NOC](/noc-nepal-apply-online/) for sending fees from Nepal.
-- [ ] Preparation for a possible [credibility interview](/top-ukvi-interview-question-examples-and-answers/).
+- [ ] Preparation for a possible [credibility interview](/ukvi-credibility-interview-questions/).
 
 ## Frequently asked questions
 
@@ -122,7 +122,7 @@ Some of these still need legislation or consultation, and the details keep movin
 
 **Can I bring my husband or wife on a UK student visa?** For courses starting from January 2024, only if you're on a postgraduate research course such as a PhD, or on some government-funded scholarships ([gov.uk: Student visa, family members](https://www.gov.uk/student-visa/family-members)).
 
-**What about the Graduate visa after my course?** See [UK Graduate visa: 18 months or 2 years?](/uk-graduate-visa-two-years-high-compliance-universities/) for the dates, the fee and the exceptions.
+**What about the Graduate visa after my course?** See [UK Graduate visa: 18 months or 2 years?](/graduate-visa-uk-psw/) for the dates, the fee and the exceptions.
 
 ## Sources
 

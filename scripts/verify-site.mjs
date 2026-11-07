@@ -22,7 +22,7 @@ const OLD_WORDPRESS_URLS = [
   '/important-details-about-wes-evaluation-for-nepali-students/',
   '/uk-immigration-2025-new-student-visa-rules-explained-simply/',
   '/how-to-apply-for-wes-evaluation-in-2025-a-complete-step-by-step-guide/',
-  '/top-ukvi-interview-question-examples-and-answers/',
+  '/ukvi-credibility-interview-questions/',
   '/how-to-apply-noc-online-easy-steps-for-nepali-students/',
   '/how-to-apply-for-wes-evaluation/',
   '/nepal-national-ai-policy-2082-explained/',
@@ -39,6 +39,12 @@ const OLD_WORDPRESS_URLS = [
   '/wes-application-from-nepal/',
   '/wes-evaluation-cost/',
   '/uk-student-visa-from-nepal/',
+  '/uk-graduate-visa-two-years-high-compliance-universities/',
+  '/ne/uk-graduate-visa-two-years-high-compliance-universities/',
+  '/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/',
+  '/top-ukvi-interview-question-examples-and-answers/',
+  '/edv-2027-nepal-dv-lottery-open-date/',
+  '/ne/edv-2027-nepal-dv-lottery-open-date/',
 ];
 
 function resolve(urlPath) {

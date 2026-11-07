@@ -13,9 +13,9 @@ export function renderHome(posts, version) {
   const studyAbroad = guides.filter((p) => p.category === 'study-abroad').slice(0, 3);
   const learning = guides.filter((p) => p.category === 'ai' || p.category === 'coding').slice(0, 3);
   const popularSlugs = [
-    'ilr-changes-uk-5-year-vs-10-year-route-earned-settlement',
-    'edv-2027-nepal-dv-lottery-open-date',
-    'uk-graduate-visa-two-years-high-compliance-universities',
+    'ilr-new-rules-uk',
+    'edv-2027-nepal',
+    'graduate-visa-uk-psw',
     'noc-nepal-apply-online',
     'wes-application-nepal',
   ];

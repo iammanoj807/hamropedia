@@ -77,7 +77,7 @@ export const categories = {
     name: 'Study Abroad',
     nameNe: 'विदेश अध्ययन',
     description: 'Step-by-step, sourced guides for students going abroad: NOC, WES, UK visas and more.',
-    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-nepal-apply-online/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost-nepal/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-nepal/">UK student visa from Nepal</a> guide, the <a href="/uk-graduate-visa-two-years-high-compliance-universities/">Graduate visa</a> rules, the <a href="/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/">new ILR rules</a> and <a href="/top-ukvi-interview-question-examples-and-answers/">UKVI interview questions</a>.',
+    intro: 'Guides for Nepali students going abroad, each checked against official sources and dated. Start with the <a href="/noc-nepal-apply-online/">NOC online guide</a> if you will send fees from Nepal. Applying to the USA or Canada? See <a href="/wes-application-nepal/">how to apply for WES</a> and <a href="/wes-evaluation-cost-nepal/">what WES costs in rupees</a>. Going to the UK? Read the <a href="/uk-student-visa-nepal/">UK student visa from Nepal</a> guide, the <a href="/graduate-visa-uk-psw/">Graduate visa</a> rules, the <a href="/ilr-new-rules-uk/">new ILR rules</a> and <a href="/ukvi-credibility-interview-questions/">UKVI interview questions</a>.',
     hue: 'blue',
   },
   coding: {
@@ -162,4 +162,10 @@ export const redirects = [
   { from: '/wes-application-from-nepal/', to: '/wes-application-nepal/', title: 'WES application from Nepal', moved: true },
   { from: '/wes-evaluation-cost/', to: '/wes-evaluation-cost-nepal/', title: 'WES evaluation cost', moved: true },
   { from: '/uk-student-visa-from-nepal/', to: '/uk-student-visa-nepal/', title: 'UK student visa from Nepal', moved: true },
+  { from: '/uk-graduate-visa-two-years-high-compliance-universities/', to: '/graduate-visa-uk-psw/', title: 'UK Graduate visa: 18 months or 2 years', moved: true },
+  { from: '/ne/uk-graduate-visa-two-years-high-compliance-universities/', to: '/ne/graduate-visa-uk-psw/', title: 'UK Graduate visa: 18 months or 2 years', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
+  { from: '/ilr-changes-uk-5-year-vs-10-year-route-earned-settlement/', to: '/ilr-new-rules-uk/', title: 'ILR new rules', moved: true },
+  { from: '/top-ukvi-interview-question-examples-and-answers/', to: '/ukvi-credibility-interview-questions/', title: 'UKVI credibility interview questions', moved: true },
+  { from: '/edv-2027-nepal-dv-lottery-open-date/', to: '/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true },
+  { from: '/ne/edv-2027-nepal-dv-lottery-open-date/', to: '/ne/edv-2027-nepal/', title: 'EDV 2027 in Nepal', moved: true, note: 'यो लेख नयाँ ठेगानामा सरेको छ।' },
 ];
