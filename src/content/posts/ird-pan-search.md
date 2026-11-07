@@ -1,15 +1,15 @@
 ---
-title: "IRD PAN Search in Nepal: How to Check a PAN Number Online (2026)"
+title: "IRD PAN Search in Nepal: How to Check a PAN Number (PAN ID) Online (2026)"
 seoTitle: "IRD PAN Search Nepal: Check a PAN Number Online (2026)"
 description: "IRD PAN search in Nepal: check any PAN number free on ird.gov.np or the IRD Nepal app, why you can't search PAN by name, and how to find a forgotten PAN."
 date: 2026-11-07
 category: nepal
-tags: [ird pan search, pan search, pan number search, pan check, pan nepal, ird, nepal]
+tags: [ird pan search, pan search, pan id search, pan card search, pan number search, pan check, ird, nepal]
 coverWord: "PAN Search"
 coverAlt: "Checking a PAN number on the IRD PAN search page"
 ---
 
-The **IRD PAN search** is the Inland Revenue Department's free page for checking a PAN number in Nepal: [ird.gov.np/pan-search](https://ird.gov.np/pan-search/). Type the PAN number, tick the captcha and click search. It needs no login and works for a **PAN no search** of your own number or a quick **PAN check** of a business. This guide shows how to do a **PAN number search** on the website and in the IRD Nepal app. It also explains why you can't do a **PAN search by name**, and what to do if you have forgotten your own PAN.
+The **IRD PAN search** is the Inland Revenue Department's free page for checking a PAN number in Nepal: [ird.gov.np/pan-search](https://ird.gov.np/pan-search/). Type the PAN number, tick the captcha and click search. It needs no login and works for a **PAN no search** of your own number, a **PAN ID search** or a quick **PAN card check** of a business. This guide shows how to do a **PAN number search** on the website and in the IRD Nepal app. It also explains why you can't do a **PAN search by name**, and what to do if you have forgotten your own PAN.
 
 ## Quick answer: PAN search in Nepal
 
@@ -30,7 +30,7 @@ The **IRD PAN search** is the Inland Revenue Department's free page for checking
 
 ![IRD PAN search page with the PAN number box and the search button marked](/images/posts/pan/pan-3-pan-search.webp "IRD PAN search: type the PAN number, tick the captcha, then search")
 
-That is the whole **www ird gov np pan search**: there is one box, for the PAN number, and no login. The search is free.
+That is the whole **www ird gov np pan search**: there is one box, for the PAN number, and no login. The search is free. People also call it a **PAN card search** or **PAN ID search**, because the PAN number is your tax ID, but it is the same page.
 
 ## PAN search on your phone: the IRD Nepal app
 
@@ -75,6 +75,8 @@ If you have an NID, you can get a personal PAN online on IRD's new taxpayer port
 ## Frequently asked questions
 
 **How do I do an IRD PAN search?** Go to ird.gov.np/pan-search, type the PAN number in the स्थाई लेखा नम्बर box, tick the captcha and click खोज्नुहोस्. It is free and needs no login. You can also search a PAN in IRD's official IRD Nepal app on Android or iPhone.
+
+**Is a PAN ID search the same as a PAN search?** Yes. Your PAN is your tax ID number, so a PAN ID search, a PAN card search and a PAN number search all mean checking the number on ird.gov.np/pan-search. Type the number, tick the captcha and click खोज्नुहोस्.
 
 **Can I search PAN by name in Nepal?** No. IRD's official PAN search only accepts the PAN number, with no field for a name or citizenship number. If you forgot your own PAN, check your PAN card or IRD's SMS and email, or ask the office that holds your PAN.
 

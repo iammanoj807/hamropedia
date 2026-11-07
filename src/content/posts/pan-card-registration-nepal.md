@@ -80,7 +80,7 @@ A success message says your registration is complete and your PAN has been creat
 
 At the end of the online registration, the success message points you to the **Print Card** button. Use your browser's print option to print the card or save it as a PDF. If you lose a personal PAN card later, IRD's FAQ says you can print it again from your **taxpayer login**, or apply at the office that holds your PAN ([IRD FAQ](https://ird.gov.np/faq/)).
 
-## Check your PAN number: IRD PAN search
+## After you register: check your PAN number
 
 Once you have a PAN, you or anyone you deal with can check the number on IRD's free **PAN search** page, [ird.gov.np/pan-search](https://ird.gov.np/pan-search/). It searches by PAN number only, not by name. For the steps, the IRD Nepal app and what to do if you forgot your PAN, see the full [IRD PAN search guide](/ird-pan-search/).
 
