@@ -9,24 +9,11 @@ coverWord: "PAN Card"
 coverAlt: "Registering for a PAN card in Nepal online"
 ---
 
-**PAN card registration** in Nepal is now online for anyone with a national ID. On the Inland Revenue Department's (IRD) new taxpayer portal, choose **Application For PPAN Registration**, enter the mobile number linked to your NID, confirm the OTP and your NID number, and IRD creates your **personal PAN card** online. You can then print the card yourself. This guide shows **how to make a PAN card in Nepal** step by step, with screenshots of the official pages. Want to check a PAN number instead? See the [IRD PAN search guide](/ird-pan-search/).
+**PAN card registration** in Nepal is now online for anyone with a national ID. On the Inland Revenue Department's (IRD) new taxpayer portal, choose **Application For PPAN Registration**, enter the mobile number linked to your NID, confirm the OTP and your NID number, and IRD creates your **personal PAN card** online. You can then print the card yourself. This guide shows **how to make a PAN card in Nepal** step by step, with screenshots of the official pages. Don't know your NID number? Find it with the [NID card check](/nid-card-check-nepal/). Want to check a PAN number instead? See the [IRD PAN search guide](/ird-pan-search/).
 
-## Quick answer: PAN card registration in Nepal
+## Who needs a PAN card?
 
-| You want to | Where | What you need |
-|---|---|---|
-| Get a personal PAN online | [taxpayerportalb.ird.gov.np](https://taxpayerportalb.ird.gov.np/) → **Registration(PAN, VAT, EXCISE)** → **Application For PPAN Registration** | Your NID number and the mobile number registered with your NID |
-| Print your PAN card | The **Print Card** button at the end of the online registration | The finished application |
-| Check a PAN number | [IRD PAN search](/ird-pan-search/) | The PAN number |
-| Register a business PAN | The same portal → **Application For Business Registration** | Your business details |
-
-Don't have your NID number to hand? The [NID card check guide](/nid-card-check-nepal/) shows how to find it.
-
-## What is a PAN card? (PAN full form)
-
-**PAN** stands for **Permanent Account Number**. IRD calls it <span lang="ne">स्थायी लेखा नम्बर</span> (PAN). It is your tax number in Nepal, issued by IRD. A **personal PAN** (IRD calls it PPAN) is the PAN for an individual. A business gets its own business PAN. The **PAN card** is the printed card that shows your number.
-
-Who needs one? IRD's policy called **"PAN for all"** (<span lang="ne">सबैका लागि स्थायी लेखा नम्बर</span>) says that anyone who earns income in a fiscal year, such as a salary, allowance, wages or house rent, must take a personal PAN ([IRD FAQ](https://ird.gov.np/faq/)).
+IRD's policy called **"PAN for all"** (<span lang="ne">सबैका लागि स्थायी लेखा नम्बर</span>) says that anyone who earns income in a fiscal year, such as a salary, allowance, wages or house rent, must take a personal PAN ([IRD FAQ](https://ird.gov.np/faq/)).
 
 ## Online PAN card registration with your NID: step by step
 
@@ -44,7 +31,7 @@ The page says: "If you have a National ID(NID), enter the mobile number register
 
 ![PAN registration page asking for the mobile number registered in the NID system, a captcha and the Continue button](/images/posts/pan/pan-2-nid-mobile.webp "Step 2: the mobile number registered in the NID system, the captcha, then Continue")
 
-It must be the number on your NID record, not just any number you use. If you changed numbers, see [No OTP?](#no-nid-yet-or-no-otp) below.
+It must be the number on your NID record, not just any number you use. If you changed numbers, see the OTP question in the [FAQ](#frequently-asked-questions) below.
 
 ### Step 3: Type the OTP
 
@@ -70,7 +57,7 @@ The form opens with these tabs: **Personal Info**, **Address**, **Documents**, *
 - **Address:** permanent address, with tick boxes to copy it as your temporary or mailing address.
 - **Documents:** your citizenship certificate details are listed here.
 - **Relatives:** add family members' names.
-- **Financial Info:** your source of income (employment, investment, business, occupation or others) and, if you like, your bank account. The form notes: "Bank details are not mandatory, but providing them will make the tax refund process easier."
+- **Financial Info:** your source of income (employment, investment, business, occupation or others) and, if you like, your bank account.
 
 Dates on IRD forms are in Bikram Sambat. To check a BS date, use the [Nepali date converter](/tools/nepali-date-converter/).
 
@@ -84,19 +71,7 @@ A success message says your registration is complete and your PAN has been creat
 
 ## How to print or download your PAN card
 
-At the end of the online registration, the success message points you to the **Print Card** button. Use your browser's print option to print the card or save it as a PDF. If you lose a personal PAN card later, IRD's FAQ says you can print it again from your **taxpayer login**, or apply at the office that holds your PAN ([IRD FAQ](https://ird.gov.np/faq/)).
-
-## After you register: check your PAN number
-
-Once you have a PAN, you or anyone you deal with can check the number on IRD's free **PAN search** page, [ird.gov.np/pan-search](https://ird.gov.np/pan-search/). It searches by PAN number only, not by name. For the steps, the IRD Nepal app and what to do if you forgot your PAN, see the full [IRD PAN search guide](/ird-pan-search/).
-
-## No NID yet, or no OTP?
-
-The online PAN route depends on your NID. It sends the OTP only to the **mobile number registered in the NID system**.
-
-- **No NID yet:** register for your national ID first. See [NID pre-enrollment and registration](/nid-card-check-nepal/#don-and-39-t-have-an-nid-yet-nid-pre-enrollment-and-registration). For a PAN without an NID, ask your nearest Inland Revenue Office or Taxpayer Service Office. IRD lists its personal PAN registration and amendment form (<span lang="ne">व्यक्तिगत पान दर्ता तथा संशोधन फाराम</span>) on its [PAN forms page](https://ird.gov.np/category/pan/).
-- **No OTP:** your NID may have an old number, or no number at all. The NID guide explains [how to update the mobile number on your NID](/nid-card-check-nepal/#no-otp-your-mobile-number-isn-and-39-t-linked-to-your-nid).
-- **Don't know your NID number:** find it with the [NID card check](/nid-card-check-nepal/).
+Print or save the card with **Print Card** as soon as you finish (Step 7). If you lose a personal PAN card later, IRD's FAQ says you can print it again from your **taxpayer login**, or apply at the office that holds your PAN ([IRD FAQ](https://ird.gov.np/faq/)).
 
 ## IRD PAN login: which taxpayer portal?
 
@@ -138,11 +113,11 @@ IRD also has the **IRD Nepal** app for [Android](https://play.google.com/store/a
 
 **Can I do PAN card registration online in Nepal?** Yes. IRD's new taxpayer portal creates a personal PAN online from your national ID number. You need the mobile number registered with your NID for the OTP. IRD explained the process in a video on 21 November 2025.
 
-**What is the full form of PAN?** PAN stands for Permanent Account Number, स्थायी लेखा नम्बर in Nepali. It is the tax number that the Inland Revenue Department (IRD) gives to individuals (personal PAN) and to businesses (business PAN).
+**What is the full form of PAN?** PAN stands for Permanent Account Number, स्थायी लेखा नम्बर in Nepali. It is the tax number that the Inland Revenue Department (IRD) gives to individuals and to businesses. IRD calls a personal PAN "PPAN", and the PAN card is the printed card that shows your number.
 
-**Can I get a PAN without an NID?** The online route needs an NID and its registered mobile number. Without one, register for your NID first, or ask your nearest Inland Revenue Office or Taxpayer Service Office. IRD lists the personal PAN registration form on its PAN forms page.
+**Can I get a PAN without an NID?** The online route needs an NID and its registered mobile number. Without one, [register for your NID](/nid-card-check-nepal/#don-and-39-t-have-an-nid-yet-nid-pre-enrollment-and-registration) first, or ask your nearest Inland Revenue Office or Taxpayer Service Office. IRD lists the personal PAN registration form on its [PAN forms page](https://ird.gov.np/category/pan/).
 
-**Why am I not getting the OTP for PAN registration?** The OTP goes only to the mobile number registered in the NID system. If your NID has an old number or none, update it at an NID registration unit, then try again. Check that you typed the number and the captcha correctly.
+**Why am I not getting the OTP for PAN registration?** The OTP goes only to the mobile number registered in the NID system. If your NID has an old number or none, [update it at an NID registration unit](/nid-card-check-nepal/#no-otp-your-mobile-number-isn-and-39-t-linked-to-your-nid), then try again. Check that you typed the number and the captcha correctly.
 
 **Do I need to give bank details for a PAN?** No. The Financial Info tab says bank details are not mandatory, but giving them makes the tax refund process easier. You can add your bank, branch and account number if you want refunds paid straight into your account.
 
