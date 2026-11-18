@@ -31,7 +31,7 @@ export function renderAbout(version) {
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
 <h2>Who writes it</h2>
-<p>I’m <strong>${esc(site.author.name)}</strong>, an ${esc(site.author.role.replace('Software Engineer', 'software engineer'))} from Nepal, now living in ${esc(site.author.location)}. I have an MSc in Artificial Intelligence (Distinction) from Aston University, and before that I was a software engineer at Accenture. I build software for a living, and Hamropedia is where I share what I have learned with students, learners and readers everywhere.</p>
+<p>I’m <strong>${esc(site.author.name)}</strong>, an ${esc(site.author.role.replace('Software Engineer', 'software engineer'))} from Nepal, now living in ${esc(site.author.location)}. I have an MSc in Artificial Intelligence from Aston University, and before that I was a software engineer at Accenture. I build software for a living, and Hamropedia is where I share what I have learned with students, learners and readers everywhere.</p>
 <p>You can see my work on <a href="${site.social.github}" target="_blank" rel="noopener">GitHub</a> and my <a href="${site.social.portfolio}" target="_blank" rel="noopener">portfolio</a>, or connect on <a href="${site.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.</p>
 <p>I also run <a href="${site.digital.url}">${esc(site.digital.name)}</a>, where I build simple websites and AI assistants for small businesses in the UK.</p>
 ${supportUrl ? `<h2>Support Hamropedia</h2>
