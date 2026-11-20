@@ -16,10 +16,10 @@ function learningBand() {
       <p class="eyebrow">Free courses</p>
       <h2>Learn AI, SQL and system design from zero</h2>
       <p>The free courses are on ${esc(learningPath.name)}: a step-by-step path where every lesson has an animation, a diagram, worked code and exercises with answers. Sign in with Google to track your progress.</p>
-      <a class="btn btn-lg" href="${learningPath.url}">Open ${esc(learningPath.name)} ${ICONS.arrow}</a>
+      <a class="btn btn-lg" href="${learningPath.url}" target="_blank" rel="noopener">Open ${esc(learningPath.name)} ${ICONS.arrow}</a>
     </div>
     <ol class="band-phases">
-      ${courses.map(([hash, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${learningPath.url}${hash}"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
+      ${courses.map(([hash, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${learningPath.url}${hash}" target="_blank" rel="noopener"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
     </ol>
   </div>
 </section>`;

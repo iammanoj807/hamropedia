@@ -132,7 +132,7 @@ ${scripts}
 }
 
 function header(section, lang) {
-  const link = (n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}${n.lang ? ` lang="${n.lang}"` : ''}>${esc(n.label)}</a>`;
+  const link = (n) => `<a href="${n.href}"${section === n.href ? ' aria-current="page"' : ''}${n.lang ? ` lang="${n.lang}"` : ''}${n.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${esc(n.label)}</a>`;
   const links = (lang === 'ne' ? navNe : nav)
     .map((n) => (n.children
       ? `<div class="nav-group">${link(n).replace('</a>', `${ICONS.caret}</a>`)}<div class="nav-sub">${n.children.map(link).join('')}</div></div>`
@@ -185,10 +185,10 @@ function footer() {
     <div>
       <h2 class="footer-h">Free courses</h2>
       <ul>
-        <li><a href="${learningPath.url}#/foundations">ML Foundations</a></li>
-        <li><a href="${learningPath.url}#/sql">SQL</a></li>
-        <li><a href="${learningPath.url}#/system-design">System Design</a></li>
-        <li><a href="${learningPath.url}">AI Engineer Path</a></li>
+        <li><a href="${learningPath.url}#/foundations" target="_blank" rel="noopener">ML Foundations</a></li>
+        <li><a href="${learningPath.url}#/sql" target="_blank" rel="noopener">SQL</a></li>
+        <li><a href="${learningPath.url}#/system-design" target="_blank" rel="noopener">System Design</a></li>
+        <li><a href="${learningPath.url}" target="_blank" rel="noopener">AI Engineer Path</a></li>
       </ul>
     </div>
     <div>

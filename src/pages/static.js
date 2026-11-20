@@ -27,7 +27,7 @@ export function renderAbout(version) {
 <p>Hamropedia (<span lang="ne">हाम्रो</span>, “our”, + encyclopedia) started in ${site.established} as a small blog for Nepali students. It is now a hand-built site with three jobs:</p>
 <ul>
 <li><strong>Free tools</strong> that people actually search for every day: <a href="/tools/english-to-nepali/">English to Nepali typing</a>, a <a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a>, a <a href="/tools/nepali-keyboard/">Nepali keyboard</a>, a <a href="/tools/nepali-date-converter/">Nepali date converter</a> and a <a href="/tools/dv-photo-tool/">DV lottery photo tool</a>.</li>
-<li><strong>Learning</strong>: articles on <a href="/category/ai/">AI and machine learning</a>. The free courses (ML foundations, SQL and system design) are on <a href="${learningPath.url}">${esc(learningPath.name)}</a>, a separate learning site.</li>
+<li><strong>Learning</strong>: articles on <a href="/category/ai/">AI and machine learning</a>. The free courses (ML foundations, SQL and system design) are on <a href="${learningPath.url}" target="_blank" rel="noopener">${esc(learningPath.name)}</a>, a separate learning site.</li>
 <li><strong>Guides and news</strong>: <a href="/category/study-abroad/">study-abroad guides</a> (NOC, WES, UK visas) and <a href="/news/">Nepal news explainers</a>, each linked to its sources.</li>
 </ul>
 <h2>Who writes it</h2>
@@ -190,7 +190,7 @@ export function render404(version) {
     <li><a href="/tools/preeti-to-unicode/">Preeti to Unicode converter</a></li>
     <li><a href="/tools/nepali-keyboard/">Nepali keyboard</a></li>
     <li><a href="/tools/dv-photo-tool/">DV lottery photo tool</a></li>
-    <li><a href="${learningPath.url}">Free courses on ${esc(learningPath.name)}</a></li>
+    <li><a href="${learningPath.url}" target="_blank" rel="noopener">Free courses on ${esc(learningPath.name)}</a></li>
     <li><a href="/blog/">All articles</a></li>
     <li><a href="/news/">News</a></li>
   </ul>

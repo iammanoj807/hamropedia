@@ -74,7 +74,7 @@ export const categories = {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
-    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-machine-learning-free/">how to learn machine learning for free</a> for a realistic plan, then follow <a href="https://iammanoj807.github.io/ai-engineer-path/">AI Engineer Path</a>, a free step-by-step learning path from Python and maths to transformers, RAG and agents, with SQL and system design too.',
+    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-machine-learning-free/">how to learn machine learning for free</a> for a realistic plan, then follow <a href="https://iammanoj807.github.io/ai-engineer-path/" target="_blank" rel="noopener">AI Engineer Path</a>, a free step-by-step learning path from Python and maths to transformers, RAG and agents, with SQL and system design too.',
     hue: 'violet',
   },
   nepal: {
