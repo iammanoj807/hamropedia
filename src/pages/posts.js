@@ -1,4 +1,4 @@
-import { site, categories } from '../data/site.js';
+import { site, categories, learningPath } from '../data/site.js';
 import { esc, longDate, isoDate, abs } from '../lib/util.js';
 import { layout } from '../templates/layout.js';
 import {
@@ -140,7 +140,7 @@ ${post.html}
     lang,
     alternates: translation ? [{ lang, path: post.url }, { lang: translation.lang || 'en', path: translation.url }] : [],
     head: `<meta property="article:published_time" content="${isoDate(post.date)}">\n<meta property="article:modified_time" content="${isoDate(post.updated || post.date)}">\n<meta property="article:section" content="${esc(categories[post.category].name)}">`,
-    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : post.category === 'ai' ? '/learn/' : '/blog/',
+    section: ne ? '/ne/' : post.type === 'news' ? '/news/' : '/blog/',
   });
 }
 
@@ -156,7 +156,7 @@ export function renderBlogIndex(posts, version) {
     crumbs: [{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }],
     eyebrow: 'The blog',
     title: 'Guides, roadmaps and explainers',
-    lead: 'Study-abroad steps that match the official sites, AI guides, and Nepal news explained with sources. Every article shows when it was published and last checked. For full courses, see <a href="/learn/">Learn &amp; Build</a>.',
+    lead: 'Study-abroad steps that match the official sites, AI guides, and Nepal news explained with sources. Every article shows when it was published and last checked. For free courses, see <a href="' + learningPath.url + '">AI Engineer Path</a>.',
   })}
 <section class="wrap blog-tools" id="search">
   <label class="search-box"><span class="sr-only">Search articles</span>
@@ -196,7 +196,7 @@ export function renderCategory(slug, posts, version) {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }, { name: c.name, path: `/category/${slug}/` }];
   const extra =
     slug === 'ai'
-      ? `<a class="banner" href="/ai-roadmap/"><strong>The free AI &amp; ML roadmap</strong><span>8 phases and 98 lessons, each with an animation, a diagram and exercises with answers.</span></a>`
+      ? `<a class="banner" href="${learningPath.url}"><strong>Free courses on ${esc(learningPath.name)}</strong><span>ML foundations, SQL and system design, step by step: every lesson has an animation, a diagram and exercises with answers.</span></a>`
       : slug === 'nepal'
         ? `<a class="banner" href="/ne/" lang="ne"><strong>नेपाली समाचार</strong><span>यी समाचार नेपाली भाषामा पढ्नुहोस्।</span></a>`
         : '';
@@ -212,7 +212,7 @@ export function renderCategory(slug, posts, version) {
     path: `/category/${slug}/`,
     body,
     version,
-    section: slug === 'ai' ? '/learn/' : '/blog/',
+    section: '/blog/',
     schema: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: c.name, url: `${site.url}/category/${slug}/`, description: c.description },
       breadcrumbSchema(crumbs),

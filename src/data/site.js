@@ -5,7 +5,7 @@ export const site = {
   url: 'https://hamropedia.com', // no trailing slash
   tagline: 'News, guides and learning, explained simply',
   description:
-    'Study-abroad guides (NOC, WES, UK visas, EDV), news explained simply in English and Nepali, and free courses in AI, system design, SQL and DSA.',
+    'Study-abroad guides (NOC, WES, UK visas, EDV), news explained simply in English and Nepali, and free tools for typing and dates in Nepali.',
   locale: 'en_GB',
   lang: 'en',
   author: {
@@ -26,7 +26,7 @@ export const site = {
   digital: { name: 'Hamropedia Digital', url: 'https://digital.hamropedia.com/' },
   // Buy Me a Coffee username (buymeacoffee.com/<username>). Leave empty and no support
   // buttons appear anywhere; fill it in and they appear in the header, footer, About page
-  // and at the end of every article and lesson.
+  // and at the end of every article.
   support: { buyMeACoffee: 'manojthapa' },
   // Paste the content value of Google Search Console's HTML-tag verification here.
   googleSiteVerification: '',
@@ -38,18 +38,16 @@ export const site = {
   established: 2024,
 };
 
+/** The free courses (ML foundations, SQL, system design) live on their own site. */
+export const learningPath = {
+  name: 'AI Engineer Path',
+  url: 'https://iammanoj807.github.io/ai-engineer-path/',
+};
+
 export const nav = [
   { href: '/news/', label: 'News' },
   { href: '/blog/', label: 'Blog' },
-  {
-    href: '/learn/', label: 'Learn & Build',
-    children: [
-      { href: '/ai-roadmap/', label: 'AI & ML Roadmap' },
-      { href: '/system-design/', label: 'System Design' },
-      { href: '/sql/', label: 'SQL' },
-      { href: '/dsa/', label: 'DSA (NeetCode 150)' },
-    ],
-  },
+  { href: learningPath.url, label: 'Free courses' },
   { href: '/tools/', label: 'Tools' },
   { href: '/about-us/', label: 'About' },
 ];
@@ -58,15 +56,7 @@ export const nav = [
 export const navNe = [
   { href: '/ne/', label: 'समाचार' },
   { href: '/blog/', label: 'ब्लग' },
-  {
-    href: '/learn/', label: 'सिक्नुहोस्',
-    children: [
-      { href: '/ai-roadmap/', label: 'एआई तथा एमएल रोडम्याप' },
-      { href: '/system-design/', label: 'सिस्टम डिजाइन' },
-      { href: '/sql/', label: 'एसक्यूएल (SQL)' },
-      { href: '/dsa/', label: 'डीएसए (NeetCode 150)' },
-    ],
-  },
+  { href: learningPath.url, label: 'निःशुल्क कोर्स' },
   { href: '/tools/', label: 'टुल्स' },
   { href: '/news/', label: 'English', lang: 'en' },
 ];
@@ -84,7 +74,7 @@ export const categories = {
     name: 'AI & Machine Learning',
     nameNe: 'एआई र मेसिन लर्निङ',
     description: 'Learn AI and machine learning for free, and follow the AI news that matters.',
-    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-machine-learning-free/">how to learn machine learning for free</a> for a realistic plan, then follow the <a href="/ai-roadmap/">AI engineer roadmap</a>: 98 lessons from Python and maths to transformers, RAG and agents.',
+    intro: 'Learn AI and machine learning properly, for free. Read <a href="/how-to-learn-machine-learning-free/">how to learn machine learning for free</a> for a realistic plan, then follow <a href="https://iammanoj807.github.io/ai-engineer-path/">AI Engineer Path</a>, a free step-by-step learning path from Python and maths to transformers, RAG and agents, with SQL and system design too.',
     hue: 'violet',
   },
   nepal: {

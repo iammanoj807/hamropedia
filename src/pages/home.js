@@ -1,8 +1,29 @@
-import { site } from '../data/site.js';
+import { site, learningPath } from '../data/site.js';
 import { esc } from '../lib/util.js';
 import { layout, ICONS } from '../templates/layout.js';
 import { postCard, categoryChip, displayDate, byLatestActivity } from '../templates/components.js';
-import { roadmapBand } from './learn.js';
+
+/** The free courses, which now live on AI Engineer Path. */
+function learningBand() {
+  const courses = [
+    ['#/foundations', 'ML Foundations', 'maths, ML, deep learning and LLMs', '#2563eb'],
+    ['#/sql', 'SQL, with a query runner', 'from SELECT to interview problems', '#0d9488'],
+    ['#/system-design', 'System Design', 'the building blocks, then full designs', '#0891b2'],
+  ];
+  return `<section class="roadmap-band">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow">Free courses</p>
+      <h2>Learn AI, SQL and system design from zero</h2>
+      <p>The free courses are on ${esc(learningPath.name)}: a step-by-step path where every lesson has an animation, a diagram, worked code and exercises with answers. Sign in with Google to track your progress.</p>
+      <a class="btn btn-lg" href="${learningPath.url}">Open ${esc(learningPath.name)} ${ICONS.arrow}</a>
+    </div>
+    <ol class="band-phases">
+      ${courses.map(([hash, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${learningPath.url}${hash}"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
+    </ol>
+  </div>
+</section>`;
+}
 
 export function renderHome(posts, version) {
   const guides = posts.filter((p) => p.type !== 'news');
@@ -26,7 +47,7 @@ export function renderHome(posts, version) {
     <div class="hero-copy">
       <p class="eyebrow">Hamropedia · <span lang="ne">हाम्रोपेडिया</span></p>
       <h1>News, study-abroad guides and learning, <em>explained simply</em>.</h1>
-      <p class="lead">Clear, sourced guides for studying abroad, the news that matters, and free courses in AI, system design, SQL and DSA, written in plain language for everyone.</p>
+      <p class="lead">Clear, sourced guides for studying abroad, the news that matters, and free Nepali tools, written in plain language for everyone.</p>
       <div class="hero-cta">
         <a class="btn btn-lg" href="/news/">Read the latest news</a>
         <a class="btn-ghost btn-lg" href="/blog/">Explore the guides</a>
@@ -67,11 +88,11 @@ export function renderHome(posts, version) {
 </section>
 
 <section class="wrap section">
-  <div class="section-head"><h2>Learn AI for free</h2><a href="/learn/">All courses</a></div>
+  <div class="section-head"><h2>Learn AI for free</h2><a href="/category/ai/">All AI articles</a></div>
   <div class="grid grid-3">${learning.map((p) => postCard(p)).join('')}</div>
 </section>
 
-${roadmapBand()}
+${learningBand()}
 
 <section class="wrap section promise">
   <div>

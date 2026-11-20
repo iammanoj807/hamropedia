@@ -1,6 +1,6 @@
 # Hamropedia
 
-> Hamropedia (hamropedia.com) is a free website by Manoj Kumar Thapa, an AI software engineer in Birmingham, UK. It has sourced, dated guides for Nepali students going abroad, Nepal news explainers, four free courses (AI & ML, System Design, SQL, DSA) and free Nepali tools. Every article links to the official or named sources it is based on.
+> Hamropedia (hamropedia.com) is a free website by Manoj Kumar Thapa, an AI software engineer in Birmingham, UK. It has sourced, dated guides for Nepali students going abroad, Nepal news explainers, articles on learning AI and free Nepali tools. Every article links to the official or named sources it is based on.
 
 ## Study abroad guides
 - [NOC online in Nepal](https://hamropedia.com/noc-nepal-apply-online/): how to apply for the No Objection Certificate, documents by level, the NRs 2,000 fee and status check
@@ -21,12 +21,9 @@
 - [Driving licence online form in Nepal: apply and renew on DoTM eDLVRS](https://hamropedia.com/driving-licence-online-form/)
 - [Nepali news in Nepali](https://hamropedia.com/ne/)
 
-## Free courses
-- [AI & Machine Learning roadmap](https://hamropedia.com/ai-roadmap/): 98 lessons, from NumPy to LLMs, RAG and agents
-- [System Design](https://hamropedia.com/system-design/): 72 lessons on high-level design, low-level design and AI/ML design
-- [SQL](https://hamropedia.com/sql/): 61 lessons with a query runner in the browser
-- [DSA: the NeetCode 150](https://hamropedia.com/dsa/): 18 patterns and 150 problems
-- [Learn & Build](https://hamropedia.com/learn/): where to start
+## Learning AI
+- [How to learn machine learning and AI for free: a realistic roadmap](https://hamropedia.com/how-to-learn-machine-learning-free/)
+- [AI Engineer Path](https://iammanoj807.github.io/ai-engineer-path/): the author's free courses in ML foundations, SQL and system design, on a separate site
 
 ## Free tools
 - [Nepali typing: English to Nepali Unicode](https://hamropedia.com/tools/english-to-nepali/)

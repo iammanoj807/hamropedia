@@ -3,6 +3,7 @@ title: "How to Learn Machine Learning and AI for Free: A Realistic Roadmap"
 seoTitle: "How to Learn Machine Learning and AI for Free: 2026 Roadmap"
 description: "How to learn machine learning for free: a realistic path into AI, what to learn first, the best free courses and videos, the tools you need, standout projects."
 date: 2026-11-07
+updated: 2026-11-20
 category: ai
 tags: [ai, machine learning, roadmap, learning, python]
 coverWord: "Learn AI"
@@ -11,20 +12,20 @@ coverAlt: "A free roadmap for learning AI and machine learning"
 
 Wondering **how to learn machine learning** without paying for a single course? You can **learn machine learning for free**, and learn it well. The best teaching material anywhere, from Stanford, MIT, Harvard, 3Blue1Brown and Andrej Karpathy, costs nothing online. What's hard is not finding resources but **deciding what to learn, in which order, and what to leave out**.
 
-The [Hamropedia AI & ML Roadmap](/ai-roadmap/) solves exactly that: 8 phases and 98 complete lessons, in sequence. Each lesson comes with an animation, a diagram, worked code and four exercises with answers, plus a short list of free videos and readings if you'd like a second explanation. Here is how to get the most out of it.
+[AI Engineer Path](https://iammanoj807.github.io/ai-engineer-path/), a free learning path by the author of Hamropedia, solves exactly that: 8 phases and 98 complete lessons, in sequence. Each lesson comes with an animation, a diagram, worked code and four exercises with answers, plus a short list of free videos and readings if you'd like a second explanation. Here is how to get the most out of it.
 
 ## The AI roadmap: 8 phases
 
 | Phase | What you learn | Why it matters |
 |---|---|---|
-| [0. Your toolkit](/ai-roadmap/your-toolkit/) | Python, NumPy, Git, the command line | Every later phase uses them daily |
-| [1. Math foundations](/ai-roadmap/math-foundations/) | Linear algebra, calculus, probability | The language every model is written in |
-| [2. Classical ML](/ai-roadmap/classical-ml-built-by-you/) | Regression, trees, evaluation, built in NumPy | Understanding *why* models work and fail |
-| [3. Deep learning](/ai-roadmap/deep-learning-foundations/) | Neural networks, backprop, PyTorch | The engine behind modern AI |
-| [4. Transformers & LLMs](/ai-roadmap/transformers-and-llms/) | Attention, tokenisers, building a small GPT | How ChatGPT-style models work inside |
-| [5. AI engineering](/ai-roadmap/ai-engineering/) | RAG, evaluation, agents, deployment | The core of most AI engineer jobs |
-| [6. Systems & scale](/ai-roadmap/systems-and-scale/) | GPUs, memory, speed, multi-GPU training | Making models fast and cheap |
-| [7. Generative models & RL](/ai-roadmap/generative-models-and-reinforcement-learning/) | VAEs, diffusion, reinforcement learning | Image generators and RLHF |
+| [0. Your toolkit](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=toolkit) | Python, NumPy, Git, the command line | Every later phase uses them daily |
+| [1. Math foundations](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=math) | Linear algebra, calculus, probability | The language every model is written in |
+| [2. Classical ML](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=classical-ml) | Regression, trees, evaluation, built in NumPy | Understanding *why* models work and fail |
+| [3. Deep learning](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=deep-learning) | Neural networks, backprop, PyTorch | The engine behind modern AI |
+| [4. Transformers & LLMs](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=llms) | Attention, tokenisers, building a small GPT | How ChatGPT-style models work inside |
+| [5. AI engineering](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=ai-engineering) | RAG, evaluation, agents, deployment | The core of most AI engineer jobs |
+| [6. Systems & scale](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=systems) | GPUs, memory, speed, multi-GPU training | Making models fast and cheap |
+| [7. Generative models & RL](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=generative-rl) | VAEs, diffusion, reinforcement learning | Image generators and RLHF |
 
 ## Five rules that matter more than any course
 
@@ -44,9 +45,9 @@ The [Hamropedia AI & ML Roadmap](/ai-roadmap/) solves exactly that: 8 phases and
 - **Transformers:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and Karpathy's "Let's build GPT".
 - **AI engineering:** [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain.
 
-Every lesson in the [roadmap](/ai-roadmap/) carries the complete list for its topic, sorted by type (video, interactive, reading, code, paper).
+Every lesson in the [roadmap](https://iammanoj807.github.io/ai-engineer-path/#/foundations) on AI Engineer Path carries the complete list for its topic, sorted by type (video, interactive, reading, code, paper).
 
-Want an AI engineer job? The interviews usually go beyond machine learning, and Hamropedia covers those parts for free as well: [SQL](/sql/) with a query runner in your browser, [DSA with the NeetCode 150](/dsa/) for the coding rounds, and [System Design](/system-design/), including [AI and ML system design](/system-design/ai-ml-design/). The [Start here map](/learn/#start-here) suggests when to fit them in alongside the roadmap.
+Want an AI engineer job? The interviews usually go beyond machine learning, and AI Engineer Path covers those parts for free as well: [SQL](https://iammanoj807.github.io/ai-engineer-path/#/sql) with a query runner in your browser, and [System Design](https://iammanoj807.github.io/ai-engineer-path/#/system-design), including [AI and ML system design](https://iammanoj807.github.io/ai-engineer-path/#/system-design?unit=ai-ml-design). For the coding rounds, practise the [NeetCode 150](https://neetcode.io/practice) problems.
 
 ## What you need
 
@@ -67,7 +68,7 @@ Publish each one on GitHub with a short README covering the problem, the data, h
 
 ## Frequently asked questions
 
-**Can I learn machine learning for free?** Yes. The best courses and books are free online, and the [Hamropedia AI & ML roadmap](/ai-roadmap/) arranges them into 98 free lessons. A laptop is all you need, and free cloud notebooks such as Google Colab supply a GPU when you want one.
+**Can I learn machine learning for free?** Yes. The best courses and books are free online, and the free [AI Engineer Path](https://iammanoj807.github.io/ai-engineer-path/#/foundations) roadmap arranges them into 98 lessons. A laptop is all you need, and free cloud notebooks such as Google Colab supply a GPU when you want one.
 
 **How do I teach myself machine learning?** Stick to one ordered path rather than collecting courses: Python and NumPy, then the maths, then classical ML, then deep learning. Finish each stage with a small project.
 
@@ -77,7 +78,7 @@ Publish each one on GitHub with a short README covering the problem, the data, h
 
 **Can I do machine learning without maths?** You can call ML libraries with little maths, but understanding, debugging and improving models needs some linear algebra, calculus and probability. Phase 1 of the roadmap covers just the parts you need.
 
-**How do I become an AI engineer?** Learn Python and the maths, then classical ML, deep learning and LLMs, and end with AI engineering: retrieval (RAG), evaluation, agents and deployment. Build and publish a project at every stage. The [AI & ML roadmap](/ai-roadmap/) follows that exact order.
+**How do I become an AI engineer?** Learn Python and the maths, then classical ML, deep learning and LLMs, and end with AI engineering: retrieval (RAG), evaluation, agents and deployment. Build and publish a project at every stage. The [AI Engineer Path roadmap](https://iammanoj807.github.io/ai-engineer-path/#/foundations) follows that exact order.
 
 **Python or C++ for AI?** Python. C++ runs inside the libraries for speed, but the AI code you write is Python.
 
@@ -91,4 +92,4 @@ Publish each one on GitHub with a short README covering the problem, the data, h
 
 ---
 
-Start now: [Phase 0: Your toolkit →](/ai-roadmap/your-toolkit/)
+Start now: [Phase 0: Your toolkit →](https://iammanoj807.github.io/ai-engineer-path/#/foundations?unit=toolkit)

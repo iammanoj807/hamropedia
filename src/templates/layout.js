@@ -1,4 +1,4 @@
-import { site, nav, navNe, categories } from '../data/site.js';
+import { site, nav, navNe, categories, learningPath } from '../data/site.js';
 import { esc, jsonLd, abs } from '../lib/util.js';
 
 /** The Buy Me a Coffee page, or '' when no username is set (then no support buttons appear). */
@@ -185,11 +185,10 @@ function footer() {
     <div>
       <h2 class="footer-h">Free courses</h2>
       <ul>
-        <li><a href="/ai-roadmap/">AI &amp; ML Roadmap</a></li>
-        <li><a href="/system-design/">System Design</a></li>
-        <li><a href="/sql/">SQL</a></li>
-        <li><a href="/dsa/">DSA (NeetCode 150)</a></li>
-        <li><a href="/learn/#start-here">Start here</a></li>
+        <li><a href="${learningPath.url}#/foundations">ML Foundations</a></li>
+        <li><a href="${learningPath.url}#/sql">SQL</a></li>
+        <li><a href="${learningPath.url}#/system-design">System Design</a></li>
+        <li><a href="${learningPath.url}">AI Engineer Path</a></li>
       </ul>
     </div>
     <div>

@@ -2,7 +2,7 @@
   "name": "hamropedia",
   "version": "1.0.0",
   "private": true,
-  "description": "Hamropedia.com: Nepali tools, AI & ML roadmap, study-abroad guides and Nepal news. A hand-built static site.",
+  "description": "Hamropedia.com: Nepali tools, study-abroad guides and Nepal news. A hand-built static site.",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -13,11 +13,9 @@
     "serve": "node serve.mjs",
     "test": "node --test tests/*.test.mjs",
     "covers": "node scripts/make-covers.mjs",
-    "check-links": "node scripts/check-links.mjs",
     "verify": "node scripts/verify-site.mjs",
     "check-post-links": "node scripts/check-post-links.mjs",
-    "check-translations": "node scripts/check-translations.mjs",
-    "sync-courses": "node scripts/sync-courses.mjs"
+    "check-translations": "node scripts/check-translations.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

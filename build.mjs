@@ -8,13 +8,8 @@ import { site, categories, redirects } from './src/data/site.js';
 import { renderMarkdown, extractFaqs } from './src/lib/markdown.js';
 import { readingMinutes, isoDate, rfc822, esc } from './src/lib/util.js';
 import { renderPost, renderBlogIndex, renderCategory, renderNews, renderNeHub } from './src/pages/posts.js';
-import { renderRoadmapIndex, renderPhase, renderLessons, lessonAnimations, phases } from './src/pages/roadmap.js';
 import { renderToolsHub, renderRomanized, renderPreeti, renderKeyboard, renderDate, renderDvPhoto, TOOLS } from './src/pages/tools.js';
 import { renderHome } from './src/pages/home.js';
-import { renderLearn } from './src/pages/learn.js';
-import { renderSdIndex, renderSdPhase, renderSdLessons, renderSdRevise, sdAnimations, sdPhases } from './src/pages/system-design.js';
-import { renderSqlIndex, renderSqlDatabase, renderSqlPhase, renderSqlLessons, renderSqlRevise, sqlAnimations, sqlPracticeDb, sqlPhases } from './src/pages/sql.js';
-import { renderDsaHub, renderDsaTopic, renderDsaPatterns, dsaAnimations, dsaTopics } from './src/pages/dsa.js';
 import { renderAbout, renderContact, renderPrivacy, renderTerms, render404, renderRedirect } from './src/pages/static.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -144,31 +139,6 @@ for (const slug of Object.keys(categories)) {
 for (const p of posts) add(p.url, renderPost(p, posts, version, neBySlug.get(p.slug)));
 for (const p of nePosts) add(p.url, renderPost(p, nePosts, version, enBySlug.get(p.slug)));
 
-add('/learn/', renderLearn(posts, version));
-add('/ai-roadmap/', renderRoadmapIndex(version));
-phases.forEach((p, i) => add(`/ai-roadmap/${p.slug}/`, renderPhase(p, i, version)));
-const lessons = renderLessons(version);
-for (const [p, html] of lessons) add(p, html);
-// Each lesson's animation, fetched by the player only when it comes into view.
-add('/system-design/', renderSdIndex(version));
-sdPhases.forEach((p, i) => add(`/system-design/${p.slug}/`, renderSdPhase(p, i, version)));
-const sdLessons = renderSdLessons(version);
-for (const [p, html] of sdLessons) add(p, html);
-add('/system-design/revise/', renderSdRevise(version));
-add('/sql/', renderSqlIndex(version));
-add('/sql/practice-database/', renderSqlDatabase(version));
-sqlPhases.forEach((p, i) => add(`/sql/${p.slug}/`, renderSqlPhase(p, i, version)));
-const sqlLessons = renderSqlLessons(version);
-for (const [p, html] of sqlLessons) add(p, html);
-add('/sql/revise/', renderSqlRevise(version));
-add('/dsa/', renderDsaHub(version));
-add('/dsa/patterns/', renderDsaPatterns(version));
-for (const t of dsaTopics) add(`/dsa/${t.slug}/`, renderDsaTopic(t, version));
-for (const [file, json] of [...lessonAnimations(), ...sdAnimations(), ...sqlAnimations(), ...sqlPracticeDb(), ...dsaAnimations()]) {
-  fs.mkdirSync(path.dirname(path.join(DIST, file)), { recursive: true });
-  fs.writeFileSync(path.join(DIST, file), json);
-}
-
 add('/tools/', renderToolsHub(version));
 add('/tools/english-to-nepali/', renderRomanized(version));
 add('/tools/preeti-to-unicode/', renderPreeti(version));
@@ -271,5 +241,5 @@ try {
 }
 
 console.log(
-  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts (${nePosts.length} in Nepali), ${phases.length} roadmap phases with ${lessons.length} lessons, ${sdLessons.length} system design lessons, ${sqlLessons.length} SQL lessons, ${dsaTopics.length} DSA topics, ${TOOLS.length} tools, ${minified} CSS/JS files minified in ${Date.now() - t0} ms`,
+  `Built ${pages.size} pages + ${redirects.length} redirects + 404 from ${posts.length} posts (${nePosts.length} in Nepali), ${TOOLS.length} tools, ${minified} CSS/JS files minified in ${Date.now() - t0} ms`,
 );

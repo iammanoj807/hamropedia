@@ -76,7 +76,7 @@ export function breadcrumbSchema(items) {
   };
 }
 
-/** "Hamropedia is free. If this helped you, buy me a coffee", at the end of articles and lessons. */
+/** "Hamropedia is free. If this helped you, buy me a coffee", at the end of articles. */
 export function supportNote(lang = 'en') {
   if (!supportUrl) return '';
   const text = lang === 'ne'

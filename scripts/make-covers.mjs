@@ -1,6 +1,6 @@
 // Generates cover art (WebP, for cards and article heads) and social images
 // (JPG, for Facebook/LinkedIn/X previews) for every post, plus defaults,
-// tool and roadmap images, and the favicons.
+// tool images, and the favicons.
 //   npm run covers            # only creates missing files
 //   npm run covers -- --force # regenerates everything
 import fs from 'node:fs';
@@ -126,12 +126,8 @@ for (const f of fs.readdirSync(postsDir).filter((x) => x.endsWith('.md'))) {
 }
 
 
-// site, roadmap and tools
-await render(coverSvg({ title: 'Nepali tools, free courses in AI, SQL, system design and DSA, and guides you can trust', theme: 'site' }), null, path.join(PUB, 'images/og-default.jpg'));
-await render(coverSvg({ title: 'The free AI & Machine Learning Roadmap: 98 lessons with animations, exercises and answers', theme: 'roadmap' }), null, path.join(PUB, 'images/og/ai-roadmap.jpg'));
-await render(coverSvg({ title: 'The free System Design course: 72 lessons, from building blocks to full designs', theme: 'roadmap' }), null, path.join(PUB, 'images/og/system-design.jpg'));
-await render(coverSvg({ title: 'The free SQL course: from your first SELECT to interview problems, with a query runner', theme: 'roadmap' }), null, path.join(PUB, 'images/og/sql.jpg'));
-await render(coverSvg({ title: 'DSA: the NeetCode 150, one pattern at a time, with reviews that make it stick', theme: 'roadmap' }), null, path.join(PUB, 'images/og/dsa.jpg'));
+// site and tools
+await render(coverSvg({ title: 'Nepali tools, study-abroad guides and news you can trust', theme: 'site' }), null, path.join(PUB, 'images/og-default.jpg'));
 const tools = {
   'english-to-nepali': 'English to Nepali typing, free and instant',
   'preeti-to-unicode': 'Preeti to Unicode converter, and Unicode to Preeti',
