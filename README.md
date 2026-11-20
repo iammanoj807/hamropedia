@@ -10,7 +10,7 @@ updated, and links to the official or named sources it is based on.
 
 The four courses that used to be here (AI & ML Roadmap, System Design, SQL and DSA) were removed
 on 20 November 2026. ML foundations, SQL and system design now live on
-**[AI Engineer Path](https://iammanoj807.github.io/ai-engineer-path/)**, a separate site. The
+**[AI Engineer Path](https://learn.hamropedia.com/)**, a separate site. The
 menu, the footer and the home page link to it.
 
 The old course pages were not redirected: they now show the "page not found" page, so search

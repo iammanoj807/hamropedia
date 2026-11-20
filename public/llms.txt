@@ -23,7 +23,7 @@
 
 ## Learning AI
 - [How to learn machine learning and AI for free: a realistic roadmap](https://hamropedia.com/how-to-learn-machine-learning-free/)
-- [AI Engineer Path](https://iammanoj807.github.io/ai-engineer-path/): the author's free courses in ML foundations, SQL and system design, on a separate site
+- [AI Engineer Path](https://learn.hamropedia.com/): the author's free courses in ML foundations, SQL and system design, on a separate site
 
 ## Free tools
 - [Nepali typing: English to Nepali Unicode](https://hamropedia.com/tools/english-to-nepali/)
