@@ -3,7 +3,7 @@ title: "How to Learn Machine Learning and AI for Free: A Realistic Roadmap"
 seoTitle: "How to Learn Machine Learning and AI for Free: 2026 Roadmap"
 description: "How to learn machine learning for free: a realistic path into AI, what to learn first, the best free courses and videos, the tools you need, standout projects."
 date: 2026-11-07
-updated: 2026-11-20
+updated: 2026-11-22
 category: ai
 tags: [ai, machine learning, roadmap, learning, python]
 coverWord: "Learn AI"
@@ -12,20 +12,20 @@ coverAlt: "A free roadmap for learning AI and machine learning"
 
 Wondering **how to learn machine learning** without paying for a single course? You can **learn machine learning for free**, and learn it well. The best teaching material anywhere, from Stanford, MIT, Harvard, 3Blue1Brown and Andrej Karpathy, costs nothing online. What's hard is not finding resources but **deciding what to learn, in which order, and what to leave out**.
 
-[AI Engineer Path](https://learn.hamropedia.com/), a free learning path by the author of Hamropedia, solves exactly that: 8 phases and 98 complete lessons, in sequence. Each lesson comes with an animation, a diagram, worked code and four exercises with answers, plus a short list of free videos and readings if you'd like a second explanation. Here is how to get the most out of it.
+[AI Engineer Path](https://learn.hamropedia.com/), a free learning path by the author of Hamropedia, solves exactly that: 8 units and 101 complete lessons, in sequence. Each lesson comes with an animation, a diagram, worked code and four exercises with answers, plus a short list of free videos and readings if you'd like a second explanation. Here is how to get the most out of it.
 
-## The AI roadmap: 8 phases
+## The AI roadmap: 8 units
 
-| Phase | What you learn | Why it matters |
+| Unit | What you learn | Why it matters |
 |---|---|---|
-| [0. Your toolkit](https://learn.hamropedia.com/#/foundations?unit=toolkit) | Python, NumPy, Git, the command line | Every later phase uses them daily |
-| [1. Math foundations](https://learn.hamropedia.com/#/foundations?unit=math) | Linear algebra, calculus, probability | The language every model is written in |
-| [2. Classical ML](https://learn.hamropedia.com/#/foundations?unit=classical-ml) | Regression, trees, evaluation, built in NumPy | Understanding *why* models work and fail |
-| [3. Deep learning](https://learn.hamropedia.com/#/foundations?unit=deep-learning) | Neural networks, backprop, PyTorch | The engine behind modern AI |
-| [4. Transformers & LLMs](https://learn.hamropedia.com/#/foundations?unit=llms) | Attention, tokenisers, building a small GPT | How ChatGPT-style models work inside |
-| [5. AI engineering](https://learn.hamropedia.com/#/foundations?unit=ai-engineering) | RAG, evaluation, agents, deployment | The core of most AI engineer jobs |
-| [6. Systems & scale](https://learn.hamropedia.com/#/foundations?unit=systems) | GPUs, memory, speed, multi-GPU training | Making models fast and cheap |
-| [7. Generative models & RL](https://learn.hamropedia.com/#/foundations?unit=generative-rl) | VAEs, diffusion, reinforcement learning | Image generators and RLHF |
+| [0. Your toolkit](https://learn.hamropedia.com/foundations/unit/toolkit/) | Python, NumPy, Git, the command line | Every later unit uses them daily |
+| [1. Math foundations](https://learn.hamropedia.com/foundations/unit/math/) | Linear algebra, calculus, probability | The language every model is written in |
+| [2. Classical ML](https://learn.hamropedia.com/foundations/unit/classical-ml/) | Regression, trees, evaluation, built in NumPy | Understanding *why* models work and fail |
+| [3. Deep learning](https://learn.hamropedia.com/foundations/unit/deep-learning/) | Neural networks, backprop, PyTorch | The engine behind modern AI |
+| [4. Transformers & LLMs](https://learn.hamropedia.com/foundations/unit/llms/) | Attention, tokenisers, building a small GPT | How ChatGPT-style models work inside |
+| [5. AI engineering](https://learn.hamropedia.com/foundations/unit/ai-engineering/) | RAG, evaluation, agents, deployment | The core of most AI engineer jobs |
+| [6. Systems & scale](https://learn.hamropedia.com/foundations/unit/systems/) | GPUs, memory, speed, multi-GPU training | Making models fast and cheap |
+| [7. Generative models & RL](https://learn.hamropedia.com/foundations/unit/generative-rl/) | VAEs, diffusion, reinforcement learning | Image generators and RLHF |
 
 ## Five rules that matter more than any course
 
@@ -33,7 +33,7 @@ Wondering **how to learn machine learning** without paying for a single course? 
 2. **Use one resource per topic.** Piling up courses feels like progress and isn't. The roadmap marks one resource per topic as **Worth it**; begin with that one.
 3. **Build it, then build it again.** Code along with a video, then close it and rewrite the code from an empty file. The second attempt is where the learning happens.
 4. **Say it out loud.** If you can't explain gradient descent to a friend in two sentences, you haven't got it yet.
-5. **Go back to old topics.** Every two weeks or so, quiz yourself on earlier lessons and untick whatever you've forgotten. Each lesson's four checks (Explain, Derive, Build, Break) are stored in your browser for this purpose, and **Download my progress** saves a copy.
+5. **Go back to old topics.** Every two weeks or so, quiz yourself on earlier lessons and untick whatever you've forgotten. Each lesson has four checks for this purpose (Explain, Derive, Build, Break). Sign in with Google to tick them, and your progress is saved to your account, the same on your phone and your laptop.
 
 ## The best free resources (a starter set)
 
@@ -45,13 +45,13 @@ Wondering **how to learn machine learning** without paying for a single course? 
 - **Transformers:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and Karpathy's "Let's build GPT".
 - **AI engineering:** [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain.
 
-Every lesson in the [roadmap](https://learn.hamropedia.com/#/foundations) on AI Engineer Path carries the complete list for its topic, sorted by type (video, interactive, reading, code, paper).
+Every lesson in the [roadmap](https://learn.hamropedia.com/foundations/) on AI Engineer Path carries the complete list for its topic, sorted by type (video, interactive, reading, code, paper).
 
-Want an AI engineer job? The interviews usually go beyond machine learning, and AI Engineer Path covers those parts for free as well: [SQL](https://learn.hamropedia.com/#/sql) with a query runner in your browser, and [System Design](https://learn.hamropedia.com/#/system-design), including [AI and ML system design](https://learn.hamropedia.com/#/system-design?unit=ai-ml-design). For the coding rounds, practise the [NeetCode 150](https://neetcode.io/practice) problems.
+Want an AI engineer job? The interviews usually go beyond machine learning, and AI Engineer Path covers those parts for free as well: [SQL](https://learn.hamropedia.com/sql/) with a query runner in your browser, and [System Design](https://learn.hamropedia.com/system-design/), including [AI and ML system design](https://learn.hamropedia.com/system-design/unit/ai-ml-design/). For the coding rounds, practise the [NeetCode 150](https://neetcode.io/practice) problems.
 
 ## What you need
 
-- **An ordinary laptop.** Phases 0 to 3 run comfortably on any recent computer.
+- **An ordinary laptop.** Units 0 to 3 run comfortably on any recent computer.
 - **Python** and a code editor such as VS Code, both free.
 - **Free GPU time** for the heavier work: [Google Colab](https://colab.research.google.com/) and [Kaggle notebooks](https://www.kaggle.com/code) both give free GPU hours, which covers the projects on this roadmap.
 
@@ -59,16 +59,16 @@ Want an AI engineer job? The interviews usually go beyond machine learning, and 
 
 Employers and universities remember projects that tackle a real problem, especially ones built on local data. Some ideas:
 
-- **A Devanagari handwriting recogniser** trained on the public [Devanagari Handwritten Character Dataset](https://archive.ics.uci.edu/dataset/389/devanagari+handwritten+character+dataset) (Phase 3).
-- **A Nepali news topic classifier**: collect headlines, label a few hundred, then train and evaluate a model (Phases 2–3).
-- **A Romanized-to-Nepali typing model** that learns from examples rather than rules, compared against our [rule-based typing tool](/tools/english-to-nepali/) (Phase 4).
-- **A RAG assistant** that answers questions on NOC or WES rules from official documents, tested against an evaluation set you wrote yourself (Phase 5).
+- **A Devanagari handwriting recogniser** trained on the public [Devanagari Handwritten Character Dataset](https://archive.ics.uci.edu/dataset/389/devanagari+handwritten+character+dataset) (Unit 3).
+- **A Nepali news topic classifier**: collect headlines, label a few hundred, then train and evaluate a model (Units 2–3).
+- **A Romanized-to-Nepali typing model** that learns from examples rather than rules, compared against our [rule-based typing tool](/tools/english-to-nepali/) (Unit 4).
+- **A RAG assistant** that answers questions on NOC or WES rules from official documents, tested against an evaluation set you wrote yourself (Unit 5).
 
 Publish each one on GitHub with a short README covering the problem, the data, how you measured success, and what didn't work.
 
 ## Frequently asked questions
 
-**Can I learn machine learning for free?** Yes. The best courses and books are free online, and the free [AI Engineer Path](https://learn.hamropedia.com/#/foundations) roadmap arranges them into 98 lessons. A laptop is all you need, and free cloud notebooks such as Google Colab supply a GPU when you want one.
+**Can I learn machine learning for free?** Yes. The best courses and books are free online, and the free [AI Engineer Path](https://learn.hamropedia.com/foundations/) roadmap arranges them into 101 lessons. A laptop is all you need, and free cloud notebooks such as Google Colab supply a GPU when you want one.
 
 **How do I teach myself machine learning?** Stick to one ordered path rather than collecting courses: Python and NumPy, then the maths, then classical ML, then deep learning. Finish each stage with a small project.
 
@@ -76,20 +76,20 @@ Publish each one on GitHub with a short README covering the problem, the data, h
 
 **Can I learn ML in 1 week?** In a week you can learn what ML is and train a first model. Learning it properly takes months of regular practice.
 
-**Can I do machine learning without maths?** You can call ML libraries with little maths, but understanding, debugging and improving models needs some linear algebra, calculus and probability. Phase 1 of the roadmap covers just the parts you need.
+**Can I do machine learning without maths?** You can call ML libraries with little maths, but understanding, debugging and improving models needs some linear algebra, calculus and probability. Unit 1 of the roadmap covers just the parts you need.
 
-**How do I become an AI engineer?** Learn Python and the maths, then classical ML, deep learning and LLMs, and end with AI engineering: retrieval (RAG), evaluation, agents and deployment. Build and publish a project at every stage. The [AI Engineer Path roadmap](https://learn.hamropedia.com/#/foundations) follows that exact order.
+**How do I become an AI engineer?** Learn Python and the maths, then classical ML, deep learning and LLMs, and end with AI engineering: retrieval (RAG), evaluation, agents and deployment. Build and publish a project at every stage. The [AI Engineer Path roadmap](https://learn.hamropedia.com/foundations/) follows that exact order.
 
 **Python or C++ for AI?** Python. C++ runs inside the libraries for speed, but the AI code you write is Python.
 
-**Is ChatGPT AI or ML?** Both. ChatGPT is an AI product built with machine learning: a large language model trained on vast amounts of text. Phase 4 of the roadmap shows how models like it work.
+**Is ChatGPT AI or ML?** Both. ChatGPT is an AI product built with machine learning: a large language model trained on vast amounts of text. Unit 4 of the roadmap shows how models like it work.
 
 **Do I need a computer science degree?** No. You need patience with maths and plenty of practice. Lots of working ML engineers taught themselves or moved over from other fields.
 
-**Should I start with ChatGPT-style apps (Phase 5) because that's where the jobs are?** Building simple apps early is fine, and it keeps you motivated. But debugging and evaluating them, and standing out in interviews, takes Phases 1–4. Do both: make small apps while you work through the foundations.
+**Should I start with ChatGPT-style apps (Unit 5) because that's where the jobs are?** Building simple apps early is fine, and it keeps you motivated. But debugging and evaluating them, and standing out in interviews, takes Units 1–4. Do both: make small apps while you work through the foundations.
 
 **Is AI going to replace programmers?** AI is changing what programmers spend their time on. People who understand how models work, and can tell when they are wrong, are well placed. This roadmap aims to make you one of them.
 
 ---
 
-Start now: [Phase 0: Your toolkit →](https://learn.hamropedia.com/#/foundations?unit=toolkit)
+Start now: [Unit 0: Your toolkit →](https://learn.hamropedia.com/foundations/unit/toolkit/)

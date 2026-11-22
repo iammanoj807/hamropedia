@@ -185,9 +185,9 @@ function footer() {
     <div>
       <h2 class="footer-h">Free courses</h2>
       <ul>
-        <li><a href="${learningPath.url}#/foundations" target="_blank" rel="noopener">ML Foundations</a></li>
-        <li><a href="${learningPath.url}#/sql" target="_blank" rel="noopener">SQL</a></li>
-        <li><a href="${learningPath.url}#/system-design" target="_blank" rel="noopener">System Design</a></li>
+        <li><a href="${learningPath.url}foundations/" target="_blank" rel="noopener">ML Foundations</a></li>
+        <li><a href="${learningPath.url}sql/" target="_blank" rel="noopener">SQL</a></li>
+        <li><a href="${learningPath.url}system-design/" target="_blank" rel="noopener">System Design</a></li>
         <li><a href="${learningPath.url}" target="_blank" rel="noopener">AI Engineer Path</a></li>
       </ul>
     </div>

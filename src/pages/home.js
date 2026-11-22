@@ -6,9 +6,9 @@ import { postCard, categoryChip, displayDate, byLatestActivity } from '../templa
 /** The free courses, which now live on AI Engineer Path. */
 function learningBand() {
   const courses = [
-    ['#/foundations', 'ML Foundations', 'maths, ML, deep learning and LLMs', '#2563eb'],
-    ['#/sql', 'SQL, with a query runner', 'from SELECT to interview problems', '#0d9488'],
-    ['#/system-design', 'System Design', 'the building blocks, then full designs', '#0891b2'],
+    ['foundations/', 'ML Foundations', 'maths, ML, deep learning and LLMs', '#2563eb'],
+    ['sql/', 'SQL, with a query runner', 'from SELECT to interview problems', '#0d9488'],
+    ['system-design/', 'System Design', 'the building blocks, then full designs', '#0891b2'],
   ];
   return `<section class="roadmap-band">
   <div class="wrap band-grid">
@@ -19,7 +19,7 @@ function learningBand() {
       <a class="btn btn-lg" href="${learningPath.url}" target="_blank" rel="noopener">Open ${esc(learningPath.name)} ${ICONS.arrow}</a>
     </div>
     <ol class="band-phases">
-      ${courses.map(([hash, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${learningPath.url}${hash}" target="_blank" rel="noopener"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
+      ${courses.map(([course, name, size, colour], i) => `<li style="--ph:${colour}"><a href="${learningPath.url}${course}" target="_blank" rel="noopener"><span>${i + 1}</span>${esc(name)} <small>${esc(size)}</small></a></li>`).join('')}
     </ol>
   </div>
 </section>`;
